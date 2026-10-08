@@ -329,11 +329,12 @@
         </div>
         
         <!-- Legend Chips -->
-        <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-mono">
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-600"></span><span class="text-slate-300">Profit ($\ge +10\text{R}$)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-800/80"></span><span class="text-slate-300">Profit ($+1\text{R} \dots +9\text{R}$)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-slate-800"></span><span class="text-slate-300">Flat ($0\text{R}$)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-rose-700/80"></span><span class="text-slate-300">Loss</span></div>
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] font-mono">
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-600"></span><span class="text-slate-300">Profit (&ge; +10R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-700/90"></span><span class="text-slate-300">Profit (+5R s.d. +9.9R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-900/60"></span><span class="text-slate-300">Profit (+0.1R s.d. +4.9R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-slate-800"></span><span class="text-slate-300">Flat (0R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-rose-700/80"></span><span class="text-slate-300">Loss (&lt; 0R)</span></div>
         </div>
       </div>
 
@@ -363,8 +364,21 @@
           </tbody>
         </table>
       </div>
-      <div class="mt-2 text-[10px] text-slate-500 font-mono text-right sm:text-left">
-        *Gunakan geser horizontal pada layar smartphone untuk melihat seluruh 12 bulan. Kolom tahun terkunci rapi di sebelah kiri.
+
+      <!-- INTERACTIVE MONTH INSPECTION CARD (MOBILE & DESKTOP) -->
+      <div id="heatmap-inspector" class="mt-3.5 p-3 rounded-xl bg-brand-dark/80 border border-brand-border/70 flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono text-slate-300 gap-2">
+        <div class="flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+          <span id="inspect-label" class="text-slate-400">Pilih / sentuh bulan untuk detail performa:</span>
+        </div>
+        <div id="inspect-value" class="text-cyan-400 font-bold bg-cyan-950/40 px-2.5 py-1 rounded border border-cyan-800/40 text-[11px]">
+          Okt 2026 (Bulan Berjalan): +0.27 R &bull; 3 Trades
+        </div>
+      </div>
+
+      <div class="mt-2.5 text-[10px] text-slate-500 font-mono flex items-center space-x-1.5">
+        <span class="text-brand-accent">&bull;</span>
+        <span>Geser horizontal pada layar smartphone untuk navigasi kalender. Kolom tahun terkunci rapi di sisi kiri.</span>
       </div>
     </div>
   </section>
@@ -495,7 +509,7 @@
     <div class="text-center max-w-2xl mx-auto mb-10">
       <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">The Quantitative Philosophy</span>
       <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Four Absolute Pillars of Strategy Survival</h2>
-      <p class="text-xs sm:text-sm text-slate-400 mt-2">Menghilangkan seluruh bias manusiawi dan godaan kurva *overfitting* melalui pembuktian matematika murni.</p>
+      <p class="text-xs sm:text-sm text-slate-400 mt-2">Menghilangkan seluruh bias manusiawi dan godaan kurva <span class="italic text-slate-300">overfitting</span> melalui pembuktian matematika murni.</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -536,7 +550,7 @@
           </div>
           <h3 class="text-base font-bold text-white mb-2">Zero-Chasing Volatility</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Melarang entri pada lilin-lilin over-extended ($\ge \gamma \cdot \text{ATR}$). Menghilangkan risiko *reversal trap* dan *slippage spikes* yang kerap menghancurkan model breakout tradisional.
+            Melarang entri pada lilin-lilin over-extended ($\ge \gamma \cdot \text{ATR}$). Menghilangkan risiko <span class="italic text-slate-300">reversal trap</span> dan <span class="italic text-slate-300">slippage spikes</span> yang kerap menghancurkan model breakout tradisional.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-amber-400">
@@ -636,8 +650,12 @@
     function initLightweightChart() {
       const container = document.getElementById('tv-chart-container');
       container.innerHTML = '';
+      const containerWidth = container.clientWidth || 800;
+      const containerHeight = 460;
 
       chart = LightweightCharts.createChart(container, {
+        width: containerWidth,
+        height: containerHeight,
         layout: {
           background: { color: '#080c14' },
           textColor: '#94a3b8',
@@ -655,12 +673,12 @@
         },
         rightPriceScale: {
           borderColor: '#1e293b',
-          scaleMargins: { top: 0.05, bottom: 0.35 }, // Top 65% area for Cumulative R
+          scaleMargins: { top: 0.05, bottom: 0.35 },
           alignLabels: true,
         },
         timeScale: {
           borderColor: '#1e293b',
-          timeVisible: true,
+          timeVisible: false,
           secondsVisible: false,
         },
       });
@@ -693,20 +711,31 @@
         borderVisible: true,
       });
 
-      // Load initial curve data
-      loadChartData(curveData);
+      // Load initial curve data (All-time mode)
+      filterChart('all', document.querySelector('.chart-btn'));
 
-      // Subscribe to crosshair move for live header HUD stats
+      // Robust Crosshair Tracker with Type Normalization
       chart.subscribeCrosshairMove(param => {
         if (!param || !param.time) return;
-        const matchedPoint = currentFilteredCurve.find(p => p.date === param.time);
+        const timeStr = typeof param.time === 'string'
+          ? param.time
+          : (typeof param.time === 'object' && param.time.year
+              ? `${param.time.year}-${String(param.time.month).padStart(2, '0')}-${String(param.time.day).padStart(2, '0')}`
+              : null);
+        if (!timeStr) return;
+
+        const matchedPoint = currentFilteredCurve.find(p => p.date === timeStr);
         if (matchedPoint) {
           document.getElementById('hover-date').innerText = matchedPoint.date;
           document.getElementById('hover-regime').innerText = matchedPoint.year === 2026 ? '2026 (OOS Live Track)' : `${matchedPoint.year} (Historical In-Sample)`;
-          document.getElementById('hover-cum-r').innerText = `${matchedPoint.cum_r >= 0 ? '+' : ''}${matchedPoint.cum_r.toFixed(2)} R`;
-          document.getElementById('hover-dd-r').innerText = `${matchedPoint.drawdown_r.toFixed(2)} R`;
-          
-          const isAth = matchedPoint.drawdown_r === 0;
+
+          const valCum = matchedPoint.display_cum_r !== undefined ? matchedPoint.display_cum_r : matchedPoint.cum_r;
+          const valDD = matchedPoint.display_dd_r !== undefined ? matchedPoint.display_dd_r : matchedPoint.drawdown_r;
+
+          document.getElementById('hover-cum-r').innerText = `${valCum >= 0 ? '+' : ''}${valCum.toFixed(2)} R`;
+          document.getElementById('hover-dd-r').innerText = `${valDD.toFixed(2)} R`;
+
+          const isAth = valDD === 0;
           document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
           document.getElementById('hover-dd-status').className = isAth ? 'text-emerald-400 font-medium' : 'text-rose-400 font-medium';
         }
@@ -719,28 +748,6 @@
       });
     }
 
-    function loadChartData(pointsArray) {
-      if (!areaSeries || !ddSeries) return;
-      currentFilteredCurve = pointsArray;
-
-      // Group and ensure strictly unique dates
-      const dateMapCum = new Map();
-      const dateMapDD = new Map();
-
-      pointsArray.forEach(p => {
-        dateMapCum.set(p.date, p.cum_r);
-        dateMapDD.set(p.date, p.drawdown_r);
-      });
-
-      const uniqueDates = Array.from(dateMapCum.keys()).sort();
-      const cumPoints = uniqueDates.map(d => ({ time: d, value: dateMapCum.get(d) }));
-      const ddPoints = uniqueDates.map(d => ({ time: d, value: dateMapDD.get(d) }));
-
-      areaSeries.setData(cumPoints);
-      ddSeries.setData(ddPoints);
-      chart.timeScale().fitContent();
-    }
-
     function filterChart(range, btnElement) {
       document.querySelectorAll('.chart-btn').forEach(b => {
         b.className = 'chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border';
@@ -749,15 +756,88 @@
         btnElement.className = 'chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
       }
 
-      let filtered = curveData;
-      if (range === '2020-2022') filtered = curveData.filter(p => p.year >= 2020 && p.year <= 2022);
-      else if (range === '2023-2025') filtered = curveData.filter(p => p.year >= 2023 && p.year <= 2025);
-      else if (range === '2026') filtered = curveData.filter(p => p.year === 2026);
+      if (range === 'all') {
+        currentFilteredCurve = curveData.map(p => ({
+          ...p,
+          display_cum_r: p.cum_r,
+          display_dd_r: p.drawdown_r
+        }));
+      } else {
+        let subset = [];
+        if (range === '2020-2022') subset = curveData.filter(p => p.year >= 2020 && p.year <= 2022);
+        else if (range === '2023-2025') subset = curveData.filter(p => p.year >= 2023 && p.year <= 2025);
+        else if (range === '2026') subset = curveData.filter(p => p.year === 2026);
 
-      loadChartData(filtered);
+        if (subset.length === 0) return;
+
+        // Baseline normalization: compute start offset from trade preceding this period
+        const firstIdx = curveData.findIndex(p => p.date === subset[0].date);
+        const baseR = firstIdx > 0 ? curveData[firstIdx - 1].cum_r : 0;
+
+        let localPeak = 0;
+        currentFilteredCurve = subset.map(p => {
+          const normCum = Math.round((p.cum_r - baseR) * 100) / 100;
+          if (normCum > localPeak) localPeak = normCum;
+          const localDD = Math.round((normCum - localPeak) * 100) / 100;
+          return {
+            ...p,
+            display_cum_r: normCum,
+            display_dd_r: localDD
+          };
+        });
+      }
+
+      loadChartData(currentFilteredCurve);
     }
 
-    // 4. RENDER MONTHLY RETURN HEATMAP (WITH STICKY YEAR ANCHOR)
+    function loadChartData(pointsArray) {
+      if (!areaSeries || !ddSeries) return;
+
+      const cumPoints = pointsArray.map(p => ({
+        time: p.date,
+        value: p.display_cum_r !== undefined ? p.display_cum_r : p.cum_r
+      }));
+      const ddPoints = pointsArray.map(p => ({
+        time: p.date,
+        value: p.display_dd_r !== undefined ? p.display_dd_r : p.drawdown_r
+      }));
+
+      areaSeries.setData(cumPoints);
+      ddSeries.setData(ddPoints);
+      chart.timeScale().fitContent();
+
+      // Update initial HUD to latest point of filtered range
+      const latest = pointsArray[pointsArray.length - 1];
+      if (latest) {
+        document.getElementById('hover-date').innerText = latest.date;
+        document.getElementById('hover-regime').innerText = latest.year === 2026 ? '2026 (OOS Live Track)' : `${latest.year} (Historical In-Sample)`;
+        const valCum = latest.display_cum_r !== undefined ? latest.display_cum_r : latest.cum_r;
+        const valDD = latest.display_dd_r !== undefined ? latest.display_dd_r : latest.drawdown_r;
+        document.getElementById('hover-cum-r').innerText = `${valCum >= 0 ? '+' : ''}${valCum.toFixed(2)} R`;
+        document.getElementById('hover-dd-r').innerText = `${valDD.toFixed(2)} R`;
+        const isAth = valDD === 0;
+        document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
+        document.getElementById('hover-dd-status').className = isAth ? 'text-emerald-400 font-medium' : 'text-rose-400 font-medium';
+      }
+    }
+
+    // 4. RENDER MONTHLY RETURN HEATMAP (WITH TOUCH INSPECTOR & CURRENT MONTH BADGE)
+    function inspectMonth(year, monthName, rVal, trades, isOngoing) {
+      const inspectLabel = document.getElementById('inspect-label');
+      const inspectValue = document.getElementById('inspect-value');
+      if (!inspectLabel || !inspectValue) return;
+
+      const sign = rVal > 0 ? '+' : '';
+      const statusText = isOngoing ? 'Bulan Berjalan (Active)' : 'Closed Month';
+      const colorClass = rVal > 0 
+        ? 'text-emerald-400 border-emerald-800/50 bg-emerald-950/40' 
+        : (rVal < 0 ? 'text-rose-400 border-rose-800/50 bg-rose-950/40' : 'text-slate-300 border-slate-700 bg-slate-900/40');
+
+      inspectLabel.innerText = `Detail Kalender ${monthName} ${year}:`;
+      inspectValue.className = `font-bold px-2.5 py-1 rounded border text-[11px] ${colorClass}`;
+      inspectValue.innerHTML = `${sign}${rVal.toFixed(2)} R &bull; ${trades} Trades &bull; ${statusText}`;
+    }
+
     function renderHeatmap() {
       const tbody = document.getElementById('heatmap-tbody');
       tbody.innerHTML = '';
@@ -776,8 +856,9 @@
             html += `<td class="py-2 px-1"><div class="py-1 px-1 rounded bg-slate-900/40 text-slate-600 text-[10px]">&ndash;</div></td>`;
           } else {
             const rVal = m.r;
+            const isCurrentMonth = (row.year === 2026 && m.month_name === 'Oct');
             let bgClass = 'bg-slate-800/60 text-slate-400';
-            let titleText = `${m.month_name} ${row.year}: ${rVal >= 0 ? '+' : ''}${rVal.toFixed(2)} R (${m.trades} trades)`;
+            let titleText = `${m.month_name} ${row.year}: ${rVal >= 0 ? '+' : ''}${rVal.toFixed(2)} R (${m.trades} trades)${isCurrentMonth ? ' [Bulan Berjalan]' : ''}`;
 
             if (rVal >= 10.0) bgClass = 'bg-emerald-600 text-white font-bold';
             else if (rVal >= 5.0) bgClass = 'bg-emerald-700/90 text-emerald-100 font-medium';
@@ -785,9 +866,13 @@
             else if (rVal === 0.0) bgClass = 'bg-slate-800/90 text-slate-400';
             else if (rVal < 0.0) bgClass = 'bg-rose-700/80 text-rose-100 font-semibold';
 
+            const activeRing = isCurrentMonth ? ' ring-1 ring-cyan-400 shadow-sm shadow-cyan-400/30 font-bold' : '';
             const sign = rVal > 0 ? '+' : '';
-            html += `<td class="py-2 px-1" title="${titleText}">
-              <div class="py-1 px-1 rounded ${bgClass} text-[10px] transition hover:scale-105 cursor-pointer">
+
+            html += `<td class="py-2 px-1">
+              <div onclick="inspectMonth(${row.year}, '${m.month_name}', ${rVal}, ${m.trades}, ${isCurrentMonth})" 
+                   title="${titleText}" 
+                   class="py-1 px-1 rounded ${bgClass}${activeRing} text-[10px] transition hover:scale-105 active:scale-95 cursor-pointer">
                 ${sign}${rVal.toFixed(1)}
               </div>
             </td>`;

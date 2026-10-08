@@ -1,0 +1,35 @@
+{
+  "total_return_r": 643.85,
+  "total_trades": 755,
+  "wins": 454,
+  "losses": 277,
+  "timeouts": 24,
+  "win_rate_pct": 60.13,
+  "profit_factor": 3.299,
+  "max_drawdown_r": 7.0,
+  "payoff_ratio": "1:2 R:R (Immutable)",
+  "wilson_ci_95": [
+    58.87,
+    65.75
+  ],
+  "avg_holding_hours": 6.2,
+  "max_holding_hours": 16.0,
+  "consecutive_positive_years": "7 / 7 (100%)",
+  "oos_2026": {
+    "return_r": 61.91,
+    "trades": 113,
+    "wins": 55,
+    "losses": 51,
+    "timeouts": 7,
+    "win_rate_pct": 48.67,
+    "profit_factor": 2.183
+  },
+  "grand_portfolio": {
+    "assets_count": 11,
+    "total_return_r": 3910.73,
+    "total_trades": 12360,
+    "win_rate_pct": 41.92,
+    "profit_factor": 1.536,
+    "oos_2026_return_r": 402.05
+  }
+}

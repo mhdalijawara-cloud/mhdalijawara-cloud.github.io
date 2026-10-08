@@ -1,0 +1,639 @@
+[
+  {
+    "year": 2020,
+    "total_r": 74.24,
+    "total_trades": 71,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 12.0,
+        "trades": 9
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 0.0,
+        "trades": 0
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 0.0,
+        "trades": 0
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 0.0,
+        "trades": 0
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": -1.0,
+        "trades": 4
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 17.0,
+        "trades": 10
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": 3.0,
+        "trades": 6
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": 10.0,
+        "trades": 8
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": 8.0,
+        "trades": 13
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 1.0,
+        "trades": 5
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "active",
+        "r": 20.24,
+        "trades": 14
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "active",
+        "r": 4.0,
+        "trades": 2
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "total_r": 108.89,
+    "total_trades": 116,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 9.0,
+        "trades": 9
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 2.0,
+        "trades": 7
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 11.0,
+        "trades": 7
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 15.0,
+        "trades": 9
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": 6.0,
+        "trades": 6
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 10.59,
+        "trades": 9
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": 11.0,
+        "trades": 10
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": 9.0,
+        "trades": 12
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": 4.0,
+        "trades": 14
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 6.0,
+        "trades": 9
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "active",
+        "r": 13.3,
+        "trades": 12
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "active",
+        "r": 12.0,
+        "trades": 12
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "total_r": 90.36,
+    "total_trades": 110,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 7.0,
+        "trades": 5
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 13.0,
+        "trades": 11
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 13.0,
+        "trades": 14
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 2.0,
+        "trades": 7
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": 14.36,
+        "trades": 9
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 12.0,
+        "trades": 6
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": -6.0,
+        "trades": 12
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": 14.0,
+        "trades": 13
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": -2.0,
+        "trades": 5
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 11.0,
+        "trades": 13
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "active",
+        "r": 1.0,
+        "trades": 5
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "active",
+        "r": 11.0,
+        "trades": 10
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "total_r": 125.88,
+    "total_trades": 117,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 10.37,
+        "trades": 10
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 13.0,
+        "trades": 8
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 10.21,
+        "trades": 11
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 6.9,
+        "trades": 12
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": 11.0,
+        "trades": 10
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 16.0,
+        "trades": 11
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": 9.0,
+        "trades": 9
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": 14.4,
+        "trades": 15
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": 10.0,
+        "trades": 8
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 7.0,
+        "trades": 8
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "active",
+        "r": 8.0,
+        "trades": 7
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "active",
+        "r": 10.0,
+        "trades": 8
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "total_r": 95.4,
+    "total_trades": 114,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 3.0,
+        "trades": 6
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 10.0,
+        "trades": 8
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 3.02,
+        "trades": 7
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 9.0,
+        "trades": 12
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": 6.0,
+        "trades": 6
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 7.0,
+        "trades": 14
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": 14.0,
+        "trades": 10
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": 19.0,
+        "trades": 17
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": 4.73,
+        "trades": 9
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 6.0,
+        "trades": 6
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "active",
+        "r": 3.0,
+        "trades": 6
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "active",
+        "r": 10.65,
+        "trades": 13
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "total_r": 87.17,
+    "total_trades": 114,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 11.93,
+        "trades": 9
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 0.0,
+        "trades": 3
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 3.0,
+        "trades": 9
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 3.26,
+        "trades": 9
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": 8.85,
+        "trades": 10
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 11.0,
+        "trades": 13
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": 12.0,
+        "trades": 15
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": 14.0,
+        "trades": 10
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": 1.13,
+        "trades": 13
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 5.0,
+        "trades": 7
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "active",
+        "r": 13.0,
+        "trades": 11
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "active",
+        "r": 4.0,
+        "trades": 5
+      }
+    ]
+  },
+  {
+    "year": 2026,
+    "total_r": 61.9,
+    "total_trades": 113,
+    "months": [
+      {
+        "month_num": 1,
+        "month_name": "Jan",
+        "status": "active",
+        "r": 0.0,
+        "trades": 9
+      },
+      {
+        "month_num": 2,
+        "month_name": "Feb",
+        "status": "active",
+        "r": 16.0,
+        "trades": 11
+      },
+      {
+        "month_num": 3,
+        "month_name": "Mar",
+        "status": "active",
+        "r": 11.84,
+        "trades": 10
+      },
+      {
+        "month_num": 4,
+        "month_name": "Apr",
+        "status": "active",
+        "r": 7.13,
+        "trades": 13
+      },
+      {
+        "month_num": 5,
+        "month_name": "May",
+        "status": "active",
+        "r": 2.12,
+        "trades": 12
+      },
+      {
+        "month_num": 6,
+        "month_name": "Jun",
+        "status": "active",
+        "r": 9.0,
+        "trades": 9
+      },
+      {
+        "month_num": 7,
+        "month_name": "Jul",
+        "status": "active",
+        "r": 6.83,
+        "trades": 16
+      },
+      {
+        "month_num": 8,
+        "month_name": "Aug",
+        "status": "active",
+        "r": -2.0,
+        "trades": 14
+      },
+      {
+        "month_num": 9,
+        "month_name": "Sep",
+        "status": "active",
+        "r": 10.71,
+        "trades": 16
+      },
+      {
+        "month_num": 10,
+        "month_name": "Oct",
+        "status": "active",
+        "r": 0.27,
+        "trades": 3
+      },
+      {
+        "month_num": 11,
+        "month_name": "Nov",
+        "status": "future",
+        "r": null,
+        "trades": null
+      },
+      {
+        "month_num": 12,
+        "month_name": "Dec",
+        "status": "future",
+        "r": null,
+        "trades": null
+      }
+    ]
+  }
+]

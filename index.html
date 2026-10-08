@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Ali Jawara Wiratama | AI Quantitative Researcher & Systems Architect</title>
+  <meta name="description" content="Personal Quantitative Research Portfolio of Muhammad Ali Jawara Wiratama. High-precision AI trading specialists operating on immutable 1:2 Risk-to-Reward mathematical edge.">
+  
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#080c14',
+              surface: '#0e1524',
+              card: '#131b2e',
+              border: '#1e293b',
+              accent: '#06b6d4',
+              emerald: '#10b981',
+              rose: '#f43f5e',
+              gold: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- TradingView Lightweight Charts standalone CDN -->
+  <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Pre-bundled Zero-CORS Data -->
+  <script src="data/data.js"></script>
+
+  <style>
+    /* Custom scrollbars and glow effects */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #080c14; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-black">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-accent to-emerald-500 flex items-center justify-center text-black font-bold text-sm shadow-md">
+          JW
+        </div>
+        <div>
+          <span class="font-bold text-slate-100 tracking-tight text-sm sm:text-base">Muhammad Ali Jawara Wiratama</span>
+          <span class="hidden sm:inline-block ml-2 text-xs font-mono text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded border border-brand-accent/20">AI Quant Architect</span>
+        </div>
+      </div>
+      
+      <div class="hidden md:flex items-center space-x-6 text-xs uppercase tracking-wider font-medium text-slate-400">
+        <a href="#flagship" class="hover:text-brand-accent transition">Flagship HK50</a>
+        <a href="#tearsheet" class="hover:text-brand-accent transition">Equity Curve</a>
+        <a href="#heatmap" class="hover:text-brand-accent transition">82-Month Matrix</a>
+        <a href="#methodology" class="hover:text-brand-accent transition">Methodology</a>
+        <a href="#ledger" class="hover:text-brand-accent transition">Trade Ledger</a>
+        <a href="#portfolio" class="hover:text-brand-accent transition">Grand Portfolio</a>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center space-x-1.5 text-xs font-medium bg-brand-card hover:bg-slate-800 text-slate-300 hover:text-white px-3 py-1.5 rounded-md border border-brand-border transition">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="relative rounded-2xl bg-gradient-to-b from-brand-surface to-brand-dark p-6 sm:p-10 border border-brand-border overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center space-x-2 text-xs font-mono bg-brand-card px-3 py-1 rounded-full border border-brand-border text-emerald-400 mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>100% Causal • Zero Look-Ahead Bias • Pure R-Metrics</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Designing Mathematical Alpha Through Deep Causal Quant Systems
+        </h1>
+        <p class="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed">
+          Quantitative Trading Systems Research Portfolio of <strong>Muhammad Ali Jawara Wiratama</strong>. 
+          Specializing in deep temporal Transformer encoders, Stiefel manifold regularizers, and immutable <strong>1:2 Risk-to-Reward</strong> execution architectures.
+        </p>
+      </div>
+
+      <!-- HIGHLIGHT METRIC CARDS -->
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Total Realized</div>
+          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-total-r">+643.85 R</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">755 Historical Trades</div>
+        </div>
+
+        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Win Rate</div>
+          <div class="text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.38%</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">+29.05% Above 33.33% BE</div>
+        </div>
+
+        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Profit Factor</div>
+          <div class="text-2xl font-bold font-mono text-white mt-1" id="stat-pf">3.299</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">Gross Win / Gross Loss</div>
+        </div>
+
+        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">OOS 2026 Return</div>
+          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-oos-r">+61.91 R</div>
+          <div class="text-[10px] text-brand-accent mt-0.5">#1 Rank in Portfolio</div>
+        </div>
+
+        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Max Drawdown</div>
+          <div class="text-2xl font-bold font-mono text-rose-400 mt-1" id="stat-max-dd">-7.00 R</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">6.8 Years Track Record</div>
+        </div>
+
+        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
+          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Non-Minus Months</div>
+          <div class="text-2xl font-bold font-mono text-white mt-1">95.12%</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">78 of 82 Months ≥ 0 R</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAGSHIP SPECIALIST OVERVIEW -->
+  <section id="flagship" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-brand-accent">Flagship Model Specification</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">HK50 H1 Multi-Regime Specialist</h2>
+      </div>
+      <div class="mt-3 md:mt-0 flex items-center space-x-2 text-xs font-mono text-slate-400">
+        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Asset ID: 10</span>
+        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Horizon: H1 (60-Bar Window)</span>
+        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Payoff: Immutable 1:2 R:R</span>
+      </div>
+    </div>
+
+    <!-- SPEC GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+        <div class="flex items-center space-x-2 text-brand-accent mb-3">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+          <h3 class="font-bold text-sm text-white">Multi-Regime Whipsaw Shield</h3>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Mengeliminasi 66 titik kerugian laten di jam rawan rollover lelang HKEX dan pembukaan bursa Barat (Jam 12:00, 15:00, dan 19:00 UTC) melalui mekanisme pengetatan ambang kausal $z_{h12} = 1.6\sigma$.
+        </p>
+      </div>
+
+      <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+        <div class="flex items-center space-x-2 text-emerald-400 mb-3">
+          <i data-lucide="clock" class="w-5 h-5"></i>
+          <h3 class="font-bold text-sm text-white">Velocity Guard (&le; 16 Jam)</h3>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          $100\%$ posisi trading tuntas atau ditutup paksa mark-to-market secara ketat pada jam ke-16. Rata-rata durasi mengambang posisi historis adalah <strong>6.20 jam</strong>, membebaskan psikologi dari risiko overnight/weekend berkepanjangan.
+        </p>
+      </div>
+
+      <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+        <div class="flex items-center space-x-2 text-brand-gold mb-3">
+          <i data-lucide="git-commit" class="w-5 h-5"></i>
+          <h3 class="font-bold text-sm text-white">Orthogonal Splay Head</h3>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Menggunakan Stiefel Manifold projection dengan Orthogonal Regularizer ($\mathcal{L}_{\text{ortho}}$) yang mengunci korelasi antar-head Long dan Short mendekati nol ($\rho < 0.011$), memastikan separabilitas arah 50:50 yang independen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TEAR SHEET (TRADINGVIEW LIGHTWEIGHT CHARTS) -->
+  <section id="tearsheet" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-6 sm:p-8 rounded-2xl border border-brand-border">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Interactive Tear Sheet</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Cumulative R-Multiple Curve & Drawdown</h2>
+          <p class="text-xs text-slate-400 mt-1">Audit run sekuensial kronologis 755 trade bar-demi-bar (Januari 2020 &ndash; Oktober 2026).</p>
+        </div>
+
+        <div class="flex items-center space-x-2 text-xs font-mono" id="chart-filter-buttons">
+          <button onclick="filterChart('all')" class="chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">All (755 Trades)</button>
+          <button onclick="filterChart('2020-2022')" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2020–2022</button>
+          <button onclick="filterChart('2023-2025')" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2023–2025</button>
+          <button onclick="filterChart('2026')" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2026 (OOS)</button>
+        </div>
+      </div>
+
+      <!-- LIVE HOVER STATS BAR -->
+      <div class="bg-brand-card/90 rounded-xl p-3 mb-4 border border-brand-border flex flex-wrap items-center justify-between text-xs font-mono text-slate-300">
+        <div>Trade ID: <span id="hover-trade-id" class="text-white font-bold">#755 (Latest)</span></div>
+        <div>Date & Time: <span id="hover-date" class="text-white">2026-10-06 13:00 UTC</span></div>
+        <div>Direction: <span id="hover-dir" class="text-cyan-400 font-bold">BUY</span></div>
+        <div>Outcome: <span id="hover-outcome" class="text-emerald-400 font-bold">TAKE PROFIT (+2.0R)</span></div>
+        <div>Cumulative Net: <span id="hover-cum-r" class="text-emerald-400 font-bold">+643.85 R</span></div>
+        <div>Drawdown: <span id="hover-dd-r" class="text-rose-400 font-bold">0.00 R (Peak)</span></div>
+      </div>
+
+      <!-- CHART CONTAINER -->
+      <div class="w-full h-[420px] rounded-xl overflow-hidden bg-brand-dark border border-brand-border" id="tv-chart-container">
+        <!-- Rendered by TradingView Lightweight Charts -->
+      </div>
+      
+      <div class="mt-3 flex items-center justify-between text-[11px] font-mono text-slate-500">
+        <span>*Dihitung strictly dalam unit R-Multiple murni (Risk 1.0R : Reward 2.0R). Tidak dimanipulasi ukuran lot atau compounding saldo.</span>
+        <span>Rendered with TradingView Lightweight Charts v4.1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MONTHLY RETURN HEATMAP (82 CALENDAR MONTHS) -->
+  <section id="heatmap" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-6 sm:p-8 rounded-2xl border border-brand-border">
+      <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-brand-accent">Calendar Integrity Matrix</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">82-Month Consecutive Performance Heatmap</h2>
+          <p class="text-xs text-slate-400 mt-1">73 Bulan Menang (89.02%), 5 Bulan Impas (6.10%), Hanya 4 Bulan Defisit (4.88%).</p>
+        </div>
+        <div class="flex items-center space-x-3 text-xs font-mono">
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-600"></span><span class="text-slate-300">Profit (&ge; +10R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-800/80"></span><span class="text-slate-300">Profit (+1R s.d. +9R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-slate-800"></span><span class="text-slate-300">Flat (0R)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-rose-700/80"></span><span class="text-slate-300">Loss</span></div>
+        </div>
+      </div>
+
+      <!-- HEATMAP TABLE CONTAINER -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-center border-collapse text-xs font-mono">
+          <thead>
+            <tr class="border-b border-brand-border text-slate-400 text-[11px]">
+              <th class="py-2.5 px-3 text-left">Year</th>
+              <th class="py-2.5 px-2">Jan</th>
+              <th class="py-2.5 px-2">Feb</th>
+              <th class="py-2.5 px-2">Mar</th>
+              <th class="py-2.5 px-2">Apr</th>
+              <th class="py-2.5 px-2">May</th>
+              <th class="py-2.5 px-2">Jun</th>
+              <th class="py-2.5 px-2">Jul</th>
+              <th class="py-2.5 px-2">Aug</th>
+              <th class="py-2.5 px-2">Sep</th>
+              <th class="py-2.5 px-2">Oct</th>
+              <th class="py-2.5 px-2">Nov</th>
+              <th class="py-2.5 px-2">Dec</th>
+              <th class="py-2.5 px-3 text-right">Annual Net R</th>
+            </tr>
+          </thead>
+          <tbody id="heatmap-tbody" class="divide-y divide-brand-border">
+            <!-- Dynamically populated from SHOWCASE_MONTHLY data -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY & CORE PRINCIPLES -->
+  <section id="methodology" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">The Quantitative Philosophy</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Four Absolute Pillars of Strategy Survival</h2>
+      <p class="text-xs text-slate-400 mt-2">Menghilangkan seluruh bias manusiawi dan godaan kurva *overfitting* melalui pembuktian matematika murni.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono font-bold mb-4 border border-emerald-500/20">
+            01
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Immutable 1:2 R:R Ratio</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Konstanta sakral repositori: Stop Loss 1.0R vs Take Profit 2.0R. Menjamin titik impas matematis hanya membutuhkan win rate 33.33%, sehingga win rate 62.38% menghasilkan surplus eksponensial.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-emerald-400">
+          Breakeven Target: 33.33%
+        </div>
+      </div>
+
+      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-mono font-bold mb-4 border border-cyan-500/20">
+            02
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Pure Rolling Causality</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Zero Look-Ahead Bias. Ambang batas seleksi persentil ($p_t$) dihitung strictly dari jendela masa lalu ($N_{\text{past}} = 420\text{ bar}$). Dilarang menggunakan kuantil global atau parameter masa depan.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-cyan-400">
+          N_past: 420 bar (~2.2 Bulan)
+        </div>
+      </div>
+
+      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-mono font-bold mb-4 border border-amber-500/20">
+            03
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Zero-Chasing Volatility</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Melarang entri pada lilin lilin yang over-extended ($\ge 1.3\text{ ATR}$). Menghilangkan risiko *reversal trap* dan *slippage spikes* yang kerap menghancurkan model breakout tradisional.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-amber-400">
+          Violation Tolerance: 0.0%
+        </div>
+      </div>
+
+      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center font-mono font-bold mb-4 border border-rose-500/20">
+            04
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Velocity Guard (&le; 16h)</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Membatasi eksposur posisi floating maksimal 16 jam. Bila TP/SL belum tersentuh di jam ke-16, posisi ditutup paksa mark-to-market guna memutus ketergantungan psikologis holding berhari-hari.
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-rose-400">
+          Avg Duration: 6.20 Jam
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADE LEDGER EXPLORER TABLE -->
+  <section id="ledger" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-6 sm:p-8 rounded-2xl border border-brand-border">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Verifiable Transparency</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Historical Master Ledger Explorer</h2>
+          <p class="text-xs text-slate-400 mt-1">Eksplorasi seluruh 755 trade historis dengan tanggal, harga eksekusi, tipe exit, dan durasi holding.</p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+          <input type="text" id="ledger-search" placeholder="Search date (e.g. 2026-09)..." 
+                 class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-accent w-48 text-xs">
+          
+          <select id="ledger-filter" class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 focus:outline-none focus:border-brand-accent text-xs">
+            <option value="ALL">All Trades (755)</option>
+            <option value="TP">Wins Only (Take Profit)</option>
+            <option value="SL">Losses Only (Stop Loss)</option>
+            <option value="2026">2026 OOS Only (113)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- TABLE CONTAINER -->
+      <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark">
+        <table class="w-full text-left border-collapse text-xs font-mono">
+          <thead>
+            <tr class="border-b border-brand-border text-slate-400 bg-brand-card/40 text-[11px]">
+              <th class="py-2.5 px-3">#</th>
+              <th class="py-2.5 px-3">Date & Time</th>
+              <th class="py-2.5 px-3">Dir</th>
+              <th class="py-2.5 px-3">Entry Price</th>
+              <th class="py-2.5 px-3">Exit Price</th>
+              <th class="py-2.5 px-3">Exit Type</th>
+              <th class="py-2.5 px-3">Holding</th>
+              <th class="py-2.5 px-3 text-right">Realized R</th>
+              <th class="py-2.5 px-3 text-right">Cum R</th>
+            </tr>
+          </thead>
+          <tbody id="ledger-tbody" class="divide-y divide-brand-border/60">
+            <!-- Dynamically populated with JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PAGINATION BAR -->
+      <div class="mt-4 flex items-center justify-between text-xs font-mono text-slate-400">
+        <div>Showing <span id="ledger-page-range" class="text-white">1 - 25</span> of <span id="ledger-total-count" class="text-white">755</span> trades</div>
+        <div class="flex items-center space-x-2">
+          <button id="btn-prev-page" class="px-3 py-1 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40" onclick="changePage(-1)">Previous</button>
+          <span id="ledger-current-page" class="px-2 text-white font-bold">1</span>
+          <button id="btn-next-page" class="px-3 py-1 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40" onclick="changePage(1)">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRAND MULTI-ASSET PORTFOLIO SNAPSHOT -->
+  <section id="portfolio" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-dark p-6 sm:p-10 border border-brand-border">
+      <div class="max-w-3xl">
+        <span class="text-xs font-mono uppercase tracking-widest text-brand-accent">Beyond A Single Instrument</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">The 11-Asset Universal Shielded Ecosystem</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+          Model HK50 adalah satu dari 11 spesialis produksi yang beroperasi serentak di bawah arsitektur terpadu <strong>Universal Shield</strong>. 
+          Portofolio gabungan mengombinasikan instrumen Indeks Saham Asia/Eropa/AS, Komoditas Energi/Emas, Forex Mayor, dan Kripto secara ortogonal ($\bar{\rho} \approx 0$).
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
+          <div class="text-[11px] text-slate-400 uppercase font-mono">Grand Total Return</div>
+          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1">+3,910.73 R</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">12,360 Sequential Trades</div>
+        </div>
+        <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
+          <div class="text-[11px] text-slate-400 uppercase font-mono">Global Win Rate</div>
+          <div class="text-2xl font-bold font-mono text-white mt-1">41.92%</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">+8.59% Above 33.33% BE</div>
+        </div>
+        <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
+          <div class="text-[11px] text-slate-400 uppercase font-mono">Global Profit Factor</div>
+          <div class="text-2xl font-bold font-mono text-white mt-1">1.536</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">Annualized Sharpe > 3.65</div>
+        </div>
+        <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
+          <div class="text-[11px] text-slate-400 uppercase font-mono">OOS 2026 Portfolio</div>
+          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1">+402.05 R</div>
+          <div class="text-[10px] text-brand-accent mt-0.5">11 / 11 Models Passed OOS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 border-t border-brand-border py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-bold text-white text-base">Muhammad Ali Jawara Wiratama</div>
+        <p class="text-xs text-slate-400 mt-1">AI Quantitative Trading Systems Architect & Researcher.</p>
+        <p class="text-[11px] text-slate-500 mt-1 font-mono">Repository: private core @ github.com/mhdalijawara-cloud/tttt-trading-system</p>
+      </div>
+
+      <div class="flex items-center space-x-4 text-xs font-mono text-slate-400">
+        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center space-x-1">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>mhdalijawara-cloud</span>
+        </a>
+        <span>&bull;</span>
+        <span class="text-slate-500">&copy; 2026 All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC (CHART, HEATMAP, LEDGER) -->
+  <script>
+    // Lucide Icons Render
+    lucide.createIcons();
+
+    // Data Access
+    const trades = window.SHOWCASE_TRADES || [];
+    const monthlyMatrix = window.SHOWCASE_MONTHLY || [];
+    const stats = window.SHOWCASE_STATS || {};
+
+    // 1. POPULATE HERO STATS
+    if (stats.total_return_r) {
+      document.getElementById('stat-total-r').innerText = `+${stats.total_return_r.toFixed(2)} R`;
+      document.getElementById('stat-win-rate').innerText = `${stats.win_rate_pct.toFixed(2)}%`;
+      document.getElementById('stat-pf').innerText = stats.profit_factor.toFixed(3);
+      document.getElementById('stat-oos-r').innerText = `+${stats.oos_2026.return_r.toFixed(2)} R`;
+      document.getElementById('stat-max-dd').innerText = `-${stats.max_drawdown_r.toFixed(2)} R`;
+    }
+
+    // 2. RENDER TRADINGVIEW LIGHTWEIGHT CHARTS
+    let chart, areaSeries, ddSeries;
+    let currentTradesFilter = 'all';
+
+    function initLightweightChart() {
+      const container = document.getElementById('tv-chart-container');
+      container.innerHTML = '';
+
+      chart = LightweightCharts.createChart(container, {
+        layout: {
+          background: { color: '#080c14' },
+          textColor: '#94a3b8',
+          fontFamily: 'JetBrains Mono, monospace',
+          fontSize: 11,
+        },
+        grid: {
+          vertLines: { color: '#131b2e' },
+          horzLines: { color: '#131b2e' },
+        },
+        crosshair: {
+          mode: LightweightCharts.CrosshairMode.Normal,
+          vertLine: { color: '#06b6d4', width: 1, style: 3 },
+          horzLine: { color: '#06b6d4', width: 1, style: 3 },
+        },
+        rightPriceScale: {
+          borderColor: '#1e293b',
+          scaleMargins: { top: 0.1, bottom: 0.25 },
+        },
+        timeScale: {
+          borderColor: '#1e293b',
+          timeVisible: true,
+          secondsVisible: false,
+        },
+      });
+
+      // Area Series for Cumulative R
+      areaSeries = chart.addAreaSeries({
+        lineColor: '#10b981',
+        topColor: 'rgba(16, 185, 129, 0.45)',
+        bottomColor: 'rgba(16, 185, 129, 0.01)',
+        lineWidth: 2,
+        priceFormat: { type: 'custom', formatter: val => `${val.toFixed(2)} R` },
+      });
+
+      // Prepare line data
+      loadChartData(trades);
+
+      // Subscribe to crosshair move for live header stats
+      chart.subscribeCrosshairMove(param => {
+        if (!param || !param.time || !param.seriesData || !param.seriesData.get(areaSeries)) {
+          return;
+        }
+        const dataPoint = param.seriesData.get(areaSeries);
+        const matchedTrade = trades.find(t => t.date === param.time);
+        if (matchedTrade) {
+          document.getElementById('hover-trade-id').innerText = `#${matchedTrade.id}`;
+          document.getElementById('hover-date').innerText = `${matchedTrade.date} ${matchedTrade.time} UTC`;
+          document.getElementById('hover-dir').innerText = matchedTrade.direction;
+          document.getElementById('hover-dir').className = matchedTrade.direction === 'BUY' ? 'text-cyan-400 font-bold' : 'text-amber-400 font-bold';
+          
+          let outcomeText = matchedTrade.r > 0 ? `TAKE PROFIT (+${matchedTrade.r.toFixed(2)}R)` : `STOP LOSS (${matchedTrade.r.toFixed(2)}R)`;
+          if (matchedTrade.exit_type === 'TIMEOUT_16H') outcomeText = `TIMEOUT 16H (${matchedTrade.r.toFixed(2)}R)`;
+          document.getElementById('hover-outcome').innerText = outcomeText;
+          document.getElementById('hover-outcome').className = matchedTrade.r > 0 ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold';
+
+          document.getElementById('hover-cum-r').innerText = `${matchedTrade.cum_r >= 0 ? '+' : ''}${matchedTrade.cum_r.toFixed(2)} R`;
+          document.getElementById('hover-dd-r').innerText = `${matchedTrade.drawdown_r.toFixed(2)} R`;
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (chart && container) {
+          chart.applyOptions({ width: container.clientWidth });
+        }
+      });
+    }
+
+    function loadChartData(tradesArray) {
+      if (!areaSeries) return;
+      // Convert to unique daily cumulative sequence
+      const chartPoints = tradesArray.map(t => ({
+        time: t.date,
+        value: t.cum_r
+      }));
+
+      // Ensure strictly ascending unique dates
+      const uniquePoints = [];
+      const seenDates = new Set();
+      for (const p of chartPoints) {
+        if (!seenDates.has(p.time)) {
+          seenDates.add(p.time);
+          uniquePoints.push(p);
+        } else {
+          // Update to latest cum_r of the day
+          const lastIdx = uniquePoints.findIndex(u => u.time === p.time);
+          if (lastIdx !== -1) uniquePoints[lastIdx].value = p.value;
+        }
+      }
+      uniquePoints.sort((a, b) => a.time.localeCompare(b.time));
+
+      areaSeries.setData(uniquePoints);
+      chart.timeScale().fitContent();
+    }
+
+    function filterChart(range) {
+      currentTradesFilter = range;
+      document.querySelectorAll('.chart-btn').forEach(b => {
+        b.className = 'chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border';
+      });
+      event.target.className = 'chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+
+      let filtered = trades;
+      if (range === '2020-2022') filtered = trades.filter(t => t.year >= 2020 && t.year <= 2022);
+      else if (range === '2023-2025') filtered = trades.filter(t => t.year >= 2023 && t.year <= 2025);
+      else if (range === '2026') filtered = trades.filter(t => t.year === 2026);
+
+      loadChartData(filtered);
+    }
+
+    // 3. RENDER MONTHLY RETURN HEATMAP
+    function renderHeatmap() {
+      const tbody = document.getElementById('heatmap-tbody');
+      tbody.innerHTML = '';
+
+      monthlyMatrix.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-brand-card/40 transition';
+
+        let yearBadge = `<span class="font-bold text-white">${row.year}</span>`;
+        if (row.year === 2026) yearBadge += ` <span class="text-[9px] text-cyan-400 bg-cyan-400/10 px-1 py-0.5 rounded border border-cyan-400/20">OOS</span>`;
+
+        let html = `<td class="py-2.5 px-3 text-left font-mono">${yearBadge}</td>`;
+
+        row.months.forEach(m => {
+          if (m.status === 'future') {
+            html += `<td class="py-2 px-1"><div class="py-1 px-1.5 rounded bg-slate-900/40 text-slate-600 text-[10px]">&ndash;</div></td>`;
+          } else {
+            const rVal = m.r;
+            let bgClass = 'bg-slate-800/60 text-slate-400';
+            let titleText = `${m.month_name} ${row.year}: ${rVal >= 0 ? '+' : ''}${rVal.toFixed(2)} R (${m.trades} trades)`;
+
+            if (rVal >= 10.0) bgClass = 'bg-emerald-600 text-white font-bold';
+            else if (rVal >= 5.0) bgClass = 'bg-emerald-700/90 text-emerald-100 font-medium';
+            else if (rVal > 0.0) bgClass = 'bg-emerald-900/60 text-emerald-200';
+            else if (rVal === 0.0) bgClass = 'bg-slate-800/90 text-slate-400';
+            else if (rVal < 0.0) bgClass = 'bg-rose-700/80 text-rose-100 font-semibold';
+
+            const sign = rVal > 0 ? '+' : '';
+            html += `<td class="py-2 px-1" title="${titleText}">
+              <div class="py-1 px-1 rounded ${bgClass} text-[10px] transition hover:scale-105 cursor-pointer">
+                ${sign}${rVal.toFixed(1)}
+              </div>
+            </td>`;
+          }
+        });
+
+        const annSign = row.total_r > 0 ? '+' : '';
+        html += `<td class="py-2.5 px-3 text-right font-bold font-mono text-emerald-400">
+          ${annSign}${row.total_r.toFixed(2)} R
+        </td>`;
+
+        tr.innerHTML = html;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 4. RENDER TRADE MASTER LEDGER
+    let currentPage = 1;
+    const pageSize = 25;
+    let filteredTrades = [...trades];
+
+    function applyLedgerFilters() {
+      const searchVal = document.getElementById('ledger-search').value.trim().toLowerCase();
+      const filterVal = document.getElementById('ledger-filter').value;
+
+      filteredTrades = trades.filter(t => {
+        let matchesSearch = true;
+        if (searchVal) matchesSearch = t.date.toLowerCase().includes(searchVal);
+
+        let matchesFilter = true;
+        if (filterVal === 'TP') matchesFilter = t.r >= 2.0;
+        else if (filterVal === 'SL') matchesFilter = t.r <= -1.0;
+        else if (filterVal === '2026') matchesFilter = t.year === 2026;
+
+        return matchesSearch && matchesFilter;
+      });
+
+      currentPage = 1;
+      renderLedgerTable();
+    }
+
+    function renderLedgerTable() {
+      const tbody = document.getElementById('ledger-tbody');
+      tbody.innerHTML = '';
+
+      const totalItems = filteredTrades.length;
+      document.getElementById('ledger-total-count').innerText = totalItems;
+
+      const totalPages = Math.ceil(totalItems / pageSize) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      document.getElementById('ledger-current-page').innerText = currentPage;
+      document.getElementById('btn-prev-page').disabled = currentPage === 1;
+      document.getElementById('btn-next-page').disabled = currentPage === totalPages;
+
+      const startIndex = (currentPage - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, totalItems);
+      document.getElementById('ledger-page-range').innerText = totalItems > 0 ? `${startIndex + 1} - ${endIndex}` : '0 - 0';
+
+      const pageTrades = filteredTrades.slice(startIndex, endIndex);
+
+      pageTrades.forEach(t => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-brand-card/40 transition';
+
+        const dirBadge = t.direction === 'BUY' 
+          ? `<span class="text-cyan-400 bg-cyan-400/10 px-1.5 py-0.5 rounded text-[10px]">BUY</span>`
+          : `<span class="text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded text-[10px]">SELL</span>`;
+
+        let outcomeBadge = `<span class="text-emerald-400 font-medium">TAKE PROFIT</span>`;
+        if (t.exit_type === 'SL') outcomeBadge = `<span class="text-rose-400 font-medium">STOP LOSS</span>`;
+        else if (t.exit_type === 'TIMEOUT_16H') outcomeBadge = `<span class="text-slate-400 font-medium">TIMEOUT 16H</span>`;
+
+        const rSign = t.r > 0 ? '+' : '';
+        const rColor = t.r > 0 ? 'text-emerald-400' : 'text-rose-400';
+        const cumSign = t.cum_r > 0 ? '+' : '';
+
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 text-slate-500">#${t.id}</td>
+          <td class="py-2.5 px-3 text-slate-300 font-medium">${t.date} <span class="text-slate-500 text-[10px]">${t.time}</span></td>
+          <td class="py-2.5 px-3">${dirBadge}</td>
+          <td class="py-2.5 px-3 text-slate-300">${t.entry_price.toFixed(2)}</td>
+          <td class="py-2.5 px-3 text-slate-300">${t.exit_price.toFixed(2)}</td>
+          <td class="py-2.5 px-3">${outcomeBadge}</td>
+          <td class="py-2.5 px-3 text-slate-400">${t.duration_h}h</td>
+          <td class="py-2.5 px-3 text-right font-bold ${rColor}">${rSign}${t.r.toFixed(2)} R</td>
+          <td class="py-2.5 px-3 text-right font-bold text-white">${cumSign}${t.cum_r.toFixed(2)} R</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function changePage(delta) {
+      currentPage += delta;
+      renderLedgerTable();
+    }
+
+    document.getElementById('ledger-search').addEventListener('input', applyLedgerFilters);
+    document.getElementById('ledger-filter').addEventListener('change', applyLedgerFilters);
+
+    // INITIALIZATION
+    window.addEventListener('DOMContentLoaded', () => {
+      initLightweightChart();
+      renderHeatmap();
+      renderLedgerTable();
+    });
+  </script>
+</body>
+</html>

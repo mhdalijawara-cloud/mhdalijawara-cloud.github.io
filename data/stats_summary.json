@@ -1,10 +1,10 @@
 {
   "total_return_r": 643.85,
   "total_trades": 755,
-  "wins": 454,
-  "losses": 277,
+  "wins": 471,
+  "losses": 284,
   "timeouts": 24,
-  "win_rate_pct": 60.13,
+  "win_rate_pct": 62.38,
   "profit_factor": 3.299,
   "max_drawdown_r": 7.0,
   "payoff_ratio": "1:2 R:R",

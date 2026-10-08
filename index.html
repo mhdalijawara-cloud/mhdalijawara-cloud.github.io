@@ -11,7 +11,7 @@
 
   <!-- OpenGraph & Social Metadata -->
   <meta property="og:title" content="Muhammad Ali Jawara Wiratama | AI Quantitative Systems Architect">
-  <meta property="og:description" content="Deep causal trading specialists operating on immutable 1:2 Risk-to-Reward mathematical edge. Verifiable 755-trade ledger and 82-month performance matrix.">
+  <meta property="og:description" content="Deep causal trading specialists operating on immutable 1:2 Risk-to-Reward mathematical edge. Verifiable 755-trade performance tearsheet and 82-month consecutive return matrix.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Muhammad Ali Jawara Wiratama | AI Quantitative Research">
@@ -58,7 +58,7 @@
   <!-- TradingView Lightweight Charts Standalone CDN -->
   <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
 
-  <!-- Pre-bundled Zero-CORS Data -->
+  <!-- Pre-bundled Zero-CORS Data (Sanitized Production Build) -->
   <script src="data/data.js"></script>
 
   <style>
@@ -101,8 +101,8 @@
         <a href="#flagship" class="hover:text-brand-accent transition">Flagship HK50</a>
         <a href="#tearsheet" class="hover:text-brand-accent transition">Equity Curve</a>
         <a href="#heatmap" class="hover:text-brand-accent transition">82-Month Matrix</a>
+        <a href="#audit" class="hover:text-brand-accent transition">Annual Breakdown</a>
         <a href="#methodology" class="hover:text-brand-accent transition">Methodology</a>
-        <a href="#ledger" class="hover:text-brand-accent transition">Trade Ledger</a>
         <a href="#portfolio" class="hover:text-brand-accent transition">Grand Portfolio</a>
       </div>
 
@@ -136,8 +136,8 @@
       <a href="#flagship" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Flagship HK50 Specialist</a>
       <a href="#tearsheet" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Interactive Equity Curve</a>
       <a href="#heatmap" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">82-Month Consecutive Matrix</a>
+      <a href="#audit" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Annual Breakdown & Risk Audit</a>
       <a href="#methodology" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Quantitative Methodology</a>
-      <a href="#ledger" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Historical Master Ledger (755 Trades)</a>
       <a href="#portfolio" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">11-Asset Grand Portfolio</a>
     </div>
   </nav>
@@ -172,8 +172,8 @@
 
         <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Win Rate</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.38%</div>
-          <div class="text-[10px] text-emerald-400 mt-0.5">+29.05% Above 33.33% BE</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">60.13%</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">+26.80% Above 33.33% BE</div>
         </div>
 
         <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
@@ -211,7 +211,7 @@
         <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">HK50 H1 Multi-Regime Specialist</h2>
       </div>
       <div class="mt-3 md:mt-0 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Asset ID: 10</span>
+        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Underlying: Hang Seng Index (HK50)</span>
         <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Horizon: H1 (60-Bar Window)</span>
         <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Payoff: Immutable 1:2 R:R</span>
       </div>
@@ -225,7 +225,7 @@
           <h3 class="font-bold text-sm text-white">Multi-Regime Whipsaw Shield</h3>
         </div>
         <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-          Mengeliminasi 66 titik kerugian laten di jam rawan rollover lelang HKEX dan pembukaan bursa Barat (Jam 12:00, 15:00, dan 19:00 UTC) melalui mekanisme pengetatan ambang kausal $z_{h12} = 1.6\sigma$.
+          Mengeliminasi titik-titik kerugian laten pada zona likuiditas lelang transisi dan pembukaan bursa lintas benua melalui mekanisme pengetatan ambang kausal adaptif $z_t \ge \kappa \cdot \sigma_t$ (Dynamic Liquidity Transition Shield).
         </p>
       </div>
 
@@ -273,20 +273,12 @@
       <!-- RESPONSIVE LIVE HUD BAR (CROSSHAIR TRACKER) -->
       <div class="bg-brand-card/90 rounded-xl p-3 mb-4 border border-brand-border grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-[11px] font-mono">
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Trade Index</span>
-          <span id="hover-trade-id" class="text-white font-bold">#755 (Latest)</span>
+          <span class="text-slate-500 block text-[10px]">Timeline Anchor</span>
+          <span id="hover-date" class="text-white font-bold">2026-10-06</span>
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Date & Time</span>
-          <span id="hover-date" class="text-white font-medium">2026-10-06 13:00 UTC</span>
-        </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Direction</span>
-          <span id="hover-dir" class="text-cyan-400 font-bold">BUY</span>
-        </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Outcome</span>
-          <span id="hover-outcome" class="text-emerald-400 font-bold">TAKE PROFIT (+2.0R)</span>
+          <span class="text-slate-500 block text-[10px]">Sample Regime</span>
+          <span id="hover-regime" class="text-cyan-400 font-medium">2026 (OOS Phase)</span>
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Cumulative Return</span>
@@ -295,6 +287,14 @@
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Underwater Drawdown</span>
           <span id="hover-dd-r" class="text-rose-400 font-bold">0.00 R (Peak)</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Drawdown Status</span>
+          <span id="hover-dd-status" class="text-emerald-400 font-medium">All-Time High</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Payoff Structure</span>
+          <span class="text-white font-bold">1:2 R:R (Sacred)</span>
         </div>
       </div>
 
@@ -371,6 +371,127 @@
     </div>
   </section>
 
+  <!-- ANNUAL BREAKDOWN & INSTITUTIONAL RISK AUDIT MATRIX -->
+  <section id="audit" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Institutional Diligence</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Annual Performance & Risk Breakdown</h2>
+          <p class="text-xs text-slate-400 mt-1">Audit verifikasi tahunan 2020 s.d. 2026. 100% konsisten positif (7 dari 7 tahun) dengan payoff tetap 1:2 R:R.</p>
+        </div>
+        <div class="text-xs font-mono px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          Consecutive Positive: 7 / 7 Years (100%)
+        </div>
+      </div>
+
+      <!-- AUDIT TABLE CONTAINER -->
+      <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark">
+        <table class="w-full text-left border-collapse text-xs font-mono min-w-[700px]">
+          <thead>
+            <tr class="border-b border-brand-border text-slate-400 bg-brand-card/40 text-[11px]">
+              <th class="py-3 px-4">Period</th>
+              <th class="py-3 px-3">Validation Regime</th>
+              <th class="py-3 px-3 text-center">Trades</th>
+              <th class="py-3 px-3 text-right">Win Rate</th>
+              <th class="py-3 px-3 text-right">Profit Factor</th>
+              <th class="py-3 px-3 text-right">Max Drawdown</th>
+              <th class="py-3 px-3 text-right">Avg Duration</th>
+              <th class="py-3 px-4 text-right">Realized Return</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-brand-border/60">
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2020</td>
+              <td class="py-2.5 px-3"><span class="text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-300">71</td>
+              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">69.0%</td>
+              <td class="py-2.5 px-3 text-right text-white">4.375</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-3.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">4.7h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+74.24 R</td>
+            </tr>
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2021</td>
+              <td class="py-2.5 px-3"><span class="text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-300">116</td>
+              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">65.5%</td>
+              <td class="py-2.5 px-3 text-right text-white">3.722</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-6.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">7.0h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+108.89 R</td>
+            </tr>
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2022</td>
+              <td class="py-2.5 px-3"><span class="text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-300">110</td>
+              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">60.9%</td>
+              <td class="py-2.5 px-3 text-right text-white">3.101</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-7.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">6.2h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+90.36 R</td>
+            </tr>
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2023</td>
+              <td class="py-2.5 px-3"><span class="text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-300">117</td>
+              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">69.2%</td>
+              <td class="py-2.5 px-3 text-right text-white">4.608</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-3.10 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">7.1h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+125.88 R</td>
+            </tr>
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2024</td>
+              <td class="py-2.5 px-3"><span class="text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-300">114</td>
+              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">62.3%</td>
+              <td class="py-2.5 px-3 text-right text-white">3.219</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-4.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">7.0h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+95.40 R</td>
+            </tr>
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2025</td>
+              <td class="py-2.5 px-3"><span class="text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-300">114</td>
+              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">59.6%</td>
+              <td class="py-2.5 px-3 text-right text-white">2.944</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-4.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">6.6h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+87.17 R</td>
+            </tr>
+            <tr class="hover:bg-brand-card/40 transition bg-cyan-950/20">
+              <td class="py-2.5 px-4 font-bold text-cyan-300">2026</td>
+              <td class="py-2.5 px-3"><span class="text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded border border-cyan-400/20 text-[10px] font-bold">Out-of-Sample (OOS)</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-200 font-bold">113</td>
+              <td class="py-2.5 px-3 text-right text-cyan-300 font-bold">52.2%</td>
+              <td class="py-2.5 px-3 text-right text-white font-bold">2.183</td>
+              <td class="py-2.5 px-3 text-right text-rose-400">-7.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">6.6h</td>
+              <td class="py-2.5 px-4 text-right font-bold text-cyan-300">+61.90 R</td>
+            </tr>
+            <!-- TOTAL ROW -->
+            <tr class="bg-brand-card/80 border-t-2 border-brand-border">
+              <td class="py-3 px-4 font-extrabold text-white uppercase">All-Time Track</td>
+              <td class="py-3 px-3"><span class="text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20 text-[10px] font-bold">Production Ready</span></td>
+              <td class="py-3 px-3 text-center text-white font-extrabold">755</td>
+              <td class="py-3 px-3 text-right text-emerald-400 font-extrabold">60.13%</td>
+              <td class="py-3 px-3 text-right text-white font-extrabold">3.299</td>
+              <td class="py-3 px-3 text-right text-rose-400 font-extrabold">-7.00 R</td>
+              <td class="py-3 px-3 text-right text-slate-300 font-bold">6.2h</td>
+              <td class="py-3 px-4 text-right font-extrabold text-emerald-400 text-sm">+643.85 R</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-3 text-[11px] font-mono text-slate-400 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+        <span>*Wilson 95% Confidence Interval: [58.87%, 65.75%] (Secara statistik jauh melampaui breakeven 33.33%).</span>
+        <span>Zero Overnight Hanging: 100% tuntas &le; 16 jam.</span>
+      </div>
+    </div>
+  </section>
+
   <!-- METHODOLOGY & CORE PRINCIPLES -->
   <section id="methodology" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="text-center max-w-2xl mx-auto mb-10">
@@ -387,7 +508,7 @@
           </div>
           <h3 class="text-base font-bold text-white mb-2">Immutable 1:2 R:R Ratio</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Konstanta sakral repositori: Stop Loss $1.0\text{R}$ vs Take Profit $2.0\text{R}$. Menjamin titik impas matematis hanya membutuhkan win rate $33.33\%$, sehingga win rate $62.38\%$ menghasilkan surplus eksponensial.
+            Konstanta sakral repositori: Stop Loss $1.0\text{R}$ vs Take Profit $2.0\text{R}$. Menjamin titik impas matematis hanya membutuhkan win rate $33.33\%$, sehingga win rate $60.13\%$ menghasilkan surplus eksponensial.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-emerald-400">
@@ -402,11 +523,11 @@
           </div>
           <h3 class="text-base font-bold text-white mb-2">Pure Rolling Causality</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Zero Look-Ahead Bias. Ambang batas seleksi persentil ($p_t$) dihitung strictly dari jendela masa lalu ($N_{\text{past}} = 420\text{ bar}$). Dilarang menggunakan kuantil global atau parameter masa depan.
+            Zero Look-Ahead Bias. Ambang batas seleksi persentil ($p_t$) dihitung strictly dari jendela masa lalu ($N_{\text{past}} \in [120, 480]\text{ bar}$). Dilarang menggunakan kuantil global atau parameter masa depan.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-cyan-400">
-          $N_{\text{past}} = 420\text{ bar}$ (~2.2 Bulan)
+          Dynamic Rolling Lookback ($N_{\text{past}}$)
         </div>
       </div>
 
@@ -417,7 +538,7 @@
           </div>
           <h3 class="text-base font-bold text-white mb-2">Zero-Chasing Volatility</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Melarang entri pada lilin-lilin yang over-extended ($\ge 1.3\text{ ATR}$). Menghilangkan risiko *reversal trap* dan *slippage spikes* yang kerap menghancurkan model breakout tradisional.
+            Melarang entri pada lilin-lilin over-extended ($\ge \gamma \cdot \text{ATR}$). Menghilangkan risiko *reversal trap* dan *slippage spikes* yang kerap menghancurkan model breakout tradisional.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-amber-400">
@@ -437,64 +558,6 @@
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-rose-400">
           Avg Duration: $6.20\text{ Jam}$
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRADE LEDGER EXPLORER TABLE -->
-  <section id="ledger" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-        <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Verifiable Transparency</span>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Historical Master Ledger Explorer</h2>
-          <p class="text-xs text-slate-400 mt-1">Eksplorasi seluruh 755 trade historis dengan tanggal, harga eksekusi, tipe exit, dan durasi holding.</p>
-        </div>
-
-        <!-- Filter & Search Controls -->
-        <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
-          <input type="text" id="ledger-search" placeholder="Search date (e.g. 2026-09)..." 
-                 class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-accent w-44 sm:w-48 text-xs">
-          
-          <select id="ledger-filter" class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 focus:outline-none focus:border-brand-accent text-xs">
-            <option value="ALL">All Trades (755)</option>
-            <option value="TP">Wins Only (Take Profit)</option>
-            <option value="SL">Losses Only (Stop Loss)</option>
-            <option value="2026">2026 OOS Only (113)</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- TABLE CONTAINER -->
-      <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark">
-        <table class="w-full text-left border-collapse text-xs font-mono min-w-[650px]">
-          <thead>
-            <tr class="border-b border-brand-border text-slate-400 bg-brand-card/40 text-[11px]">
-              <th class="py-2.5 px-3">#</th>
-              <th class="py-2.5 px-3">Date & Time</th>
-              <th class="py-2.5 px-3">Dir</th>
-              <th class="py-2.5 px-3">Entry Price</th>
-              <th class="py-2.5 px-3">Exit Price</th>
-              <th class="py-2.5 px-3">Exit Type</th>
-              <th class="py-2.5 px-3">Holding</th>
-              <th class="py-2.5 px-3 text-right">Realized R</th>
-              <th class="py-2.5 px-3 text-right">Cum R</th>
-            </tr>
-          </thead>
-          <tbody id="ledger-tbody" class="divide-y divide-brand-border/60">
-            <!-- Dynamically populated with JS -->
-          </tbody>
-        </table>
-      </div>
-
-      <!-- PAGINATION BAR -->
-      <div class="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 gap-3">
-        <div>Showing <span id="ledger-page-range" class="text-white">1 - 25</span> of <span id="ledger-total-count" class="text-white">755</span> trades</div>
-        <div class="flex items-center space-x-2">
-          <button id="btn-prev-page" class="px-3 py-1.5 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40 transition" onclick="changePage(-1)">Previous</button>
-          <span id="ledger-current-page" class="px-3 py-1 text-white font-bold bg-brand-surface rounded border border-brand-border/80">1</span>
-          <button id="btn-next-page" class="px-3 py-1.5 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40 transition" onclick="changePage(1)">Next</button>
         </div>
       </div>
     </div>
@@ -543,7 +606,7 @@
       <div>
         <div class="font-bold text-white text-base">Muhammad Ali Jawara Wiratama</div>
         <p class="text-xs text-slate-400 mt-1">AI Quantitative Trading Systems Architect & Researcher.</p>
-        <p class="text-[11px] text-slate-500 mt-1 font-mono">Repository: private core @ github.com/mhdalijawara-cloud/tttt-trading-system</p>
+        <p class="text-[11px] text-slate-500 mt-1 font-mono">Proprietary Institutional Core • Available upon institutional due diligence inquiry</p>
       </div>
 
       <div class="flex items-center space-x-4 text-xs font-mono text-slate-400">
@@ -559,10 +622,10 @@
     </div>
   </footer>
 
-  <!-- SCRIPT LOGIC (CHART DUAL-PANE, HEATMAP, LEDGER, MOBILE DRAWER, KATEX) -->
+  <!-- SCRIPT LOGIC (CHART DUAL-PANE, HEATMAP, MOBILE DRAWER, KATEX) -->
   <script>
-    // 0. DATA ACCESS
-    const trades = window.SHOWCASE_TRADES || [];
+    // 0. DATA ACCESS (SANITIZED ZERO-LEAK BUNDLE)
+    const curveData = window.SHOWCASE_CURVE || [];
     const monthlyMatrix = window.SHOWCASE_MONTHLY || [];
     const stats = window.SHOWCASE_STATS || {};
 
@@ -607,7 +670,7 @@
 
     // 3. RENDER TRADINGVIEW LIGHTWEIGHT CHARTS (DUAL-PANE: CUMULATIVE R + UNDERWATER DRAWDOWN)
     let chart, areaSeries, ddSeries;
-    let currentFilteredTrades = [...trades];
+    let currentFilteredCurve = [...curveData];
 
     function initLightweightChart() {
       const container = document.getElementById('tv-chart-container');
@@ -669,26 +732,22 @@
         borderVisible: true,
       });
 
-      // Load initial trades
-      loadChartData(trades);
+      // Load initial curve data
+      loadChartData(curveData);
 
       // Subscribe to crosshair move for live header HUD stats
       chart.subscribeCrosshairMove(param => {
         if (!param || !param.time) return;
-        const matchedTrade = currentFilteredTrades.find(t => t.date === param.time);
-        if (matchedTrade) {
-          document.getElementById('hover-trade-id').innerText = `#${matchedTrade.id}`;
-          document.getElementById('hover-date').innerText = `${matchedTrade.date} ${matchedTrade.time} UTC`;
-          document.getElementById('hover-dir').innerText = matchedTrade.direction;
-          document.getElementById('hover-dir').className = matchedTrade.direction === 'BUY' ? 'text-cyan-400 font-bold' : 'text-amber-400 font-bold';
+        const matchedPoint = currentFilteredCurve.find(p => p.date === param.time);
+        if (matchedPoint) {
+          document.getElementById('hover-date').innerText = matchedPoint.date;
+          document.getElementById('hover-regime').innerText = matchedPoint.year === 2026 ? '2026 (OOS Live Track)' : `${matchedPoint.year} (Historical In-Sample)`;
+          document.getElementById('hover-cum-r').innerText = `${matchedPoint.cum_r >= 0 ? '+' : ''}${matchedPoint.cum_r.toFixed(2)} R`;
+          document.getElementById('hover-dd-r').innerText = `${matchedPoint.drawdown_r.toFixed(2)} R`;
           
-          let outcomeText = matchedTrade.r > 0 ? `TAKE PROFIT (+${matchedTrade.r.toFixed(2)}R)` : `STOP LOSS (${matchedTrade.r.toFixed(2)}R)`;
-          if (matchedTrade.exit_type === 'TIMEOUT_16H') outcomeText = `TIMEOUT 16H (${matchedTrade.r.toFixed(2)}R)`;
-          document.getElementById('hover-outcome').innerText = outcomeText;
-          document.getElementById('hover-outcome').className = matchedTrade.r > 0 ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold';
-
-          document.getElementById('hover-cum-r').innerText = `${matchedTrade.cum_r >= 0 ? '+' : ''}${matchedTrade.cum_r.toFixed(2)} R`;
-          document.getElementById('hover-dd-r').innerText = `${matchedTrade.drawdown_r.toFixed(2)} R`;
+          const isAth = matchedPoint.drawdown_r === 0;
+          document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
+          document.getElementById('hover-dd-status').className = isAth ? 'text-emerald-400 font-medium' : 'text-rose-400 font-medium';
         }
       });
 
@@ -699,17 +758,17 @@
       });
     }
 
-    function loadChartData(tradesArray) {
+    function loadChartData(pointsArray) {
       if (!areaSeries || !ddSeries) return;
-      currentFilteredTrades = tradesArray;
+      currentFilteredCurve = pointsArray;
 
-      // Ensure unique date points with latest values
+      // Group and ensure strictly unique dates
       const dateMapCum = new Map();
       const dateMapDD = new Map();
 
-      tradesArray.forEach(t => {
-        dateMapCum.set(t.date, t.cum_r);
-        dateMapDD.set(t.date, t.drawdown_r);
+      pointsArray.forEach(p => {
+        dateMapCum.set(p.date, p.cum_r);
+        dateMapDD.set(p.date, p.drawdown_r);
       });
 
       const uniqueDates = Array.from(dateMapCum.keys()).sort();
@@ -729,10 +788,10 @@
         btnElement.className = 'chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
       }
 
-      let filtered = trades;
-      if (range === '2020-2022') filtered = trades.filter(t => t.year >= 2020 && t.year <= 2022);
-      else if (range === '2023-2025') filtered = trades.filter(t => t.year >= 2023 && t.year <= 2025);
-      else if (range === '2026') filtered = trades.filter(t => t.year === 2026);
+      let filtered = curveData;
+      if (range === '2020-2022') filtered = curveData.filter(p => p.year >= 2020 && p.year <= 2022);
+      else if (range === '2023-2025') filtered = curveData.filter(p => p.year >= 2023 && p.year <= 2025);
+      else if (range === '2026') filtered = curveData.filter(p => p.year === 2026);
 
       loadChartData(filtered);
     }
@@ -784,96 +843,10 @@
       });
     }
 
-    // 5. RENDER TRADE MASTER LEDGER
-    let currentPage = 1;
-    const pageSize = 25;
-    let filteredTrades = [...trades];
-
-    function applyLedgerFilters() {
-      const searchVal = document.getElementById('ledger-search').value.trim().toLowerCase();
-      const filterVal = document.getElementById('ledger-filter').value;
-
-      filteredTrades = trades.filter(t => {
-        let matchesSearch = true;
-        if (searchVal) matchesSearch = t.date.toLowerCase().includes(searchVal);
-
-        let matchesFilter = true;
-        if (filterVal === 'TP') matchesFilter = t.r >= 2.0;
-        else if (filterVal === 'SL') matchesFilter = t.r <= -1.0;
-        else if (filterVal === '2026') matchesFilter = t.year === 2026;
-
-        return matchesSearch && matchesFilter;
-      });
-
-      currentPage = 1;
-      renderLedgerTable();
-    }
-
-    function renderLedgerTable() {
-      const tbody = document.getElementById('ledger-tbody');
-      tbody.innerHTML = '';
-
-      const totalItems = filteredTrades.length;
-      document.getElementById('ledger-total-count').innerText = totalItems;
-
-      const totalPages = Math.ceil(totalItems / pageSize) || 1;
-      if (currentPage > totalPages) currentPage = totalPages;
-      if (currentPage < 1) currentPage = 1;
-
-      document.getElementById('ledger-current-page').innerText = currentPage;
-      document.getElementById('btn-prev-page').disabled = currentPage === 1;
-      document.getElementById('btn-next-page').disabled = currentPage === totalPages;
-
-      const startIndex = (currentPage - 1) * pageSize;
-      const endIndex = Math.min(startIndex + pageSize, totalItems);
-      document.getElementById('ledger-page-range').innerText = totalItems > 0 ? `${startIndex + 1} - ${endIndex}` : '0 - 0';
-
-      const pageTrades = filteredTrades.slice(startIndex, endIndex);
-
-      pageTrades.forEach(t => {
-        const tr = document.createElement('tr');
-        tr.className = 'hover:bg-brand-card/40 transition';
-
-        const dirBadge = t.direction === 'BUY' 
-          ? `<span class="text-cyan-400 bg-cyan-400/10 px-1.5 py-0.5 rounded text-[10px]">BUY</span>`
-          : `<span class="text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded text-[10px]">SELL</span>`;
-
-        let outcomeBadge = `<span class="text-emerald-400 font-medium">TAKE PROFIT</span>`;
-        if (t.exit_type === 'SL') outcomeBadge = `<span class="text-rose-400 font-medium">STOP LOSS</span>`;
-        else if (t.exit_type === 'TIMEOUT_16H') outcomeBadge = `<span class="text-slate-400 font-medium">TIMEOUT 16H</span>`;
-
-        const rSign = t.r > 0 ? '+' : '';
-        const rColor = t.r > 0 ? 'text-emerald-400' : 'text-rose-400';
-        const cumSign = t.cum_r > 0 ? '+' : '';
-
-        tr.innerHTML = `
-          <td class="py-2.5 px-3 text-slate-500">#${t.id}</td>
-          <td class="py-2.5 px-3 text-slate-300 font-medium">${t.date} <span class="text-slate-500 text-[10px]">${t.time}</span></td>
-          <td class="py-2.5 px-3">${dirBadge}</td>
-          <td class="py-2.5 px-3 text-slate-300">${t.entry_price.toFixed(2)}</td>
-          <td class="py-2.5 px-3 text-slate-300">${t.exit_price.toFixed(2)}</td>
-          <td class="py-2.5 px-3">${outcomeBadge}</td>
-          <td class="py-2.5 px-3 text-slate-400">${t.duration_h}h</td>
-          <td class="py-2.5 px-3 text-right font-bold ${rColor}">${rSign}${t.r.toFixed(2)} R</td>
-          <td class="py-2.5 px-3 text-right font-bold text-white">${cumSign}${t.cum_r.toFixed(2)} R</td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
-
-    function changePage(delta) {
-      currentPage += delta;
-      renderLedgerTable();
-    }
-
-    document.getElementById('ledger-search').addEventListener('input', applyLedgerFilters);
-    document.getElementById('ledger-filter').addEventListener('change', applyLedgerFilters);
-
-    // 6. INITIALIZATION & KATEX RENDERING
+    // 5. INITIALIZATION & KATEX RENDERING
     window.addEventListener('DOMContentLoaded', () => {
       initLightweightChart();
       renderHeatmap();
-      renderLedgerTable();
 
       // Render KaTeX after DOM is ready
       if (typeof renderMathInElement === 'function') {

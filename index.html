@@ -4,13 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Ali Jawara Wiratama | AI Quantitative Researcher & Systems Architect</title>
-  <meta name="description" content="Personal Quantitative Research Portfolio of Muhammad Ali Jawara Wiratama. High-precision AI trading specialists operating on immutable 1:2 Risk-to-Reward mathematical edge.">
+  <meta name="description" content="Personal Quantitative Research Portfolio of Muhammad Ali Jawara Wiratama. Deep causal AI trading specialists operating on immutable 1:2 Risk-to-Reward mathematical edge.">
   
+  <!-- Favicon SVG Data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080c14'/%3E%3Cpath d='M6 22 L13 14 L19 18 L26 8' stroke='%2310b981' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='26' cy='8' r='2' fill='%2306b6d4'/%3E%3C/svg%3E">
+
+  <!-- OpenGraph & Social Metadata -->
+  <meta property="og:title" content="Muhammad Ali Jawara Wiratama | AI Quantitative Systems Architect">
+  <meta property="og:description" content="Deep causal trading specialists operating on immutable 1:2 Risk-to-Reward mathematical edge. Verifiable 755-trade ledger and 82-month performance matrix.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Ali Jawara Wiratama | AI Quantitative Research">
+  <meta name="twitter:description" content="Deep causal AI trading systems and 1:2 Risk-to-Reward quantitative research portfolio.">
+
   <!-- Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- KaTeX CDN for LaTeX Mathematical Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -39,46 +55,49 @@
     }
   </script>
 
-  <!-- TradingView Lightweight Charts standalone CDN -->
+  <!-- TradingView Lightweight Charts Standalone CDN -->
   <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Pre-bundled Zero-CORS Data -->
   <script src="data/data.js"></script>
 
   <style>
-    /* Custom scrollbars and glow effects */
+    /* Custom scrollbars and styling */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #080c14; }
     ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #334155; }
-    
-    .glow-cyan {
-      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+
+    /* Sticky column drop-shadow helper */
+    .sticky-col-shadow {
+      box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.45);
     }
-    .glow-emerald {
-      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+
+    /* KaTeX equation display tweaks */
+    .katex {
+      font-size: 1.05em;
     }
   </style>
 </head>
 <body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-black">
 
-  <!-- NAVIGATION BAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border">
+  <!-- TOP NAVIGATION BAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-accent to-emerald-500 flex items-center justify-center text-black font-bold text-sm shadow-md">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-accent to-emerald-500 flex items-center justify-center text-black font-extrabold text-sm shadow-md group-hover:scale-105 transition-transform">
           JW
         </div>
         <div>
-          <span class="font-bold text-slate-100 tracking-tight text-sm sm:text-base">Muhammad Ali Jawara Wiratama</span>
+          <span class="font-bold text-slate-100 tracking-tight text-sm sm:text-base group-hover:text-white transition">Muhammad Ali Jawara Wiratama</span>
           <span class="hidden sm:inline-block ml-2 text-xs font-mono text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded border border-brand-accent/20">AI Quant Architect</span>
         </div>
-      </div>
+      </a>
       
-      <div class="hidden md:flex items-center space-x-6 text-xs uppercase tracking-wider font-medium text-slate-400">
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-6 text-xs uppercase tracking-wider font-medium text-slate-400">
         <a href="#flagship" class="hover:text-brand-accent transition">Flagship HK50</a>
         <a href="#tearsheet" class="hover:text-brand-accent transition">Equity Curve</a>
         <a href="#heatmap" class="hover:text-brand-accent transition">82-Month Matrix</a>
@@ -87,19 +106,45 @@
         <a href="#portfolio" class="hover:text-brand-accent transition">Grand Portfolio</a>
       </div>
 
-      <div class="flex items-center space-x-3">
+      <!-- Action Buttons & Mobile Toggle -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- Native Inline SVG GitHub Link -->
         <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center space-x-1.5 text-xs font-medium bg-brand-card hover:bg-slate-800 text-slate-300 hover:text-white px-3 py-1.5 rounded-md border border-brand-border transition">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          <span>GitHub</span>
+           class="inline-flex items-center space-x-1.5 text-xs font-medium bg-brand-card hover:bg-slate-800 text-slate-300 hover:text-white px-3 py-1.5 rounded-md border border-brand-border transition shadow-sm"
+           title="GitHub Profile">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span class="hidden sm:inline">GitHub</span>
         </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu"
+                class="lg:hidden p-2 rounded-md bg-brand-card text-slate-300 hover:text-white border border-brand-border focus:outline-none focus:ring-1 focus:ring-brand-accent">
+          <svg id="hamburger-icon" class="w-5 h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="hidden lg:hidden border-b border-brand-border bg-brand-dark/95 backdrop-blur-xl px-4 pt-3 pb-5 space-y-2.5 transition-all">
+      <a href="#flagship" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Flagship HK50 Specialist</a>
+      <a href="#tearsheet" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Interactive Equity Curve</a>
+      <a href="#heatmap" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">82-Month Consecutive Matrix</a>
+      <a href="#methodology" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Quantitative Methodology</a>
+      <a href="#ledger" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">Historical Master Ledger (755 Trades)</a>
+      <a href="#portfolio" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-accent hover:bg-brand-card">11-Asset Grand Portfolio</a>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="relative rounded-2xl bg-gradient-to-b from-brand-surface to-brand-dark p-6 sm:p-10 border border-brand-border overflow-hidden">
+  <section class="pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="relative rounded-2xl bg-gradient-to-b from-brand-surface to-brand-dark p-6 sm:p-10 border border-brand-border overflow-hidden shadow-2xl">
       <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -108,50 +153,50 @@
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>100% Causal • Zero Look-Ahead Bias • Pure R-Metrics</span>
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
           Designing Mathematical Alpha Through Deep Causal Quant Systems
         </h1>
-        <p class="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed">
+        <p class="mt-4 text-xs sm:text-base text-slate-400 leading-relaxed">
           Quantitative Trading Systems Research Portfolio of <strong>Muhammad Ali Jawara Wiratama</strong>. 
           Specializing in deep temporal Transformer encoders, Stiefel manifold regularizers, and immutable <strong>1:2 Risk-to-Reward</strong> execution architectures.
         </p>
       </div>
 
-      <!-- HIGHLIGHT METRIC CARDS -->
+      <!-- HIGHLIGHT METRIC CARDS (RESPONSIVE GRID) -->
       <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Total Realized</div>
-          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-total-r">+643.85 R</div>
+        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Total Realized</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-total-r">+643.85 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">755 Historical Trades</div>
         </div>
 
-        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Win Rate</div>
-          <div class="text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.38%</div>
+        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Win Rate</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.38%</div>
           <div class="text-[10px] text-emerald-400 mt-0.5">+29.05% Above 33.33% BE</div>
         </div>
 
-        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Profit Factor</div>
-          <div class="text-2xl font-bold font-mono text-white mt-1" id="stat-pf">3.299</div>
+        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Profit Factor</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-pf">3.299</div>
           <div class="text-[10px] text-slate-500 mt-0.5">Gross Win / Gross Loss</div>
         </div>
 
-        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">OOS 2026 Return</div>
-          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-oos-r">+61.91 R</div>
+        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">OOS 2026 Return</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-oos-r">+61.91 R</div>
           <div class="text-[10px] text-brand-accent mt-0.5">#1 Rank in Portfolio</div>
         </div>
 
-        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Max Drawdown</div>
-          <div class="text-2xl font-bold font-mono text-rose-400 mt-1" id="stat-max-dd">-7.00 R</div>
+        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Max Drawdown</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-rose-400 mt-1" id="stat-max-dd">-7.00 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">6.8 Years Track Record</div>
         </div>
 
-        <div class="bg-brand-card/70 backdrop-blur p-4 rounded-xl border border-brand-border">
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-mono">Non-Minus Months</div>
-          <div class="text-2xl font-bold font-mono text-white mt-1">95.12%</div>
+        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Non-Minus Months</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1">95.12%</div>
           <div class="text-[10px] text-emerald-400 mt-0.5">78 of 82 Months ≥ 0 R</div>
         </div>
       </div>
@@ -159,13 +204,13 @@
   </section>
 
   <!-- FLAGSHIP SPECIALIST OVERVIEW -->
-  <section id="flagship" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <section id="flagship" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-6">
       <div>
         <span class="text-xs font-mono uppercase tracking-widest text-brand-accent">Flagship Model Specification</span>
         <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">HK50 H1 Multi-Regime Specialist</h2>
       </div>
-      <div class="mt-3 md:mt-0 flex items-center space-x-2 text-xs font-mono text-slate-400">
+      <div class="mt-3 md:mt-0 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
         <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Asset ID: 10</span>
         <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Horizon: H1 (60-Bar Window)</span>
         <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Payoff: Immutable 1:2 R:R</span>
@@ -174,101 +219,132 @@
 
     <!-- SPEC GRID -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+      <div class="bg-brand-card p-5 sm:p-6 rounded-xl border border-brand-border">
         <div class="flex items-center space-x-2 text-brand-accent mb-3">
-          <i data-lucide="shield-check" class="w-5 h-5"></i>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           <h3 class="font-bold text-sm text-white">Multi-Regime Whipsaw Shield</h3>
         </div>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           Mengeliminasi 66 titik kerugian laten di jam rawan rollover lelang HKEX dan pembukaan bursa Barat (Jam 12:00, 15:00, dan 19:00 UTC) melalui mekanisme pengetatan ambang kausal $z_{h12} = 1.6\sigma$.
         </p>
       </div>
 
-      <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+      <div class="bg-brand-card p-5 sm:p-6 rounded-xl border border-brand-border">
         <div class="flex items-center space-x-2 text-emerald-400 mb-3">
-          <i data-lucide="clock" class="w-5 h-5"></i>
-          <h3 class="font-bold text-sm text-white">Velocity Guard (&le; 16 Jam)</h3>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <h3 class="font-bold text-sm text-white">Velocity Guard ($\le 16\text{ Jam}$)</h3>
         </div>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           $100\%$ posisi trading tuntas atau ditutup paksa mark-to-market secara ketat pada jam ke-16. Rata-rata durasi mengambang posisi historis adalah <strong>6.20 jam</strong>, membebaskan psikologi dari risiko overnight/weekend berkepanjangan.
         </p>
       </div>
 
-      <div class="bg-brand-card p-5 rounded-xl border border-brand-border">
+      <div class="bg-brand-card p-5 sm:p-6 rounded-xl border border-brand-border">
         <div class="flex items-center space-x-2 text-brand-gold mb-3">
-          <i data-lucide="git-commit" class="w-5 h-5"></i>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
           <h3 class="font-bold text-sm text-white">Orthogonal Splay Head</h3>
         </div>
-        <p class="text-xs text-slate-400 leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           Menggunakan Stiefel Manifold projection dengan Orthogonal Regularizer ($\mathcal{L}_{\text{ortho}}$) yang mengunci korelasi antar-head Long dan Short mendekati nol ($\rho < 0.011$), memastikan separabilitas arah 50:50 yang independen.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- INTERACTIVE TEAR SHEET (TRADINGVIEW LIGHTWEIGHT CHARTS) -->
-  <section id="tearsheet" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="bg-brand-surface p-6 sm:p-8 rounded-2xl border border-brand-border">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+  <!-- INTERACTIVE TEAR SHEET (TRADINGVIEW LIGHTWEIGHT CHARTS DUAL-PANE) -->
+  <section id="tearsheet" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
         <div>
           <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Interactive Tear Sheet</span>
           <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Cumulative R-Multiple Curve & Drawdown</h2>
-          <p class="text-xs text-slate-400 mt-1">Audit run sekuensial kronologis 755 trade bar-demi-bar (Januari 2020 &ndash; Oktober 2026).</p>
+          <p class="text-xs text-slate-400 mt-1">Audit run sekuensial kronologis 755 trade bar-demi-bar (Januari 2020 – Oktober 2026).</p>
         </div>
 
-        <div class="flex items-center space-x-2 text-xs font-mono" id="chart-filter-buttons">
-          <button onclick="filterChart('all')" class="chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">All (755 Trades)</button>
-          <button onclick="filterChart('2020-2022')" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2020–2022</button>
-          <button onclick="filterChart('2023-2025')" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2023–2025</button>
-          <button onclick="filterChart('2026')" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2026 (OOS)</button>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-mono" id="chart-filter-buttons">
+          <button onclick="filterChart('all', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">All (755 Trades)</button>
+          <button onclick="filterChart('2020-2022', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2020–2022</button>
+          <button onclick="filterChart('2023-2025', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2023–2025</button>
+          <button onclick="filterChart('2026', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2026 (OOS)</button>
         </div>
       </div>
 
-      <!-- LIVE HOVER STATS BAR -->
-      <div class="bg-brand-card/90 rounded-xl p-3 mb-4 border border-brand-border flex flex-wrap items-center justify-between text-xs font-mono text-slate-300">
-        <div>Trade ID: <span id="hover-trade-id" class="text-white font-bold">#755 (Latest)</span></div>
-        <div>Date & Time: <span id="hover-date" class="text-white">2026-10-06 13:00 UTC</span></div>
-        <div>Direction: <span id="hover-dir" class="text-cyan-400 font-bold">BUY</span></div>
-        <div>Outcome: <span id="hover-outcome" class="text-emerald-400 font-bold">TAKE PROFIT (+2.0R)</span></div>
-        <div>Cumulative Net: <span id="hover-cum-r" class="text-emerald-400 font-bold">+643.85 R</span></div>
-        <div>Drawdown: <span id="hover-dd-r" class="text-rose-400 font-bold">0.00 R (Peak)</span></div>
+      <!-- RESPONSIVE LIVE HUD BAR (CROSSHAIR TRACKER) -->
+      <div class="bg-brand-card/90 rounded-xl p-3 mb-4 border border-brand-border grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-[11px] font-mono">
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Trade Index</span>
+          <span id="hover-trade-id" class="text-white font-bold">#755 (Latest)</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Date & Time</span>
+          <span id="hover-date" class="text-white font-medium">2026-10-06 13:00 UTC</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Direction</span>
+          <span id="hover-dir" class="text-cyan-400 font-bold">BUY</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Outcome</span>
+          <span id="hover-outcome" class="text-emerald-400 font-bold">TAKE PROFIT (+2.0R)</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Cumulative Return</span>
+          <span id="hover-cum-r" class="text-emerald-400 font-bold">+643.85 R</span>
+        </div>
+        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+          <span class="text-slate-500 block text-[10px]">Underwater Drawdown</span>
+          <span id="hover-dd-r" class="text-rose-400 font-bold">0.00 R (Peak)</span>
+        </div>
       </div>
 
-      <!-- CHART CONTAINER -->
-      <div class="w-full h-[420px] rounded-xl overflow-hidden bg-brand-dark border border-brand-border" id="tv-chart-container">
+      <!-- CHART VISUALIZATION CONTAINER -->
+      <div class="relative w-full h-[460px] rounded-xl overflow-hidden bg-brand-dark border border-brand-border" id="tv-chart-container">
         <!-- Rendered by TradingView Lightweight Charts -->
       </div>
       
-      <div class="mt-3 flex items-center justify-between text-[11px] font-mono text-slate-500">
-        <span>*Dihitung strictly dalam unit R-Multiple murni (Risk 1.0R : Reward 2.0R). Tidak dimanipulasi ukuran lot atau compounding saldo.</span>
-        <span>Rendered with TradingView Lightweight Charts v4.1</span>
+      <!-- SUB-CAPTION & SCALE LEGEND -->
+      <div class="mt-3.5 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] font-mono text-slate-400 gap-2">
+        <div class="flex items-center space-x-4">
+          <span class="inline-flex items-center space-x-1.5">
+            <span class="w-3 h-1.5 rounded-sm bg-emerald-500 inline-block"></span>
+            <span>Cumulative R-Multiple (Top Scale)</span>
+          </span>
+          <span class="inline-flex items-center space-x-1.5">
+            <span class="w-3 h-1.5 rounded-sm bg-rose-500 inline-block"></span>
+            <span>Underwater Drawdown (Bottom Scale)</span>
+          </span>
+        </div>
+        <span class="text-slate-500 text-[10px] sm:text-[11px]">Powered by TradingView Lightweight Charts v4.1</span>
       </div>
     </div>
   </section>
 
   <!-- MONTHLY RETURN HEATMAP (82 CALENDAR MONTHS) -->
-  <section id="heatmap" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="bg-brand-surface p-6 sm:p-8 rounded-2xl border border-brand-border">
-      <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+  <section id="heatmap" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
+      <div class="mb-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div>
           <span class="text-xs font-mono uppercase tracking-widest text-brand-accent">Calendar Integrity Matrix</span>
           <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">82-Month Consecutive Performance Heatmap</h2>
           <p class="text-xs text-slate-400 mt-1">73 Bulan Menang (89.02%), 5 Bulan Impas (6.10%), Hanya 4 Bulan Defisit (4.88%).</p>
         </div>
-        <div class="flex items-center space-x-3 text-xs font-mono">
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-600"></span><span class="text-slate-300">Profit (&ge; +10R)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-800/80"></span><span class="text-slate-300">Profit (+1R s.d. +9R)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-slate-800"></span><span class="text-slate-300">Flat (0R)</span></div>
+        
+        <!-- Legend Chips -->
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-mono">
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-600"></span><span class="text-slate-300">Profit ($\ge +10\text{R}$)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-800/80"></span><span class="text-slate-300">Profit ($+1\text{R} \dots +9\text{R}$)</span></div>
+          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-slate-800"></span><span class="text-slate-300">Flat ($0\text{R}$)</span></div>
           <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-rose-700/80"></span><span class="text-slate-300">Loss</span></div>
         </div>
       </div>
 
-      <!-- HEATMAP TABLE CONTAINER -->
-      <div class="overflow-x-auto">
-        <table class="w-full text-center border-collapse text-xs font-mono">
+      <!-- HEATMAP TABLE CONTAINER WITH STICKY YEAR ANCHOR -->
+      <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark/50">
+        <table class="w-full text-center border-collapse text-xs font-mono min-w-[700px]">
           <thead>
-            <tr class="border-b border-brand-border text-slate-400 text-[11px]">
-              <th class="py-2.5 px-3 text-left">Year</th>
+            <tr class="border-b border-brand-border text-slate-400 text-[11px] bg-brand-card/60">
+              <th class="py-2.5 px-3 text-left sticky left-0 z-20 bg-brand-surface sticky-col-shadow">Year</th>
               <th class="py-2.5 px-2">Jan</th>
               <th class="py-2.5 px-2">Feb</th>
               <th class="py-2.5 px-2">Mar</th>
@@ -284,20 +360,23 @@
               <th class="py-2.5 px-3 text-right">Annual Net R</th>
             </tr>
           </thead>
-          <tbody id="heatmap-tbody" class="divide-y divide-brand-border">
+          <tbody id="heatmap-tbody" class="divide-y divide-brand-border/60">
             <!-- Dynamically populated from SHOWCASE_MONTHLY data -->
           </tbody>
         </table>
+      </div>
+      <div class="mt-2 text-[10px] text-slate-500 font-mono text-right sm:text-left">
+        *Gunakan geser horizontal pada layar smartphone untuk melihat seluruh 12 bulan. Kolom tahun terkunci rapi di sebelah kiri.
       </div>
     </div>
   </section>
 
   <!-- METHODOLOGY & CORE PRINCIPLES -->
-  <section id="methodology" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <section id="methodology" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="text-center max-w-2xl mx-auto mb-10">
       <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">The Quantitative Philosophy</span>
       <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Four Absolute Pillars of Strategy Survival</h2>
-      <p class="text-xs text-slate-400 mt-2">Menghilangkan seluruh bias manusiawi dan godaan kurva *overfitting* melalui pembuktian matematika murni.</p>
+      <p class="text-xs sm:text-sm text-slate-400 mt-2">Menghilangkan seluruh bias manusiawi dan godaan kurva *overfitting* melalui pembuktian matematika murni.</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -308,11 +387,11 @@
           </div>
           <h3 class="text-base font-bold text-white mb-2">Immutable 1:2 R:R Ratio</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Konstanta sakral repositori: Stop Loss 1.0R vs Take Profit 2.0R. Menjamin titik impas matematis hanya membutuhkan win rate 33.33%, sehingga win rate 62.38% menghasilkan surplus eksponensial.
+            Konstanta sakral repositori: Stop Loss $1.0\text{R}$ vs Take Profit $2.0\text{R}$. Menjamin titik impas matematis hanya membutuhkan win rate $33.33\%$, sehingga win rate $62.38\%$ menghasilkan surplus eksponensial.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-emerald-400">
-          Breakeven Target: 33.33%
+          Breakeven Target: $33.33\%$
         </div>
       </div>
 
@@ -327,7 +406,7 @@
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-cyan-400">
-          N_past: 420 bar (~2.2 Bulan)
+          $N_{\text{past}} = 420\text{ bar}$ (~2.2 Bulan)
         </div>
       </div>
 
@@ -338,11 +417,11 @@
           </div>
           <h3 class="text-base font-bold text-white mb-2">Zero-Chasing Volatility</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Melarang entri pada lilin lilin yang over-extended ($\ge 1.3\text{ ATR}$). Menghilangkan risiko *reversal trap* dan *slippage spikes* yang kerap menghancurkan model breakout tradisional.
+            Melarang entri pada lilin-lilin yang over-extended ($\ge 1.3\text{ ATR}$). Menghilangkan risiko *reversal trap* dan *slippage spikes* yang kerap menghancurkan model breakout tradisional.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-amber-400">
-          Violation Tolerance: 0.0%
+          Violation Tolerance: $0.0\%$
         </div>
       </div>
 
@@ -351,21 +430,21 @@
           <div class="w-10 h-10 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center font-mono font-bold mb-4 border border-rose-500/20">
             04
           </div>
-          <h3 class="text-base font-bold text-white mb-2">Velocity Guard (&le; 16h)</h3>
+          <h3 class="text-base font-bold text-white mb-2">Velocity Guard ($\le 16\text{ Jam}$)</h3>
           <p class="text-xs text-slate-400 leading-relaxed">
             Membatasi eksposur posisi floating maksimal 16 jam. Bila TP/SL belum tersentuh di jam ke-16, posisi ditutup paksa mark-to-market guna memutus ketergantungan psikologis holding berhari-hari.
           </p>
         </div>
         <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-rose-400">
-          Avg Duration: 6.20 Jam
+          Avg Duration: $6.20\text{ Jam}$
         </div>
       </div>
     </div>
   </section>
 
   <!-- TRADE LEDGER EXPLORER TABLE -->
-  <section id="ledger" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="bg-brand-surface p-6 sm:p-8 rounded-2xl border border-brand-border">
+  <section id="ledger" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Verifiable Transparency</span>
@@ -376,7 +455,7 @@
         <!-- Filter & Search Controls -->
         <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
           <input type="text" id="ledger-search" placeholder="Search date (e.g. 2026-09)..." 
-                 class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-accent w-48 text-xs">
+                 class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-accent w-44 sm:w-48 text-xs">
           
           <select id="ledger-filter" class="bg-brand-card border border-brand-border rounded-lg px-3 py-1.5 text-slate-200 focus:outline-none focus:border-brand-accent text-xs">
             <option value="ALL">All Trades (755)</option>
@@ -389,7 +468,7 @@
 
       <!-- TABLE CONTAINER -->
       <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark">
-        <table class="w-full text-left border-collapse text-xs font-mono">
+        <table class="w-full text-left border-collapse text-xs font-mono min-w-[650px]">
           <thead>
             <tr class="border-b border-brand-border text-slate-400 bg-brand-card/40 text-[11px]">
               <th class="py-2.5 px-3">#</th>
@@ -410,20 +489,20 @@
       </div>
 
       <!-- PAGINATION BAR -->
-      <div class="mt-4 flex items-center justify-between text-xs font-mono text-slate-400">
+      <div class="mt-4 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 gap-3">
         <div>Showing <span id="ledger-page-range" class="text-white">1 - 25</span> of <span id="ledger-total-count" class="text-white">755</span> trades</div>
         <div class="flex items-center space-x-2">
-          <button id="btn-prev-page" class="px-3 py-1 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40" onclick="changePage(-1)">Previous</button>
-          <span id="ledger-current-page" class="px-2 text-white font-bold">1</span>
-          <button id="btn-next-page" class="px-3 py-1 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40" onclick="changePage(1)">Next</button>
+          <button id="btn-prev-page" class="px-3 py-1.5 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40 transition" onclick="changePage(-1)">Previous</button>
+          <span id="ledger-current-page" class="px-3 py-1 text-white font-bold bg-brand-surface rounded border border-brand-border/80">1</span>
+          <button id="btn-next-page" class="px-3 py-1.5 bg-brand-card hover:bg-slate-800 text-slate-300 rounded border border-brand-border disabled:opacity-40 transition" onclick="changePage(1)">Next</button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- GRAND MULTI-ASSET PORTFOLIO SNAPSHOT -->
-  <section id="portfolio" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-dark p-6 sm:p-10 border border-brand-border">
+  <section id="portfolio" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="rounded-2xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-dark p-6 sm:p-10 border border-brand-border shadow-2xl">
       <div class="max-w-3xl">
         <span class="text-xs font-mono uppercase tracking-widest text-brand-accent">Beyond A Single Instrument</span>
         <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">The 11-Asset Universal Shielded Ecosystem</h2>
@@ -433,25 +512,25 @@
         </p>
       </div>
 
-      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
           <div class="text-[11px] text-slate-400 uppercase font-mono">Grand Total Return</div>
-          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1">+3,910.73 R</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-1">+3,910.73 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">12,360 Sequential Trades</div>
         </div>
         <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
           <div class="text-[11px] text-slate-400 uppercase font-mono">Global Win Rate</div>
-          <div class="text-2xl font-bold font-mono text-white mt-1">41.92%</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1">41.92%</div>
           <div class="text-[10px] text-emerald-400 mt-0.5">+8.59% Above 33.33% BE</div>
         </div>
         <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
           <div class="text-[11px] text-slate-400 uppercase font-mono">Global Profit Factor</div>
-          <div class="text-2xl font-bold font-mono text-white mt-1">1.536</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1">1.536</div>
           <div class="text-[10px] text-slate-500 mt-0.5">Annualized Sharpe > 3.65</div>
         </div>
         <div class="bg-brand-dark/80 p-4 rounded-xl border border-brand-border">
           <div class="text-[11px] text-slate-400 uppercase font-mono">OOS 2026 Portfolio</div>
-          <div class="text-2xl font-bold font-mono text-emerald-400 mt-1">+402.05 R</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-1">+402.05 R</div>
           <div class="text-[10px] text-brand-accent mt-0.5">11 / 11 Models Passed OOS</div>
         </div>
       </div>
@@ -459,7 +538,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="mt-16 border-t border-brand-border py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <footer class="mt-12 sm:mt-16 border-t border-brand-border py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
         <div class="font-bold text-white text-base">Muhammad Ali Jawara Wiratama</div>
@@ -468,8 +547,10 @@
       </div>
 
       <div class="flex items-center space-x-4 text-xs font-mono text-slate-400">
-        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center space-x-1">
-          <i data-lucide="github" class="w-4 h-4"></i>
+        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center space-x-1.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
           <span>mhdalijawara-cloud</span>
         </a>
         <span>&bull;</span>
@@ -478,12 +559,9 @@
     </div>
   </footer>
 
-  <!-- SCRIPT LOGIC (CHART, HEATMAP, LEDGER) -->
+  <!-- SCRIPT LOGIC (CHART DUAL-PANE, HEATMAP, LEDGER, MOBILE DRAWER, KATEX) -->
   <script>
-    // Lucide Icons Render
-    lucide.createIcons();
-
-    // Data Access
+    // 0. DATA ACCESS
     const trades = window.SHOWCASE_TRADES || [];
     const monthlyMatrix = window.SHOWCASE_MONTHLY || [];
     const stats = window.SHOWCASE_STATS || {};
@@ -497,9 +575,39 @@
       document.getElementById('stat-max-dd').innerText = `-${stats.max_drawdown_r.toFixed(2)} R`;
     }
 
-    // 2. RENDER TRADINGVIEW LIGHTWEIGHT CHARTS
+    // 2. MOBILE DRAWER NAVIGATION
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileMenuBtn && mobileDrawer) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileDrawer.classList.contains('hidden');
+        if (isOpen) {
+          mobileDrawer.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        } else {
+          mobileDrawer.classList.remove('hidden');
+          hamburgerIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        }
+      });
+
+      // Auto close drawer when any link is clicked
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    // 3. RENDER TRADINGVIEW LIGHTWEIGHT CHARTS (DUAL-PANE: CUMULATIVE R + UNDERWATER DRAWDOWN)
     let chart, areaSeries, ddSeries;
-    let currentTradesFilter = 'all';
+    let currentFilteredTrades = [...trades];
 
     function initLightweightChart() {
       const container = document.getElementById('tv-chart-container');
@@ -523,7 +631,8 @@
         },
         rightPriceScale: {
           borderColor: '#1e293b',
-          scaleMargins: { top: 0.1, bottom: 0.25 },
+          scaleMargins: { top: 0.05, bottom: 0.35 }, // Top 65% area for Cumulative R
+          alignLabels: true,
         },
         timeScale: {
           borderColor: '#1e293b',
@@ -532,25 +641,41 @@
         },
       });
 
-      // Area Series for Cumulative R
+      // Area Series 1: Cumulative R-Multiple (Top Pane)
       areaSeries = chart.addAreaSeries({
+        priceScaleId: 'right',
         lineColor: '#10b981',
         topColor: 'rgba(16, 185, 129, 0.45)',
-        bottomColor: 'rgba(16, 185, 129, 0.01)',
+        bottomColor: 'rgba(16, 185, 129, 0.02)',
         lineWidth: 2,
         priceFormat: { type: 'custom', formatter: val => `${val.toFixed(2)} R` },
       });
 
-      // Prepare line data
+      // Area Series 2: Underwater Drawdown (Bottom Pane)
+      ddSeries = chart.addAreaSeries({
+        priceScaleId: 'ddScale',
+        lineColor: '#f43f5e',
+        topColor: 'rgba(244, 63, 94, 0.01)',
+        bottomColor: 'rgba(244, 63, 94, 0.40)',
+        lineWidth: 1.5,
+        invertFilledArea: true,
+        priceFormat: { type: 'custom', formatter: val => `${val.toFixed(2)} R` },
+      });
+
+      // Configure separate price scale margins for Underwater Drawdown (bottom 30%)
+      chart.priceScale('ddScale').applyOptions({
+        scaleMargins: { top: 0.72, bottom: 0.04 },
+        borderColor: '#1e293b',
+        borderVisible: true,
+      });
+
+      // Load initial trades
       loadChartData(trades);
 
-      // Subscribe to crosshair move for live header stats
+      // Subscribe to crosshair move for live header HUD stats
       chart.subscribeCrosshairMove(param => {
-        if (!param || !param.time || !param.seriesData || !param.seriesData.get(areaSeries)) {
-          return;
-        }
-        const dataPoint = param.seriesData.get(areaSeries);
-        const matchedTrade = trades.find(t => t.date === param.time);
+        if (!param || !param.time) return;
+        const matchedTrade = currentFilteredTrades.find(t => t.date === param.time);
         if (matchedTrade) {
           document.getElementById('hover-trade-id').innerText = `#${matchedTrade.id}`;
           document.getElementById('hover-date').innerText = `${matchedTrade.date} ${matchedTrade.time} UTC`;
@@ -575,38 +700,34 @@
     }
 
     function loadChartData(tradesArray) {
-      if (!areaSeries) return;
-      // Convert to unique daily cumulative sequence
-      const chartPoints = tradesArray.map(t => ({
-        time: t.date,
-        value: t.cum_r
-      }));
+      if (!areaSeries || !ddSeries) return;
+      currentFilteredTrades = tradesArray;
 
-      // Ensure strictly ascending unique dates
-      const uniquePoints = [];
-      const seenDates = new Set();
-      for (const p of chartPoints) {
-        if (!seenDates.has(p.time)) {
-          seenDates.add(p.time);
-          uniquePoints.push(p);
-        } else {
-          // Update to latest cum_r of the day
-          const lastIdx = uniquePoints.findIndex(u => u.time === p.time);
-          if (lastIdx !== -1) uniquePoints[lastIdx].value = p.value;
-        }
-      }
-      uniquePoints.sort((a, b) => a.time.localeCompare(b.time));
+      // Ensure unique date points with latest values
+      const dateMapCum = new Map();
+      const dateMapDD = new Map();
 
-      areaSeries.setData(uniquePoints);
+      tradesArray.forEach(t => {
+        dateMapCum.set(t.date, t.cum_r);
+        dateMapDD.set(t.date, t.drawdown_r);
+      });
+
+      const uniqueDates = Array.from(dateMapCum.keys()).sort();
+      const cumPoints = uniqueDates.map(d => ({ time: d, value: dateMapCum.get(d) }));
+      const ddPoints = uniqueDates.map(d => ({ time: d, value: dateMapDD.get(d) }));
+
+      areaSeries.setData(cumPoints);
+      ddSeries.setData(ddPoints);
       chart.timeScale().fitContent();
     }
 
-    function filterChart(range) {
-      currentTradesFilter = range;
+    function filterChart(range, btnElement) {
       document.querySelectorAll('.chart-btn').forEach(b => {
         b.className = 'chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border';
       });
-      event.target.className = 'chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+      if (btnElement) {
+        btnElement.className = 'chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+      }
 
       let filtered = trades;
       if (range === '2020-2022') filtered = trades.filter(t => t.year >= 2020 && t.year <= 2022);
@@ -616,7 +737,7 @@
       loadChartData(filtered);
     }
 
-    // 3. RENDER MONTHLY RETURN HEATMAP
+    // 4. RENDER MONTHLY RETURN HEATMAP (WITH STICKY YEAR ANCHOR)
     function renderHeatmap() {
       const tbody = document.getElementById('heatmap-tbody');
       tbody.innerHTML = '';
@@ -628,11 +749,11 @@
         let yearBadge = `<span class="font-bold text-white">${row.year}</span>`;
         if (row.year === 2026) yearBadge += ` <span class="text-[9px] text-cyan-400 bg-cyan-400/10 px-1 py-0.5 rounded border border-cyan-400/20">OOS</span>`;
 
-        let html = `<td class="py-2.5 px-3 text-left font-mono">${yearBadge}</td>`;
+        let html = `<td class="py-2.5 px-3 text-left font-mono sticky left-0 z-10 bg-brand-surface sticky-col-shadow border-r border-brand-border/40">${yearBadge}</td>`;
 
         row.months.forEach(m => {
           if (m.status === 'future') {
-            html += `<td class="py-2 px-1"><div class="py-1 px-1.5 rounded bg-slate-900/40 text-slate-600 text-[10px]">&ndash;</div></td>`;
+            html += `<td class="py-2 px-1"><div class="py-1 px-1 rounded bg-slate-900/40 text-slate-600 text-[10px]">&ndash;</div></td>`;
           } else {
             const rVal = m.r;
             let bgClass = 'bg-slate-800/60 text-slate-400';
@@ -663,7 +784,7 @@
       });
     }
 
-    // 4. RENDER TRADE MASTER LEDGER
+    // 5. RENDER TRADE MASTER LEDGER
     let currentPage = 1;
     const pageSize = 25;
     let filteredTrades = [...trades];
@@ -748,11 +869,34 @@
     document.getElementById('ledger-search').addEventListener('input', applyLedgerFilters);
     document.getElementById('ledger-filter').addEventListener('change', applyLedgerFilters);
 
-    // INITIALIZATION
+    // 6. INITIALIZATION & KATEX RENDERING
     window.addEventListener('DOMContentLoaded', () => {
       initLightweightChart();
       renderHeatmap();
       renderLedgerTable();
+
+      // Render KaTeX after DOM is ready
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
+          throwOnError: false
+        });
+      } else {
+        window.addEventListener('load', () => {
+          if (typeof renderMathInElement === 'function') {
+            renderMathInElement(document.body, {
+              delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false }
+              ],
+              throwOnError: false
+            });
+          }
+        });
+      }
     });
   </script>
 </body>

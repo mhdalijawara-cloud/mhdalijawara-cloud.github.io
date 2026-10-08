@@ -68,9 +68,33 @@
     ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
-    /* Sticky column drop-shadow helper */
+    /* Mobile scrolling & touch pipeline optimizations */
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: auto;
+    }
+
+    /* Hardware compositing for fixed navbar & sticky headers */
+    nav {
+      transform: translateZ(0);
+      will-change: transform;
+    }
+
     .sticky-col-shadow {
-      box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.45);
+      transform: translateZ(0);
+      box-shadow: 3px 0 6px -2px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Decouple chart touch gestures: allow 100% native vertical page scrolling */
+    #tv-chart-top, #tv-chart-bottom,
+    #tv-chart-top canvas, #tv-chart-bottom canvas {
+      touch-action: pan-y !important;
+    }
+
+    /* Content visibility containment for heavy downstream sections */
+    #audit, #methodology {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 600px;
     }
 
     /* KaTeX equation display tweaks */
@@ -82,7 +106,7 @@
 <body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-black">
 
   <!-- TOP NAVIGATION BAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border">
+  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/98 sm:bg-brand-dark/95 sm:backdrop-blur-md border-b border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
       
       <!-- Brand Logo & Identity -->
@@ -147,7 +171,7 @@
     </div>
 
     <!-- Mobile Technical Navigation Sheet -->
-    <div id="mobile-drawer" class="lg:hidden border-brand-border bg-slate-950/98 backdrop-blur-xl px-4 font-mono transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 py-0 border-b-0 pointer-events-none">
+    <div id="mobile-drawer" class="lg:hidden border-brand-border bg-slate-950/98 px-4 font-mono transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 py-0 border-b-0 pointer-events-none">
       <div class="space-y-1 text-xs">
         <a href="#hk50" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
           <div class="flex items-center space-x-2.5">
@@ -209,37 +233,37 @@
 
       <!-- HIGHLIGHT METRIC CARDS (RESPONSIVE GRID) -->
       <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Total Realized</div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-total-r">+643.85 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">755 Historical Trades</div>
         </div>
 
-        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Win Rate</div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.38%</div>
           <div class="text-[10px] text-slate-500 mt-0.5">+29.05% vs 33.33% Breakeven</div>
         </div>
 
-        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Profit Factor</div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-pf">3.299</div>
           <div class="text-[10px] text-slate-500 mt-0.5">Gross Win / Gross Loss</div>
         </div>
 
-        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">OOS 2026 Return</div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-oos-r">+61.91 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">Pure Forward Track (113 Trades)</div>
         </div>
 
-        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Max Drawdown</div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-max-dd">-7.00 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">6.8 Years Track Record</div>
         </div>
 
-        <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
+        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Non-Minus Months</div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1">95.12%</div>
           <div class="text-[10px] text-slate-500 mt-0.5">78 of 82 Months ≥ 0 R</div>
@@ -697,6 +721,18 @@
     if (mobileMenuBtn && mobileDrawer) {
       let isDrawerOpen = false;
 
+      function onOutsideTouch(e) {
+        if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          closeDrawer();
+        }
+      }
+
+      function onScrollClose() {
+        if (isDrawerOpen) {
+          closeDrawer();
+        }
+      }
+
       function openDrawer() {
         isDrawerOpen = true;
         mobileDrawer.classList.remove('max-h-0', 'opacity-0', 'py-0', 'border-b-0', 'pointer-events-none');
@@ -707,9 +743,15 @@
         }
         hamburgerIcon.classList.add('hidden');
         closeIcon.classList.remove('hidden');
+
+        // Dynamically attach listeners only while drawer is open
+        window.addEventListener('scroll', onScrollClose, { passive: true });
+        document.addEventListener('touchstart', onOutsideTouch, { passive: true });
+        document.addEventListener('click', onOutsideTouch);
       }
 
       function closeDrawer() {
+        if (!isDrawerOpen) return;
         isDrawerOpen = false;
         mobileDrawer.classList.remove('max-h-80', 'opacity-100', 'py-2.5', 'border-b', 'pointer-events-auto');
         mobileDrawer.classList.add('max-h-0', 'opacity-0', 'py-0', 'border-b-0', 'pointer-events-none');
@@ -719,6 +761,11 @@
         }
         hamburgerIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
+
+        // Detach listeners to ensure zero JavaScript runs during normal scrolling
+        window.removeEventListener('scroll', onScrollClose);
+        document.removeEventListener('touchstart', onOutsideTouch);
+        document.removeEventListener('click', onOutsideTouch);
       }
 
       mobileMenuBtn.addEventListener('click', (e) => {
@@ -734,26 +781,6 @@
         mobileBackdrop.addEventListener('click', closeDrawer);
         mobileBackdrop.addEventListener('touchstart', closeDrawer, { passive: true });
       }
-
-      // Close on outside touch or click
-      document.addEventListener('click', (e) => {
-        if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-          closeDrawer();
-        }
-      });
-
-      document.addEventListener('touchstart', (e) => {
-        if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-          closeDrawer();
-        }
-      }, { passive: true });
-
-      // Close automatically when page is scrolled
-      window.addEventListener('scroll', () => {
-        if (isDrawerOpen) {
-          closeDrawer();
-        }
-      }, { passive: true });
 
       // Close on escape key
       document.addEventListener('keydown', (e) => {
@@ -814,6 +841,17 @@
           fixRightEdge: true,
           rightOffset: 0,
         },
+        handleScroll: {
+          vertTouchDrag: false,
+          horzTouchDrag: false,
+          mouseWheel: true,
+          pressedMouseMove: true,
+        },
+        handleScale: {
+          axisPressedMouseMove: false,
+          mouseWheel: false,
+          pinch: false,
+        },
       });
 
       areaSeries = chartTop.addAreaSeries({
@@ -858,6 +896,17 @@
           timeVisible: false,
           secondsVisible: false,
         },
+        handleScroll: {
+          vertTouchDrag: false,
+          horzTouchDrag: false,
+          mouseWheel: true,
+          pressedMouseMove: true,
+        },
+        handleScale: {
+          axisPressedMouseMove: false,
+          mouseWheel: false,
+          pinch: false,
+        },
       });
 
       ddSeries = chartBottom.addAreaSeries({
@@ -885,7 +934,15 @@
         isSyncingRange = false;
       });
 
-      // Crosshair tracking handler
+      // Crosshair tracking handler with O(1) hash map & redundant DOM mutation guard
+      const curvePointMap = new Map();
+      let lastHoveredDate = null;
+
+      function updateCurvePointMap() {
+        curvePointMap.clear();
+        currentFilteredCurve.forEach(p => curvePointMap.set(p.date, p));
+      }
+
       function handleCrosshair(param) {
         if (!param || !param.time) return;
         const timeStr = typeof param.time === 'string'
@@ -893,10 +950,11 @@
           : (typeof param.time === 'object' && param.time.year
               ? `${param.time.year}-${String(param.time.month).padStart(2, '0')}-${String(param.time.day).padStart(2, '0')}`
               : null);
-        if (!timeStr) return;
+        if (!timeStr || timeStr === lastHoveredDate) return;
 
-        const matchedPoint = currentFilteredCurve.find(p => p.date === timeStr);
+        const matchedPoint = curvePointMap.get(timeStr);
         if (matchedPoint) {
+          lastHoveredDate = matchedPoint.date;
           document.getElementById('hover-date').innerText = matchedPoint.date;
           document.getElementById('hover-regime').innerText = matchedPoint.year === 2026 ? '2026 (OOS Live Track)' : `${matchedPoint.year} (Historical In-Sample)`;
 
@@ -966,6 +1024,9 @@
           };
         });
       }
+
+      // Sync fast lookup map
+      updateCurvePointMap();
 
       loadChartData(currentFilteredCurve);
     }

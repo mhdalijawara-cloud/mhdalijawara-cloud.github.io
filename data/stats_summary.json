@@ -23,13 +23,5 @@
     "timeouts": 7,
     "win_rate_pct": 48.67,
     "profit_factor": 2.183
-  },
-  "grand_portfolio": {
-    "assets_count": 11,
-    "total_return_r": 3910.73,
-    "total_trades": 12360,
-    "win_rate_pct": 41.92,
-    "profit_factor": 1.536,
-    "oos_2026_return_r": 402.05
   }
 }

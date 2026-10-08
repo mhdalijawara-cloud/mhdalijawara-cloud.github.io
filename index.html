@@ -147,7 +147,7 @@
     </div>
 
     <!-- Mobile Technical Navigation Sheet -->
-    <div id="mobile-drawer" class="hidden lg:hidden border-b border-brand-border bg-slate-950/98 backdrop-blur-xl px-4 py-2.5 font-mono">
+    <div id="mobile-drawer" class="lg:hidden border-brand-border bg-slate-950/98 backdrop-blur-xl px-4 font-mono transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 py-0 border-b-0 pointer-events-none">
       <div class="space-y-1 text-xs">
         <a href="#hk50" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
           <div class="flex items-center space-x-2.5">
@@ -187,6 +187,9 @@
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div id="mobile-backdrop" class="fixed inset-0 z-40 bg-black/60 transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden" aria-hidden="true"></div>
 
   <!-- HERO SECTION -->
   <section class="pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -683,33 +686,84 @@
       document.getElementById('stat-max-dd').innerText = `-${stats.max_drawdown_r.toFixed(2)} R`;
     }
 
-    // Mobile navigation drawer
+    // Mobile navigation drawer & backdrop (Smooth transition & outside touch handler)
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileBackdrop = document.getElementById('mobile-backdrop');
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const closeIcon = document.getElementById('close-icon');
 
     if (mobileMenuBtn && mobileDrawer) {
-      mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = !mobileDrawer.classList.contains('hidden');
-        if (isOpen) {
-          mobileDrawer.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
+      let isDrawerOpen = false;
+
+      function openDrawer() {
+        isDrawerOpen = true;
+        mobileDrawer.classList.remove('max-h-0', 'opacity-0', 'py-0', 'border-b-0', 'pointer-events-none');
+        mobileDrawer.classList.add('max-h-80', 'opacity-100', 'py-2.5', 'border-b', 'pointer-events-auto');
+        if (mobileBackdrop) {
+          mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+          mobileBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+        }
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+
+      function closeDrawer() {
+        isDrawerOpen = false;
+        mobileDrawer.classList.remove('max-h-80', 'opacity-100', 'py-2.5', 'border-b', 'pointer-events-auto');
+        mobileDrawer.classList.add('max-h-0', 'opacity-0', 'py-0', 'border-b-0', 'pointer-events-none');
+        if (mobileBackdrop) {
+          mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+          mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+        }
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isDrawerOpen) {
+          closeDrawer();
         } else {
-          mobileDrawer.classList.remove('hidden');
-          hamburgerIcon.classList.add('hidden');
-          closeIcon.classList.remove('hidden');
+          openDrawer();
         }
       });
 
-      // Auto close drawer when any link is clicked
+      if (mobileBackdrop) {
+        mobileBackdrop.addEventListener('click', closeDrawer);
+        mobileBackdrop.addEventListener('touchstart', closeDrawer, { passive: true });
+      }
+
+      // Close on outside touch or click
+      document.addEventListener('click', (e) => {
+        if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          closeDrawer();
+        }
+      });
+
+      document.addEventListener('touchstart', (e) => {
+        if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          closeDrawer();
+        }
+      }, { passive: true });
+
+      // Close automatically when page is scrolled
+      window.addEventListener('scroll', () => {
+        if (isDrawerOpen) {
+          closeDrawer();
+        }
+      }, { passive: true });
+
+      // Close on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isDrawerOpen) {
+          closeDrawer();
+        }
+      });
+
+      // Auto close drawer when any navigation link is clicked
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileDrawer.classList.add('hidden');
-          hamburgerIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-        });
+        link.addEventListener('click', closeDrawer);
       });
     }
 

@@ -211,7 +211,7 @@
       <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
         <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Total Realized</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-1" id="stat-total-r">+643.85 R</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-total-r">+643.85 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">755 Historical Trades</div>
         </div>
 
@@ -229,13 +229,13 @@
 
         <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">OOS 2026 Return</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-cyan-400 mt-1" id="stat-oos-r">+61.91 R</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-oos-r">+61.91 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">Pure Forward Track (113 Trades)</div>
         </div>
 
         <div class="bg-brand-card/80 backdrop-blur p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
           <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Max Drawdown</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-rose-400 mt-1" id="stat-max-dd">-7.00 R</div>
+          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-max-dd">-7.00 R</div>
           <div class="text-[10px] text-slate-500 mt-0.5">6.8 Years Track Record</div>
         </div>
 
@@ -317,7 +317,7 @@
 
         <!-- Filter Buttons -->
         <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-mono" id="chart-filter-buttons">
-          <button onclick="filterChart('all', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">All (755 Trades)</button>
+          <button onclick="filterChart('all', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-slate-800 text-white border border-slate-600 font-semibold">All (755 Trades)</button>
           <button onclick="filterChart('2020-2022', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2020–2022</button>
           <button onclick="filterChart('2023-2025', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2023–2025</button>
           <button onclick="filterChart('2026', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2026 (OOS)</button>
@@ -332,19 +332,19 @@
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Sample Regime</span>
-          <span id="hover-regime" class="text-cyan-400 font-medium">2026 (OOS Phase)</span>
+          <span id="hover-regime" class="text-slate-200 font-medium">2026 (OOS Phase)</span>
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Cumulative Return</span>
-          <span id="hover-cum-r" class="text-emerald-400 font-bold">+643.85 R</span>
+          <span id="hover-cum-r" class="text-white font-bold">+643.85 R</span>
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Underwater Drawdown</span>
-          <span id="hover-dd-r" class="text-rose-400 font-bold">0.00 R (Peak)</span>
+          <span id="hover-dd-r" class="text-slate-200 font-bold">0.00 R (Peak)</span>
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Drawdown Status</span>
-          <span id="hover-dd-status" class="text-emerald-400 font-medium">All-Time High</span>
+          <span id="hover-dd-status" class="text-slate-300 font-medium">All-Time High</span>
         </div>
         <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
           <span class="text-slate-500 block text-[10px]">Payoff Structure</span>
@@ -357,7 +357,7 @@
         <!-- Top Pane: Cumulative R -->
         <div>
           <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1 px-1">
-            <span class="inline-flex items-center space-x-1.5 font-semibold text-emerald-400">
+            <span class="inline-flex items-center space-x-1.5 font-medium text-slate-300">
               <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
               <span>Cumulative Realized Return (+R Growth)</span>
             </span>
@@ -369,7 +369,7 @@
         <!-- Bottom Pane: Underwater Drawdown -->
         <div>
           <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1 px-1">
-            <span class="inline-flex items-center space-x-1.5 font-semibold text-rose-400">
+            <span class="inline-flex items-center space-x-1.5 font-medium text-slate-300">
               <span class="w-2 h-2 rounded-full bg-rose-400"></span>
               <span>Underwater Drawdown Profile (-R from Peak)</span>
             </span>
@@ -434,7 +434,7 @@
           <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
           <span id="inspect-label" class="text-slate-400">Pilih / sentuh bulan untuk detail performa:</span>
         </div>
-        <div id="inspect-value" class="text-cyan-400 font-bold bg-cyan-950/40 px-2.5 py-1 rounded border border-cyan-800/40 text-[11px]">
+        <div id="inspect-value" class="text-slate-200 font-medium bg-slate-900/90 px-2.5 py-1 rounded border border-slate-700/80 text-[11px]">
           Okt 2026 (Bulan Berjalan): +0.27 R &bull; 3 Trades
         </div>
       </div>
@@ -450,8 +450,8 @@
           <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Annual Performance & Risk Breakdown</h2>
           <p class="text-xs text-slate-400 mt-1">Audit verifikasi tahunan 2020 s.d. 2026. 100% konsisten positif (7 dari 7 tahun) dengan payoff tetap 1:2 R:R.</p>
         </div>
-        <div class="text-xs font-mono px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-          Consecutive Positive: 7 / 7 Years (100%)
+        <div class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-slate-300">
+          <span class="text-slate-500">Consecutive Track:</span> <strong class="text-white">7 / 7 Years (100%)</strong>
         </div>
       </div>
 
@@ -475,82 +475,82 @@
               <td class="py-2.5 px-4 font-bold text-white">2020</td>
               <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
               <td class="py-2.5 px-3 text-center text-slate-300">71</td>
-              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">69.0%</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">69.0%</td>
               <td class="py-2.5 px-3 text-right text-white">4.375</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-3.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-3.00 R</td>
               <td class="py-2.5 px-3 text-right text-slate-400">4.7h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+74.24 R</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+74.24 R</td>
             </tr>
             <tr class="hover:bg-brand-card/40 transition">
               <td class="py-2.5 px-4 font-bold text-white">2021</td>
               <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
               <td class="py-2.5 px-3 text-center text-slate-300">116</td>
-              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">65.5%</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">65.5%</td>
               <td class="py-2.5 px-3 text-right text-white">3.722</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-6.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-6.00 R</td>
               <td class="py-2.5 px-3 text-right text-slate-400">7.0h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+108.89 R</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+108.89 R</td>
             </tr>
             <tr class="hover:bg-brand-card/40 transition">
               <td class="py-2.5 px-4 font-bold text-white">2022</td>
               <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
               <td class="py-2.5 px-3 text-center text-slate-300">110</td>
-              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">60.9%</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">60.9%</td>
               <td class="py-2.5 px-3 text-right text-white">3.101</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-7.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-7.00 R</td>
               <td class="py-2.5 px-3 text-right text-slate-400">6.2h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+90.36 R</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+90.36 R</td>
             </tr>
             <tr class="hover:bg-brand-card/40 transition">
               <td class="py-2.5 px-4 font-bold text-white">2023</td>
               <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
               <td class="py-2.5 px-3 text-center text-slate-300">117</td>
-              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">69.2%</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">69.2%</td>
               <td class="py-2.5 px-3 text-right text-white">4.608</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-3.10 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-3.10 R</td>
               <td class="py-2.5 px-3 text-right text-slate-400">7.1h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+125.88 R</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+125.88 R</td>
             </tr>
             <tr class="hover:bg-brand-card/40 transition">
               <td class="py-2.5 px-4 font-bold text-white">2024</td>
               <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
               <td class="py-2.5 px-3 text-center text-slate-300">114</td>
-              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">62.3%</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">62.3%</td>
               <td class="py-2.5 px-3 text-right text-white">3.219</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-4.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-4.00 R</td>
               <td class="py-2.5 px-3 text-right text-slate-400">7.0h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+95.40 R</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+95.40 R</td>
             </tr>
             <tr class="hover:bg-brand-card/40 transition">
               <td class="py-2.5 px-4 font-bold text-white">2025</td>
               <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
               <td class="py-2.5 px-3 text-center text-slate-300">114</td>
-              <td class="py-2.5 px-3 text-right text-emerald-400 font-semibold">59.6%</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">59.6%</td>
               <td class="py-2.5 px-3 text-right text-white">2.944</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-4.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-4.00 R</td>
               <td class="py-2.5 px-3 text-right text-slate-400">6.6h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-emerald-400">+87.17 R</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+87.17 R</td>
             </tr>
-            <tr class="hover:bg-brand-card/40 transition bg-cyan-950/20">
-              <td class="py-2.5 px-4 font-bold text-cyan-300">2026</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded border border-cyan-400/20 text-[10px] font-bold">Out-of-Sample (OOS)</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-200 font-bold">113</td>
-              <td class="py-2.5 px-3 text-right text-cyan-300 font-bold">52.2%</td>
-              <td class="py-2.5 px-3 text-right text-white font-bold">2.183</td>
-              <td class="py-2.5 px-3 text-right text-rose-400">-7.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">6.6h</td>
-              <td class="py-2.5 px-4 text-right font-bold text-cyan-300">+61.91 R</td>
+            <tr class="hover:bg-brand-card/40 transition">
+              <td class="py-2.5 px-4 font-bold text-white">2026</td>
+              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-300 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60 text-[10px] font-semibold">Out-of-Sample (OOS)</span></td>
+              <td class="py-2.5 px-3 text-center text-slate-200 font-semibold">113</td>
+              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">52.2%</td>
+              <td class="py-2.5 px-3 text-right text-white">2.183</td>
+              <td class="py-2.5 px-3 text-right text-slate-300">-7.00 R</td>
+              <td class="py-2.5 px-3 text-right text-slate-400">6.6h</td>
+              <td class="py-2.5 px-4 text-right font-semibold text-white">+61.91 R</td>
             </tr>
             <!-- TOTAL ROW -->
             <tr class="bg-brand-card/80 border-t-2 border-brand-border">
               <td class="py-3 px-4 font-extrabold text-white uppercase">All-Time Track</td>
               <td class="py-3 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-300 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60 text-[10px]">Full Track (2020–2026)</span></td>
               <td class="py-3 px-3 text-center text-white font-extrabold">755</td>
-              <td class="py-3 px-3 text-right text-emerald-400 font-extrabold">62.38%</td>
+              <td class="py-3 px-3 text-right text-white font-extrabold">62.38%</td>
               <td class="py-3 px-3 text-right text-white font-extrabold">3.299</td>
-              <td class="py-3 px-3 text-right text-rose-400 font-extrabold">-7.00 R</td>
+              <td class="py-3 px-3 text-right text-slate-200 font-extrabold">-7.00 R</td>
               <td class="py-3 px-3 text-right text-slate-300 font-bold">6.2h</td>
-              <td class="py-3 px-4 text-right font-extrabold text-emerald-400 text-sm">+643.85 R</td>
+              <td class="py-3 px-4 text-right font-extrabold text-white text-sm">+643.85 R</td>
             </tr>
           </tbody>
         </table>
@@ -908,7 +908,7 @@
 
           const isAth = valDD === 0;
           document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
-          document.getElementById('hover-dd-status').className = isAth ? 'text-emerald-400 font-medium' : 'text-rose-400 font-medium';
+          document.getElementById('hover-dd-status').className = isAth ? 'text-slate-300 font-medium' : 'text-slate-400 font-medium';
         }
       }
 
@@ -933,7 +933,7 @@
         b.className = 'chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border';
       });
       if (btnElement) {
-        btnElement.className = 'chart-btn px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
+        btnElement.className = 'chart-btn px-3 py-1.5 rounded-lg bg-slate-800 text-white border border-slate-600 font-semibold';
       }
 
       if (range === 'all') {
@@ -1001,7 +1001,7 @@
         document.getElementById('hover-dd-r').innerText = `${valDD.toFixed(2)} R`;
         const isAth = valDD === 0;
         document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
-        document.getElementById('hover-dd-status').className = isAth ? 'text-emerald-400 font-medium' : 'text-rose-400 font-medium';
+        document.getElementById('hover-dd-status').className = isAth ? 'text-slate-300 font-medium' : 'text-slate-400 font-medium';
       }
     }
 
@@ -1013,12 +1013,10 @@
 
       const sign = rVal > 0 ? '+' : '';
       const statusText = isOngoing ? 'Bulan Berjalan (Active)' : 'Closed Month';
-      const colorClass = rVal > 0 
-        ? 'text-emerald-400 border-emerald-800/50 bg-emerald-950/40' 
-        : (rVal < 0 ? 'text-rose-400 border-rose-800/50 bg-rose-950/40' : 'text-slate-300 border-slate-700 bg-slate-900/40');
+      const colorClass = 'text-slate-200 border-slate-700/80 bg-slate-900/90';
 
       inspectLabel.innerText = `Detail Kalender ${monthName} ${year}:`;
-      inspectValue.className = `font-bold px-2.5 py-1 rounded border text-[11px] ${colorClass}`;
+      inspectValue.className = `font-medium px-2.5 py-1 rounded border text-[11px] ${colorClass}`;
       inspectValue.innerHTML = `${sign}${rVal.toFixed(2)} R &bull; ${trades} Trades &bull; ${statusText}`;
     }
 

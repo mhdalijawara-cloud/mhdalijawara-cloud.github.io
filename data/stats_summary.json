@@ -7,7 +7,7 @@
   "win_rate_pct": 60.13,
   "profit_factor": 3.299,
   "max_drawdown_r": 7.0,
-  "payoff_ratio": "1:2 R:R (Immutable)",
+  "payoff_ratio": "1:2 R:R",
   "wilson_ci_95": [
     58.87,
     65.75

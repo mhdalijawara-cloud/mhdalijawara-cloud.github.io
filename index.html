@@ -799,6 +799,13 @@
     let chartTop, chartBottom, areaSeries, ddSeries;
     let currentFilteredCurve = [...curveData];
     let isSyncingRange = false;
+    const curvePointMap = new Map();
+    let lastHoveredDate = null;
+
+    function updateCurvePointMap() {
+      curvePointMap.clear();
+      currentFilteredCurve.forEach(p => curvePointMap.set(p.date, p));
+    }
 
     function initLightweightChart() {
       const containerTop = document.getElementById('tv-chart-top');
@@ -935,14 +942,6 @@
       });
 
       // Crosshair tracking handler with O(1) hash map & redundant DOM mutation guard
-      const curvePointMap = new Map();
-      let lastHoveredDate = null;
-
-      function updateCurvePointMap() {
-        curvePointMap.clear();
-        currentFilteredCurve.forEach(p => curvePointMap.set(p.date, p));
-      }
-
       function handleCrosshair(param) {
         if (!param || !param.time) return;
         const timeStr = typeof param.time === 'string'

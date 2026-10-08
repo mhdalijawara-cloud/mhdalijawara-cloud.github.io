@@ -74,10 +74,14 @@
       scroll-behavior: auto;
     }
 
-    /* Hardware compositing for fixed navbar & sticky headers */
-    nav {
+    /* Hardware compositing & smooth smart-hide transition for navbar */
+    #main-nav {
       transform: translateZ(0);
       will-change: transform;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #main-nav.nav-hidden {
+      transform: translateY(-100%) translateZ(0);
     }
 
     .sticky-col-shadow {
@@ -106,7 +110,7 @@
 <body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-black">
 
   <!-- TOP NAVIGATION BAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/98 sm:bg-brand-dark/95 sm:backdrop-blur-md border-b border-brand-border">
+  <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-brand-dark/98 sm:bg-brand-dark/95 sm:backdrop-blur-md border-b border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
       
       <!-- Brand Logo & Identity -->
@@ -717,9 +721,9 @@
     const mobileBackdrop = document.getElementById('mobile-backdrop');
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const closeIcon = document.getElementById('close-icon');
+    let isDrawerOpen = false;
 
     if (mobileMenuBtn && mobileDrawer) {
-      let isDrawerOpen = false;
 
       function onOutsideTouch(e) {
         if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
@@ -794,6 +798,48 @@
         link.addEventListener('click', closeDrawer);
       });
     }
+
+    // Smart Hide/Reveal Navbar on Scroll (Smooth slide out on scroll down, slide in on scroll up)
+    const mainNav = document.getElementById('main-nav');
+    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    let isNavHidden = false;
+    let isScrollTicking = false;
+
+    function updateNavScroll() {
+      const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      const scrollDelta = currentScrollY - lastScrollY;
+
+      if (!mainNav) return;
+
+      // Always show at top of page (threshold 48px)
+      if (currentScrollY <= 48) {
+        if (isNavHidden) {
+          mainNav.classList.remove('nav-hidden');
+          isNavHidden = false;
+        }
+      } else if (!isDrawerOpen) {
+        // Scrolling down past threshold -> slide out smoothly
+        if (scrollDelta > 8 && !isNavHidden) {
+          mainNav.classList.add('nav-hidden');
+          isNavHidden = true;
+        }
+        // Scrolling up past threshold -> slide in smoothly
+        else if (scrollDelta < -8 && isNavHidden) {
+          mainNav.classList.remove('nav-hidden');
+          isNavHidden = false;
+        }
+      }
+
+      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+      isScrollTicking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!isScrollTicking) {
+        window.requestAnimationFrame(updateNavScroll);
+        isScrollTicking = true;
+      }
+    }, { passive: true });
 
     // Synchronized dual-pane chart initialization
     let chartTop, chartBottom, areaSeries, ddSeries;

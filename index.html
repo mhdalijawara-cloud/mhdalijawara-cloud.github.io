@@ -431,7 +431,7 @@
       <!-- INTERACTIVE MONTH INSPECTION CARD (MOBILE & DESKTOP) -->
       <div id="heatmap-inspector" class="mt-3.5 p-3 rounded-xl bg-brand-dark/80 border border-brand-border/70 flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono text-slate-300 gap-2">
         <div class="flex items-center space-x-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
           <span id="inspect-label" class="text-slate-400">Pilih / sentuh bulan untuk detail performa:</span>
         </div>
         <div id="inspect-value" class="text-slate-200 font-medium bg-slate-900/90 px-2.5 py-1 rounded border border-slate-700/80 text-[11px]">
@@ -1029,7 +1029,7 @@
         tr.className = 'hover:bg-brand-card/40 transition';
 
         let yearBadge = `<span class="font-bold text-white">${row.year}</span>`;
-        if (row.year === 2026) yearBadge += ` <span class="text-[9px] text-cyan-400 bg-cyan-400/10 px-1 py-0.5 rounded border border-cyan-400/20">OOS</span>`;
+        if (row.year === 2026) yearBadge += ` <span class="text-[9px] text-slate-300 bg-slate-800/80 px-1 py-0.5 rounded border border-slate-700/60 font-semibold">OOS</span>`;
 
         let html = `<td class="py-2.5 px-3 text-left font-mono sticky left-0 z-10 bg-brand-surface sticky-col-shadow border-r border-brand-border/40">${yearBadge}</td>`;
 
@@ -1048,7 +1048,7 @@
             else if (rVal === 0.0) bgClass = 'bg-slate-800/90 text-slate-400';
             else if (rVal < 0.0) bgClass = 'bg-rose-700/80 text-rose-100 font-semibold';
 
-            const activeRing = isCurrentMonth ? ' ring-1 ring-cyan-400 shadow-sm shadow-cyan-400/30 font-bold' : '';
+            const activeRing = isCurrentMonth ? ' ring-1 ring-slate-400 font-bold' : '';
             const sign = rVal > 0 ? '+' : '';
 
             html += `<td class="py-2 px-1">
@@ -1062,7 +1062,7 @@
         });
 
         const annSign = row.total_r > 0 ? '+' : '';
-        html += `<td class="py-2.5 px-3 text-right font-bold font-mono text-emerald-400">
+        html += `<td class="py-2.5 px-3 text-right font-semibold font-mono text-white">
           ${annSign}${row.total_r.toFixed(2)} R
         </td>`;
 

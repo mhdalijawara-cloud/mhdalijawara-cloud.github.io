@@ -600,17 +600,23 @@
       </div>
       <!-- AUDIT FOOTNOTE & VERIFICATION GUARDS -->
       <div class="mt-3.5 p-3 rounded-xl border border-brand-border/80 bg-brand-surface/50 text-[11px] font-mono text-slate-400 flex flex-col md:flex-row md:items-center justify-between gap-2.5">
-        <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-          <span class="text-slate-300 font-semibold">Wilson 95% CI:</span>
-          <span class="text-white bg-slate-800/80 px-1.5 py-0.5 rounded border border-slate-700/60 font-semibold">[58.87%, 65.75%]</span>
-          <span class="text-slate-500">•</span>
-          <span>Reject $H_0: p \le 33.33\%$</span>
-          <span class="text-slate-500">•</span>
-          <span class="text-slate-300 font-semibold">$p < 10^{-12}$</span>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-2.5">
+          <div class="flex items-center space-x-1.5 shrink-0">
+            <span class="text-slate-300 font-semibold">Wilson 95% CI:</span>
+            <span class="text-white bg-slate-800/90 px-1.5 py-0.5 rounded border border-slate-700/60 font-semibold whitespace-nowrap">[58.87%, 65.75%]</span>
+          </div>
+          <div class="flex items-center space-x-1.5 text-slate-300">
+            <span class="hidden sm:inline text-slate-600">•</span>
+            <span class="inline-flex items-center gap-1.5 bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 text-[10.5px] sm:text-[11px] whitespace-nowrap">
+              <span>Reject $H_0: p \le 33.33\%$</span>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-200 font-semibold">$p < 10^{-12}$</span>
+            </span>
+          </div>
         </div>
-        <div class="flex items-center space-x-2 text-slate-400 shrink-0">
+        <div class="flex items-center space-x-1.5 text-slate-400 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-brand-border/40">
           <span class="text-slate-300 font-semibold">Velocity Cap:</span>
-          <span>100% resolved $\le 16\text{h}$</span>
+          <span class="text-white bg-slate-800/90 px-1.5 py-0.5 rounded border border-slate-700/60 font-semibold whitespace-nowrap">100% resolved $\le 16\text{h}$</span>
         </div>
       </div>
     </div>

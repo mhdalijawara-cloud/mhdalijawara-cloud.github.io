@@ -32,7 +32,7 @@ Model difokuskan pada instrumen Hang Seng Index (HK50) horizon H1 di bawah empat
 | **All-Time Realized Return** | **+643.85 R** | Akumulasi unit Risk-to-Reward murni |
 | **Konsistensi Tahunan** | **7 / 7 Tahun (100%)** | Positif setiap tahun berturut-turut (2020–2026) |
 | **All-Time Win Rate** | **62.38%** | Titik breakeven payoff 1:2 adalah $33.33\%$ |
-| **Wilson 95% Confidence Interval** | **[58.87%, 65.75%]** | Lower bound $> 33.33\%$ ($p < 10^{-12}$) |
+| **Wilson 95% Confidence Interval** | <nobr>**[58.87%,&nbsp;65.75%]**</nobr> | Lower bound $> 33.33\%$ ($p < 10^{-12}$) |
 | **Annualized Sharpe Ratio** | **~3.30** | Distribusi performa mingguan |
 | **Out-of-Sample (OOS 2026)** | **+61.91 R (52.2% WR)** | Profit Factor $2.183$ pada data un-seen |
 | **Max Drawdown (All-Time)** | **-7.00 R** | Weekly close-to-close drawdown |

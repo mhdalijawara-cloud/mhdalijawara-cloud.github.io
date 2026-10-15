@@ -4,25 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muhammad Ali Jawara Wiratama | Quantitative Systems Researcher</title>
-  <meta name="description" content="Quantitative research archive and empirical track record for Hang Seng Index (HK50) sequence modeling under fixed 1:2 Risk-to-Reward execution.">
+  <meta name="description" content="Empirical research archive, neural sequence modeling, and econometric risk verification under immutable 1:2 Risk-to-Reward execution.">
   
   <!-- Favicon SVG Data URI -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080c14'/%3E%3Cpath d='M6 22 L13 14 L19 18 L26 8' stroke='%2310b981' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='26' cy='8' r='2' fill='%2306b6d4'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23050811'/%3E%3Cpath d='M6 22 L13 14 L19 18 L26 8' stroke='%2310b981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='26' cy='8' r='2' fill='%230ea5e9'/%3E%3C/svg%3E">
 
   <!-- OpenGraph & Social Metadata -->
   <meta property="og:title" content="Muhammad Ali Jawara Wiratama | Quantitative Systems Researcher">
-  <meta property="og:description" content="Quantitative research archive and empirical track record for Hang Seng Index (HK50) sequence modeling under fixed 1:2 Risk-to-Reward execution.">
+  <meta property="og:description" content="Empirical research archive, neural sequence modeling, and econometric risk verification under immutable 1:2 Risk-to-Reward execution.">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Muhammad Ali Jawara Wiratama | Quantitative Research">
-  <meta name="twitter:description" content="Quantitative research archive and empirical track record for Hang Seng Index (HK50) sequence modeling under fixed 1:2 Risk-to-Reward execution.">
 
   <!-- Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- KaTeX CDN for LaTeX Mathematical Rendering -->
+  <!-- KaTeX for Mathematical Equation Rendering -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
@@ -40,14 +37,16 @@
           },
           colors: {
             brand: {
-              dark: '#080c14',
-              surface: '#0e1524',
-              card: '#131b2e',
-              border: '#1e293b',
-              accent: '#06b6d4',
+              obsidian: '#050811',
+              panel: '#090e1a',
+              surface: '#0d1527',
+              cell: '#111b30',
+              border: '#1a263e',
+              borderLight: '#243452',
+              cyan: '#0ea5e9',
               emerald: '#10b981',
               rose: '#f43f5e',
-              gold: '#f59e0b',
+              amber: '#f59e0b',
             }
           }
         }
@@ -58,948 +57,1100 @@
   <!-- TradingView Lightweight Charts Standalone CDN -->
   <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
 
-  <!-- Pre-bundled Zero-CORS Data (Sanitized Production Build) -->
+  <!-- Sanitized Public Quantitative Data -->
   <script src="data/data.js"></script>
 
   <style>
-    /* Custom scrollbars and styling */
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #080c14; }
-    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    /* Dense Quantitative Terminal Scrollbar */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #050811; }
+    ::-webkit-scrollbar-thumb { background: #1a263e; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: #243452; }
 
-    /* Mobile scrolling & touch pipeline optimizations */
-    html {
-      -webkit-text-size-adjust: 100%;
-      scroll-behavior: auto;
+    /* Hairline Grid & Mathematical Display */
+    .grid-hairline { border: 1px solid #1a263e; }
+    .grid-cell { border: 1px solid #1a263e; }
+    .katex { font-size: 1.0em; }
+    
+    /* Interactive Node Styling */
+    .arch-node {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .arch-node:hover {
+      border-color: #0ea5e9;
+      background: #0d1527;
+      transform: translateY(-2px);
+    }
+    .arch-node.active-node {
+      border-color: #0ea5e9;
+      background: #0d1527;
+      box-shadow: 0 0 16px rgba(14, 165, 233, 0.20);
     }
 
-    /* Hardware compositing & smooth smart-hide transition for navbar */
-    #main-nav {
-      transform: translateZ(0);
-      will-change: transform;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    #main-nav.nav-hidden {
-      transform: translateY(-100%) translateZ(0);
-    }
-
-    .sticky-col-shadow {
-      transform: translateZ(0);
-      box-shadow: 3px 0 6px -2px rgba(0, 0, 0, 0.45);
-    }
-
-    /* Decouple chart touch gestures: allow 100% native vertical page scrolling */
+    /* Decouple touch gestures on chart containers */
     #tv-chart-top, #tv-chart-bottom,
     #tv-chart-top canvas, #tv-chart-bottom canvas {
       touch-action: pan-y !important;
     }
-
-    /* Content visibility containment for heavy downstream sections */
-    #audit, #methodology {
-      content-visibility: auto;
-      contain-intrinsic-size: 1px 600px;
-    }
-
-    /* Silky smooth section scroll-reveal animation */
-    .scroll-reveal {
-      opacity: 0;
-      transform: translateY(24px) translateZ(0);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: opacity, transform;
-    }
-    .scroll-reveal.revealed {
-      opacity: 1;
-      transform: translateY(0) translateZ(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .scroll-reveal {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
-      }
-    }
-
-    /* KaTeX equation display tweaks */
-    .katex {
-      font-size: 1.05em;
-    }
   </style>
 </head>
-<body class="bg-brand-dark text-slate-200 font-sans antialiased selection:bg-brand-accent selection:text-black">
+<body class="bg-brand-obsidian text-slate-300 font-sans antialiased selection:bg-brand-cyan selection:text-black">
 
   <!-- TOP NAVIGATION BAR -->
-  <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-brand-dark/98 sm:bg-brand-dark/95 sm:backdrop-blur-md border-b border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
+  <nav id="main-nav" class="sticky top-0 z-50 bg-brand-obsidian/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
       
-      <!-- Brand Logo & Identity -->
+      <!-- Brand & Quantitative Identity -->
       <a href="#" class="flex items-center space-x-3 group">
-        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded bg-slate-900 border border-slate-700/80 flex items-center justify-center text-slate-200 font-mono font-bold text-xs sm:text-sm">
+        <div class="w-7 h-7 rounded bg-brand-surface border border-brand-borderLight flex items-center justify-center text-slate-200 font-mono font-bold text-xs">
           JW
         </div>
         <div class="flex items-center space-x-2">
-          <span class="font-bold text-slate-100 tracking-tight text-xs sm:text-sm md:text-base">Muhammad Ali Jawara Wiratama</span>
-          <span class="hidden md:inline-block text-slate-600">|</span>
-          <span class="hidden md:inline-block text-xs font-mono text-slate-400">Quantitative Systems Researcher</span>
+          <span class="font-bold text-slate-100 tracking-tight text-xs sm:text-sm">Muhammad Ali Jawara Wiratama</span>
+          <span class="text-slate-600 hidden sm:inline">/</span>
+          <span class="text-xs font-mono text-slate-400 hidden sm:inline">Quant Research</span>
         </div>
       </a>
       
-      <!-- Desktop Navigation Links (Segmented Institutional Grid) -->
-      <div class="hidden lg:flex items-center divide-x divide-slate-800/80 border-x border-slate-800/80 font-mono text-xs">
-        <a href="#hk50" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-slate-900/80 transition flex items-center space-x-1.5">
+      <!-- Segmented Terminal Navigation Links -->
+      <div class="hidden lg:flex items-center divide-x divide-brand-border border-x border-brand-border font-mono text-xs">
+        <a href="#overview" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-brand-surface transition flex items-center space-x-1.5">
           <span class="text-slate-600 font-bold">01</span>
           <span>Overview</span>
         </a>
-        <a href="#tearsheet" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-slate-900/80 transition flex items-center space-x-1.5">
+        <a href="#tearsheet" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-brand-surface transition flex items-center space-x-1.5">
           <span class="text-slate-600 font-bold">02</span>
-          <span>Equity Curve</span>
+          <span>Cumulative R</span>
         </a>
-        <a href="#heatmap" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-slate-900/80 transition flex items-center space-x-1.5">
+        <a href="#architecture" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-brand-surface transition flex items-center space-x-1.5">
           <span class="text-slate-600 font-bold">03</span>
+          <span>Model Architecture</span>
+        </a>
+        <a href="#analytics" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-brand-surface transition flex items-center space-x-1.5">
+          <span class="text-slate-600 font-bold">04</span>
+          <span>Quant Analytics</span>
+        </a>
+        <a href="#heatmap" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-brand-surface transition flex items-center space-x-1.5">
+          <span class="text-slate-600 font-bold">05</span>
           <span>82-Mo Matrix</span>
         </a>
-        <a href="#audit" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-slate-900/80 transition flex items-center space-x-1.5">
-          <span class="text-slate-600 font-bold">04</span>
-          <span>Annual Track</span>
-        </a>
-        <a href="#methodology" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-slate-900/80 transition flex items-center space-x-1.5">
-          <span class="text-slate-600 font-bold">05</span>
+        <a href="#methodology" class="px-3.5 py-1.5 text-slate-400 hover:text-white hover:bg-brand-surface transition flex items-center space-x-1.5">
+          <span class="text-slate-600 font-bold">06</span>
           <span>Methodology</span>
         </a>
       </div>
 
-      <!-- Action Buttons & Mobile Toggle -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <!-- Native Inline SVG GitHub Link -->
+      <!-- Action Buttons & System State -->
+      <div class="flex items-center space-x-3">
+        <div class="hidden sm:flex items-center space-x-1.5 px-2.5 py-1 rounded bg-brand-surface border border-brand-border font-mono text-[11px] text-emerald-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Verified Track: 758 Trades</span>
+        </div>
+
         <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center space-x-1.5 text-xs font-mono bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded border border-slate-800 hover:border-slate-700 transition"
+           class="inline-flex items-center space-x-1.5 text-xs font-mono bg-brand-surface hover:bg-brand-cell text-slate-300 hover:text-white px-3 py-1.5 rounded border border-brand-border hover:border-slate-600 transition"
            title="GitHub Profile">
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
-          <span class="hidden sm:inline">GitHub Profile</span>
+          <span class="hidden sm:inline">GitHub</span>
         </a>
 
-        <!-- Mobile Menu Button -->
+        <!-- Mobile Menu Toggle Button -->
         <button id="mobile-menu-btn" aria-label="Toggle navigation menu"
-                class="lg:hidden p-1.5 sm:p-2 rounded bg-slate-900 text-slate-300 hover:text-white border border-slate-800 focus:outline-none">
-          <svg id="hamburger-icon" class="w-4 h-4 sm:w-5 sm:h-5 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="lg:hidden p-1.5 rounded bg-brand-surface text-slate-300 border border-brand-border">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg id="close-icon" class="w-4 h-4 sm:w-5 sm:h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Technical Navigation Sheet -->
-    <div id="mobile-drawer" class="lg:hidden border-brand-border bg-slate-950/98 px-4 font-mono transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0 py-0 border-b-0 pointer-events-none">
-      <div class="space-y-1 text-xs">
-        <a href="#hk50" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
-          <div class="flex items-center space-x-2.5">
-            <span class="text-slate-600 font-bold">01</span>
-            <span>HK50 Specialist Overview</span>
-          </div>
-          <span class="text-[10px] text-slate-500">H1 Seq</span>
-        </a>
-        <a href="#tearsheet" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
-          <div class="flex items-center space-x-2.5">
-            <span class="text-slate-600 font-bold">02</span>
-            <span>Interactive Equity Curve</span>
-          </div>
-          <span class="text-[10px] text-slate-500">+646.58R</span>
-        </a>
-        <a href="#heatmap" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
-          <div class="flex items-center space-x-2.5">
-            <span class="text-slate-600 font-bold">03</span>
-            <span>82-Month Consecutive Matrix</span>
-          </div>
-          <span class="text-[10px] text-slate-500">2020–2026</span>
-        </a>
-        <a href="#audit" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
-          <div class="flex items-center space-x-2.5">
-            <span class="text-slate-600 font-bold">04</span>
-            <span>Annual Verification & Risk Audit</span>
-          </div>
-          <span class="text-[10px] text-slate-500">7/7 Pass</span>
-        </a>
-        <a href="#methodology" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-900/80 transition">
-          <div class="flex items-center space-x-2.5">
-            <span class="text-slate-600 font-bold">05</span>
-            <span>Quantitative Methodology</span>
-          </div>
-          <span class="text-[10px] text-slate-500">1:2 R:R</span>
-        </a>
-      </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="lg:hidden hidden border-b border-brand-border bg-brand-panel px-4 py-3 font-mono text-xs space-y-2">
+      <a href="#overview" class="block text-slate-300 hover:text-white py-1">01. Overview</a>
+      <a href="#tearsheet" class="block text-slate-300 hover:text-white py-1">02. Cumulative R</a>
+      <a href="#architecture" class="block text-slate-300 hover:text-white py-1">03. Model Architecture</a>
+      <a href="#analytics" class="block text-slate-300 hover:text-white py-1">04. Quant Analytics</a>
+      <a href="#heatmap" class="block text-slate-300 hover:text-white py-1">05. 82-Month Matrix</a>
+      <a href="#methodology" class="block text-slate-300 hover:text-white py-1">06. Methodology</a>
     </div>
   </nav>
 
-  <!-- Mobile Backdrop Overlay -->
-  <div id="mobile-backdrop" class="fixed inset-0 z-40 bg-black/60 transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden" aria-hidden="true"></div>
-
-  <!-- HERO SECTION -->
-  <section class="pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-reveal">
-    <div class="relative rounded-2xl bg-brand-surface p-6 sm:p-10 border border-brand-border overflow-hidden shadow-xl">
-      <div class="max-w-3xl">
-        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-          HK50 Deep Temporal Sequence Modeling & Execution Track Record
-        </h1>
-        <p class="mt-4 text-xs sm:text-base text-slate-400 leading-relaxed">
-          Empirical research, out-of-sample forward verification, and risk audit of a causal deep learning trading system operating on Hang Seng Index (HK50) H1 timeframe under immutable <strong>1:2 Risk-to-Reward</strong> parameters. Authored by <strong>Muhammad Ali Jawara Wiratama</strong>.
-        </p>
-      </div>
-
-      <!-- HIGHLIGHT METRIC CARDS (RESPONSIVE GRID) -->
-      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Total Realized</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-total-r">+646.58 R</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">758 Historical Trades</div>
+  <!-- HERO SECTION & CORE TELEMETRY STRIP -->
+  <section id="overview" class="pt-8 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="border border-brand-border bg-brand-panel p-6 sm:p-8">
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-brand-border">
+        <div>
+          <div class="flex items-center space-x-2 text-xs font-mono text-brand-cyan tracking-wider uppercase mb-1.5">
+            <span>Hang Seng Index (HK50)</span>
+            <span>&bull;</span>
+            <span>H1 Sequence Modeling</span>
+            <span>&bull;</span>
+            <span class="text-emerald-400">Fixed 1:2 R:R</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Causal Deep Sequence Modeling & Empirical Verification Archive
+          </h1>
+          <p class="mt-2 text-xs sm:text-sm text-slate-400 max-w-3xl leading-relaxed">
+            Sistem trading kuantitatif kausal berbasis transformer mikrostruktur pada timeframe H1. Beroperasi di bawah struktur payoff simetris-terkuantisasi <strong>Stop Loss 1.0R / Take Profit 2.0R</strong> dengan batas waktu mengambang maksimal 16 jam.
+          </p>
         </div>
 
-        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Win Rate</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.40%</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">+29.07% vs 33.33% Breakeven</div>
-        </div>
-
-        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Profit Factor</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-pf">3.298</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">Gross Win / Gross Loss</div>
-        </div>
-
-        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">OOS 2026 Return</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-oos-r">+64.64 R</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">Pure Forward Track (116 Trades)</div>
-        </div>
-
-        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Max Drawdown</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1" id="stat-max-dd">-7.00 R</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">6.8 Years Track Record</div>
-        </div>
-
-        <div class="bg-brand-card p-3.5 sm:p-4 rounded-xl border border-brand-border flex flex-col justify-between">
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-mono">Non-Minus Months</div>
-          <div class="text-xl sm:text-2xl font-bold font-mono text-white mt-1">95.12%</div>
-          <div class="text-[10px] text-slate-500 mt-0.5">78 of 82 Months ≥ 0 R</div>
+        <div class="flex flex-col items-start md:items-end justify-center font-mono text-xs text-slate-400 gap-1 min-w-[220px]">
+          <div>Principal: <strong class="text-slate-200">Muhammad Ali Jawara Wiratama</strong></div>
+          <div>Evaluation Horizon: <span class="text-slate-200">2020.01 – 2026.10 (82 Bulan)</span></div>
+          <div>Causality Guarantee: <span class="text-emerald-400 font-semibold">Zero Look-Ahead Bias</span></div>
         </div>
       </div>
+
+      <!-- HIGH-DENSITY QUANT METRIC GRID (1px Hairline Structural Cells) -->
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-px bg-brand-border">
+        
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Total Return</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-emerald-400 mt-1" id="stat-total-r">+646.58 R</span>
+          <span class="text-[10px] font-mono text-slate-500">758 Total Trades</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Win Rate</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-white mt-1" id="stat-win-rate">62.40%</span>
+          <span class="text-[10px] font-mono text-slate-500">Breakeven: 33.33%</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Profit Factor</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-white mt-1" id="stat-pf">3.298</span>
+          <span class="text-[10px] font-mono text-slate-500">Gross Win / Loss</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Wilson 95% CI</span>
+          <span class="text-sm sm:text-base font-bold font-mono text-white mt-1">[58.9%, 65.8%]</span>
+          <span class="text-[10px] font-mono text-emerald-400">p &lt; 10⁻¹² vs H₀</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">OOS 2026 Return</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-white mt-1" id="stat-oos-r">+64.64 R</span>
+          <span class="text-[10px] font-mono text-slate-500">116 Trades (PF 2.21)</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Max Drawdown</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-rose-400 mt-1" id="stat-max-dd">-7.00 R</span>
+          <span class="text-[10px] font-mono text-slate-500">Weekly Close: -7.0R</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Velocity Exit</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-white mt-1">&le; 16 Jam</span>
+          <span class="text-[10px] font-mono text-slate-500">Rerata: 6.20 Jam</span>
+        </div>
+
+        <div class="bg-brand-panel p-3 flex flex-col justify-between">
+          <span class="text-[10px] font-mono uppercase text-slate-400">Positive Years</span>
+          <span class="text-lg sm:text-xl font-bold font-mono text-emerald-400 mt-1">7 / 7 (100%)</span>
+          <span class="text-[10px] font-mono text-slate-500">2020–2026 Konsisten</span>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- HK50 SPECIALIST OVERVIEW -->
-  <section id="hk50" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-reveal">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6">
-      <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-slate-400">Model Architecture & Specification</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">HK50 H1 Multi-Regime Specialist</h2>
-      </div>
-      <div class="mt-3 md:mt-0 flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Underlying: Hang Seng Index (HK50)</span>
-        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Horizon: H1 (60-Bar Window)</span>
-        <span class="px-2.5 py-1 bg-brand-surface rounded border border-brand-border">Payoff: Fixed 1:2 R:R</span>
-      </div>
-    </div>
-
-    <!-- SPEC GRID -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-brand-card p-5 sm:p-6 rounded-xl border border-brand-border flex flex-col justify-between">
+  <!-- INTERACTIVE TEARSHEET (TRADINGVIEW DUAL-PANE SYNCED) -->
+  <section id="tearsheet" class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="border border-brand-border bg-brand-panel p-4 sm:p-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-brand-border">
         <div>
-          <div class="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-1">Execution Constraint 01</div>
-          <h3 class="font-bold text-base text-white mb-2">Liquidity Transition Filter</h3>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            Mitigasi risiko kerugian laten pada periode transisi lelang dan pembukaan bursa lintas benua melalui ambang batas kausal adaptif $z_t \ge \kappa \cdot \sigma_t$.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-slate-400">
-          Target: Zero Spurious Entry on Open
-        </div>
-      </div>
-
-      <div class="bg-brand-card p-5 sm:p-6 rounded-xl border border-brand-border flex flex-col justify-between">
-        <div>
-          <div class="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-1">Execution Constraint 02</div>
-          <h3 class="font-bold text-base text-white mb-2">Holding Duration Velocity Cap</h3>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            $100\%$ posisi trading tuntas atau ditutup paksa mark-to-market secara ketat pada jam ke-16. Rata-rata durasi floating historis adalah <strong>6.20 jam</strong>, membebaskan psikologi dari risiko overnight/weekend berkepanjangan.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-slate-400">
-          Max Floating: $\le 16\text{ Jam}$ (Hard Exit)
-        </div>
-      </div>
-
-      <div class="bg-brand-card p-5 sm:p-6 rounded-xl border border-brand-border flex flex-col justify-between">
-        <div>
-          <div class="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-1">Execution Constraint 03</div>
-          <h3 class="font-bold text-base text-white mb-2">Orthogonal Directional Manifold</h3>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            Proyeksi Stiefel Manifold dengan penalti ortogonal ($\mathcal{L}_{\text{ortho}}$) yang mengunci korelasi antar-head Long dan Short mendekati nol ($\rho < 0.011$), memastikan separabilitas arah 50:50 yang independen.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border/60 text-[11px] font-mono text-slate-400">
-          Cross-Head Correlation: $\rho < 0.011$
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERACTIVE TEAR SHEET (TRADINGVIEW LIGHTWEIGHT CHARTS DUAL-PANE) -->
-  <section id="tearsheet" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-reveal">
-    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
-        <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-slate-400">Interactive Tear Sheet</span>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Cumulative R-Multiple Curve & Drawdown</h2>
-          <p class="text-xs text-slate-400 mt-1">Audit run sekuensial kronologis 758 trade bar-demi-bar (Januari 2020 – Oktober 2026).</p>
+          <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Section 02 // Cumulative Realized Performance</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Cumulative R-Multiple Curve & Drawdown Profile</h2>
         </div>
 
         <!-- Filter Buttons -->
-        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-mono" id="chart-filter-buttons">
-          <button onclick="filterChart('all', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-slate-800 text-white border border-slate-600 font-semibold">All (758 Trades)</button>
-          <button onclick="filterChart('2020-2022', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2020–2022</button>
-          <button onclick="filterChart('2023-2025', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2023–2025</button>
-          <button onclick="filterChart('2026', this)" class="chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border">2026 (OOS)</button>
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+          <button onclick="filterChart('all', this)" class="chart-btn px-3 py-1 bg-brand-surface text-white border border-brand-borderLight font-semibold">All (758 Trades)</button>
+          <button onclick="filterChart('2020-2022', this)" class="chart-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white">2020–2022</button>
+          <button onclick="filterChart('2023-2025', this)" class="chart-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white">2023–2025</button>
+          <button onclick="filterChart('2026', this)" class="chart-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white">2026 (Forward OOS)</button>
         </div>
       </div>
 
-      <!-- RESPONSIVE LIVE HUD BAR (CROSSHAIR TRACKER) -->
-      <div class="bg-brand-card/90 rounded-xl p-3 mb-4 border border-brand-border grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-[11px] font-mono">
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Timeline Anchor</span>
-          <span id="hover-date" class="text-white font-bold">2026-10-12</span>
+      <!-- Live HUD Telemetry Crosshair -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-brand-border mb-3 font-mono text-[11px]">
+        <div class="bg-brand-surface p-2">
+          <span class="text-slate-500 block text-[10px]">Anchor Date</span>
+          <span id="hover-date" class="text-white font-bold">2026-10-14</span>
         </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Sample Regime</span>
-          <span id="hover-regime" class="text-slate-200 font-medium">2026 (OOS Phase)</span>
+        <div class="bg-brand-surface p-2">
+          <span class="text-slate-500 block text-[10px]">Regime</span>
+          <span id="hover-regime" class="text-slate-200">2026 (Forward OOS)</span>
         </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+        <div class="bg-brand-surface p-2">
           <span class="text-slate-500 block text-[10px]">Cumulative Return</span>
-          <span id="hover-cum-r" class="text-white font-bold">+646.58 R</span>
+          <span id="hover-cum-r" class="text-emerald-400 font-bold">+646.58 R</span>
         </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Underwater Drawdown</span>
-          <span id="hover-dd-r" class="text-slate-200 font-bold">0.00 R (Peak)</span>
+        <div class="bg-brand-surface p-2">
+          <span class="text-slate-500 block text-[10px]">Underwater DD</span>
+          <span id="hover-dd-r" class="text-slate-300 font-bold">0.00 R (Peak)</span>
         </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
+        <div class="bg-brand-surface p-2">
           <span class="text-slate-500 block text-[10px]">Drawdown Status</span>
-          <span id="hover-dd-status" class="text-slate-300 font-medium">All-Time High</span>
+          <span id="hover-dd-status" class="text-emerald-400 font-medium">All-Time High</span>
         </div>
-        <div class="bg-brand-surface/70 p-2 rounded border border-brand-border/60">
-          <span class="text-slate-500 block text-[10px]">Payoff Structure</span>
-          <span class="text-white font-bold">1:2 R:R (Fixed Payoff)</span>
+        <div class="bg-brand-surface p-2">
+          <span class="text-slate-500 block text-[10px]">Payoff Geometry</span>
+          <span class="text-white font-bold">1:2 R:R Bit-Exact</span>
         </div>
       </div>
 
-      <!-- DUAL-PANE CHART CONTAINERS (SYNCHRONIZED PANES) -->
-      <div class="space-y-3">
-        <!-- Top Pane: Cumulative R -->
-        <div>
-          <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1 px-1">
-            <span class="inline-flex items-center space-x-1.5 font-medium text-slate-300">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              <span>Cumulative Realized Return (+R Growth)</span>
-            </span>
-            <span class="text-slate-500 text-[10px]">Scale: 0.0R to +650.0R</span>
-          </div>
-          <div class="relative w-full h-[310px] rounded-xl overflow-hidden bg-brand-dark border border-brand-border" id="tv-chart-top"></div>
-        </div>
-
-        <!-- Bottom Pane: Underwater Drawdown -->
-        <div>
-          <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1 px-1">
-            <span class="inline-flex items-center space-x-1.5 font-medium text-slate-300">
-              <span class="w-2 h-2 rounded-full bg-rose-400"></span>
-              <span>Underwater Drawdown Profile (-R from Peak)</span>
-            </span>
-            <span class="text-slate-500 text-[10px]">Scale: 0.0R to -7.0R</span>
-          </div>
-          <div class="relative w-full h-[140px] rounded-xl overflow-hidden bg-brand-dark border border-brand-border" id="tv-chart-bottom"></div>
-        </div>
+      <!-- Synchronized Lightweight Chart Panes -->
+      <div class="space-y-2">
+        <div id="tv-chart-top" class="w-full h-[320px] bg-brand-obsidian border border-brand-border"></div>
+        <div id="tv-chart-bottom" class="w-full h-[130px] bg-brand-obsidian border border-brand-border"></div>
       </div>
+
     </div>
   </section>
 
-  <!-- MONTHLY RETURN HEATMAP (82 CALENDAR MONTHS) -->
-  <section id="heatmap" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-reveal">
-    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
-      <div class="mb-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+  <!-- INTERACTIVE NEURAL ARCHITECTURE EXPLORER (IP-GUARDED SHOWCASE) -->
+  <section id="architecture" class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="border border-brand-border bg-brand-panel p-4 sm:p-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 mb-5 border-b border-brand-border">
         <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-slate-400">Monthly Return Distribution</span>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">82-Month Consecutive Performance Heatmap</h2>
-          <p class="text-xs text-slate-400 mt-1">73 Bulan Menang (89.02%), 5 Bulan Impas (6.10%), Hanya 4 Bulan Defisit (4.88%).</p>
+          <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Section 03 // Core Deep Learning Technology</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Interactive Neural Architecture Explorer</h2>
+          <p class="text-xs text-slate-400 mt-1">Klik blok layer pada diagram dataflow di bawah untuk memeriksa spesifikasi matematis & dimensi tensor (IP-Guarded).</p>
         </div>
+        <div class="font-mono text-[11px] text-amber-400 bg-brand-surface border border-brand-border px-3 py-1.5 rounded self-start sm:self-auto">
+          🔒 IP Protection: Weights & Seeds Closed-Source
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DATAFLOW PIPELINE (SVG & MODULAR NODES) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 mb-6" id="architecture-nodes">
         
-        <!-- Legend Chips -->
-        <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] font-mono">
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-600"></span><span class="text-slate-300">Profit (&ge; +10R)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-700/90"></span><span class="text-slate-300">Profit (+5R s.d. +9.9R)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-emerald-900/60"></span><span class="text-slate-300">Profit (+0.1R s.d. +4.9R)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-slate-800"></span><span class="text-slate-300">Flat (0R)</span></div>
-          <div class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-rose-700/80"></span><span class="text-slate-300">Loss (&lt; 0R)</span></div>
+        <div class="arch-node active-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(0)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 01</div>
+          <div class="text-xs font-bold text-white mt-1">H1 Raw Feed</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">OHLCV Strict Seq</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(1)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 02</div>
+          <div class="text-xs font-bold text-white mt-1">24 Mikrostruktur</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">Wavelet & YZ Vol</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(2)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 03</div>
+          <div class="text-xs font-bold text-white mt-1">Inception Front</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">Conv1D k=[3,5,7]</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(3)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 04</div>
+          <div class="text-xs font-bold text-white mt-1">Transformer Trunk</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">4-Layer Self-Attn</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(4)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 05</div>
+          <div class="text-xs font-bold text-white mt-1">FiLM Modulation</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">Asset Conditioning</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(5)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 06</div>
+          <div class="text-xs font-bold text-white mt-1">Stiefel Splay Head</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">&rho;(L,S) &lt; 0.011</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(6)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 07</div>
+          <div class="text-xs font-bold text-white mt-1">Causal Gating</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">Rolling q (N=330)</div>
+        </div>
+
+        <div class="arch-node p-3 border border-brand-border bg-brand-surface rounded text-left" onclick="inspectLayer(7)">
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Stage 08</div>
+          <div class="text-xs font-bold text-white mt-1">Execution Guard</div>
+          <div class="text-[10px] font-mono text-slate-400 mt-1">1:2 R:R &le; 16h Exit</div>
+        </div>
+
+      </div>
+
+      <!-- LAYER DETAIL INSPECTOR PANEL (DYNAMIC DISPLAY) -->
+      <div id="inspector-panel" class="border border-brand-border bg-brand-surface p-5 sm:p-6 rounded">
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-4 border-b border-brand-border">
+          <div>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-brand-cyan" id="insp-stage-id">STAGE 01 // DATA INGESTION</span>
+            <h3 class="text-lg sm:text-xl font-bold text-white mt-0.5" id="insp-layer-name">H1 Closed Bar Acquisition</h3>
+          </div>
+          <div class="flex items-center space-x-2 font-mono text-xs">
+            <span class="text-slate-500">Tensor Flow:</span>
+            <code class="px-2 py-0.5 bg-brand-panel border border-brand-border text-emerald-400 rounded" id="insp-tensor-flow">Raw MT5 Feed &rarr; (60, 6)</code>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
+          
+          <div class="lg:col-span-2 space-y-4">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-1">Mathematical Formulation</span>
+              <div class="p-3.5 bg-brand-obsidian border border-brand-border rounded font-mono text-xs overflow-x-auto text-slate-200" id="insp-math-block">
+                $$\text{Causality Assertion: } t_k > t_{k-1}, \quad \forall k \in [1, 60], \quad \text{Look-Ahead Bias } \equiv 0$$
+              </div>
+            </div>
+
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-1">Architectural Role & Engineering Rationale</span>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" id="insp-rationale">
+                Menarik 60 bar H1 tertutup secara strictly monotonic dari matching engine broker. Memverifikasi integritas harga OHLC (High &ge; Low, High &ge; Open/Close) dan memastikan nol gap data sebelum disalurkan ke pipeline fitur.
+              </p>
+            </div>
+          </div>
+
+          <div class="border-t lg:border-t-0 lg:border-l border-brand-border pt-4 lg:pt-0 lg:pl-6 space-y-3 font-mono text-xs">
+            <div>
+              <span class="text-slate-500 block text-[10px] uppercase">Input Dimension</span>
+              <span class="text-slate-200 font-semibold" id="insp-dim-in">List[Dict[str, float]] (MT5 Bars)</span>
+            </div>
+            <div>
+              <span class="text-slate-500 block text-[10px] uppercase">Output Dimension</span>
+              <span class="text-slate-200 font-semibold" id="insp-dim-out">DataFrame (60, 6)</span>
+            </div>
+            <div>
+              <span class="text-slate-500 block text-[10px] uppercase">Execution Latency</span>
+              <span class="text-emerald-400 font-semibold" id="insp-latency">&lt; 1.5 ms per poll cycle</span>
+            </div>
+            <div>
+              <span class="text-slate-500 block text-[10px] uppercase">Verification Status</span>
+              <span class="text-white bg-slate-800 px-2 py-0.5 rounded border border-slate-700 inline-block mt-0.5" id="insp-verification">100% Causal Monotonic</span>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- HEATMAP TABLE CONTAINER WITH STICKY YEAR ANCHOR -->
-      <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark/50">
-        <table class="w-full text-center border-collapse text-xs font-mono min-w-[700px]">
+    </div>
+  </section>
+
+  <!-- ADVANCED QUANT & ECONOMETRIC ANALYTICS (KEY TOPIC VISUALIZATIONS) -->
+  <section id="analytics" class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="border border-brand-border bg-brand-panel p-4 sm:p-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-5 border-b border-brand-border">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Section 04 // Advanced Econometrics & Risk Analysis</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Quantitative Analytics & Tail Risk Diagnostics</h2>
+          <p class="text-xs text-slate-400 mt-1">Analisis distribusi ekor, invariansi sekuens Markov, dan batas impas matematis.</p>
+        </div>
+
+        <!-- Analytical Tab Switcher -->
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+          <button onclick="switchQuantTab('distribution', this)" class="quant-tab-btn px-3 py-1 bg-brand-surface text-white border border-brand-borderLight font-semibold">1. Return Distribution</button>
+          <button onclick="switchQuantTab('rolling-wr', this)" class="quant-tab-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white">2. Rolling Win Rate</button>
+          <button onclick="switchQuantTab('markov', this)" class="quant-tab-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white">3. Markov Independence</button>
+          <button onclick="switchQuantTab('velocity', this)" class="quant-tab-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white">4. Velocity Attribution</button>
+        </div>
+      </div>
+
+      <!-- TAB 1: RETURN DISTRIBUTION (BIMODAL PAYOFF HISTOGRAM) -->
+      <div id="quant-tab-distribution" class="quant-tab-content block">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2">
+            <span class="text-xs font-mono uppercase text-slate-400 block mb-3">Empirical Payoff Frequency Distribution (758 Trades)</span>
+            <div id="distribution-chart-container" class="space-y-2 font-mono text-xs">
+              <!-- Rendered via JavaScript from window.QUANT_RETURN_DISTRIBUTION -->
+            </div>
+            <div class="mt-4 p-3 bg-brand-obsidian border border-brand-border rounded font-mono text-[11px] text-slate-400 flex flex-wrap justify-between gap-2">
+              <span>Mathematical Truncation: <strong>SL Capped strictly at -1.0R</strong></span>
+              <span>Theoretical Breakeven: <strong>33.33% Win Rate</strong></span>
+              <span class="text-emerald-400 font-semibold">Realized Surplus: +29.07% above Breakeven</span>
+            </div>
+          </div>
+
+          <div class="border-t lg:border-t-0 lg:border-l border-brand-border pt-4 lg:pt-0 lg:pl-6 space-y-4 font-mono text-xs">
+            <span class="text-xs font-mono uppercase text-slate-400 block">Risk Tail & Moments Metrics</span>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="bg-brand-surface p-2.5 border border-brand-border rounded">
+                <span class="text-slate-500 block text-[10px]">Skewness</span>
+                <span class="text-emerald-400 font-bold text-sm" id="dist-skewness">+0.5847</span>
+                <span class="text-[9px] text-slate-500 block">Positive Right Tail</span>
+              </div>
+              <div class="bg-brand-surface p-2.5 border border-brand-border rounded">
+                <span class="text-slate-500 block text-[10px]">Kurtosis</span>
+                <span class="text-white font-bold text-sm" id="dist-kurtosis">-1.6210</span>
+                <span class="text-[9px] text-slate-500 block">Bimodal Dispersion</span>
+              </div>
+              <div class="bg-brand-surface p-2.5 border border-brand-border rounded">
+                <span class="text-slate-500 block text-[10px]">VaR (95% & 99%)</span>
+                <span class="text-rose-400 font-bold text-sm">-1.00 R</span>
+                <span class="text-[9px] text-slate-500 block">Max 1-Trade Loss Hard Cap</span>
+              </div>
+              <div class="bg-brand-surface p-2.5 border border-brand-border rounded">
+                <span class="text-slate-500 block text-[10px]">CVaR / Expected Shortfall</span>
+                <span class="text-rose-400 font-bold text-sm">-1.00 R</span>
+                <span class="text-[9px] text-slate-500 block">Zero Fat-Tail Ruin</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-400 leading-relaxed font-sans pt-2">
+              Struktur stop loss absolut $1.0\times\text{ATR}$ memotong ekor kiri distribusi (*zero fat-tail downside*). Nilai VaR dan CVaR identik di $-1.00\text{R}$, membuktikan eliminasi risiko kerugian melebihi modal alokasi per trade.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: ROLLING WIN RATE VS 33.33% BREAKEVEN ENVELOPE -->
+      <div id="quant-tab-rolling-wr" class="quant-tab-content hidden">
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs font-mono uppercase text-slate-400">Rolling 50-Trade Win Rate vs 33.33% Breakeven Threshold (2020–2026)</span>
+            <div class="font-mono text-xs flex items-center space-x-3">
+              <span class="flex items-center space-x-1.5"><span class="w-3 h-0.5 bg-brand-cyan inline-block"></span><span class="text-slate-300">Rolling Win Rate (50 Trades)</span></span>
+              <span class="flex items-center space-x-1.5"><span class="w-3 h-0.5 bg-rose-500 inline-block border-t border-dashed"></span><span class="text-rose-400">Breakeven Line (33.33%)</span></span>
+            </div>
+          </div>
+
+          <div id="rolling-chart-container" class="w-full h-[260px] bg-brand-obsidian border border-brand-border relative">
+            <!-- Custom Canvas / SVG Renderer -->
+            <canvas id="rolling-canvas" class="w-full h-full"></canvas>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-brand-border font-mono text-xs">
+            <div class="bg-brand-surface p-3">
+              <span class="text-slate-500 block text-[10px]">All-Time Minimum Rolling Win Rate</span>
+              <span class="text-white font-bold text-base" id="stat-min-rolling">50.00%</span>
+              <span class="text-emerald-400 text-[10px] block mt-0.5">+16.67% di atas Breakeven</span>
+            </div>
+            <div class="bg-brand-surface p-3">
+              <span class="text-slate-500 block text-[10px]">All-Time Maximum Rolling Win Rate</span>
+              <span class="text-white font-bold text-base" id="stat-max-rolling">78.00%</span>
+              <span class="text-slate-400 text-[10px] block mt-0.5">Peak Regime 2023</span>
+            </div>
+            <div class="bg-brand-surface p-3">
+              <span class="text-slate-500 block text-[10px]">Margin of Safety</span>
+              <span class="text-emerald-400 font-bold text-base">Selalu &gt; 0% (Zero Breakeven Violation)</span>
+              <span class="text-slate-500 text-[10px] block mt-0.5">Tak Pernah Menyentuh Garis 33.33%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: MARKOVIAN TRANSITION PROBABILITY MATRIX -->
+      <div id="quant-tab-markov" class="quant-tab-content hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+          <div>
+            <span class="text-xs font-mono uppercase text-slate-400 block mb-3">Empirical 2&times;2 Transition Probability Matrix</span>
+            
+            <div class="border border-brand-border bg-brand-obsidian rounded overflow-hidden font-mono text-xs">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-brand-border bg-brand-surface/70 text-slate-400 text-[11px]">
+                    <th class="p-3">State Saat Ini ($t-1$)</th>
+                    <th class="p-3 text-right text-emerald-400">Next Win ($t$)</th>
+                    <th class="p-3 text-right text-rose-400">Next Loss ($t$)</th>
+                    <th class="p-3 text-right text-slate-400">Total Transisi</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-brand-border/60">
+                  <tr>
+                    <td class="p-3 font-semibold text-white">Pasca Menang (Win)</td>
+                    <td class="p-3 text-right text-emerald-400 font-bold" id="mkv-ww">61.95% (293)</td>
+                    <td class="p-3 text-right text-rose-400" id="mkv-wl">38.05% (180)</td>
+                    <td class="p-3 text-right text-slate-400">473</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold text-white">Pasca Kalah (Loss)</td>
+                    <td class="p-3 text-right text-emerald-400 font-bold" id="mkv-lw">63.16% (179)</td>
+                    <td class="p-3 text-right text-rose-400" id="mkv-ll">36.84% (105)</td>
+                    <td class="p-3 text-right text-slate-400">284</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-4 p-3 bg-brand-surface border border-brand-border rounded font-mono text-xs space-y-1">
+              <div class="flex justify-between text-slate-300">
+                <span>Chi-Square Test Statistic ($\chi^2$):</span>
+                <strong class="text-white">0.0881</strong>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>p-value:</span>
+                <strong class="text-emerald-400">0.7666 (p &gt; 0.05)</strong>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>Statistik Hipotesis:</span>
+                <span class="text-emerald-400">Gagal Menolak $H_0$ (Independen Murni)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 font-sans text-xs text-slate-300 leading-relaxed border-t lg:border-t-0 lg:border-l border-brand-border pt-4 lg:pt-0 lg:pl-6">
+            <span class="text-xs font-mono uppercase text-slate-400 block font-normal">Makna Kuantitatif Independensi Markovian</span>
+            <p>
+              Uji independensi Chi-Square menghasilkan <strong>p-value 0.7666</strong>, jauh di atas ambang batas penolakan standar ($0.05$).
+            </p>
+            <p>
+              Artinya secara matematis: <strong>Probabilitas menang setelah mengalami kerugian ($63.16\%$) identik dengan probabilitas menang setelah memperoleh kemenangan ($61.95\%$)</strong>.
+            </p>
+            <div class="p-3 bg-brand-obsidian border border-brand-border rounded font-mono text-[11px] text-slate-400">
+              &bull; Tidak ada efek <span class="italic text-slate-200">Gambler's Fallacy</span>.<br>
+              &bull; Tidak ada penggumpalan kerugian (*loss streak clustering*).<br>
+              &bull; Siklus trade mematuhi hukum probabilitas binomial independen murni.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: VELOCITY ATTRIBUTION (HOLDING DURATION VS REALIZED R) -->
+      <div id="quant-tab-velocity" class="quant-tab-content hidden">
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs font-mono uppercase text-slate-400">Holding Duration Distribution (1 to 16 Hours)</span>
+            <span class="font-mono text-xs text-emerald-400">100% Closed &le; 16h (Rerata: 6.20h)</span>
+          </div>
+
+          <div id="velocity-bars-container" class="space-y-1.5 font-mono text-xs">
+            <!-- Rendered via JavaScript from window.QUANT_VELOCITY_ATTRIBUTION -->
+          </div>
+
+          <div class="p-3 bg-brand-obsidian border border-brand-border rounded font-mono text-[11px] text-slate-400 flex flex-wrap justify-between gap-2">
+            <span>Rerata Durasi Trade Menang: <strong class="text-emerald-400">5.92 Jam</strong></span>
+            <span>Rerata Durasi Trade Kalah: <strong class="text-rose-400">6.67 Jam</strong></span>
+            <span>Batas Keluar Paksa (Hard Time Exit): <strong class="text-white">Jam ke-16</strong></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 82-MONTH CONSECUTIVE MATRIX (HEATMAP) -->
+  <section id="heatmap" class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="border border-brand-border bg-brand-panel p-4 sm:p-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-brand-border">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Section 05 // Chronological Consistency</span>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">82-Month Continuous Return Matrix (2020–2026)</h2>
+          <p class="text-xs text-slate-400 mt-1">Matriks perolehan bersih unit R bulanan tanpa celah waktu libur.</p>
+        </div>
+        <div class="font-mono text-xs flex items-center space-x-2">
+          <span class="text-emerald-400 font-bold">78 / 82 Bulan Positif/Impas (95.12%)</span>
+        </div>
+      </div>
+
+      <!-- Matrix Table Container -->
+      <div class="overflow-x-auto border border-brand-border bg-brand-obsidian">
+        <table class="w-full text-left border-collapse text-xs font-mono min-w-[760px]" id="monthly-matrix-table">
           <thead>
-            <tr class="border-b border-brand-border text-slate-400 text-[11px] bg-brand-card/60">
-              <th class="py-2.5 px-3 text-left sticky left-0 z-20 bg-brand-surface sticky-col-shadow">Year</th>
-              <th class="py-2.5 px-2">Jan</th>
-              <th class="py-2.5 px-2">Feb</th>
-              <th class="py-2.5 px-2">Mar</th>
-              <th class="py-2.5 px-2">Apr</th>
-              <th class="py-2.5 px-2">May</th>
-              <th class="py-2.5 px-2">Jun</th>
-              <th class="py-2.5 px-2">Jul</th>
-              <th class="py-2.5 px-2">Aug</th>
-              <th class="py-2.5 px-2">Sep</th>
-              <th class="py-2.5 px-2">Oct</th>
-              <th class="py-2.5 px-2">Nov</th>
-              <th class="py-2.5 px-2">Dec</th>
-              <th class="py-2.5 px-3 text-right">Annual Net R</th>
+            <tr class="border-b border-brand-border text-slate-400 bg-brand-surface/70 text-[11px]">
+              <th class="py-2.5 px-3">Year</th>
+              <th class="py-2.5 px-2 text-center">Jan</th>
+              <th class="py-2.5 px-2 text-center">Feb</th>
+              <th class="py-2.5 px-2 text-center">Mar</th>
+              <th class="py-2.5 px-2 text-center">Apr</th>
+              <th class="py-2.5 px-2 text-center">May</th>
+              <th class="py-2.5 px-2 text-center">Jun</th>
+              <th class="py-2.5 px-2 text-center">Jul</th>
+              <th class="py-2.5 px-2 text-center">Aug</th>
+              <th class="py-2.5 px-2 text-center">Sep</th>
+              <th class="py-2.5 px-2 text-center">Oct</th>
+              <th class="py-2.5 px-2 text-center">Nov</th>
+              <th class="py-2.5 px-2 text-center">Dec</th>
+              <th class="py-2.5 px-3 text-right">Net R</th>
+              <th class="py-2.5 px-3 text-center">Trades</th>
             </tr>
           </thead>
-          <tbody id="heatmap-tbody" class="divide-y divide-brand-border/60">
-            <!-- Dynamically populated from SHOWCASE_MONTHLY data -->
+          <tbody class="divide-y divide-brand-border/60" id="matrix-tbody">
+            <!-- Dynamically populated from window.SHOWCASE_MONTHLY -->
           </tbody>
         </table>
       </div>
 
-      <!-- INTERACTIVE MONTH INSPECTION CARD (MOBILE & DESKTOP) -->
-      <div id="heatmap-inspector" class="mt-3.5 p-3 rounded-xl bg-brand-dark/80 border border-brand-border/70 flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono text-slate-300 gap-2">
-        <div class="flex items-center space-x-2">
-          <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
-          <span id="inspect-label" class="text-slate-400">Pilih / sentuh bulan untuk detail performa:</span>
-        </div>
-        <div id="inspect-value" class="text-slate-200 font-medium bg-slate-900/90 px-2.5 py-1 rounded border border-slate-700/80 text-[11px]">
-          Okt 2026 (Bulan Berjalan): +0.27 R &bull; 3 Trades
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ANNUAL BREAKDOWN & INSTITUTIONAL RISK AUDIT MATRIX -->
-  <section id="audit" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-reveal">
-    <div class="bg-brand-surface p-4 sm:p-8 rounded-2xl border border-brand-border shadow-xl">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-        <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-slate-400">Annual Verification</span>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Annual Performance & Risk Breakdown</h2>
-          <p class="text-xs text-slate-400 mt-1">Audit verifikasi tahunan 2020 s.d. 2026. 100% konsisten positif (7 dari 7 tahun) dengan payoff tetap 1:2 R:R.</p>
-        </div>
-        <div class="text-xs font-mono px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 text-slate-300">
-          <span class="text-slate-500">Consecutive Track:</span> <strong class="text-white">7 / 7 Years (100%)</strong>
-        </div>
+  <!-- METHODOLOGY & FOUR EMPIRICAL PILLARS -->
+  <section id="methodology" class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="border border-brand-border bg-brand-panel p-4 sm:p-6">
+      
+      <div class="pb-4 mb-5 border-b border-brand-border">
+        <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Section 06 // Research Principles</span>
+        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mt-0.5">Four Invariant Pillars of Model Robustness</h2>
+        <p class="text-xs text-slate-400 mt-1">Batasan kuantitatif terukur untuk mengeliminasi bias kurva overfitting dan menjaga ketahanan forward-testing.</p>
       </div>
 
-      <!-- AUDIT TABLE CONTAINER -->
-      <div class="overflow-x-auto rounded-xl border border-brand-border bg-brand-dark">
-        <table class="w-full text-left border-collapse text-xs font-mono min-w-[720px] whitespace-nowrap">
-          <thead>
-            <tr class="border-b border-brand-border text-slate-400 bg-brand-card/40 text-[11px]">
-              <th class="py-3 px-4">Period</th>
-              <th class="py-3 px-3">Validation Regime</th>
-              <th class="py-3 px-3 text-center">Trades</th>
-              <th class="py-3 px-3 text-right">Win Rate</th>
-              <th class="py-3 px-3 text-right">Profit Factor</th>
-              <th class="py-3 px-3 text-right">Max Drawdown</th>
-              <th class="py-3 px-3 text-right">Avg Duration</th>
-              <th class="py-3 px-4 text-right">Realized Return</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-brand-border/60">
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2020</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-300">71</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">69.0%</td>
-              <td class="py-2.5 px-3 text-right text-white">4.375</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-3.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">4.7h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+74.24 R</td>
-            </tr>
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2021</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-300">116</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">65.5%</td>
-              <td class="py-2.5 px-3 text-right text-white">3.722</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-6.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">7.0h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+108.89 R</td>
-            </tr>
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2022</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-300">110</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">60.9%</td>
-              <td class="py-2.5 px-3 text-right text-white">3.101</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-7.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">6.2h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+90.36 R</td>
-            </tr>
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2023</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-300">117</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">69.2%</td>
-              <td class="py-2.5 px-3 text-right text-white">4.608</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-3.10 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">7.1h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+125.88 R</td>
-            </tr>
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2024</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-300">114</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">62.3%</td>
-              <td class="py-2.5 px-3 text-right text-white">3.219</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-4.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">7.0h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+95.40 R</td>
-            </tr>
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2025</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded text-[10px]">In-Sample</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-300">114</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">59.6%</td>
-              <td class="py-2.5 px-3 text-right text-white">2.944</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-4.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">6.6h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+87.17 R</td>
-            </tr>
-            <tr class="hover:bg-brand-card/40 transition">
-              <td class="py-2.5 px-4 font-bold text-white">2026</td>
-              <td class="py-2.5 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-300 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60 text-[10px] font-semibold">Out-of-Sample (OOS)</span></td>
-              <td class="py-2.5 px-3 text-center text-slate-200 font-semibold">116</td>
-              <td class="py-2.5 px-3 text-right text-slate-200 font-medium">52.6%</td>
-              <td class="py-2.5 px-3 text-right text-white">2.206</td>
-              <td class="py-2.5 px-3 text-right text-slate-300">-7.00 R</td>
-              <td class="py-2.5 px-3 text-right text-slate-400">6.6h</td>
-              <td class="py-2.5 px-4 text-right font-semibold text-white">+64.64 R</td>
-            </tr>
-            <!-- TOTAL ROW -->
-            <tr class="bg-brand-card/80 border-t-2 border-brand-border">
-              <td class="py-3 px-4 font-extrabold text-white uppercase">All-Time Track</td>
-              <td class="py-3 px-3"><span class="inline-flex items-center whitespace-nowrap text-slate-300 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700/60 text-[10px]">Full Track (2020–2026)</span></td>
-              <td class="py-3 px-3 text-center text-white font-extrabold">758</td>
-              <td class="py-3 px-3 text-right text-white font-extrabold">62.40%</td>
-              <td class="py-3 px-3 text-right text-white font-extrabold">3.298</td>
-              <td class="py-3 px-3 text-right text-slate-200 font-extrabold">-7.00 R</td>
-              <td class="py-3 px-3 text-right text-slate-300 font-bold">6.2h</td>
-              <td class="py-3 px-4 text-right font-extrabold text-white text-sm">+646.58 R</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- AUDIT FOOTNOTE & VERIFICATION GUARDS -->
-      <div class="mt-3.5 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px] font-mono">
-        <!-- Card 1: Statistical Significance (Wilson 95% CI) -->
-        <div class="p-2.5 sm:p-3 rounded-xl border border-brand-border/80 bg-brand-surface/70 flex flex-col justify-between gap-1.5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <span class="text-slate-300 font-semibold flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
-              Wilson 95% CI
-            </span>
-            <span class="text-white bg-slate-800/90 px-2 py-0.5 rounded border border-slate-700/60 font-semibold whitespace-nowrap">[58.90%, 65.78%]</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-4 bg-brand-surface border border-brand-border rounded flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] font-mono text-brand-cyan uppercase font-bold mb-1">Pillar 01</div>
+            <h3 class="text-sm font-bold text-white mb-2">Immutable 1:2 Risk-to-Reward</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-sans">
+              Parameter payoff Stop Loss $1.0\text{R}$ vs Take Profit $2.0\text{R}$. Titik impas matematis hanya $33.33\%$, memberikan margin pengaman kokoh sebesar $+29.07\%$ pada win rate aktual $62.40\%$.
+            </p>
           </div>
-          <div class="flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 pt-1.5 border-t border-brand-border/40">
-            <span>Reject $H_0: p \le 33.33\%$</span>
-            <span class="text-slate-200 font-medium bg-slate-800/80 px-1.5 py-0.5 rounded border border-slate-700/50 whitespace-nowrap">$p < 10^{-12}$</span>
+          <div class="mt-4 pt-2 border-t border-brand-border/60 font-mono text-[11px] text-slate-500">
+            Breakeven Boundary: 33.33%
           </div>
         </div>
 
-        <!-- Card 2: Execution Velocity (Velocity Cap) -->
-        <div class="p-2.5 sm:p-3 rounded-xl border border-brand-border/80 bg-brand-surface/70 flex flex-col justify-between gap-1.5 shadow-sm">
-          <div class="flex items-center justify-between">
-            <span class="text-slate-300 font-semibold flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
-              Velocity Cap
-            </span>
-            <span class="text-white bg-slate-800/90 px-2 py-0.5 rounded border border-slate-700/60 font-semibold whitespace-nowrap">$\le 16\text{h}$</span>
+        <div class="p-4 bg-brand-surface border border-brand-border rounded flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] font-mono text-brand-cyan uppercase font-bold mb-1">Pillar 02</div>
+            <h3 class="text-sm font-bold text-white mb-2">Strict Rolling Causality</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-sans">
+              Zero Look-Ahead Bias. Ambang seleksi $p_t$ dihitung strictly dari jendela bergulir masa lalu ($N_{\text{past}} = 330\text{ bar}$). Tidak ada parameter masa depan yang bocor ke dalam inferensi.
+            </p>
           </div>
-          <div class="flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400 pt-1.5 border-t border-brand-border/40">
-            <span>Hard Time-Exit Guard</span>
-            <span class="text-slate-200 font-medium bg-slate-800/80 px-1.5 py-0.5 rounded border border-slate-700/50 whitespace-nowrap">100% resolved</span>
+          <div class="mt-4 pt-2 border-t border-brand-border/60 font-mono text-[11px] text-slate-500">
+            Rolling Lookback: 330 Bars
           </div>
         </div>
+
+        <div class="p-4 bg-brand-surface border border-brand-border rounded flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] font-mono text-brand-cyan uppercase font-bold mb-1">Pillar 03</div>
+            <h3 class="text-sm font-bold text-white mb-2">Anti-Chasing Volatility Guard</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-sans">
+              Melarang entri pada lilin over-extended ($\ge 1.5\times\text{ATR}$). Mengeliminasi risiko reversal trap dan slippage liar yang merusak performa model breakout konvensional.
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-brand-border/60 font-mono text-[11px] text-slate-500">
+            Violation Tolerance: 0.0%
+          </div>
+        </div>
+
+        <div class="p-4 bg-brand-surface border border-brand-border rounded flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] font-mono text-brand-cyan uppercase font-bold mb-1">Pillar 04</div>
+            <h3 class="text-sm font-bold text-white mb-2">Velocity Guard (&le; 16 Jam)</h3>
+            <p class="text-xs text-slate-400 leading-relaxed font-sans">
+              Membatasi durasi mengambang maksimal 16 jam. Bila TP/SL belum tersentuh di jam ke-16, posisi ditutup paksa mark-to-market guna memutus risiko posisi terbawa turbulensi multihari.
+            </p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-brand-border/60 font-mono text-[11px] text-slate-500">
+            Hard Time-Exit: 16 Jam
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- METHODOLOGY & CORE PRINCIPLES -->
-  <section id="methodology" class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-reveal">
-    <div class="text-center max-w-2xl mx-auto mb-10">
-      <span class="text-xs font-mono uppercase tracking-widest text-slate-400">Core Risk Architecture & Causal Guardrails</span>
-      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">Four Empirical Principles of Model Survival</h2>
-      <p class="text-xs sm:text-sm text-slate-400 mt-2">Batasan matematis terukur untuk mengeliminasi bias kurva <span class="italic text-slate-300">overfitting</span> dan menjaga keutuhan probabilitas forward-testing.</p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
-        <div>
-          <div class="w-9 h-9 rounded bg-slate-800 text-slate-300 flex items-center justify-center font-mono font-bold text-xs mb-4 border border-slate-700/60">
-            01
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">Fixed 1:2 Risk-to-Reward</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Parameter eksekusi baku: Stop Loss $1.0\text{R}$ vs Take Profit $2.0\text{R}$. Titik impas matematis hanya membutuhkan win rate $33.33\%$, sehingga win rate aktual $62.40\%$ mempertahankan ekspektansi positif yang kokoh.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-slate-400">
-          Breakeven Target: $33.33\%$
-        </div>
-      </div>
-
-      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
-        <div>
-          <div class="w-9 h-9 rounded bg-slate-800 text-slate-300 flex items-center justify-center font-mono font-bold text-xs mb-4 border border-slate-700/60">
-            02
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">Strict Rolling Causality</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Zero Look-Ahead Bias. Ambang batas seleksi persentil ($p_t$) dihitung strictly dari jendela masa lalu ($N_{\text{past}} \in [120, 480]\text{ bar}$). Tidak menggunakan kuantil global atau parameter masa depan.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-slate-400">
-          Rolling Lookback ($N_{\text{past}}$)
-        </div>
-      </div>
-
-      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
-        <div>
-          <div class="w-9 h-9 rounded bg-slate-800 text-slate-300 flex items-center justify-center font-mono font-bold text-xs mb-4 border border-slate-700/60">
-            03
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">Anti-Chasing Volatility Guard</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Melarang entri pada lilin-lilin over-extended ($\ge \gamma \cdot \text{ATR}$). Mengeliminasi risiko <span class="italic text-slate-300">reversal trap</span> dan <span class="italic text-slate-300">slippage spikes</span> yang kerap merusak model breakout konvensional.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-slate-400">
-          Violation Tolerance: $0.0\%$
-        </div>
-      </div>
-
-      <div class="bg-brand-surface p-6 rounded-xl border border-brand-border flex flex-col justify-between">
-        <div>
-          <div class="w-9 h-9 rounded bg-slate-800 text-slate-300 flex items-center justify-center font-mono font-bold text-xs mb-4 border border-slate-700/60">
-            04
-          </div>
-          <h3 class="text-base font-bold text-white mb-2">Hard Velocity Exit ($\le 16\text{ Jam}$)</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Membatasi durasi mengambang maksimal 16 jam. Bila TP/SL belum tersentuh di jam ke-16, posisi ditutup paksa mark-to-market guna memutus risiko posisi terbawa turbulensi multihari.
-          </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-brand-border text-[11px] font-mono text-slate-400">
-          Avg Duration: $6.20\text{ Jam}$
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="mt-12 sm:mt-16 border-t border-brand-border py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- REFINED TECHNICAL FOOTER -->
+  <footer class="mt-8 border-t border-brand-border py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto font-mono text-xs text-slate-500">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
-        <div class="font-bold text-white text-base">Muhammad Ali Jawara Wiratama</div>
-        <p class="text-xs text-slate-400 mt-1">Quantitative Systems Researcher & Algorithmic Architecture.</p>
-        <p class="text-[11px] text-slate-500 mt-1 font-mono">Quantitative Research Archive • Hang Seng Index (HK50) Specialist Model</p>
+        <span class="text-slate-300 font-bold">Muhammad Ali Jawara Wiratama</span> &bull; 
+        <span>Quantitative Systems Research & Machine Learning Finance</span>
+        <div class="text-[11px] text-slate-600 mt-0.5">HK50 Specialist Research Archive &bull; Immutable 1:2 R:R Execution</div>
       </div>
-
-      <div class="flex items-center space-x-4 text-xs font-mono text-slate-400">
-        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition flex items-center space-x-1.5">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-          <span>mhdalijawara-cloud</span>
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition flex items-center space-x-1">
+          <span>GitHub</span>
         </a>
         <span>&bull;</span>
-        <span class="text-slate-500">&copy; 2026 All Rights Reserved</span>
+        <span>&copy; 2026 All Rights Reserved</span>
       </div>
     </div>
   </footer>
 
-  <!-- Client scripts -->
+  <!-- JAVASCRIPT LOGIC & INTERACTIVITY ENGINE -->
   <script>
-    // Data sources
-    const curveData = window.SHOWCASE_CURVE || [];
-    const monthlyMatrix = window.SHOWCASE_MONTHLY || [];
+    // 1. DATA SOURCES FROM data.js
     const stats = window.SHOWCASE_STATS || {};
+    const monthlyMatrix = window.SHOWCASE_MONTHLY || [];
+    const curveData = window.SHOWCASE_CURVE || [];
+    const distData = window.QUANT_RETURN_DISTRIBUTION || {};
+    const rollingData = window.QUANT_ROLLING_WIN_RATE || {};
+    const markovData = window.QUANT_MARKOV_TRANSITION || {};
+    const velocityData = window.QUANT_VELOCITY_ATTRIBUTION || {};
 
-    // Populate hero statistics
-    if (stats.total_return_r) {
-      document.getElementById('stat-total-r').innerText = `+${stats.total_return_r.toFixed(2)} R`;
-      document.getElementById('stat-win-rate').innerText = `${stats.win_rate_pct.toFixed(2)}%`;
-      document.getElementById('stat-pf').innerText = stats.profit_factor.toFixed(3);
-      document.getElementById('stat-oos-r').innerText = `+${stats.oos_2026.return_r.toFixed(2)} R`;
-      document.getElementById('stat-max-dd').innerText = `-${stats.max_drawdown_r.toFixed(2)} R`;
-    }
-
-    // Mobile navigation drawer & backdrop (Smooth transition & outside touch handler)
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileDrawer = document.getElementById('mobile-drawer');
-    const mobileBackdrop = document.getElementById('mobile-backdrop');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeIcon = document.getElementById('close-icon');
-    let isDrawerOpen = false;
-
-    if (mobileMenuBtn && mobileDrawer) {
-
-      function onOutsideTouch(e) {
-        if (isDrawerOpen && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-          closeDrawer();
-        }
+    // 2. ARCHITECTURE EXPLORER KNOWLEDGE BASE (IP-GUARDED)
+    const ARCH_SPEC = [
+      {
+        stage: "STAGE 01 // DATA INGESTION",
+        name: "H1 Closed Bar Acquisition",
+        flow: "Raw MT5 Feed \u2192 (60, 6)",
+        math: "$$\\text{Monotonicity: } t_k > t_{k-1}, \\quad \\forall k \\in [1, 60], \\quad \\text{Look-Ahead Bias } \\equiv 0$$",
+        rationale: "Menarik 60 bar H1 tertutup secara strictly monotonic dari broker. Memverifikasi integritas harga OHLC (High \u2265 Low, High \u2265 Open/Close) dan memastikan nol gap data sebelum disalurkan ke pipeline fitur.",
+        inDim: "List[Dict[str, float]] (MT5 Bars)",
+        outDim: "DataFrame (60, 6)",
+        latency: "< 1.5 ms per poll cycle",
+        verification: "100% Causal Monotonic"
+      },
+      {
+        stage: "STAGE 02 // FEATURE ENGINEERING",
+        name: "24 Causal Microstructure Features",
+        flow: "(60, 6) \u2192 (60, 24)",
+        math: "$$f_t = [\\text{DWT}_{d_1..a_3}, \\text{YZ}_{20}, \\text{Jump}_{\\text{bp}}, \\text{Skew}_{20}, \\text{Sess}_{\\text{NY,LDN,ASN}}, \\text{Harm}_{\\sin,\\cos}]$$",
+        rationale: "Mengekstrak 24 fitur mikrostruktur bebas indikator lagging MT5: Dekomposisi Wavelet Haar (d1, d2, d3, a3), Volatilitas Yang-Zhang, Bipower Jump Diffusion, dan Harmonik Waktu Siklikal.",
+        inDim: "Tensor (1, 60, 6)",
+        outDim: "Tensor (1, 60, 24)",
+        latency: "~ 2.50 ms",
+        verification: "0 NaN / 0 Inf Bit-Exact"
+      },
+      {
+        stage: "STAGE 03 // FRONT-END FILTER",
+        name: "Multi-Scale Temporal Inception",
+        flow: "(1, 60, 24) \u2192 (1, 60, 64)",
+        math: "$$\\mathbf{z}_{\\text{incept}} = \\text{Concat}(\\text{Conv1D}_{k=3}(\\mathbf{x}), \\text{Conv1D}_{k=5}(\\mathbf{x}), \\text{Conv1D}_{k=7}(\\mathbf{x}))$$",
+        rationale: "Menangkap pola fraktal mikrostruktur pada tiga resolusi temporal berbeda (3 jam, 5 jam, dan 7 jam) secara simultan sebelum dipetakan ke dalam ruang laten Transformer.",
+        inDim: "Tensor (1, 60, 24)",
+        outDim: "Tensor (1, 60, 64)",
+        latency: "~ 0.85 ms",
+        verification: "Orthogonal Filter Kernels"
+      },
+      {
+        stage: "STAGE 04 // LATENT BACKBONE",
+        name: "Pretrained Transformer Trunk",
+        flow: "(1, 60, 64) \u2192 (1, 60, 64)",
+        math: "$$\\mathbf{h}_{\\text{seq}} = \\text{TransformerEncoderLayer}(\\mathbf{z} + \\mathbf{p}_{\\text{enc}}), \\quad L = 4, \\, d = 64$$",
+        rationale: "Trunk 4-layer Transformer Encoder yang memodelkan ketergantungan temporal jangka panjang pada jendela 60 bar lalu melalui mekanisme Multi-Head Self-Attention tanpa bias arah.",
+        inDim: "Tensor (1, 60, 64)",
+        outDim: "Tensor (1, 60, 64)",
+        latency: "~ 1.80 ms",
+        verification: "Frozen Latent Manifold"
+      },
+      {
+        stage: "STAGE 05 // DYNAMIC CONDITIONING",
+        name: "Asset-Conditioned FiLM Layer",
+        flow: "(1, 60, 64) \u2192 (1, 60, 64)",
+        math: "$$\\mathbf{h}_{\\text{mod}} = \\gamma(a) \\odot \\mathbf{h}_{\\text{seq}} + \\beta(a), \\quad a = \\text{Asset ID } 10$$",
+        rationale: "Feature-wise Linear Modulation (FiLM) yang memodulasi fitur laten Transformer berdasarkan identitas aset HK50, menyelaraskan respons volatilitas spesifik tanpa merusak bobot representasi global.",
+        inDim: "Tensor (1, 60, 64) + ID",
+        outDim: "Tensor (1, 60, 64)",
+        latency: "~ 0.25 ms",
+        verification: "Affine Invariance"
+      },
+      {
+        stage: "STAGE 06 // MANIFOLD PROJECTION",
+        name: "Stiefel Manifold Splay Head",
+        flow: "(1, 64) \u2192 [lgt_long, lgt_short]",
+        math: "$$\\mathcal{L}_{\\text{ortho}} = \\| \\mathbf{W}_L^T \\mathbf{W}_S \\|_F^2 \\to 0, \\quad \\rho(\\text{logit}_L, \\text{logit}_S) < 0.011$$",
+        rationale: "Proyeksi manifold Stiefel dengan penalti ortogonalitas mutlak. Mengunci korelasi antara head Long dan head Short mendekati nol, memastikan separabilitas arah 50:50 yang objektif.",
+        inDim: "Tensor (1, 64) Context",
+        outDim: "Tuple[float, float]",
+        latency: "~ 0.74 ms",
+        verification: "Orthogonal Splay Confirmed"
+      },
+      {
+        stage: "STAGE 07 // CAUSAL SELECTION",
+        name: "Rolling Quantile Gating (N=330)",
+        flow: "[lgt_L, lgt_S] \u2192 Binary Signal",
+        math: "$$z_t = \\frac{\\text{lgt}_t - \\mu_{330}}{\\sigma_{330}} \\ge q_{0.95}(N_{\\text{past}}), \\quad \\text{Range}_t < 1.5\\times\\text{ATR}$$",
+        rationale: "Gating kausal murni dari 330 bar sebelumnya. Hanya memicu eksekusi ketika logit menembus persentil ke-95 rolling past dan candle pemicu bukan lonjakan over-extended (Volatility Shield).",
+        inDim: "Logits + Past 330 Buffer",
+        outDim: "Signal: BUY / SELL / FLAT",
+        latency: "~ 0.80 ms",
+        verification: "Zero Look-Ahead Assertion"
+      },
+      {
+        stage: "STAGE 08 // PHYSICAL EXECUTION",
+        name: "Quantized Payoff & Velocity Exit",
+        flow: "Signal \u2192 Broker GTC Order",
+        math: "$$\\text{SL} = P - 1.0\\cdot\\text{ATR}, \\, \\text{TP} = P + 2.0\\cdot\\text{ATR}, \\, \\tau_{\\max} = 16\\text{ Jam Mark-to-Market}$$",
+        rationale: "Eksekusi fisik order MT5 menggunakan ORDER_TIME_GTC dengan SL/TP tertanam langsung di server broker matching engine. Posisi diputus paksa strictly di jam ke-16 untuk membatasi holding horizon.",
+        inDim: "Order Payload (0.15 Lot)",
+        outDim: "Order Ticket + SQLite Lock",
+        latency: "~ 25.0 ms broker network",
+        verification: "100% Bit-Exact 1:2 R:R"
       }
+    ];
 
-      function onScrollClose() {
-        if (isDrawerOpen) {
-          closeDrawer();
-        }
-      }
-
-      function openDrawer() {
-        isDrawerOpen = true;
-        mobileDrawer.classList.remove('max-h-0', 'opacity-0', 'py-0', 'border-b-0', 'pointer-events-none');
-        mobileDrawer.classList.add('max-h-80', 'opacity-100', 'py-2.5', 'border-b', 'pointer-events-auto');
-        if (mobileBackdrop) {
-          mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
-          mobileBackdrop.classList.add('opacity-100', 'pointer-events-auto');
-        }
-        hamburgerIcon.classList.add('hidden');
-        closeIcon.classList.remove('hidden');
-
-        // Dynamically attach listeners only while drawer is open
-        window.addEventListener('scroll', onScrollClose, { passive: true });
-        document.addEventListener('touchstart', onOutsideTouch, { passive: true });
-        document.addEventListener('click', onOutsideTouch);
-      }
-
-      function closeDrawer() {
-        if (!isDrawerOpen) return;
-        isDrawerOpen = false;
-        mobileDrawer.classList.remove('max-h-80', 'opacity-100', 'py-2.5', 'border-b', 'pointer-events-auto');
-        mobileDrawer.classList.add('max-h-0', 'opacity-0', 'py-0', 'border-b-0', 'pointer-events-none');
-        if (mobileBackdrop) {
-          mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
-          mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
-        }
-        hamburgerIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-
-        // Detach listeners to ensure zero JavaScript runs during normal scrolling
-        window.removeEventListener('scroll', onScrollClose);
-        document.removeEventListener('touchstart', onOutsideTouch);
-        document.removeEventListener('click', onOutsideTouch);
-      }
-
-      mobileMenuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (isDrawerOpen) {
-          closeDrawer();
+    function inspectLayer(idx) {
+      document.querySelectorAll('.arch-node').forEach((node, i) => {
+        if (i === idx) {
+          node.classList.add('active-node');
         } else {
-          openDrawer();
+          node.classList.remove('active-node');
         }
       });
 
-      if (mobileBackdrop) {
-        mobileBackdrop.addEventListener('click', closeDrawer);
-        mobileBackdrop.addEventListener('touchstart', closeDrawer, { passive: true });
+      const spec = ARCH_SPEC[idx];
+      if (!spec) return;
+
+      document.getElementById('insp-stage-id').innerText = spec.stage;
+      document.getElementById('insp-layer-name').innerText = spec.name;
+      document.getElementById('insp-tensor-flow').innerText = spec.flow;
+      document.getElementById('insp-math-block').innerHTML = spec.math;
+      document.getElementById('insp-rationale').innerText = spec.rationale;
+      document.getElementById('insp-dim-in').innerText = spec.inDim;
+      document.getElementById('insp-dim-out').innerText = spec.outDim;
+      document.getElementById('insp-latency').innerText = spec.latency;
+      document.getElementById('insp-verification').innerText = spec.verification;
+
+      if (window.renderMathInElement) {
+        renderMathInElement(document.getElementById('insp-math-block'), {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      }
+    }
+
+    // 3. ADVANCED QUANT TAB SWITCHER
+    function switchQuantTab(tabKey, btnElement) {
+      document.querySelectorAll('.quant-tab-btn').forEach(b => {
+        b.className = 'quant-tab-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white';
+      });
+      btnElement.className = 'quant-tab-btn px-3 py-1 bg-brand-surface text-white border border-brand-borderLight font-semibold';
+
+      document.querySelectorAll('.quant-tab-content').forEach(c => c.classList.add('hidden'));
+      const activeContent = document.getElementById(`quant-tab-${tabKey}`);
+      if (activeContent) activeContent.classList.remove('hidden');
+
+      if (tabKey === 'rolling-wr') {
+        renderRollingWinRateCanvas();
+      }
+    }
+
+    // 4. RENDER RETURN DISTRIBUTION HISTOGRAM (BIMODAL)
+    function renderReturnDistribution() {
+      const container = document.getElementById('distribution-chart-container');
+      if (!container || !distData.breakdown) return;
+
+      container.innerHTML = '';
+      distData.breakdown.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center space-x-3 py-1.5 border-b border-brand-border/40';
+        row.innerHTML = `
+          <div class="w-44 text-[11px] text-slate-300 font-semibold truncate">${item.label}</div>
+          <div class="flex-1 bg-brand-surface h-5 rounded overflow-hidden relative border border-brand-border/50">
+            <div class="h-full transition-all duration-500" style="width: ${item.pct}%; background-color: ${item.color};"></div>
+          </div>
+          <div class="w-14 text-right text-white font-bold">${item.count}</div>
+          <div class="w-16 text-right text-slate-400 text-[11px]">${item.pct.toFixed(1)}%</div>
+        `;
+        container.appendChild(row);
+      });
+
+      if (distData.skewness) document.getElementById('dist-skewness').innerText = `${distData.skewness >= 0 ? '+' : ''}${distData.skewness.toFixed(4)}`;
+      if (distData.kurtosis) document.getElementById('dist-kurtosis').innerText = `${distData.kurtosis.toFixed(4)}`;
+    }
+
+    // 5. RENDER ROLLING WIN RATE CANVAS
+    function renderRollingWinRateCanvas() {
+      const canvas = document.getElementById('rolling-canvas');
+      if (!canvas || !rollingData.series || rollingData.series.length === 0) return;
+
+      const rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = rect.width * window.devicePixelRatio;
+      canvas.height = rect.height * window.devicePixelRatio;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+      const w = rect.width;
+      const h = rect.height;
+      const padL = 45;
+      const padR = 20;
+      const padT = 20;
+      const padB = 30;
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Y-scale: 20% to 90%
+      const yMin = 20.0;
+      const yMax = 90.0;
+      const series = rollingData.series;
+
+      function getY(val) {
+        return padT + (h - padT - padB) * (1 - (val - yMin) / (yMax - yMin));
+      }
+      function getX(idx) {
+        return padL + (w - padL - padR) * (idx / (series.length - 1));
       }
 
-      // Close on escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isDrawerOpen) {
-          closeDrawer();
-        }
+      // Horizontal grid lines
+      ctx.strokeStyle = '#1a263e';
+      ctx.lineWidth = 1;
+      [30, 40, 50, 60, 70, 80].forEach(yVal => {
+        const y = getY(yVal);
+        ctx.beginPath();
+        ctx.moveTo(padL, y);
+        ctx.lineTo(w - padR, y);
+        ctx.stroke();
+
+        ctx.fillStyle = '#64748b';
+        ctx.font = '10px JetBrains Mono';
+        ctx.textAlign = 'right';
+        ctx.fillText(`${yVal}%`, padL - 8, y + 3);
       });
 
-      // Auto close drawer when any navigation link is clicked
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', closeDrawer);
+      // Breakeven reference line (33.33%)
+      const yBe = getY(33.33);
+      ctx.strokeStyle = '#f43f5e';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.moveTo(padL, yBe);
+      ctx.lineTo(w - padR, yBe);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = '#f43f5e';
+      ctx.font = 'bold 10px JetBrains Mono';
+      ctx.textAlign = 'left';
+      ctx.fillText('Breakeven Target: 33.33%', padL + 10, yBe - 6);
+
+      // Rolling Win Rate Series Line
+      ctx.strokeStyle = '#0ea5e9';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      series.forEach((pt, idx) => {
+        const x = getX(idx);
+        const y = getY(pt.win_rate);
+        if (idx === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+
+      // Area fill below rolling win rate
+      ctx.lineTo(getX(series.length - 1), getY(yMin));
+      ctx.lineTo(getX(0), getY(yMin));
+      ctx.closePath();
+      const grad = ctx.createLinearGradient(0, padT, 0, h - padB);
+      grad.addColorStop(0, 'rgba(14, 165, 233, 0.25)');
+      grad.addColorStop(1, 'rgba(14, 165, 233, 0.00)');
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      if (rollingData.min_win_rate) document.getElementById('stat-min-rolling').innerText = `${rollingData.min_win_rate.toFixed(2)}%`;
+      if (rollingData.max_win_rate) document.getElementById('stat-max-rolling').innerText = `${rollingData.max_win_rate.toFixed(2)}%`;
+    }
+
+    // 6. RENDER VELOCITY ATTRIBUTION BARS
+    function renderVelocityBars() {
+      const container = document.getElementById('velocity-bars-container');
+      if (!container || !velocityData.hourly_distribution) return;
+
+      container.innerHTML = '';
+      velocityData.hourly_distribution.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center space-x-2 text-[11px] font-mono py-1 border-b border-brand-border/40';
+        const barWidthPct = Math.min(100, (item.trades / 160) * 100);
+        row.innerHTML = `
+          <div class="w-16 text-slate-400">Jam ${String(item.hour).padStart(2, '0')}</div>
+          <div class="flex-1 bg-brand-surface h-4 rounded overflow-hidden relative border border-brand-border/50">
+            <div class="h-full bg-brand-cyan transition-all" style="width: ${barWidthPct}%;"></div>
+          </div>
+          <div class="w-14 text-right text-slate-300 font-semibold">${item.trades} trd</div>
+          <div class="w-16 text-right text-emerald-400 font-bold">${item.net_r >= 0 ? '+' : ''}${item.net_r.toFixed(1)} R</div>
+          <div class="w-16 text-right text-slate-400">${item.win_rate.toFixed(0)}% WR</div>
+        `;
+        container.appendChild(row);
       });
     }
 
-    // Smart Hide/Reveal Navbar on Scroll (Smooth slide out on scroll down, slide in on scroll up)
-    const mainNav = document.getElementById('main-nav');
-    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-    let isNavHidden = false;
-    let isScrollTicking = false;
+    // 7. RENDER 82-MONTH CONSECUTIVE HEATMAP TABLE
+    function renderMonthlyMatrix() {
+      const tbody = document.getElementById('matrix-tbody');
+      if (!tbody || monthlyMatrix.length === 0) return;
 
-    function updateNavScroll() {
-      const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-      const scrollDelta = currentScrollY - lastScrollY;
+      tbody.innerHTML = '';
+      monthlyMatrix.forEach(yRow => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-brand-surface/60 transition';
 
-      if (!mainNav) return;
+        let monthsHtml = '';
+        yRow.months.forEach(m => {
+          if (m.status === 'future') {
+            monthsHtml += `<td class="py-2 px-1 text-center text-slate-700 bg-brand-obsidian/40">&ndash;</td>`;
+          } else if (m.trades === 0) {
+            monthsHtml += `<td class="py-2 px-1 text-center text-slate-600 bg-brand-surface/30">0.0</td>`;
+          } else if (m.r > 0) {
+            const intensity = Math.min(1, m.r / 15.0);
+            monthsHtml += `<td class="py-2 px-1 text-center font-bold text-emerald-300" style="background-color: rgba(16, 185, 129, ${0.12 + intensity * 0.28});">+${m.r.toFixed(1)}</td>`;
+          } else if (m.r < 0) {
+            monthsHtml += `<td class="py-2 px-1 text-center font-bold text-rose-300 bg-rose-950/40">${m.r.toFixed(1)}</td>`;
+          } else {
+            monthsHtml += `<td class="py-2 px-1 text-center text-slate-300 bg-brand-surface/50">0.0</td>`;
+          }
+        });
 
-      // Always show at top of page (threshold 48px)
-      if (currentScrollY <= 48) {
-        if (isNavHidden) {
-          mainNav.classList.remove('nav-hidden');
-          isNavHidden = false;
-        }
-      } else if (!isDrawerOpen) {
-        // Scrolling down past threshold -> slide out smoothly
-        if (scrollDelta > 8 && !isNavHidden) {
-          mainNav.classList.add('nav-hidden');
-          isNavHidden = true;
-        }
-        // Scrolling up past threshold -> slide in smoothly
-        else if (scrollDelta < -8 && isNavHidden) {
-          mainNav.classList.remove('nav-hidden');
-          isNavHidden = false;
-        }
-      }
-
-      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-      isScrollTicking = false;
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-bold text-white">${yRow.year}</td>
+          ${monthsHtml}
+          <td class="py-2 px-3 text-right font-bold text-emerald-400">+${yRow.total_r.toFixed(1)} R</td>
+          <td class="py-2 px-3 text-center text-slate-400 font-semibold">${yRow.total_trades}</td>
+        `;
+        tbody.appendChild(tr);
+      });
     }
 
-    window.addEventListener('scroll', () => {
-      if (!isScrollTicking) {
-        window.requestAnimationFrame(updateNavScroll);
-        isScrollTicking = true;
-      }
-    }, { passive: true });
-
-    // Synchronized dual-pane chart initialization
+    // 8. SYNCHRONIZED DUAL-PANE LIGHTWEIGHT CHARTS
     let chartTop, chartBottom, areaSeries, ddSeries;
     let currentFilteredCurve = [...curveData];
     let isSyncingRange = false;
     const curvePointMap = new Map();
     let lastHoveredDate = null;
 
-    function updateCurvePointMap() {
-      curvePointMap.clear();
-      currentFilteredCurve.forEach(p => curvePointMap.set(p.date, p));
-    }
-
     function initLightweightChart() {
       const containerTop = document.getElementById('tv-chart-top');
       const containerBottom = document.getElementById('tv-chart-bottom');
-      if (!containerTop || !containerBottom) return;
+      if (!containerTop || !containerBottom || curveData.length === 0) return;
 
       containerTop.innerHTML = '';
       containerBottom.innerHTML = '';
 
-      const containerWidth = containerTop.clientWidth || 800;
+      const w = containerTop.clientWidth || 800;
 
-      // Top pane: cumulative return series
       chartTop = LightweightCharts.createChart(containerTop, {
-        width: containerWidth,
-        height: 310,
-        layout: {
-          background: { color: '#080c14' },
-          textColor: '#94a3b8',
-          fontFamily: 'JetBrains Mono, monospace',
-          fontSize: 11,
-        },
-        grid: {
-          vertLines: { color: '#131b2e' },
-          horzLines: { color: '#131b2e' },
-        },
-        crosshair: {
-          mode: LightweightCharts.CrosshairMode.Normal,
-          vertLine: { color: '#06b6d4', width: 1, style: 3 },
-          horzLine: { color: '#06b6d4', width: 1, style: 3 },
-        },
-        rightPriceScale: {
-          borderColor: '#1e293b',
-          scaleMargins: { top: 0.08, bottom: 0.05 },
-          alignLabels: true,
-        },
-        timeScale: {
-          visible: false,
-          borderColor: '#1e293b',
-          fixLeftEdge: true,
-          fixRightEdge: true,
-          rightOffset: 0,
-        },
-        handleScroll: {
-          vertTouchDrag: false,
-          horzTouchDrag: false,
-          mouseWheel: true,
-          pressedMouseMove: true,
-        },
-        handleScale: {
-          axisPressedMouseMove: false,
-          mouseWheel: false,
-          pinch: false,
-        },
+        width: w,
+        height: 320,
+        layout: { background: { color: '#050811' }, textColor: '#94a3b8', fontFamily: 'JetBrains Mono, monospace', fontSize: 11 },
+        grid: { vertLines: { color: '#131b2e' }, horzLines: { color: '#131b2e' } },
+        crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: '#0ea5e9', width: 1, style: 3 }, horzLine: { color: '#0ea5e9', width: 1, style: 3 } },
+        rightPriceScale: { borderColor: '#1a263e', scaleMargins: { top: 0.08, bottom: 0.05 }, alignLabels: true },
+        timeScale: { visible: false, borderColor: '#1a263e', fixLeftEdge: true, fixRightEdge: true, rightOffset: 0 },
+        handleScroll: { vertTouchDrag: false, horzTouchDrag: false, mouseWheel: true, pressedMouseMove: true },
+        handleScale: { axisPressedMouseMove: false, mouseWheel: false, pinch: false }
       });
 
       areaSeries = chartTop.addAreaSeries({
         priceScaleId: 'right',
         lineColor: '#10b981',
-        topColor: 'rgba(16, 185, 129, 0.40)',
-        bottomColor: 'rgba(16, 185, 129, 0.02)',
+        topColor: 'rgba(16, 185, 129, 0.35)',
+        bottomColor: 'rgba(16, 185, 129, 0.01)',
         lineWidth: 2,
-        priceFormat: { type: 'custom', formatter: val => `${val.toFixed(1)} R` },
+        priceFormat: { type: 'custom', formatter: val => `${val.toFixed(1)} R` }
       });
 
-      // Bottom pane: drawdown profile series
       chartBottom = LightweightCharts.createChart(containerBottom, {
-        width: containerWidth,
-        height: 140,
-        layout: {
-          background: { color: '#080c14' },
-          textColor: '#94a3b8',
-          fontFamily: 'JetBrains Mono, monospace',
-          fontSize: 10,
-        },
-        grid: {
-          vertLines: { color: '#131b2e' },
-          horzLines: { color: '#131b2e' },
-        },
-        crosshair: {
-          mode: LightweightCharts.CrosshairMode.Normal,
-          vertLine: { color: '#06b6d4', width: 1, style: 3 },
-          horzLine: { color: '#06b6d4', width: 1, style: 3 },
-        },
-        rightPriceScale: {
-          borderColor: '#1e293b',
-          scaleMargins: { top: 0.08, bottom: 0.08 },
-          alignLabels: true,
-        },
-        timeScale: {
-          visible: true,
-          borderColor: '#1e293b',
-          fixLeftEdge: true,
-          fixRightEdge: true,
-          rightOffset: 0,
-          timeVisible: false,
-          secondsVisible: false,
-        },
-        handleScroll: {
-          vertTouchDrag: false,
-          horzTouchDrag: false,
-          mouseWheel: true,
-          pressedMouseMove: true,
-        },
-        handleScale: {
-          axisPressedMouseMove: false,
-          mouseWheel: false,
-          pinch: false,
-        },
+        width: w,
+        height: 130,
+        layout: { background: { color: '#050811' }, textColor: '#94a3b8', fontFamily: 'JetBrains Mono, monospace', fontSize: 10 },
+        grid: { vertLines: { color: '#131b2e' }, horzLines: { color: '#131b2e' } },
+        crosshair: { mode: LightweightCharts.CrosshairMode.Normal, vertLine: { color: '#0ea5e9', width: 1, style: 3 }, horzLine: { color: '#0ea5e9', width: 1, style: 3 } },
+        rightPriceScale: { borderColor: '#1a263e', scaleMargins: { top: 0.08, bottom: 0.08 }, alignLabels: true },
+        timeScale: { visible: true, borderColor: '#1a263e', fixLeftEdge: true, fixRightEdge: true, rightOffset: 0, timeVisible: false },
+        handleScroll: { vertTouchDrag: false, horzTouchDrag: false, mouseWheel: true, pressedMouseMove: true },
+        handleScale: { axisPressedMouseMove: false, mouseWheel: false, pinch: false }
       });
 
       ddSeries = chartBottom.addAreaSeries({
         priceScaleId: 'right',
         lineColor: '#f43f5e',
         topColor: 'rgba(244, 63, 94, 0.02)',
-        bottomColor: 'rgba(244, 63, 94, 0.45)',
+        bottomColor: 'rgba(244, 63, 94, 0.40)',
         lineWidth: 1.5,
         invertFilledArea: true,
-        priceFormat: { type: 'custom', formatter: val => `${val.toFixed(1)} R` },
+        priceFormat: { type: 'custom', formatter: val => `${val.toFixed(1)} R` }
       });
 
-      // Synchronize logical time range
+      // Synchronize time scales
       chartTop.timeScale().subscribeVisibleLogicalRangeChange(range => {
         if (isSyncingRange || !range) return;
         isSyncingRange = true;
@@ -1014,7 +1165,7 @@
         isSyncingRange = false;
       });
 
-      // Crosshair tracking handler with O(1) hash map & redundant DOM mutation guard
+      // Crosshair Hover Handler
       function handleCrosshair(param) {
         if (!param || !param.time) return;
         const timeStr = typeof param.time === 'string'
@@ -1024,46 +1175,44 @@
               : null);
         if (!timeStr || timeStr === lastHoveredDate) return;
 
-        const matchedPoint = curvePointMap.get(timeStr);
-        if (matchedPoint) {
-          lastHoveredDate = matchedPoint.date;
-          document.getElementById('hover-date').innerText = matchedPoint.date;
-          document.getElementById('hover-regime').innerText = matchedPoint.year === 2026 ? '2026 (OOS Live Track)' : `${matchedPoint.year} (Historical In-Sample)`;
+        const matched = curvePointMap.get(timeStr);
+        if (matched) {
+          lastHoveredDate = matched.date;
+          document.getElementById('hover-date').innerText = matched.date;
+          document.getElementById('hover-regime').innerText = matched.year === 2026 ? '2026 (Forward OOS)' : `${matched.year} (Historical In-Sample)`;
 
-          const valCum = matchedPoint.display_cum_r !== undefined ? matchedPoint.display_cum_r : matchedPoint.cum_r;
-          const valDD = matchedPoint.display_dd_r !== undefined ? matchedPoint.display_dd_r : matchedPoint.drawdown_r;
+          const valCum = matched.display_cum_r !== undefined ? matched.display_cum_r : matched.cum_r;
+          const valDD = matched.display_dd_r !== undefined ? matched.display_dd_r : matched.drawdown_r;
 
           document.getElementById('hover-cum-r').innerText = `${valCum >= 0 ? '+' : ''}${valCum.toFixed(2)} R`;
           document.getElementById('hover-dd-r').innerText = `${valDD.toFixed(2)} R`;
 
           const isAth = valDD === 0;
           document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
-          document.getElementById('hover-dd-status').className = isAth ? 'text-slate-300 font-medium' : 'text-slate-400 font-medium';
+          document.getElementById('hover-dd-status').className = isAth ? 'text-emerald-400 font-medium' : 'text-rose-400 font-medium';
         }
       }
 
       chartTop.subscribeCrosshairMove(handleCrosshair);
       chartBottom.subscribeCrosshairMove(handleCrosshair);
 
-      // Initial chart load
       filterChart('all', document.querySelector('.chart-btn'));
 
-      // Window resize listener
       window.addEventListener('resize', () => {
-        if (containerTop) {
-          const w = containerTop.clientWidth;
-          if (chartTop) chartTop.applyOptions({ width: w });
-          if (chartBottom) chartBottom.applyOptions({ width: w });
+        if (containerTop && chartTop && chartBottom) {
+          const newW = containerTop.clientWidth;
+          chartTop.applyOptions({ width: newW });
+          chartBottom.applyOptions({ width: newW });
         }
       });
     }
 
     function filterChart(range, btnElement) {
       document.querySelectorAll('.chart-btn').forEach(b => {
-        b.className = 'chart-btn px-3 py-1.5 rounded-lg bg-brand-card hover:bg-slate-800 text-slate-300 border border-brand-border';
+        b.className = 'chart-btn px-3 py-1 bg-brand-panel text-slate-400 border border-brand-border hover:text-white';
       });
       if (btnElement) {
-        btnElement.className = 'chart-btn px-3 py-1.5 rounded-lg bg-slate-800 text-white border border-slate-600 font-semibold';
+        btnElement.className = 'chart-btn px-3 py-1 bg-brand-surface text-white border border-brand-borderLight font-semibold';
       }
 
       if (range === 'all') {
@@ -1080,7 +1229,6 @@
 
         if (subset.length === 0) return;
 
-        // Baseline normalization: start at 0R for the filtered period
         const firstIdx = curveData.findIndex(p => p.date === subset[0].date);
         const baseR = firstIdx > 0 ? curveData[firstIdx - 1].cum_r : 0;
 
@@ -1097,165 +1245,53 @@
         });
       }
 
-      // Sync fast lookup map
-      updateCurvePointMap();
+      curvePointMap.clear();
+      currentFilteredCurve.forEach(p => curvePointMap.set(p.date, p));
 
-      loadChartData(currentFilteredCurve);
-    }
+      const topSeriesData = currentFilteredCurve.map(p => ({ time: p.date, value: p.display_cum_r }));
+      const ddSeriesData = currentFilteredCurve.map(p => ({ time: p.date, value: p.display_dd_r }));
 
-    function loadChartData(pointsArray) {
-      if (!areaSeries || !ddSeries) return;
+      areaSeries.setData(topSeriesData);
+      ddSeries.setData(ddSeriesData);
 
-      const cumPoints = pointsArray.map(p => ({
-        time: p.date,
-        value: p.display_cum_r !== undefined ? p.display_cum_r : p.cum_r
-      }));
-      const ddPoints = pointsArray.map(p => ({
-        time: p.date,
-        value: p.display_dd_r !== undefined ? p.display_dd_r : p.drawdown_r
-      }));
-
-      areaSeries.setData(cumPoints);
-      ddSeries.setData(ddPoints);
-
-      isSyncingRange = true;
       chartTop.timeScale().fitContent();
       chartBottom.timeScale().fitContent();
-      isSyncingRange = false;
-
-      // Update initial HUD to latest point of filtered range
-      const latest = pointsArray[pointsArray.length - 1];
-      if (latest) {
-        document.getElementById('hover-date').innerText = latest.date;
-        document.getElementById('hover-regime').innerText = latest.year === 2026 ? '2026 (OOS Live Track)' : `${latest.year} (Historical In-Sample)`;
-        const valCum = latest.display_cum_r !== undefined ? latest.display_cum_r : latest.cum_r;
-        const valDD = latest.display_dd_r !== undefined ? latest.display_dd_r : latest.drawdown_r;
-        document.getElementById('hover-cum-r').innerText = `${valCum >= 0 ? '+' : ''}${valCum.toFixed(2)} R`;
-        document.getElementById('hover-dd-r').innerText = `${valDD.toFixed(2)} R`;
-        const isAth = valDD === 0;
-        document.getElementById('hover-dd-status').innerText = isAth ? 'All-Time High' : 'Drawdown Phase';
-        document.getElementById('hover-dd-status').className = isAth ? 'text-slate-300 font-medium' : 'text-slate-400 font-medium';
-      }
     }
 
-    // Monthly heatmap rendering
-    function inspectMonth(year, monthName, rVal, trades, isOngoing) {
-      const inspectLabel = document.getElementById('inspect-label');
-      const inspectValue = document.getElementById('inspect-value');
-      if (!inspectLabel || !inspectValue) return;
-
-      const sign = rVal > 0 ? '+' : '';
-      const statusText = isOngoing ? 'Bulan Berjalan (Active)' : 'Closed Month';
-      const colorClass = 'text-slate-200 border-slate-700/80 bg-slate-900/90';
-
-      inspectLabel.innerText = `Detail Kalender ${monthName} ${year}:`;
-      inspectValue.className = `font-medium px-2.5 py-1 rounded border text-[11px] ${colorClass}`;
-      inspectValue.innerHTML = `${sign}${rVal.toFixed(2)} R &bull; ${trades} Trades &bull; ${statusText}`;
-    }
-
-    function renderHeatmap() {
-      const tbody = document.getElementById('heatmap-tbody');
-      tbody.innerHTML = '';
-
-      monthlyMatrix.forEach(row => {
-        const tr = document.createElement('tr');
-        tr.className = 'hover:bg-brand-card/40 transition';
-
-        let yearBadge = `<span class="font-bold text-white">${row.year}</span>`;
-        if (row.year === 2026) yearBadge += ` <span class="text-[9px] text-slate-300 bg-slate-800/80 px-1 py-0.5 rounded border border-slate-700/60 font-semibold">OOS</span>`;
-
-        let html = `<td class="py-2.5 px-3 text-left font-mono sticky left-0 z-10 bg-brand-surface sticky-col-shadow border-r border-brand-border/40">${yearBadge}</td>`;
-
-        row.months.forEach(m => {
-          if (m.status === 'future') {
-            html += `<td class="py-2 px-1"><div class="py-1 px-1 rounded bg-slate-900/40 text-slate-600 text-[10px]">&ndash;</div></td>`;
-          } else {
-            const rVal = m.r;
-            const isCurrentMonth = (row.year === 2026 && m.month_name === 'Oct');
-            let bgClass = 'bg-slate-800/60 text-slate-400';
-            let titleText = `${m.month_name} ${row.year}: ${rVal >= 0 ? '+' : ''}${rVal.toFixed(2)} R (${m.trades} trades)${isCurrentMonth ? ' [Bulan Berjalan]' : ''}`;
-
-            if (rVal >= 10.0) bgClass = 'bg-emerald-600 text-white font-bold';
-            else if (rVal >= 5.0) bgClass = 'bg-emerald-700/90 text-emerald-100 font-medium';
-            else if (rVal > 0.0) bgClass = 'bg-emerald-900/60 text-emerald-200';
-            else if (rVal === 0.0) bgClass = 'bg-slate-800/90 text-slate-400';
-            else if (rVal < 0.0) bgClass = 'bg-rose-700/80 text-rose-100 font-semibold';
-
-            const activeRing = isCurrentMonth ? ' ring-1 ring-slate-400 font-bold' : '';
-            const sign = rVal > 0 ? '+' : '';
-
-            html += `<td class="py-2 px-1">
-              <div onclick="inspectMonth(${row.year}, '${m.month_name}', ${rVal}, ${m.trades}, ${isCurrentMonth})" 
-                   title="${titleText}" 
-                   class="py-1 px-1 rounded ${bgClass}${activeRing} text-[10px] transition hover:scale-105 active:scale-95 cursor-pointer">
-                ${sign}${rVal.toFixed(1)}
-              </div>
-            </td>`;
-          }
-        });
-
-        const annSign = row.total_r > 0 ? '+' : '';
-        html += `<td class="py-2.5 px-3 text-right font-semibold font-mono text-white">
-          ${annSign}${row.total_r.toFixed(2)} R
-        </td>`;
-
-        tr.innerHTML = html;
-        tbody.appendChild(tr);
-      });
-    }
-
-    // Smooth scroll reveal observer
-    function initScrollReveal() {
-      const revealElements = document.querySelectorAll('.scroll-reveal');
-      if (!revealElements.length) return;
-
-      if (!('IntersectionObserver' in window)) {
-        revealElements.forEach(el => el.classList.add('revealed'));
-        return;
+    // 9. ON DOM LOAD INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      // Setup hero stats
+      if (stats.total_return_r) {
+        document.getElementById('stat-total-r').innerText = `+${stats.total_return_r.toFixed(2)} R`;
+        document.getElementById('stat-win-rate').innerText = `${stats.win_rate_pct.toFixed(2)}%`;
+        document.getElementById('stat-pf').innerText = stats.profit_factor.toFixed(3);
+        document.getElementById('stat-oos-r').innerText = `+${stats.oos_2026.return_r.toFixed(2)} R`;
+        document.getElementById('stat-max-dd').innerText = `-${stats.max_drawdown_r.toFixed(2)} R`;
       }
 
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, {
-        root: null,
-        rootMargin: '0px 0px -40px 0px',
-        threshold: 0.05
-      });
-
-      revealElements.forEach(el => observer.observe(el));
-    }
-
-    // DOM ready initialization
-    window.addEventListener('DOMContentLoaded', () => {
+      // Initialize components
+      renderReturnDistribution();
+      renderVelocityBars();
+      renderMonthlyMatrix();
       initLightweightChart();
-      renderHeatmap();
-      initScrollReveal();
+      inspectLayer(0);
 
-      // Render KaTeX after DOM is ready
-      if (typeof renderMathInElement === 'function') {
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+          mobileDrawer.classList.toggle('hidden');
+        });
+      }
+
+      // Render math on entire document
+      if (window.renderMathInElement) {
         renderMathInElement(document.body, {
           delimiters: [
-            { left: '$$', right: '$$', display: true },
-            { left: '$', right: '$', display: false }
-          ],
-          throwOnError: false
-        });
-      } else {
-        window.addEventListener('load', () => {
-          if (typeof renderMathInElement === 'function') {
-            renderMathInElement(document.body, {
-              delimiters: [
-                { left: '$$', right: '$$', display: true },
-                { left: '$', right: '$', display: false }
-              ],
-              throwOnError: false
-            });
-          }
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
         });
       }
     });

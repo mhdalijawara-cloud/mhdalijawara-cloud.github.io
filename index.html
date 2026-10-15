@@ -285,6 +285,18 @@
         z-index: 1000;
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       }
+
+      /* References & Colophon Fullwidth Harmonization (Eliminates Asymmetric Dead Void) */
+      .section-references p,
+      .references-list,
+      .tufte-colophon {
+        width: 100% !important;
+        max-width: 90% !important;
+        clear: both;
+      }
+      .references-list {
+        padding-left: 1.5rem !important;
+      }
     </style>
   </head>
   <body>
@@ -334,6 +346,9 @@
         </p>
 
         <div class="table-wrapper">
+          <span class="sans" style="font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 0.4rem;">
+            Table 1: Key Econometric Properties &amp; Statistical Performance Matrix
+          </span>
           <table class="booktabs fullwidth">
             <thead>
               <tr>
@@ -844,7 +859,7 @@
       </section>
 
       <!-- Section: Computational Environment & References -->
-      <section>
+      <section class="section-references">
         <h2 id="references">Computational Environment & References</h2>
         <p>Execution is hosted on a high-availability dedicated Linux cloud compute instance with PyTorch and CUDA acceleration, orchestrated by an autonomous system daemon executing bar-by-bar causal quantile calibrations at market arrivals.</p>
 

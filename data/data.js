@@ -15786,3 +15786,9526 @@ window.QUANT_UNDERWATER_PROFILE = {
     }
   ]
 };
+
+// =============================================================
+// ADVANCED QUANTITATIVE RESEARCH EXTENSIONS (AUDITED & SANITIZED)
+// =============================================================
+
+window.QUANT_BENCHMARK_CURVE = [
+  {
+    "trade_idx": 1,
+    "date": "2020-01-15",
+    "price": 28756.29,
+    "benchmark_pct": 0.0,
+    "cum_r": 2.0
+  },
+  {
+    "trade_idx": 2,
+    "date": "2020-01-16",
+    "price": 28786.79,
+    "benchmark_pct": 0.11,
+    "cum_r": 4.0
+  },
+  {
+    "trade_idx": 3,
+    "date": "2020-01-17",
+    "price": 28886.29,
+    "benchmark_pct": 0.45,
+    "cum_r": 6.0
+  },
+  {
+    "trade_idx": 4,
+    "date": "2020-01-20",
+    "price": 28928.79,
+    "benchmark_pct": 0.6,
+    "cum_r": 8.0
+  },
+  {
+    "trade_idx": 5,
+    "date": "2020-01-21",
+    "price": 27985.29,
+    "benchmark_pct": -2.68,
+    "cum_r": 7.0
+  },
+  {
+    "trade_idx": 6,
+    "date": "2020-01-22",
+    "price": 28181.29,
+    "benchmark_pct": -2.0,
+    "cum_r": 6.0
+  },
+  {
+    "trade_idx": 7,
+    "date": "2020-01-23",
+    "price": 27825.79,
+    "benchmark_pct": -3.24,
+    "cum_r": 8.0
+  },
+  {
+    "trade_idx": 8,
+    "date": "2020-01-24",
+    "price": 27895.79,
+    "benchmark_pct": -2.99,
+    "cum_r": 10.0
+  },
+  {
+    "trade_idx": 9,
+    "date": "2020-01-30",
+    "price": 26676.29,
+    "benchmark_pct": -7.23,
+    "cum_r": 12.0
+  },
+  {
+    "trade_idx": 10,
+    "date": "2020-05-08",
+    "price": 24242.29,
+    "benchmark_pct": -15.7,
+    "cum_r": 11.0
+  },
+  {
+    "trade_idx": 11,
+    "date": "2020-05-11",
+    "price": 24725.79,
+    "benchmark_pct": -14.02,
+    "cum_r": 10.0
+  },
+  {
+    "trade_idx": 12,
+    "date": "2020-05-22",
+    "price": 23120.29,
+    "benchmark_pct": -19.6,
+    "cum_r": 9.0
+  },
+  {
+    "trade_idx": 13,
+    "date": "2020-05-29",
+    "price": 22970.29,
+    "benchmark_pct": -20.12,
+    "cum_r": 11.0
+  },
+  {
+    "trade_idx": 14,
+    "date": "2020-06-01",
+    "price": 23733.09,
+    "benchmark_pct": -17.47,
+    "cum_r": 13.0
+  },
+  {
+    "trade_idx": 15,
+    "date": "2020-06-02",
+    "price": 23841.29,
+    "benchmark_pct": -17.09,
+    "cum_r": 15.0
+  },
+  {
+    "trade_idx": 16,
+    "date": "2020-06-04",
+    "price": 24301.79,
+    "benchmark_pct": -15.49,
+    "cum_r": 17.0
+  },
+  {
+    "trade_idx": 17,
+    "date": "2020-06-05",
+    "price": 24391.79,
+    "benchmark_pct": -15.18,
+    "cum_r": 19.0
+  },
+  {
+    "trade_idx": 18,
+    "date": "2020-06-08",
+    "price": 24796.79,
+    "benchmark_pct": -13.77,
+    "cum_r": 21.0
+  },
+  {
+    "trade_idx": 19,
+    "date": "2020-06-11",
+    "price": 24624.79,
+    "benchmark_pct": -14.37,
+    "cum_r": 23.0
+  },
+  {
+    "trade_idx": 20,
+    "date": "2020-06-12",
+    "price": 24136.79,
+    "benchmark_pct": -16.06,
+    "cum_r": 25.0
+  },
+  {
+    "trade_idx": 21,
+    "date": "2020-06-19",
+    "price": 24404.79,
+    "benchmark_pct": -15.13,
+    "cum_r": 27.0
+  },
+  {
+    "trade_idx": 22,
+    "date": "2020-06-23",
+    "price": 24672.29,
+    "benchmark_pct": -14.2,
+    "cum_r": 26.0
+  },
+  {
+    "trade_idx": 23,
+    "date": "2020-06-24",
+    "price": 24869.79,
+    "benchmark_pct": -13.52,
+    "cum_r": 28.0
+  },
+  {
+    "trade_idx": 24,
+    "date": "2020-07-02",
+    "price": 24803.29,
+    "benchmark_pct": -13.75,
+    "cum_r": 30.0
+  },
+  {
+    "trade_idx": 25,
+    "date": "2020-07-03",
+    "price": 25359.29,
+    "benchmark_pct": -11.81,
+    "cum_r": 32.0
+  },
+  {
+    "trade_idx": 26,
+    "date": "2020-07-17",
+    "price": 25091.79,
+    "benchmark_pct": -12.74,
+    "cum_r": 31.0
+  },
+  {
+    "trade_idx": 27,
+    "date": "2020-07-24",
+    "price": 24651.29,
+    "benchmark_pct": -14.28,
+    "cum_r": 33.0
+  },
+  {
+    "trade_idx": 28,
+    "date": "2020-07-30",
+    "price": 24726.29,
+    "benchmark_pct": -14.01,
+    "cum_r": 32.0
+  },
+  {
+    "trade_idx": 29,
+    "date": "2020-07-31",
+    "price": 24615.79,
+    "benchmark_pct": -14.4,
+    "cum_r": 31.0
+  },
+  {
+    "trade_idx": 30,
+    "date": "2020-08-04",
+    "price": 24977.29,
+    "benchmark_pct": -13.14,
+    "cum_r": 30.0
+  },
+  {
+    "trade_idx": 31,
+    "date": "2020-08-05",
+    "price": 25187.29,
+    "benchmark_pct": -12.41,
+    "cum_r": 32.0
+  },
+  {
+    "trade_idx": 32,
+    "date": "2020-08-14",
+    "price": 25187.29,
+    "benchmark_pct": -12.41,
+    "cum_r": 34.0
+  },
+  {
+    "trade_idx": 33,
+    "date": "2020-08-19",
+    "price": 25167.29,
+    "benchmark_pct": -12.48,
+    "cum_r": 36.0
+  },
+  {
+    "trade_idx": 34,
+    "date": "2020-08-21",
+    "price": 25169.29,
+    "benchmark_pct": -12.47,
+    "cum_r": 35.0
+  },
+  {
+    "trade_idx": 35,
+    "date": "2020-08-24",
+    "price": 25529.29,
+    "benchmark_pct": -11.22,
+    "cum_r": 37.0
+  },
+  {
+    "trade_idx": 36,
+    "date": "2020-08-25",
+    "price": 25532.29,
+    "benchmark_pct": -11.21,
+    "cum_r": 39.0
+  },
+  {
+    "trade_idx": 37,
+    "date": "2020-08-26",
+    "price": 25471.29,
+    "benchmark_pct": -11.42,
+    "cum_r": 41.0
+  },
+  {
+    "trade_idx": 38,
+    "date": "2020-09-01",
+    "price": 25177.79,
+    "benchmark_pct": -12.44,
+    "cum_r": 43.0
+  },
+  {
+    "trade_idx": 39,
+    "date": "2020-09-02",
+    "price": 25061.29,
+    "benchmark_pct": -12.85,
+    "cum_r": 42.0
+  },
+  {
+    "trade_idx": 40,
+    "date": "2020-09-08",
+    "price": 24689.29,
+    "benchmark_pct": -14.14,
+    "cum_r": 44.0
+  },
+  {
+    "trade_idx": 41,
+    "date": "2020-09-09",
+    "price": 24316.29,
+    "benchmark_pct": -15.44,
+    "cum_r": 43.0
+  },
+  {
+    "trade_idx": 42,
+    "date": "2020-09-14",
+    "price": 24638.79,
+    "benchmark_pct": -14.32,
+    "cum_r": 42.0
+  },
+  {
+    "trade_idx": 43,
+    "date": "2020-09-15",
+    "price": 24746.29,
+    "benchmark_pct": -13.94,
+    "cum_r": 44.0
+  },
+  {
+    "trade_idx": 44,
+    "date": "2020-09-16",
+    "price": 24695.79,
+    "benchmark_pct": -14.12,
+    "cum_r": 46.0
+  },
+  {
+    "trade_idx": 45,
+    "date": "2020-09-17",
+    "price": 24291.79,
+    "benchmark_pct": -15.53,
+    "cum_r": 45.0
+  },
+  {
+    "trade_idx": 46,
+    "date": "2020-09-18",
+    "price": 24375.29,
+    "benchmark_pct": -15.23,
+    "cum_r": 44.0
+  },
+  {
+    "trade_idx": 47,
+    "date": "2020-09-21",
+    "price": 24061.79,
+    "benchmark_pct": -16.33,
+    "cum_r": 46.0
+  },
+  {
+    "trade_idx": 48,
+    "date": "2020-09-22",
+    "price": 23843.29,
+    "benchmark_pct": -17.08,
+    "cum_r": 48.0
+  },
+  {
+    "trade_idx": 49,
+    "date": "2020-09-23",
+    "price": 23688.29,
+    "benchmark_pct": -17.62,
+    "cum_r": 50.0
+  },
+  {
+    "trade_idx": 50,
+    "date": "2020-09-28",
+    "price": 23422.29,
+    "benchmark_pct": -18.55,
+    "cum_r": 49.0
+  },
+  {
+    "trade_idx": 51,
+    "date": "2020-10-09",
+    "price": 24048.79,
+    "benchmark_pct": -16.37,
+    "cum_r": 51.0
+  },
+  {
+    "trade_idx": 52,
+    "date": "2020-10-16",
+    "price": 24349.79,
+    "benchmark_pct": -15.32,
+    "cum_r": 50.0
+  },
+  {
+    "trade_idx": 53,
+    "date": "2020-10-22",
+    "price": 24670.79,
+    "benchmark_pct": -14.21,
+    "cum_r": 52.0
+  },
+  {
+    "trade_idx": 54,
+    "date": "2020-10-23",
+    "price": 24852.29,
+    "benchmark_pct": -13.58,
+    "cum_r": 51.0
+  },
+  {
+    "trade_idx": 55,
+    "date": "2020-10-30",
+    "price": 24520.29,
+    "benchmark_pct": -14.73,
+    "cum_r": 50.0
+  },
+  {
+    "trade_idx": 56,
+    "date": "2020-11-02",
+    "price": 24256.79,
+    "benchmark_pct": -15.65,
+    "cum_r": 52.0
+  },
+  {
+    "trade_idx": 57,
+    "date": "2020-11-03",
+    "price": 24950.29,
+    "benchmark_pct": -13.24,
+    "cum_r": 51.0
+  },
+  {
+    "trade_idx": 58,
+    "date": "2020-11-05",
+    "price": 25550.79,
+    "benchmark_pct": -11.15,
+    "cum_r": 53.0
+  },
+  {
+    "trade_idx": 59,
+    "date": "2020-11-06",
+    "price": 25639.29,
+    "benchmark_pct": -10.84,
+    "cum_r": 55.0
+  },
+  {
+    "trade_idx": 60,
+    "date": "2020-11-09",
+    "price": 26007.29,
+    "benchmark_pct": -9.56,
+    "cum_r": 57.0
+  },
+  {
+    "trade_idx": 61,
+    "date": "2020-11-12",
+    "price": 26151.29,
+    "benchmark_pct": -9.06,
+    "cum_r": 56.0
+  },
+  {
+    "trade_idx": 62,
+    "date": "2020-11-13",
+    "price": 26027.29,
+    "benchmark_pct": -9.49,
+    "cum_r": 58.0
+  },
+  {
+    "trade_idx": 63,
+    "date": "2020-11-16",
+    "price": 26276.79,
+    "benchmark_pct": -8.62,
+    "cum_r": 60.0
+  },
+  {
+    "trade_idx": 64,
+    "date": "2020-11-17",
+    "price": 26413.29,
+    "benchmark_pct": -8.15,
+    "cum_r": 60.24
+  },
+  {
+    "trade_idx": 65,
+    "date": "2020-11-19",
+    "price": 26391.29,
+    "benchmark_pct": -8.22,
+    "cum_r": 62.24
+  },
+  {
+    "trade_idx": 66,
+    "date": "2020-11-20",
+    "price": 26434.29,
+    "benchmark_pct": -8.07,
+    "cum_r": 64.24
+  },
+  {
+    "trade_idx": 67,
+    "date": "2020-11-23",
+    "price": 26426.29,
+    "benchmark_pct": -8.1,
+    "cum_r": 66.24
+  },
+  {
+    "trade_idx": 68,
+    "date": "2020-11-26",
+    "price": 26679.29,
+    "benchmark_pct": -7.22,
+    "cum_r": 68.24
+  },
+  {
+    "trade_idx": 69,
+    "date": "2020-11-27",
+    "price": 26779.79,
+    "benchmark_pct": -6.87,
+    "cum_r": 70.24
+  },
+  {
+    "trade_idx": 70,
+    "date": "2020-12-17",
+    "price": 26556.0,
+    "benchmark_pct": -7.65,
+    "cum_r": 72.24
+  },
+  {
+    "trade_idx": 71,
+    "date": "2020-12-21",
+    "price": 26413.0,
+    "benchmark_pct": -8.15,
+    "cum_r": 74.24
+  },
+  {
+    "trade_idx": 72,
+    "date": "2021-01-04",
+    "price": 27467.0,
+    "benchmark_pct": -4.48,
+    "cum_r": 76.24
+  },
+  {
+    "trade_idx": 73,
+    "date": "2021-01-07",
+    "price": 27455.0,
+    "benchmark_pct": -4.53,
+    "cum_r": 78.24
+  },
+  {
+    "trade_idx": 74,
+    "date": "2021-01-08",
+    "price": 27804.0,
+    "benchmark_pct": -3.31,
+    "cum_r": 77.24
+  },
+  {
+    "trade_idx": 75,
+    "date": "2021-01-14",
+    "price": 28367.0,
+    "benchmark_pct": -1.35,
+    "cum_r": 79.24
+  },
+  {
+    "trade_idx": 76,
+    "date": "2021-01-20",
+    "price": 29707.0,
+    "benchmark_pct": 3.31,
+    "cum_r": 81.24
+  },
+  {
+    "trade_idx": 77,
+    "date": "2021-01-21",
+    "price": 29859.5,
+    "benchmark_pct": 3.84,
+    "cum_r": 83.24
+  },
+  {
+    "trade_idx": 78,
+    "date": "2021-01-26",
+    "price": 29534.0,
+    "benchmark_pct": 2.7,
+    "cum_r": 82.24
+  },
+  {
+    "trade_idx": 79,
+    "date": "2021-01-28",
+    "price": 28535.0,
+    "benchmark_pct": -0.77,
+    "cum_r": 84.24
+  },
+  {
+    "trade_idx": 80,
+    "date": "2021-01-29",
+    "price": 28605.0,
+    "benchmark_pct": -0.53,
+    "cum_r": 83.24
+  },
+  {
+    "trade_idx": 81,
+    "date": "2021-02-03",
+    "price": 29151.5,
+    "benchmark_pct": 1.37,
+    "cum_r": 82.24
+  },
+  {
+    "trade_idx": 82,
+    "date": "2021-02-05",
+    "price": 29264.5,
+    "benchmark_pct": 1.77,
+    "cum_r": 84.24
+  },
+  {
+    "trade_idx": 83,
+    "date": "2021-02-08",
+    "price": 29299.0,
+    "benchmark_pct": 1.89,
+    "cum_r": 83.24
+  },
+  {
+    "trade_idx": 84,
+    "date": "2021-02-16",
+    "price": 30698.0,
+    "benchmark_pct": 6.75,
+    "cum_r": 82.24
+  },
+  {
+    "trade_idx": 85,
+    "date": "2021-02-17",
+    "price": 31053.0,
+    "benchmark_pct": 7.99,
+    "cum_r": 84.24
+  },
+  {
+    "trade_idx": 86,
+    "date": "2021-02-18",
+    "price": 30471.0,
+    "benchmark_pct": 5.96,
+    "cum_r": 83.24
+  },
+  {
+    "trade_idx": 87,
+    "date": "2021-02-19",
+    "price": 30500.0,
+    "benchmark_pct": 6.06,
+    "cum_r": 85.24
+  },
+  {
+    "trade_idx": 88,
+    "date": "2021-03-03",
+    "price": 29742.0,
+    "benchmark_pct": 3.43,
+    "cum_r": 87.24
+  },
+  {
+    "trade_idx": 89,
+    "date": "2021-03-11",
+    "price": 29266.0,
+    "benchmark_pct": 1.77,
+    "cum_r": 89.24
+  },
+  {
+    "trade_idx": 90,
+    "date": "2021-03-18",
+    "price": 29528.5,
+    "benchmark_pct": 2.69,
+    "cum_r": 91.24
+  },
+  {
+    "trade_idx": 91,
+    "date": "2021-03-19",
+    "price": 28882.0,
+    "benchmark_pct": 0.44,
+    "cum_r": 90.24
+  },
+  {
+    "trade_idx": 92,
+    "date": "2021-03-22",
+    "price": 28929.5,
+    "benchmark_pct": 0.6,
+    "cum_r": 92.24
+  },
+  {
+    "trade_idx": 93,
+    "date": "2021-03-23",
+    "price": 28508.0,
+    "benchmark_pct": -0.86,
+    "cum_r": 94.24
+  },
+  {
+    "trade_idx": 94,
+    "date": "2021-03-24",
+    "price": 27950.5,
+    "benchmark_pct": -2.8,
+    "cum_r": 96.24
+  },
+  {
+    "trade_idx": 95,
+    "date": "2021-04-01",
+    "price": 28631.0,
+    "benchmark_pct": -0.44,
+    "cum_r": 98.24
+  },
+  {
+    "trade_idx": 96,
+    "date": "2021-04-12",
+    "price": 28464.5,
+    "benchmark_pct": -1.01,
+    "cum_r": 97.24
+  },
+  {
+    "trade_idx": 97,
+    "date": "2021-04-16",
+    "price": 29067.5,
+    "benchmark_pct": 1.08,
+    "cum_r": 99.24
+  },
+  {
+    "trade_idx": 98,
+    "date": "2021-04-19",
+    "price": 29172.5,
+    "benchmark_pct": 1.45,
+    "cum_r": 101.24
+  },
+  {
+    "trade_idx": 99,
+    "date": "2021-04-20",
+    "price": 28909.5,
+    "benchmark_pct": 0.53,
+    "cum_r": 103.24
+  },
+  {
+    "trade_idx": 100,
+    "date": "2021-04-22",
+    "price": 28683.0,
+    "benchmark_pct": -0.25,
+    "cum_r": 105.24
+  },
+  {
+    "trade_idx": 101,
+    "date": "2021-04-23",
+    "price": 28934.5,
+    "benchmark_pct": 0.62,
+    "cum_r": 107.24
+  },
+  {
+    "trade_idx": 102,
+    "date": "2021-04-26",
+    "price": 28785.0,
+    "benchmark_pct": 0.1,
+    "cum_r": 109.24
+  },
+  {
+    "trade_idx": 103,
+    "date": "2021-04-30",
+    "price": 28797.0,
+    "benchmark_pct": 0.14,
+    "cum_r": 111.24
+  },
+  {
+    "trade_idx": 104,
+    "date": "2021-05-03",
+    "price": 28248.5,
+    "benchmark_pct": -1.77,
+    "cum_r": 113.24
+  },
+  {
+    "trade_idx": 105,
+    "date": "2021-05-04",
+    "price": 28599.5,
+    "benchmark_pct": -0.55,
+    "cum_r": 112.24
+  },
+  {
+    "trade_idx": 106,
+    "date": "2021-05-05",
+    "price": 28441.5,
+    "benchmark_pct": -1.09,
+    "cum_r": 111.24
+  },
+  {
+    "trade_idx": 107,
+    "date": "2021-05-06",
+    "price": 28552.5,
+    "benchmark_pct": -0.71,
+    "cum_r": 113.24
+  },
+  {
+    "trade_idx": 108,
+    "date": "2021-05-26",
+    "price": 29217.5,
+    "benchmark_pct": 1.6,
+    "cum_r": 115.24
+  },
+  {
+    "trade_idx": 109,
+    "date": "2021-05-31",
+    "price": 28957.0,
+    "benchmark_pct": 0.7,
+    "cum_r": 117.24
+  },
+  {
+    "trade_idx": 110,
+    "date": "2021-06-02",
+    "price": 29285.0,
+    "benchmark_pct": 1.84,
+    "cum_r": 116.24
+  },
+  {
+    "trade_idx": 111,
+    "date": "2021-06-03",
+    "price": 29127.5,
+    "benchmark_pct": 1.29,
+    "cum_r": 118.24
+  },
+  {
+    "trade_idx": 112,
+    "date": "2021-06-09",
+    "price": 28765.0,
+    "benchmark_pct": 0.03,
+    "cum_r": 120.24
+  },
+  {
+    "trade_idx": 113,
+    "date": "2021-06-11",
+    "price": 28893.0,
+    "benchmark_pct": 0.48,
+    "cum_r": 122.24
+  },
+  {
+    "trade_idx": 114,
+    "date": "2021-06-17",
+    "price": 28438.0,
+    "benchmark_pct": -1.11,
+    "cum_r": 124.24
+  },
+  {
+    "trade_idx": 115,
+    "date": "2021-06-24",
+    "price": 28894.5,
+    "benchmark_pct": 0.48,
+    "cum_r": 126.24
+  },
+  {
+    "trade_idx": 116,
+    "date": "2021-06-25",
+    "price": 29303.5,
+    "benchmark_pct": 1.9,
+    "cum_r": 126.83
+  },
+  {
+    "trade_idx": 117,
+    "date": "2021-06-28",
+    "price": 29298.0,
+    "benchmark_pct": 1.88,
+    "cum_r": 128.83
+  },
+  {
+    "trade_idx": 118,
+    "date": "2021-06-30",
+    "price": 28781.0,
+    "benchmark_pct": 0.09,
+    "cum_r": 127.83
+  },
+  {
+    "trade_idx": 119,
+    "date": "2021-07-02",
+    "price": 28220.5,
+    "benchmark_pct": -1.86,
+    "cum_r": 126.83
+  },
+  {
+    "trade_idx": 120,
+    "date": "2021-07-05",
+    "price": 28137.0,
+    "benchmark_pct": -2.15,
+    "cum_r": 128.83
+  },
+  {
+    "trade_idx": 121,
+    "date": "2021-07-07",
+    "price": 27805.0,
+    "benchmark_pct": -3.31,
+    "cum_r": 127.83
+  },
+  {
+    "trade_idx": 122,
+    "date": "2021-07-08",
+    "price": 27230.0,
+    "benchmark_pct": -5.31,
+    "cum_r": 129.83
+  },
+  {
+    "trade_idx": 123,
+    "date": "2021-07-09",
+    "price": 27600.0,
+    "benchmark_pct": -4.02,
+    "cum_r": 128.83
+  },
+  {
+    "trade_idx": 124,
+    "date": "2021-07-12",
+    "price": 27476.0,
+    "benchmark_pct": -4.45,
+    "cum_r": 130.83
+  },
+  {
+    "trade_idx": 125,
+    "date": "2021-07-16",
+    "price": 28000.0,
+    "benchmark_pct": -2.63,
+    "cum_r": 132.83
+  },
+  {
+    "trade_idx": 126,
+    "date": "2021-07-20",
+    "price": 27129.0,
+    "benchmark_pct": -5.66,
+    "cum_r": 134.83
+  },
+  {
+    "trade_idx": 127,
+    "date": "2021-07-21",
+    "price": 27148.0,
+    "benchmark_pct": -5.59,
+    "cum_r": 136.83
+  },
+  {
+    "trade_idx": 128,
+    "date": "2021-07-22",
+    "price": 27700.0,
+    "benchmark_pct": -3.67,
+    "cum_r": 138.83
+  },
+  {
+    "trade_idx": 129,
+    "date": "2021-08-05",
+    "price": 26242.0,
+    "benchmark_pct": -8.74,
+    "cum_r": 137.83
+  },
+  {
+    "trade_idx": 130,
+    "date": "2021-08-06",
+    "price": 26205.5,
+    "benchmark_pct": -8.87,
+    "cum_r": 139.83
+  },
+  {
+    "trade_idx": 131,
+    "date": "2021-08-09",
+    "price": 26360.0,
+    "benchmark_pct": -8.33,
+    "cum_r": 141.83
+  },
+  {
+    "trade_idx": 132,
+    "date": "2021-08-10",
+    "price": 26474.5,
+    "benchmark_pct": -7.93,
+    "cum_r": 140.83
+  },
+  {
+    "trade_idx": 133,
+    "date": "2021-08-18",
+    "price": 25825.5,
+    "benchmark_pct": -10.19,
+    "cum_r": 142.83
+  },
+  {
+    "trade_idx": 134,
+    "date": "2021-08-19",
+    "price": 25404.0,
+    "benchmark_pct": -11.66,
+    "cum_r": 141.83
+  },
+  {
+    "trade_idx": 135,
+    "date": "2021-08-20",
+    "price": 25102.5,
+    "benchmark_pct": -12.71,
+    "cum_r": 143.83
+  },
+  {
+    "trade_idx": 136,
+    "date": "2021-08-23",
+    "price": 25328.5,
+    "benchmark_pct": -11.92,
+    "cum_r": 142.83
+  },
+  {
+    "trade_idx": 137,
+    "date": "2021-08-25",
+    "price": 25602.5,
+    "benchmark_pct": -10.97,
+    "cum_r": 144.83
+  },
+  {
+    "trade_idx": 138,
+    "date": "2021-08-27",
+    "price": 25422.5,
+    "benchmark_pct": -11.59,
+    "cum_r": 146.83
+  },
+  {
+    "trade_idx": 139,
+    "date": "2021-08-30",
+    "price": 25447.5,
+    "benchmark_pct": -11.51,
+    "cum_r": 145.83
+  },
+  {
+    "trade_idx": 140,
+    "date": "2021-08-31",
+    "price": 25715.5,
+    "benchmark_pct": -10.57,
+    "cum_r": 147.83
+  },
+  {
+    "trade_idx": 141,
+    "date": "2021-09-02",
+    "price": 26025.5,
+    "benchmark_pct": -9.5,
+    "cum_r": 146.83
+  },
+  {
+    "trade_idx": 142,
+    "date": "2021-09-03",
+    "price": 25886.5,
+    "benchmark_pct": -9.98,
+    "cum_r": 145.83
+  },
+  {
+    "trade_idx": 143,
+    "date": "2021-09-06",
+    "price": 26063.5,
+    "benchmark_pct": -9.36,
+    "cum_r": 147.83
+  },
+  {
+    "trade_idx": 144,
+    "date": "2021-09-10",
+    "price": 26027.5,
+    "benchmark_pct": -9.49,
+    "cum_r": 149.83
+  },
+  {
+    "trade_idx": 145,
+    "date": "2021-09-13",
+    "price": 25837.0,
+    "benchmark_pct": -10.15,
+    "cum_r": 151.83
+  },
+  {
+    "trade_idx": 146,
+    "date": "2021-09-14",
+    "price": 25611.0,
+    "benchmark_pct": -10.94,
+    "cum_r": 153.83
+  },
+  {
+    "trade_idx": 147,
+    "date": "2021-09-15",
+    "price": 25040.0,
+    "benchmark_pct": -12.92,
+    "cum_r": 155.83
+  },
+  {
+    "trade_idx": 148,
+    "date": "2021-09-16",
+    "price": 24524.0,
+    "benchmark_pct": -14.72,
+    "cum_r": 154.83
+  },
+  {
+    "trade_idx": 149,
+    "date": "2021-09-17",
+    "price": 24708.0,
+    "benchmark_pct": -14.08,
+    "cum_r": 153.83
+  },
+  {
+    "trade_idx": 150,
+    "date": "2021-09-20",
+    "price": 23842.0,
+    "benchmark_pct": -17.09,
+    "cum_r": 152.83
+  },
+  {
+    "trade_idx": 151,
+    "date": "2021-09-21",
+    "price": 24149.0,
+    "benchmark_pct": -16.02,
+    "cum_r": 151.83
+  },
+  {
+    "trade_idx": 152,
+    "date": "2021-09-23",
+    "price": 24444.0,
+    "benchmark_pct": -15.0,
+    "cum_r": 150.83
+  },
+  {
+    "trade_idx": 153,
+    "date": "2021-09-24",
+    "price": 24005.0,
+    "benchmark_pct": -16.52,
+    "cum_r": 152.83
+  },
+  {
+    "trade_idx": 154,
+    "date": "2021-09-27",
+    "price": 24268.0,
+    "benchmark_pct": -15.61,
+    "cum_r": 151.83
+  },
+  {
+    "trade_idx": 155,
+    "date": "2021-10-04",
+    "price": 24089.5,
+    "benchmark_pct": -16.23,
+    "cum_r": 150.83
+  },
+  {
+    "trade_idx": 156,
+    "date": "2021-10-05",
+    "price": 24073.5,
+    "benchmark_pct": -16.28,
+    "cum_r": 149.83
+  },
+  {
+    "trade_idx": 157,
+    "date": "2021-10-06",
+    "price": 23927.5,
+    "benchmark_pct": -16.79,
+    "cum_r": 151.83
+  },
+  {
+    "trade_idx": 158,
+    "date": "2021-10-11",
+    "price": 25131.5,
+    "benchmark_pct": -12.61,
+    "cum_r": 153.83
+  },
+  {
+    "trade_idx": 159,
+    "date": "2021-10-13",
+    "price": 24918.5,
+    "benchmark_pct": -13.35,
+    "cum_r": 155.83
+  },
+  {
+    "trade_idx": 160,
+    "date": "2021-10-15",
+    "price": 25256.5,
+    "benchmark_pct": -12.17,
+    "cum_r": 157.83
+  },
+  {
+    "trade_idx": 161,
+    "date": "2021-10-18",
+    "price": 25193.5,
+    "benchmark_pct": -12.39,
+    "cum_r": 156.83
+  },
+  {
+    "trade_idx": 162,
+    "date": "2021-10-22",
+    "price": 26110.5,
+    "benchmark_pct": -9.2,
+    "cum_r": 155.83
+  },
+  {
+    "trade_idx": 163,
+    "date": "2021-10-29",
+    "price": 25400.0,
+    "benchmark_pct": -11.67,
+    "cum_r": 157.83
+  },
+  {
+    "trade_idx": 164,
+    "date": "2021-11-04",
+    "price": 25054.5,
+    "benchmark_pct": -12.87,
+    "cum_r": 156.83
+  },
+  {
+    "trade_idx": 165,
+    "date": "2021-11-05",
+    "price": 24861.0,
+    "benchmark_pct": -13.55,
+    "cum_r": 155.83
+  },
+  {
+    "trade_idx": 166,
+    "date": "2021-11-11",
+    "price": 25201.5,
+    "benchmark_pct": -12.36,
+    "cum_r": 157.83
+  },
+  {
+    "trade_idx": 167,
+    "date": "2021-11-12",
+    "price": 25279.5,
+    "benchmark_pct": -12.09,
+    "cum_r": 158.13
+  },
+  {
+    "trade_idx": 168,
+    "date": "2021-11-16",
+    "price": 25673.5,
+    "benchmark_pct": -10.72,
+    "cum_r": 160.13
+  },
+  {
+    "trade_idx": 169,
+    "date": "2021-11-17",
+    "price": 25574.5,
+    "benchmark_pct": -11.06,
+    "cum_r": 162.13
+  },
+  {
+    "trade_idx": 170,
+    "date": "2021-11-19",
+    "price": 24866.5,
+    "benchmark_pct": -13.53,
+    "cum_r": 164.13
+  },
+  {
+    "trade_idx": 171,
+    "date": "2021-11-22",
+    "price": 24871.5,
+    "benchmark_pct": -13.51,
+    "cum_r": 166.13
+  },
+  {
+    "trade_idx": 172,
+    "date": "2021-11-23",
+    "price": 24677.0,
+    "benchmark_pct": -14.19,
+    "cum_r": 165.13
+  },
+  {
+    "trade_idx": 173,
+    "date": "2021-11-25",
+    "price": 24729.5,
+    "benchmark_pct": -14.0,
+    "cum_r": 167.13
+  },
+  {
+    "trade_idx": 174,
+    "date": "2021-11-26",
+    "price": 24204.5,
+    "benchmark_pct": -15.83,
+    "cum_r": 169.13
+  },
+  {
+    "trade_idx": 175,
+    "date": "2021-11-29",
+    "price": 23853.5,
+    "benchmark_pct": -17.05,
+    "cum_r": 171.13
+  },
+  {
+    "trade_idx": 176,
+    "date": "2021-12-01",
+    "price": 23774.0,
+    "benchmark_pct": -17.33,
+    "cum_r": 173.13
+  },
+  {
+    "trade_idx": 177,
+    "date": "2021-12-02",
+    "price": 23737.5,
+    "benchmark_pct": -17.45,
+    "cum_r": 175.13
+  },
+  {
+    "trade_idx": 178,
+    "date": "2021-12-03",
+    "price": 23597.5,
+    "benchmark_pct": -17.94,
+    "cum_r": 174.13
+  },
+  {
+    "trade_idx": 179,
+    "date": "2021-12-06",
+    "price": 23335.5,
+    "benchmark_pct": -18.85,
+    "cum_r": 176.13
+  },
+  {
+    "trade_idx": 180,
+    "date": "2021-12-07",
+    "price": 23668.5,
+    "benchmark_pct": -17.69,
+    "cum_r": 178.13
+  },
+  {
+    "trade_idx": 181,
+    "date": "2021-12-08",
+    "price": 23961.5,
+    "benchmark_pct": -16.67,
+    "cum_r": 180.13
+  },
+  {
+    "trade_idx": 182,
+    "date": "2021-12-09",
+    "price": 24220.5,
+    "benchmark_pct": -15.77,
+    "cum_r": 182.13
+  },
+  {
+    "trade_idx": 183,
+    "date": "2021-12-15",
+    "price": 23388.5,
+    "benchmark_pct": -18.67,
+    "cum_r": 184.13
+  },
+  {
+    "trade_idx": 184,
+    "date": "2021-12-16",
+    "price": 23358.5,
+    "benchmark_pct": -18.77,
+    "cum_r": 183.13
+  },
+  {
+    "trade_idx": 185,
+    "date": "2021-12-17",
+    "price": 23159.5,
+    "benchmark_pct": -19.46,
+    "cum_r": 182.13
+  },
+  {
+    "trade_idx": 186,
+    "date": "2021-12-20",
+    "price": 22844.0,
+    "benchmark_pct": -20.56,
+    "cum_r": 181.13
+  },
+  {
+    "trade_idx": 187,
+    "date": "2021-12-21",
+    "price": 22980.5,
+    "benchmark_pct": -20.09,
+    "cum_r": 183.13
+  },
+  {
+    "trade_idx": 188,
+    "date": "2022-01-04",
+    "price": 23335.5,
+    "benchmark_pct": -18.85,
+    "cum_r": 185.13
+  },
+  {
+    "trade_idx": 189,
+    "date": "2022-01-06",
+    "price": 22832.5,
+    "benchmark_pct": -20.6,
+    "cum_r": 187.13
+  },
+  {
+    "trade_idx": 190,
+    "date": "2022-01-21",
+    "price": 25007.5,
+    "benchmark_pct": -13.04,
+    "cum_r": 189.13
+  },
+  {
+    "trade_idx": 191,
+    "date": "2022-01-24",
+    "price": 24670.5,
+    "benchmark_pct": -14.21,
+    "cum_r": 191.13
+  },
+  {
+    "trade_idx": 192,
+    "date": "2022-01-28",
+    "price": 23533.5,
+    "benchmark_pct": -18.16,
+    "cum_r": 190.13
+  },
+  {
+    "trade_idx": 193,
+    "date": "2022-02-09",
+    "price": 24789.5,
+    "benchmark_pct": -13.79,
+    "cum_r": 192.13
+  },
+  {
+    "trade_idx": 194,
+    "date": "2022-02-10",
+    "price": 24941.5,
+    "benchmark_pct": -13.27,
+    "cum_r": 194.13
+  },
+  {
+    "trade_idx": 195,
+    "date": "2022-02-14",
+    "price": 24447.5,
+    "benchmark_pct": -14.98,
+    "cum_r": 193.13
+  },
+  {
+    "trade_idx": 196,
+    "date": "2022-02-16",
+    "price": 24670.5,
+    "benchmark_pct": -14.21,
+    "cum_r": 192.13
+  },
+  {
+    "trade_idx": 197,
+    "date": "2022-02-17",
+    "price": 24731.5,
+    "benchmark_pct": -14.0,
+    "cum_r": 194.13
+  },
+  {
+    "trade_idx": 198,
+    "date": "2022-02-18",
+    "price": 24687.5,
+    "benchmark_pct": -14.15,
+    "cum_r": 196.13
+  },
+  {
+    "trade_idx": 199,
+    "date": "2022-02-21",
+    "price": 24157.5,
+    "benchmark_pct": -15.99,
+    "cum_r": 198.13
+  },
+  {
+    "trade_idx": 200,
+    "date": "2022-02-23",
+    "price": 23663.5,
+    "benchmark_pct": -17.71,
+    "cum_r": 200.13
+  },
+  {
+    "trade_idx": 201,
+    "date": "2022-02-24",
+    "price": 22890.5,
+    "benchmark_pct": -20.4,
+    "cum_r": 202.13
+  },
+  {
+    "trade_idx": 202,
+    "date": "2022-02-25",
+    "price": 22762.0,
+    "benchmark_pct": -20.85,
+    "cum_r": 201.13
+  },
+  {
+    "trade_idx": 203,
+    "date": "2022-02-28",
+    "price": 22578.0,
+    "benchmark_pct": -21.49,
+    "cum_r": 203.13
+  },
+  {
+    "trade_idx": 204,
+    "date": "2022-03-02",
+    "price": 22386.0,
+    "benchmark_pct": -22.15,
+    "cum_r": 202.13
+  },
+  {
+    "trade_idx": 205,
+    "date": "2022-03-03",
+    "price": 22417.0,
+    "benchmark_pct": -22.04,
+    "cum_r": 204.13
+  },
+  {
+    "trade_idx": 206,
+    "date": "2022-03-04",
+    "price": 21721.0,
+    "benchmark_pct": -24.47,
+    "cum_r": 206.13
+  },
+  {
+    "trade_idx": 207,
+    "date": "2022-03-07",
+    "price": 21032.0,
+    "benchmark_pct": -26.86,
+    "cum_r": 205.13
+  },
+  {
+    "trade_idx": 208,
+    "date": "2022-03-10",
+    "price": 20593.0,
+    "benchmark_pct": -28.39,
+    "cum_r": 207.13
+  },
+  {
+    "trade_idx": 209,
+    "date": "2022-03-11",
+    "price": 20571.0,
+    "benchmark_pct": -28.46,
+    "cum_r": 209.13
+  },
+  {
+    "trade_idx": 210,
+    "date": "2022-03-14",
+    "price": 19763.0,
+    "benchmark_pct": -31.27,
+    "cum_r": 211.13
+  },
+  {
+    "trade_idx": 211,
+    "date": "2022-03-15",
+    "price": 18375.0,
+    "benchmark_pct": -36.1,
+    "cum_r": 213.13
+  },
+  {
+    "trade_idx": 212,
+    "date": "2022-03-16",
+    "price": 20057.0,
+    "benchmark_pct": -30.25,
+    "cum_r": 215.13
+  },
+  {
+    "trade_idx": 213,
+    "date": "2022-03-17",
+    "price": 21322.0,
+    "benchmark_pct": -25.85,
+    "cum_r": 214.13
+  },
+  {
+    "trade_idx": 214,
+    "date": "2022-03-18",
+    "price": 20987.0,
+    "benchmark_pct": -27.02,
+    "cum_r": 216.13
+  },
+  {
+    "trade_idx": 215,
+    "date": "2022-03-21",
+    "price": 21213.0,
+    "benchmark_pct": -26.23,
+    "cum_r": 218.13
+  },
+  {
+    "trade_idx": 216,
+    "date": "2022-03-22",
+    "price": 22210.0,
+    "benchmark_pct": -22.76,
+    "cum_r": 217.13
+  },
+  {
+    "trade_idx": 217,
+    "date": "2022-03-28",
+    "price": 21820.0,
+    "benchmark_pct": -24.12,
+    "cum_r": 216.13
+  },
+  {
+    "trade_idx": 218,
+    "date": "2022-04-06",
+    "price": 22005.0,
+    "benchmark_pct": -23.48,
+    "cum_r": 215.13
+  },
+  {
+    "trade_idx": 219,
+    "date": "2022-04-07",
+    "price": 21865.0,
+    "benchmark_pct": -23.96,
+    "cum_r": 217.13
+  },
+  {
+    "trade_idx": 220,
+    "date": "2022-04-08",
+    "price": 21780.0,
+    "benchmark_pct": -24.26,
+    "cum_r": 216.13
+  },
+  {
+    "trade_idx": 221,
+    "date": "2022-04-11",
+    "price": 21139.0,
+    "benchmark_pct": -26.49,
+    "cum_r": 215.13
+  },
+  {
+    "trade_idx": 222,
+    "date": "2022-04-14",
+    "price": 21493.0,
+    "benchmark_pct": -25.26,
+    "cum_r": 217.13
+  },
+  {
+    "trade_idx": 223,
+    "date": "2022-04-27",
+    "price": 19982.0,
+    "benchmark_pct": -30.51,
+    "cum_r": 216.13
+  },
+  {
+    "trade_idx": 224,
+    "date": "2022-04-28",
+    "price": 20024.0,
+    "benchmark_pct": -30.37,
+    "cum_r": 218.13
+  },
+  {
+    "trade_idx": 225,
+    "date": "2022-05-03",
+    "price": 21105.0,
+    "benchmark_pct": -26.61,
+    "cum_r": 219.49
+  },
+  {
+    "trade_idx": 226,
+    "date": "2022-05-06",
+    "price": 20036.0,
+    "benchmark_pct": -30.32,
+    "cum_r": 221.49
+  },
+  {
+    "trade_idx": 227,
+    "date": "2022-05-10",
+    "price": 19520.0,
+    "benchmark_pct": -32.12,
+    "cum_r": 220.49
+  },
+  {
+    "trade_idx": 228,
+    "date": "2022-05-12",
+    "price": 19327.0,
+    "benchmark_pct": -32.79,
+    "cum_r": 222.49
+  },
+  {
+    "trade_idx": 229,
+    "date": "2022-05-13",
+    "price": 19685.0,
+    "benchmark_pct": -31.55,
+    "cum_r": 224.49
+  },
+  {
+    "trade_idx": 230,
+    "date": "2022-05-16",
+    "price": 19948.0,
+    "benchmark_pct": -30.63,
+    "cum_r": 226.49
+  },
+  {
+    "trade_idx": 231,
+    "date": "2022-05-19",
+    "price": 20151.0,
+    "benchmark_pct": -29.92,
+    "cum_r": 228.49
+  },
+  {
+    "trade_idx": 232,
+    "date": "2022-05-26",
+    "price": 19969.5,
+    "benchmark_pct": -30.56,
+    "cum_r": 230.49
+  },
+  {
+    "trade_idx": 233,
+    "date": "2022-05-27",
+    "price": 20569.0,
+    "benchmark_pct": -28.47,
+    "cum_r": 232.49
+  },
+  {
+    "trade_idx": 234,
+    "date": "2022-06-07",
+    "price": 21504.0,
+    "benchmark_pct": -25.22,
+    "cum_r": 234.49
+  },
+  {
+    "trade_idx": 235,
+    "date": "2022-06-10",
+    "price": 21883.0,
+    "benchmark_pct": -23.9,
+    "cum_r": 236.49
+  },
+  {
+    "trade_idx": 236,
+    "date": "2022-06-21",
+    "price": 21538.0,
+    "benchmark_pct": -25.1,
+    "cum_r": 238.49
+  },
+  {
+    "trade_idx": 237,
+    "date": "2022-06-23",
+    "price": 21330.0,
+    "benchmark_pct": -25.82,
+    "cum_r": 240.49
+  },
+  {
+    "trade_idx": 238,
+    "date": "2022-06-27",
+    "price": 22258.0,
+    "benchmark_pct": -22.6,
+    "cum_r": 242.49
+  },
+  {
+    "trade_idx": 239,
+    "date": "2022-06-29",
+    "price": 22005.0,
+    "benchmark_pct": -23.48,
+    "cum_r": 244.49
+  },
+  {
+    "trade_idx": 240,
+    "date": "2022-07-04",
+    "price": 21784.0,
+    "benchmark_pct": -24.25,
+    "cum_r": 243.49
+  },
+  {
+    "trade_idx": 241,
+    "date": "2022-07-05",
+    "price": 21847.0,
+    "benchmark_pct": -24.03,
+    "cum_r": 245.49
+  },
+  {
+    "trade_idx": 242,
+    "date": "2022-07-08",
+    "price": 21729.0,
+    "benchmark_pct": -24.44,
+    "cum_r": 244.49
+  },
+  {
+    "trade_idx": 243,
+    "date": "2022-07-11",
+    "price": 21012.0,
+    "benchmark_pct": -26.93,
+    "cum_r": 243.49
+  },
+  {
+    "trade_idx": 244,
+    "date": "2022-07-12",
+    "price": 20865.0,
+    "benchmark_pct": -27.44,
+    "cum_r": 242.49
+  },
+  {
+    "trade_idx": 245,
+    "date": "2022-07-18",
+    "price": 20816.0,
+    "benchmark_pct": -27.61,
+    "cum_r": 241.49
+  },
+  {
+    "trade_idx": 246,
+    "date": "2022-07-22",
+    "price": 20543.0,
+    "benchmark_pct": -28.56,
+    "cum_r": 240.49
+  },
+  {
+    "trade_idx": 247,
+    "date": "2022-07-25",
+    "price": 20397.0,
+    "benchmark_pct": -29.07,
+    "cum_r": 239.49
+  },
+  {
+    "trade_idx": 248,
+    "date": "2022-07-26",
+    "price": 20899.7,
+    "benchmark_pct": -27.32,
+    "cum_r": 241.49
+  },
+  {
+    "trade_idx": 249,
+    "date": "2022-07-27",
+    "price": 20654.7,
+    "benchmark_pct": -28.17,
+    "cum_r": 240.49
+  },
+  {
+    "trade_idx": 250,
+    "date": "2022-07-28",
+    "price": 20583.2,
+    "benchmark_pct": -28.42,
+    "cum_r": 239.49
+  },
+  {
+    "trade_idx": 251,
+    "date": "2022-07-29",
+    "price": 20104.2,
+    "benchmark_pct": -30.09,
+    "cum_r": 238.49
+  },
+  {
+    "trade_idx": 252,
+    "date": "2022-08-02",
+    "price": 19555.2,
+    "benchmark_pct": -32.0,
+    "cum_r": 240.49
+  },
+  {
+    "trade_idx": 253,
+    "date": "2022-08-05",
+    "price": 20153.7,
+    "benchmark_pct": -29.92,
+    "cum_r": 242.49
+  },
+  {
+    "trade_idx": 254,
+    "date": "2022-08-08",
+    "price": 20000.7,
+    "benchmark_pct": -30.45,
+    "cum_r": 241.49
+  },
+  {
+    "trade_idx": 255,
+    "date": "2022-08-09",
+    "price": 20008.2,
+    "benchmark_pct": -30.42,
+    "cum_r": 240.49
+  },
+  {
+    "trade_idx": 256,
+    "date": "2022-08-10",
+    "price": 19524.2,
+    "benchmark_pct": -32.1,
+    "cum_r": 242.49
+  },
+  {
+    "trade_idx": 257,
+    "date": "2022-08-11",
+    "price": 19867.2,
+    "benchmark_pct": -30.91,
+    "cum_r": 244.49
+  },
+  {
+    "trade_idx": 258,
+    "date": "2022-08-12",
+    "price": 20159.2,
+    "benchmark_pct": -29.9,
+    "cum_r": 243.49
+  },
+  {
+    "trade_idx": 259,
+    "date": "2022-08-15",
+    "price": 20044.2,
+    "benchmark_pct": -30.3,
+    "cum_r": 242.49
+  },
+  {
+    "trade_idx": 260,
+    "date": "2022-08-19",
+    "price": 19649.2,
+    "benchmark_pct": -31.67,
+    "cum_r": 244.49
+  },
+  {
+    "trade_idx": 261,
+    "date": "2022-08-22",
+    "price": 19626.2,
+    "benchmark_pct": -31.75,
+    "cum_r": 246.49
+  },
+  {
+    "trade_idx": 262,
+    "date": "2022-08-23",
+    "price": 19512.2,
+    "benchmark_pct": -32.15,
+    "cum_r": 248.49
+  },
+  {
+    "trade_idx": 263,
+    "date": "2022-08-25",
+    "price": 19549.2,
+    "benchmark_pct": -32.02,
+    "cum_r": 250.49
+  },
+  {
+    "trade_idx": 264,
+    "date": "2022-08-26",
+    "price": 20080.2,
+    "benchmark_pct": -30.17,
+    "cum_r": 252.49
+  },
+  {
+    "trade_idx": 265,
+    "date": "2022-09-02",
+    "price": 19438.2,
+    "benchmark_pct": -32.4,
+    "cum_r": 251.49
+  },
+  {
+    "trade_idx": 266,
+    "date": "2022-09-05",
+    "price": 19167.7,
+    "benchmark_pct": -33.34,
+    "cum_r": 250.49
+  },
+  {
+    "trade_idx": 267,
+    "date": "2022-09-09",
+    "price": 19371.7,
+    "benchmark_pct": -32.63,
+    "cum_r": 249.49
+  },
+  {
+    "trade_idx": 268,
+    "date": "2022-09-13",
+    "price": 19438.2,
+    "benchmark_pct": -32.4,
+    "cum_r": 251.49
+  },
+  {
+    "trade_idx": 269,
+    "date": "2022-09-14",
+    "price": 18816.2,
+    "benchmark_pct": -34.57,
+    "cum_r": 250.49
+  },
+  {
+    "trade_idx": 270,
+    "date": "2022-10-03",
+    "price": 17157.7,
+    "benchmark_pct": -40.33,
+    "cum_r": 252.49
+  },
+  {
+    "trade_idx": 271,
+    "date": "2022-10-05",
+    "price": 17986.2,
+    "benchmark_pct": -37.45,
+    "cum_r": 251.49
+  },
+  {
+    "trade_idx": 272,
+    "date": "2022-10-07",
+    "price": 17772.2,
+    "benchmark_pct": -38.2,
+    "cum_r": 253.49
+  },
+  {
+    "trade_idx": 273,
+    "date": "2022-10-10",
+    "price": 17241.2,
+    "benchmark_pct": -40.04,
+    "cum_r": 255.49
+  },
+  {
+    "trade_idx": 274,
+    "date": "2022-10-14",
+    "price": 16815.2,
+    "benchmark_pct": -41.53,
+    "cum_r": 254.49
+  },
+  {
+    "trade_idx": 275,
+    "date": "2022-10-17",
+    "price": 16516.7,
+    "benchmark_pct": -42.56,
+    "cum_r": 256.49
+  },
+  {
+    "trade_idx": 276,
+    "date": "2022-10-19",
+    "price": 16445.2,
+    "benchmark_pct": -42.81,
+    "cum_r": 255.49
+  },
+  {
+    "trade_idx": 277,
+    "date": "2022-10-20",
+    "price": 16283.2,
+    "benchmark_pct": -43.38,
+    "cum_r": 257.49
+  },
+  {
+    "trade_idx": 278,
+    "date": "2022-10-21",
+    "price": 16209.2,
+    "benchmark_pct": -43.63,
+    "cum_r": 256.49
+  },
+  {
+    "trade_idx": 279,
+    "date": "2022-10-25",
+    "price": 15107.2,
+    "benchmark_pct": -47.46,
+    "cum_r": 258.49
+  },
+  {
+    "trade_idx": 280,
+    "date": "2022-10-26",
+    "price": 15247.2,
+    "benchmark_pct": -46.98,
+    "cum_r": 260.49
+  },
+  {
+    "trade_idx": 281,
+    "date": "2022-10-27",
+    "price": 15421.2,
+    "benchmark_pct": -46.37,
+    "cum_r": 259.49
+  },
+  {
+    "trade_idx": 282,
+    "date": "2022-10-28",
+    "price": 15169.7,
+    "benchmark_pct": -47.25,
+    "cum_r": 261.49
+  },
+  {
+    "trade_idx": 283,
+    "date": "2022-11-09",
+    "price": 16287.2,
+    "benchmark_pct": -43.36,
+    "cum_r": 260.49
+  },
+  {
+    "trade_idx": 284,
+    "date": "2022-11-10",
+    "price": 16043.2,
+    "benchmark_pct": -44.21,
+    "cum_r": 262.49
+  },
+  {
+    "trade_idx": 285,
+    "date": "2022-11-23",
+    "price": 17636.2,
+    "benchmark_pct": -38.67,
+    "cum_r": 261.49
+  },
+  {
+    "trade_idx": 286,
+    "date": "2022-11-24",
+    "price": 17641.2,
+    "benchmark_pct": -38.65,
+    "cum_r": 260.49
+  },
+  {
+    "trade_idx": 287,
+    "date": "2022-11-25",
+    "price": 17606.2,
+    "benchmark_pct": -38.77,
+    "cum_r": 262.49
+  },
+  {
+    "trade_idx": 288,
+    "date": "2022-12-09",
+    "price": 19860.0,
+    "benchmark_pct": -30.94,
+    "cum_r": 264.49
+  },
+  {
+    "trade_idx": 289,
+    "date": "2022-12-12",
+    "price": 19497.0,
+    "benchmark_pct": -32.2,
+    "cum_r": 266.49
+  },
+  {
+    "trade_idx": 290,
+    "date": "2022-12-13",
+    "price": 19554.0,
+    "benchmark_pct": -32.0,
+    "cum_r": 268.49
+  },
+  {
+    "trade_idx": 291,
+    "date": "2022-12-15",
+    "price": 19394.0,
+    "benchmark_pct": -32.56,
+    "cum_r": 270.49
+  },
+  {
+    "trade_idx": 292,
+    "date": "2022-12-16",
+    "price": 19531.0,
+    "benchmark_pct": -32.08,
+    "cum_r": 269.49
+  },
+  {
+    "trade_idx": 293,
+    "date": "2022-12-19",
+    "price": 19424.0,
+    "benchmark_pct": -32.45,
+    "cum_r": 268.49
+  },
+  {
+    "trade_idx": 294,
+    "date": "2022-12-21",
+    "price": 19180.0,
+    "benchmark_pct": -33.3,
+    "cum_r": 270.49
+  },
+  {
+    "trade_idx": 295,
+    "date": "2022-12-22",
+    "price": 19586.5,
+    "benchmark_pct": -31.89,
+    "cum_r": 272.49
+  },
+  {
+    "trade_idx": 296,
+    "date": "2022-12-28",
+    "price": 20047.0,
+    "benchmark_pct": -30.29,
+    "cum_r": 274.49
+  },
+  {
+    "trade_idx": 297,
+    "date": "2022-12-29",
+    "price": 19684.0,
+    "benchmark_pct": -31.55,
+    "cum_r": 273.49
+  },
+  {
+    "trade_idx": 298,
+    "date": "2023-01-03",
+    "price": 20127.2,
+    "benchmark_pct": -30.01,
+    "cum_r": 275.49
+  },
+  {
+    "trade_idx": 299,
+    "date": "2023-01-04",
+    "price": 20715.2,
+    "benchmark_pct": -27.96,
+    "cum_r": 277.49
+  },
+  {
+    "trade_idx": 300,
+    "date": "2023-01-06",
+    "price": 21040.0,
+    "benchmark_pct": -26.83,
+    "cum_r": 279.49
+  },
+  {
+    "trade_idx": 301,
+    "date": "2023-01-09",
+    "price": 21385.0,
+    "benchmark_pct": -25.63,
+    "cum_r": 278.49
+  },
+  {
+    "trade_idx": 302,
+    "date": "2023-01-10",
+    "price": 21338.0,
+    "benchmark_pct": -25.8,
+    "cum_r": 280.49
+  },
+  {
+    "trade_idx": 303,
+    "date": "2023-01-19",
+    "price": 21647.0,
+    "benchmark_pct": -24.72,
+    "cum_r": 282.49
+  },
+  {
+    "trade_idx": 304,
+    "date": "2023-01-20",
+    "price": 22054.0,
+    "benchmark_pct": -23.31,
+    "cum_r": 284.49
+  },
+  {
+    "trade_idx": 305,
+    "date": "2023-01-26",
+    "price": 22582.0,
+    "benchmark_pct": -21.47,
+    "cum_r": 285.86
+  },
+  {
+    "trade_idx": 306,
+    "date": "2023-01-27",
+    "price": 22669.0,
+    "benchmark_pct": -21.17,
+    "cum_r": 284.86
+  },
+  {
+    "trade_idx": 307,
+    "date": "2023-01-31",
+    "price": 21868.0,
+    "benchmark_pct": -23.95,
+    "cum_r": 283.86
+  },
+  {
+    "trade_idx": 308,
+    "date": "2023-02-02",
+    "price": 21993.0,
+    "benchmark_pct": -23.52,
+    "cum_r": 285.86
+  },
+  {
+    "trade_idx": 309,
+    "date": "2023-02-10",
+    "price": 21235.0,
+    "benchmark_pct": -26.16,
+    "cum_r": 287.86
+  },
+  {
+    "trade_idx": 310,
+    "date": "2023-02-13",
+    "price": 21091.5,
+    "benchmark_pct": -26.65,
+    "cum_r": 289.86
+  },
+  {
+    "trade_idx": 311,
+    "date": "2023-02-17",
+    "price": 20884.0,
+    "benchmark_pct": -27.38,
+    "cum_r": 291.86
+  },
+  {
+    "trade_idx": 312,
+    "date": "2023-02-20",
+    "price": 20955.0,
+    "benchmark_pct": -27.13,
+    "cum_r": 293.86
+  },
+  {
+    "trade_idx": 313,
+    "date": "2023-02-21",
+    "price": 20548.0,
+    "benchmark_pct": -28.54,
+    "cum_r": 292.86
+  },
+  {
+    "trade_idx": 314,
+    "date": "2023-02-24",
+    "price": 20082.0,
+    "benchmark_pct": -30.16,
+    "cum_r": 294.86
+  },
+  {
+    "trade_idx": 315,
+    "date": "2023-02-27",
+    "price": 19874.0,
+    "benchmark_pct": -30.89,
+    "cum_r": 296.86
+  },
+  {
+    "trade_idx": 316,
+    "date": "2023-03-02",
+    "price": 20438.0,
+    "benchmark_pct": -28.93,
+    "cum_r": 295.86
+  },
+  {
+    "trade_idx": 317,
+    "date": "2023-03-03",
+    "price": 20579.0,
+    "benchmark_pct": -28.44,
+    "cum_r": 297.86
+  },
+  {
+    "trade_idx": 318,
+    "date": "2023-03-08",
+    "price": 20004.0,
+    "benchmark_pct": -30.44,
+    "cum_r": 297.07
+  },
+  {
+    "trade_idx": 319,
+    "date": "2023-03-09",
+    "price": 20033.0,
+    "benchmark_pct": -30.34,
+    "cum_r": 296.07
+  },
+  {
+    "trade_idx": 320,
+    "date": "2023-03-10",
+    "price": 19335.0,
+    "benchmark_pct": -32.76,
+    "cum_r": 298.07
+  },
+  {
+    "trade_idx": 321,
+    "date": "2023-03-14",
+    "price": 19231.0,
+    "benchmark_pct": -33.12,
+    "cum_r": 300.07
+  },
+  {
+    "trade_idx": 322,
+    "date": "2023-03-16",
+    "price": 19128.0,
+    "benchmark_pct": -33.48,
+    "cum_r": 302.07
+  },
+  {
+    "trade_idx": 323,
+    "date": "2023-03-27",
+    "price": 19646.5,
+    "benchmark_pct": -31.68,
+    "cum_r": 304.07
+  },
+  {
+    "trade_idx": 324,
+    "date": "2023-03-28",
+    "price": 19704.0,
+    "benchmark_pct": -31.48,
+    "cum_r": 306.07
+  },
+  {
+    "trade_idx": 325,
+    "date": "2023-03-29",
+    "price": 20229.0,
+    "benchmark_pct": -29.65,
+    "cum_r": 305.07
+  },
+  {
+    "trade_idx": 326,
+    "date": "2023-03-30",
+    "price": 20313.5,
+    "benchmark_pct": -29.36,
+    "cum_r": 307.07
+  },
+  {
+    "trade_idx": 327,
+    "date": "2023-04-03",
+    "price": 20421.5,
+    "benchmark_pct": -28.98,
+    "cum_r": 309.07
+  },
+  {
+    "trade_idx": 328,
+    "date": "2023-04-04",
+    "price": 20303.5,
+    "benchmark_pct": -29.39,
+    "cum_r": 311.07
+  },
+  {
+    "trade_idx": 329,
+    "date": "2023-04-11",
+    "price": 20412.0,
+    "benchmark_pct": -29.02,
+    "cum_r": 310.07
+  },
+  {
+    "trade_idx": 330,
+    "date": "2023-04-14",
+    "price": 20237.0,
+    "benchmark_pct": -29.63,
+    "cum_r": 309.07
+  },
+  {
+    "trade_idx": 331,
+    "date": "2023-04-17",
+    "price": 20671.5,
+    "benchmark_pct": -28.11,
+    "cum_r": 308.97
+  },
+  {
+    "trade_idx": 332,
+    "date": "2023-04-18",
+    "price": 20636.0,
+    "benchmark_pct": -28.24,
+    "cum_r": 307.97
+  },
+  {
+    "trade_idx": 333,
+    "date": "2023-04-19",
+    "price": 20469.0,
+    "benchmark_pct": -28.82,
+    "cum_r": 309.97
+  },
+  {
+    "trade_idx": 334,
+    "date": "2023-04-20",
+    "price": 20422.5,
+    "benchmark_pct": -28.98,
+    "cum_r": 311.97
+  },
+  {
+    "trade_idx": 335,
+    "date": "2023-04-21",
+    "price": 20255.0,
+    "benchmark_pct": -29.56,
+    "cum_r": 313.97
+  },
+  {
+    "trade_idx": 336,
+    "date": "2023-04-24",
+    "price": 19941.5,
+    "benchmark_pct": -30.65,
+    "cum_r": 315.97
+  },
+  {
+    "trade_idx": 337,
+    "date": "2023-04-26",
+    "price": 19730.5,
+    "benchmark_pct": -31.39,
+    "cum_r": 314.97
+  },
+  {
+    "trade_idx": 338,
+    "date": "2023-04-28",
+    "price": 19956.0,
+    "benchmark_pct": -30.6,
+    "cum_r": 313.97
+  },
+  {
+    "trade_idx": 339,
+    "date": "2023-05-03",
+    "price": 19579.0,
+    "benchmark_pct": -31.91,
+    "cum_r": 315.97
+  },
+  {
+    "trade_idx": 340,
+    "date": "2023-05-04",
+    "price": 19878.0,
+    "benchmark_pct": -30.87,
+    "cum_r": 317.97
+  },
+  {
+    "trade_idx": 341,
+    "date": "2023-05-05",
+    "price": 20086.0,
+    "benchmark_pct": -30.15,
+    "cum_r": 316.97
+  },
+  {
+    "trade_idx": 342,
+    "date": "2023-05-08",
+    "price": 20319.5,
+    "benchmark_pct": -29.34,
+    "cum_r": 318.97
+  },
+  {
+    "trade_idx": 343,
+    "date": "2023-05-12",
+    "price": 19642.0,
+    "benchmark_pct": -31.69,
+    "cum_r": 317.97
+  },
+  {
+    "trade_idx": 344,
+    "date": "2023-05-15",
+    "price": 19978.5,
+    "benchmark_pct": -30.52,
+    "cum_r": 319.97
+  },
+  {
+    "trade_idx": 345,
+    "date": "2023-05-18",
+    "price": 19645.0,
+    "benchmark_pct": -31.68,
+    "cum_r": 318.97
+  },
+  {
+    "trade_idx": 346,
+    "date": "2023-05-29",
+    "price": 18645.0,
+    "benchmark_pct": -35.16,
+    "cum_r": 320.97
+  },
+  {
+    "trade_idx": 347,
+    "date": "2023-05-30",
+    "price": 18599.5,
+    "benchmark_pct": -35.32,
+    "cum_r": 322.97
+  },
+  {
+    "trade_idx": 348,
+    "date": "2023-05-31",
+    "price": 18256.5,
+    "benchmark_pct": -36.51,
+    "cum_r": 324.97
+  },
+  {
+    "trade_idx": 349,
+    "date": "2023-06-01",
+    "price": 18245.5,
+    "benchmark_pct": -36.55,
+    "cum_r": 326.97
+  },
+  {
+    "trade_idx": 350,
+    "date": "2023-06-02",
+    "price": 18885.0,
+    "benchmark_pct": -34.33,
+    "cum_r": 328.97
+  },
+  {
+    "trade_idx": 351,
+    "date": "2023-06-05",
+    "price": 19101.5,
+    "benchmark_pct": -33.57,
+    "cum_r": 327.97
+  },
+  {
+    "trade_idx": 352,
+    "date": "2023-06-06",
+    "price": 19093.5,
+    "benchmark_pct": -33.6,
+    "cum_r": 329.97
+  },
+  {
+    "trade_idx": 353,
+    "date": "2023-06-07",
+    "price": 19330.5,
+    "benchmark_pct": -32.78,
+    "cum_r": 328.97
+  },
+  {
+    "trade_idx": 354,
+    "date": "2023-06-08",
+    "price": 19248.0,
+    "benchmark_pct": -33.07,
+    "cum_r": 330.97
+  },
+  {
+    "trade_idx": 355,
+    "date": "2023-06-16",
+    "price": 20142.0,
+    "benchmark_pct": -29.96,
+    "cum_r": 332.97
+  },
+  {
+    "trade_idx": 356,
+    "date": "2023-06-19",
+    "price": 19974.5,
+    "benchmark_pct": -30.54,
+    "cum_r": 334.97
+  },
+  {
+    "trade_idx": 357,
+    "date": "2023-06-20",
+    "price": 19618.0,
+    "benchmark_pct": -31.78,
+    "cum_r": 336.97
+  },
+  {
+    "trade_idx": 358,
+    "date": "2023-06-28",
+    "price": 19160.5,
+    "benchmark_pct": -33.37,
+    "cum_r": 338.97
+  },
+  {
+    "trade_idx": 359,
+    "date": "2023-06-30",
+    "price": 18935.0,
+    "benchmark_pct": -34.15,
+    "cum_r": 340.97
+  },
+  {
+    "trade_idx": 360,
+    "date": "2023-07-04",
+    "price": 19425.5,
+    "benchmark_pct": -32.45,
+    "cum_r": 342.97
+  },
+  {
+    "trade_idx": 361,
+    "date": "2023-07-05",
+    "price": 19068.5,
+    "benchmark_pct": -33.69,
+    "cum_r": 344.97
+  },
+  {
+    "trade_idx": 362,
+    "date": "2023-07-10",
+    "price": 18481.2,
+    "benchmark_pct": -35.73,
+    "cum_r": 346.97
+  },
+  {
+    "trade_idx": 363,
+    "date": "2023-07-17",
+    "price": 19180.95,
+    "benchmark_pct": -33.3,
+    "cum_r": 348.97
+  },
+  {
+    "trade_idx": 364,
+    "date": "2023-07-19",
+    "price": 19023.2,
+    "benchmark_pct": -33.85,
+    "cum_r": 347.97
+  },
+  {
+    "trade_idx": 365,
+    "date": "2023-07-20",
+    "price": 19017.7,
+    "benchmark_pct": -33.87,
+    "cum_r": 346.97
+  },
+  {
+    "trade_idx": 366,
+    "date": "2023-07-25",
+    "price": 19348.2,
+    "benchmark_pct": -32.72,
+    "cum_r": 348.97
+  },
+  {
+    "trade_idx": 367,
+    "date": "2023-07-26",
+    "price": 19289.7,
+    "benchmark_pct": -32.92,
+    "cum_r": 350.97
+  },
+  {
+    "trade_idx": 368,
+    "date": "2023-07-28",
+    "price": 19992.2,
+    "benchmark_pct": -30.48,
+    "cum_r": 349.97
+  },
+  {
+    "trade_idx": 369,
+    "date": "2023-08-01",
+    "price": 19991.2,
+    "benchmark_pct": -30.48,
+    "cum_r": 348.97
+  },
+  {
+    "trade_idx": 370,
+    "date": "2023-08-03",
+    "price": 19467.2,
+    "benchmark_pct": -32.3,
+    "cum_r": 350.97
+  },
+  {
+    "trade_idx": 371,
+    "date": "2023-08-04",
+    "price": 19596.2,
+    "benchmark_pct": -31.85,
+    "cum_r": 352.97
+  },
+  {
+    "trade_idx": 372,
+    "date": "2023-08-07",
+    "price": 19497.7,
+    "benchmark_pct": -32.2,
+    "cum_r": 354.97
+  },
+  {
+    "trade_idx": 373,
+    "date": "2023-08-08",
+    "price": 18989.2,
+    "benchmark_pct": -33.97,
+    "cum_r": 353.97
+  },
+  {
+    "trade_idx": 374,
+    "date": "2023-08-10",
+    "price": 19272.2,
+    "benchmark_pct": -32.98,
+    "cum_r": 355.97
+  },
+  {
+    "trade_idx": 375,
+    "date": "2023-08-11",
+    "price": 19081.7,
+    "benchmark_pct": -33.64,
+    "cum_r": 357.97
+  },
+  {
+    "trade_idx": 376,
+    "date": "2023-08-14",
+    "price": 18666.2,
+    "benchmark_pct": -35.09,
+    "cum_r": 359.38
+  },
+  {
+    "trade_idx": 377,
+    "date": "2023-08-16",
+    "price": 18038.2,
+    "benchmark_pct": -37.27,
+    "cum_r": 361.38
+  },
+  {
+    "trade_idx": 378,
+    "date": "2023-08-17",
+    "price": 18333.2,
+    "benchmark_pct": -36.25,
+    "cum_r": 363.38
+  },
+  {
+    "trade_idx": 379,
+    "date": "2023-08-18",
+    "price": 17854.2,
+    "benchmark_pct": -37.91,
+    "cum_r": 365.38
+  },
+  {
+    "trade_idx": 380,
+    "date": "2023-08-22",
+    "price": 17831.2,
+    "benchmark_pct": -37.99,
+    "cum_r": 364.38
+  },
+  {
+    "trade_idx": 381,
+    "date": "2023-08-23",
+    "price": 17783.2,
+    "benchmark_pct": -38.16,
+    "cum_r": 366.38
+  },
+  {
+    "trade_idx": 382,
+    "date": "2023-08-25",
+    "price": 18002.95,
+    "benchmark_pct": -37.39,
+    "cum_r": 365.38
+  },
+  {
+    "trade_idx": 383,
+    "date": "2023-08-31",
+    "price": 18375.2,
+    "benchmark_pct": -36.1,
+    "cum_r": 364.38
+  },
+  {
+    "trade_idx": 384,
+    "date": "2023-09-04",
+    "price": 18827.2,
+    "benchmark_pct": -34.53,
+    "cum_r": 366.38
+  },
+  {
+    "trade_idx": 385,
+    "date": "2023-09-05",
+    "price": 18567.2,
+    "benchmark_pct": -35.43,
+    "cum_r": 368.38
+  },
+  {
+    "trade_idx": 386,
+    "date": "2023-09-06",
+    "price": 18449.2,
+    "benchmark_pct": -35.84,
+    "cum_r": 367.38
+  },
+  {
+    "trade_idx": 387,
+    "date": "2023-09-07",
+    "price": 17979.2,
+    "benchmark_pct": -37.48,
+    "cum_r": 366.38
+  },
+  {
+    "trade_idx": 388,
+    "date": "2023-09-12",
+    "price": 18025.2,
+    "benchmark_pct": -37.32,
+    "cum_r": 368.38
+  },
+  {
+    "trade_idx": 389,
+    "date": "2023-09-15",
+    "price": 18056.2,
+    "benchmark_pct": -37.21,
+    "cum_r": 370.38
+  },
+  {
+    "trade_idx": 390,
+    "date": "2023-09-21",
+    "price": 17539.2,
+    "benchmark_pct": -39.01,
+    "cum_r": 372.38
+  },
+  {
+    "trade_idx": 391,
+    "date": "2023-09-25",
+    "price": 17721.2,
+    "benchmark_pct": -38.37,
+    "cum_r": 374.38
+  },
+  {
+    "trade_idx": 392,
+    "date": "2023-10-05",
+    "price": 17215.7,
+    "benchmark_pct": -40.13,
+    "cum_r": 373.38
+  },
+  {
+    "trade_idx": 393,
+    "date": "2023-10-06",
+    "price": 17407.2,
+    "benchmark_pct": -39.47,
+    "cum_r": 375.38
+  },
+  {
+    "trade_idx": 394,
+    "date": "2023-10-09",
+    "price": 17531.7,
+    "benchmark_pct": -39.03,
+    "cum_r": 374.38
+  },
+  {
+    "trade_idx": 395,
+    "date": "2023-10-10",
+    "price": 17692.7,
+    "benchmark_pct": -38.47,
+    "cum_r": 376.38
+  },
+  {
+    "trade_idx": 396,
+    "date": "2023-10-11",
+    "price": 17892.7,
+    "benchmark_pct": -37.78,
+    "cum_r": 378.38
+  },
+  {
+    "trade_idx": 397,
+    "date": "2023-10-12",
+    "price": 18225.95,
+    "benchmark_pct": -36.62,
+    "cum_r": 377.38
+  },
+  {
+    "trade_idx": 398,
+    "date": "2023-10-13",
+    "price": 17876.7,
+    "benchmark_pct": -37.83,
+    "cum_r": 379.38
+  },
+  {
+    "trade_idx": 399,
+    "date": "2023-10-31",
+    "price": 17177.2,
+    "benchmark_pct": -40.27,
+    "cum_r": 381.38
+  },
+  {
+    "trade_idx": 400,
+    "date": "2023-11-06",
+    "price": 17976.2,
+    "benchmark_pct": -37.49,
+    "cum_r": 383.38
+  },
+  {
+    "trade_idx": 401,
+    "date": "2023-11-15",
+    "price": 18183.2,
+    "benchmark_pct": -36.77,
+    "cum_r": 382.38
+  },
+  {
+    "trade_idx": 402,
+    "date": "2023-11-16",
+    "price": 17769.3,
+    "benchmark_pct": -38.21,
+    "cum_r": 381.38
+  },
+  {
+    "trade_idx": 403,
+    "date": "2023-11-17",
+    "price": 17613.2,
+    "benchmark_pct": -38.75,
+    "cum_r": 383.38
+  },
+  {
+    "trade_idx": 404,
+    "date": "2023-11-20",
+    "price": 17723.3,
+    "benchmark_pct": -38.37,
+    "cum_r": 385.38
+  },
+  {
+    "trade_idx": 405,
+    "date": "2023-11-24",
+    "price": 17663.3,
+    "benchmark_pct": -38.58,
+    "cum_r": 387.38
+  },
+  {
+    "trade_idx": 406,
+    "date": "2023-11-27",
+    "price": 17544.2,
+    "benchmark_pct": -38.99,
+    "cum_r": 389.38
+  },
+  {
+    "trade_idx": 407,
+    "date": "2023-12-04",
+    "price": 16648.7,
+    "benchmark_pct": -42.1,
+    "cum_r": 388.38
+  },
+  {
+    "trade_idx": 408,
+    "date": "2023-12-05",
+    "price": 16295.2,
+    "benchmark_pct": -43.33,
+    "cum_r": 390.38
+  },
+  {
+    "trade_idx": 409,
+    "date": "2023-12-06",
+    "price": 16443.2,
+    "benchmark_pct": -42.82,
+    "cum_r": 389.38
+  },
+  {
+    "trade_idx": 410,
+    "date": "2023-12-14",
+    "price": 16439.2,
+    "benchmark_pct": -42.83,
+    "cum_r": 391.38
+  },
+  {
+    "trade_idx": 411,
+    "date": "2023-12-15",
+    "price": 16825.7,
+    "benchmark_pct": -41.49,
+    "cum_r": 393.38
+  },
+  {
+    "trade_idx": 412,
+    "date": "2023-12-18",
+    "price": 16636.3,
+    "benchmark_pct": -42.15,
+    "cum_r": 395.38
+  },
+  {
+    "trade_idx": 413,
+    "date": "2023-12-19",
+    "price": 16517.7,
+    "benchmark_pct": -42.56,
+    "cum_r": 397.38
+  },
+  {
+    "trade_idx": 414,
+    "date": "2023-12-21",
+    "price": 16622.2,
+    "benchmark_pct": -42.2,
+    "cum_r": 399.38
+  },
+  {
+    "trade_idx": 415,
+    "date": "2024-01-04",
+    "price": 16593.2,
+    "benchmark_pct": -42.3,
+    "cum_r": 401.38
+  },
+  {
+    "trade_idx": 416,
+    "date": "2024-01-12",
+    "price": 16198.7,
+    "benchmark_pct": -43.67,
+    "cum_r": 400.38
+  },
+  {
+    "trade_idx": 417,
+    "date": "2024-01-15",
+    "price": 16190.2,
+    "benchmark_pct": -43.7,
+    "cum_r": 402.38
+  },
+  {
+    "trade_idx": 418,
+    "date": "2024-01-18",
+    "price": 15370.7,
+    "benchmark_pct": -46.55,
+    "cum_r": 401.38
+  },
+  {
+    "trade_idx": 419,
+    "date": "2024-01-19",
+    "price": 15339.3,
+    "benchmark_pct": -46.66,
+    "cum_r": 400.38
+  },
+  {
+    "trade_idx": 420,
+    "date": "2024-01-26",
+    "price": 16046.2,
+    "benchmark_pct": -44.2,
+    "cum_r": 402.38
+  },
+  {
+    "trade_idx": 421,
+    "date": "2024-02-01",
+    "price": 15571.2,
+    "benchmark_pct": -45.85,
+    "cum_r": 404.38
+  },
+  {
+    "trade_idx": 422,
+    "date": "2024-02-02",
+    "price": 15460.2,
+    "benchmark_pct": -46.24,
+    "cum_r": 403.38
+  },
+  {
+    "trade_idx": 423,
+    "date": "2024-02-05",
+    "price": 15494.2,
+    "benchmark_pct": -46.12,
+    "cum_r": 405.38
+  },
+  {
+    "trade_idx": 424,
+    "date": "2024-02-22",
+    "price": 16512.3,
+    "benchmark_pct": -42.58,
+    "cum_r": 407.38
+  },
+  {
+    "trade_idx": 425,
+    "date": "2024-02-23",
+    "price": 16768.2,
+    "benchmark_pct": -41.69,
+    "cum_r": 409.38
+  },
+  {
+    "trade_idx": 426,
+    "date": "2024-02-26",
+    "price": 16604.3,
+    "benchmark_pct": -42.26,
+    "cum_r": 408.38
+  },
+  {
+    "trade_idx": 427,
+    "date": "2024-02-27",
+    "price": 16826.2,
+    "benchmark_pct": -41.49,
+    "cum_r": 410.38
+  },
+  {
+    "trade_idx": 428,
+    "date": "2024-02-29",
+    "price": 16467.2,
+    "benchmark_pct": -42.74,
+    "cum_r": 412.38
+  },
+  {
+    "trade_idx": 429,
+    "date": "2024-03-01",
+    "price": 16572.2,
+    "benchmark_pct": -42.37,
+    "cum_r": 412.39
+  },
+  {
+    "trade_idx": 430,
+    "date": "2024-03-04",
+    "price": 16493.7,
+    "benchmark_pct": -42.64,
+    "cum_r": 414.39
+  },
+  {
+    "trade_idx": 431,
+    "date": "2024-03-11",
+    "price": 16547.0,
+    "benchmark_pct": -42.46,
+    "cum_r": 416.39
+  },
+  {
+    "trade_idx": 432,
+    "date": "2024-03-14",
+    "price": 16922.2,
+    "benchmark_pct": -41.15,
+    "cum_r": 418.39
+  },
+  {
+    "trade_idx": 433,
+    "date": "2024-03-15",
+    "price": 16715.2,
+    "benchmark_pct": -41.87,
+    "cum_r": 417.39
+  },
+  {
+    "trade_idx": 434,
+    "date": "2024-03-22",
+    "price": 16465.7,
+    "benchmark_pct": -42.74,
+    "cum_r": 416.39
+  },
+  {
+    "trade_idx": 435,
+    "date": "2024-03-25",
+    "price": 16480.2,
+    "benchmark_pct": -42.69,
+    "cum_r": 415.39
+  },
+  {
+    "trade_idx": 436,
+    "date": "2024-04-05",
+    "price": 16738.2,
+    "benchmark_pct": -41.79,
+    "cum_r": 414.39
+  },
+  {
+    "trade_idx": 437,
+    "date": "2024-04-08",
+    "price": 16743.7,
+    "benchmark_pct": -41.77,
+    "cum_r": 416.39
+  },
+  {
+    "trade_idx": 438,
+    "date": "2024-04-11",
+    "price": 17072.7,
+    "benchmark_pct": -40.63,
+    "cum_r": 418.39
+  },
+  {
+    "trade_idx": 439,
+    "date": "2024-04-12",
+    "price": 16752.95,
+    "benchmark_pct": -41.74,
+    "cum_r": 420.39
+  },
+  {
+    "trade_idx": 440,
+    "date": "2024-04-15",
+    "price": 16556.2,
+    "benchmark_pct": -42.43,
+    "cum_r": 422.39
+  },
+  {
+    "trade_idx": 441,
+    "date": "2024-04-18",
+    "price": 16333.2,
+    "benchmark_pct": -43.2,
+    "cum_r": 421.39
+  },
+  {
+    "trade_idx": 442,
+    "date": "2024-04-19",
+    "price": 16234.2,
+    "benchmark_pct": -43.55,
+    "cum_r": 423.39
+  },
+  {
+    "trade_idx": 443,
+    "date": "2024-04-22",
+    "price": 16496.95,
+    "benchmark_pct": -42.63,
+    "cum_r": 425.39
+  },
+  {
+    "trade_idx": 444,
+    "date": "2024-04-23",
+    "price": 16798.2,
+    "benchmark_pct": -41.58,
+    "cum_r": 427.39
+  },
+  {
+    "trade_idx": 445,
+    "date": "2024-04-24",
+    "price": 17203.7,
+    "benchmark_pct": -40.17,
+    "cum_r": 426.39
+  },
+  {
+    "trade_idx": 446,
+    "date": "2024-04-26",
+    "price": 17674.2,
+    "benchmark_pct": -38.54,
+    "cum_r": 425.39
+  },
+  {
+    "trade_idx": 447,
+    "date": "2024-04-29",
+    "price": 17767.2,
+    "benchmark_pct": -38.21,
+    "cum_r": 424.39
+  },
+  {
+    "trade_idx": 448,
+    "date": "2024-05-02",
+    "price": 18469.2,
+    "benchmark_pct": -35.77,
+    "cum_r": 426.39
+  },
+  {
+    "trade_idx": 449,
+    "date": "2024-05-03",
+    "price": 18424.95,
+    "benchmark_pct": -35.93,
+    "cum_r": 428.39
+  },
+  {
+    "trade_idx": 450,
+    "date": "2024-05-06",
+    "price": 18662.2,
+    "benchmark_pct": -35.1,
+    "cum_r": 430.39
+  },
+  {
+    "trade_idx": 451,
+    "date": "2024-05-13",
+    "price": 19120.7,
+    "benchmark_pct": -33.51,
+    "cum_r": 429.39
+  },
+  {
+    "trade_idx": 452,
+    "date": "2024-05-28",
+    "price": 18833.7,
+    "benchmark_pct": -34.51,
+    "cum_r": 431.39
+  },
+  {
+    "trade_idx": 453,
+    "date": "2024-05-29",
+    "price": 18496.2,
+    "benchmark_pct": -35.68,
+    "cum_r": 430.39
+  },
+  {
+    "trade_idx": 454,
+    "date": "2024-06-04",
+    "price": 18385.2,
+    "benchmark_pct": -36.07,
+    "cum_r": 429.39
+  },
+  {
+    "trade_idx": 455,
+    "date": "2024-06-05",
+    "price": 18408.2,
+    "benchmark_pct": -35.99,
+    "cum_r": 428.39
+  },
+  {
+    "trade_idx": 456,
+    "date": "2024-06-06",
+    "price": 18388.7,
+    "benchmark_pct": -36.05,
+    "cum_r": 427.39
+  },
+  {
+    "trade_idx": 457,
+    "date": "2024-06-07",
+    "price": 18375.95,
+    "benchmark_pct": -36.1,
+    "cum_r": 429.39
+  },
+  {
+    "trade_idx": 458,
+    "date": "2024-06-12",
+    "price": 18134.2,
+    "benchmark_pct": -36.94,
+    "cum_r": 431.39
+  },
+  {
+    "trade_idx": 459,
+    "date": "2024-06-13",
+    "price": 18047.2,
+    "benchmark_pct": -37.24,
+    "cum_r": 430.39
+  },
+  {
+    "trade_idx": 460,
+    "date": "2024-06-14",
+    "price": 17996.7,
+    "benchmark_pct": -37.42,
+    "cum_r": 432.39
+  },
+  {
+    "trade_idx": 461,
+    "date": "2024-06-17",
+    "price": 17946.2,
+    "benchmark_pct": -37.59,
+    "cum_r": 431.39
+  },
+  {
+    "trade_idx": 462,
+    "date": "2024-06-18",
+    "price": 18020.2,
+    "benchmark_pct": -37.33,
+    "cum_r": 433.39
+  },
+  {
+    "trade_idx": 463,
+    "date": "2024-06-19",
+    "price": 18398.2,
+    "benchmark_pct": -36.02,
+    "cum_r": 432.39
+  },
+  {
+    "trade_idx": 464,
+    "date": "2024-06-20",
+    "price": 18339.2,
+    "benchmark_pct": -36.23,
+    "cum_r": 434.39
+  },
+  {
+    "trade_idx": 465,
+    "date": "2024-06-21",
+    "price": 18013.2,
+    "benchmark_pct": -37.36,
+    "cum_r": 436.39
+  },
+  {
+    "trade_idx": 466,
+    "date": "2024-06-26",
+    "price": 18107.2,
+    "benchmark_pct": -37.03,
+    "cum_r": 438.39
+  },
+  {
+    "trade_idx": 467,
+    "date": "2024-06-27",
+    "price": 17700.2,
+    "benchmark_pct": -38.45,
+    "cum_r": 437.39
+  },
+  {
+    "trade_idx": 468,
+    "date": "2024-07-05",
+    "price": 17876.45,
+    "benchmark_pct": -37.83,
+    "cum_r": 439.39
+  },
+  {
+    "trade_idx": 469,
+    "date": "2024-07-08",
+    "price": 17501.2,
+    "benchmark_pct": -39.14,
+    "cum_r": 441.39
+  },
+  {
+    "trade_idx": 470,
+    "date": "2024-07-11",
+    "price": 17826.2,
+    "benchmark_pct": -38.01,
+    "cum_r": 443.39
+  },
+  {
+    "trade_idx": 471,
+    "date": "2024-07-12",
+    "price": 18315.2,
+    "benchmark_pct": -36.31,
+    "cum_r": 445.39
+  },
+  {
+    "trade_idx": 472,
+    "date": "2024-07-15",
+    "price": 18008.2,
+    "benchmark_pct": -37.38,
+    "cum_r": 447.39
+  },
+  {
+    "trade_idx": 473,
+    "date": "2024-07-17",
+    "price": 17764.2,
+    "benchmark_pct": -38.22,
+    "cum_r": 446.39
+  },
+  {
+    "trade_idx": 474,
+    "date": "2024-07-18",
+    "price": 17750.2,
+    "benchmark_pct": -38.27,
+    "cum_r": 445.39
+  },
+  {
+    "trade_idx": 475,
+    "date": "2024-07-19",
+    "price": 17447.2,
+    "benchmark_pct": -39.33,
+    "cum_r": 447.39
+  },
+  {
+    "trade_idx": 476,
+    "date": "2024-07-25",
+    "price": 17050.2,
+    "benchmark_pct": -40.71,
+    "cum_r": 449.39
+  },
+  {
+    "trade_idx": 477,
+    "date": "2024-07-26",
+    "price": 16993.2,
+    "benchmark_pct": -40.91,
+    "cum_r": 451.39
+  },
+  {
+    "trade_idx": 478,
+    "date": "2024-08-02",
+    "price": 16938.2,
+    "benchmark_pct": -41.1,
+    "cum_r": 453.39
+  },
+  {
+    "trade_idx": 479,
+    "date": "2024-08-05",
+    "price": 16695.2,
+    "benchmark_pct": -41.94,
+    "cum_r": 452.39
+  },
+  {
+    "trade_idx": 480,
+    "date": "2024-08-06",
+    "price": 16533.2,
+    "benchmark_pct": -42.51,
+    "cum_r": 454.39
+  },
+  {
+    "trade_idx": 481,
+    "date": "2024-08-07",
+    "price": 16849.95,
+    "benchmark_pct": -41.4,
+    "cum_r": 453.39
+  },
+  {
+    "trade_idx": 482,
+    "date": "2024-08-08",
+    "price": 17017.2,
+    "benchmark_pct": -40.82,
+    "cum_r": 455.39
+  },
+  {
+    "trade_idx": 483,
+    "date": "2024-08-09",
+    "price": 17211.2,
+    "benchmark_pct": -40.15,
+    "cum_r": 454.39
+  },
+  {
+    "trade_idx": 484,
+    "date": "2024-08-12",
+    "price": 17077.7,
+    "benchmark_pct": -40.61,
+    "cum_r": 456.39
+  },
+  {
+    "trade_idx": 485,
+    "date": "2024-08-13",
+    "price": 17121.2,
+    "benchmark_pct": -40.46,
+    "cum_r": 458.39
+  },
+  {
+    "trade_idx": 486,
+    "date": "2024-08-14",
+    "price": 17116.95,
+    "benchmark_pct": -40.48,
+    "cum_r": 457.39
+  },
+  {
+    "trade_idx": 487,
+    "date": "2024-08-15",
+    "price": 17099.2,
+    "benchmark_pct": -40.54,
+    "cum_r": 459.39
+  },
+  {
+    "trade_idx": 488,
+    "date": "2024-08-19",
+    "price": 17597.7,
+    "benchmark_pct": -38.8,
+    "cum_r": 461.39
+  },
+  {
+    "trade_idx": 489,
+    "date": "2024-08-22",
+    "price": 17598.7,
+    "benchmark_pct": -38.8,
+    "cum_r": 463.39
+  },
+  {
+    "trade_idx": 490,
+    "date": "2024-08-26",
+    "price": 17759.2,
+    "benchmark_pct": -38.24,
+    "cum_r": 465.39
+  },
+  {
+    "trade_idx": 491,
+    "date": "2024-08-27",
+    "price": 17865.7,
+    "benchmark_pct": -37.87,
+    "cum_r": 467.39
+  },
+  {
+    "trade_idx": 492,
+    "date": "2024-08-28",
+    "price": 17712.2,
+    "benchmark_pct": -38.41,
+    "cum_r": 469.39
+  },
+  {
+    "trade_idx": 493,
+    "date": "2024-08-29",
+    "price": 17790.2,
+    "benchmark_pct": -38.13,
+    "cum_r": 468.39
+  },
+  {
+    "trade_idx": 494,
+    "date": "2024-08-30",
+    "price": 17987.7,
+    "benchmark_pct": -37.45,
+    "cum_r": 470.39
+  },
+  {
+    "trade_idx": 495,
+    "date": "2024-09-02",
+    "price": 17660.95,
+    "benchmark_pct": -38.58,
+    "cum_r": 471.12
+  },
+  {
+    "trade_idx": 496,
+    "date": "2024-09-03",
+    "price": 17598.2,
+    "benchmark_pct": -38.8,
+    "cum_r": 473.12
+  },
+  {
+    "trade_idx": 497,
+    "date": "2024-09-09",
+    "price": 17153.2,
+    "benchmark_pct": -40.35,
+    "cum_r": 472.12
+  },
+  {
+    "trade_idx": 498,
+    "date": "2024-09-16",
+    "price": 17366.2,
+    "benchmark_pct": -39.61,
+    "cum_r": 474.12
+  },
+  {
+    "trade_idx": 499,
+    "date": "2024-09-17",
+    "price": 17673.2,
+    "benchmark_pct": -38.54,
+    "cum_r": 473.12
+  },
+  {
+    "trade_idx": 500,
+    "date": "2024-09-19",
+    "price": 18056.2,
+    "benchmark_pct": -37.21,
+    "cum_r": 472.12
+  },
+  {
+    "trade_idx": 501,
+    "date": "2024-09-20",
+    "price": 18207.7,
+    "benchmark_pct": -36.68,
+    "cum_r": 474.12
+  },
+  {
+    "trade_idx": 502,
+    "date": "2024-09-23",
+    "price": 18360.95,
+    "benchmark_pct": -36.15,
+    "cum_r": 473.12
+  },
+  {
+    "trade_idx": 503,
+    "date": "2024-09-24",
+    "price": 18957.7,
+    "benchmark_pct": -34.07,
+    "cum_r": 475.12
+  },
+  {
+    "trade_idx": 504,
+    "date": "2024-10-07",
+    "price": 23022.95,
+    "benchmark_pct": -19.94,
+    "cum_r": 477.12
+  },
+  {
+    "trade_idx": 505,
+    "date": "2024-10-08",
+    "price": 21206.2,
+    "benchmark_pct": -26.26,
+    "cum_r": 479.12
+  },
+  {
+    "trade_idx": 506,
+    "date": "2024-10-09",
+    "price": 20719.2,
+    "benchmark_pct": -27.95,
+    "cum_r": 478.12
+  },
+  {
+    "trade_idx": 507,
+    "date": "2024-10-10",
+    "price": 21356.2,
+    "benchmark_pct": -25.73,
+    "cum_r": 480.12
+  },
+  {
+    "trade_idx": 508,
+    "date": "2024-10-14",
+    "price": 21193.95,
+    "benchmark_pct": -26.3,
+    "cum_r": 479.12
+  },
+  {
+    "trade_idx": 509,
+    "date": "2024-10-18",
+    "price": 20739.2,
+    "benchmark_pct": -27.88,
+    "cum_r": 481.12
+  },
+  {
+    "trade_idx": 510,
+    "date": "2024-11-13",
+    "price": 19802.2,
+    "benchmark_pct": -31.14,
+    "cum_r": 480.12
+  },
+  {
+    "trade_idx": 511,
+    "date": "2024-11-18",
+    "price": 19570.2,
+    "benchmark_pct": -31.94,
+    "cum_r": 479.12
+  },
+  {
+    "trade_idx": 512,
+    "date": "2024-11-21",
+    "price": 19624.2,
+    "benchmark_pct": -31.76,
+    "cum_r": 481.12
+  },
+  {
+    "trade_idx": 513,
+    "date": "2024-11-22",
+    "price": 19107.2,
+    "benchmark_pct": -33.55,
+    "cum_r": 483.12
+  },
+  {
+    "trade_idx": 514,
+    "date": "2024-11-25",
+    "price": 19139.95,
+    "benchmark_pct": -33.44,
+    "cum_r": 482.12
+  },
+  {
+    "trade_idx": 515,
+    "date": "2024-11-28",
+    "price": 19354.2,
+    "benchmark_pct": -32.7,
+    "cum_r": 484.12
+  },
+  {
+    "trade_idx": 516,
+    "date": "2024-12-02",
+    "price": 19506.7,
+    "benchmark_pct": -32.17,
+    "cum_r": 483.12
+  },
+  {
+    "trade_idx": 517,
+    "date": "2024-12-04",
+    "price": 19731.2,
+    "benchmark_pct": -31.38,
+    "cum_r": 482.12
+  },
+  {
+    "trade_idx": 518,
+    "date": "2024-12-05",
+    "price": 19522.2,
+    "benchmark_pct": -32.11,
+    "cum_r": 484.12
+  },
+  {
+    "trade_idx": 519,
+    "date": "2024-12-06",
+    "price": 19874.7,
+    "benchmark_pct": -30.89,
+    "cum_r": 486.12
+  },
+  {
+    "trade_idx": 520,
+    "date": "2024-12-09",
+    "price": 19797.45,
+    "benchmark_pct": -31.15,
+    "cum_r": 485.12
+  },
+  {
+    "trade_idx": 521,
+    "date": "2024-12-10",
+    "price": 20655.95,
+    "benchmark_pct": -28.17,
+    "cum_r": 487.12
+  },
+  {
+    "trade_idx": 522,
+    "date": "2024-12-12",
+    "price": 20510.95,
+    "benchmark_pct": -28.67,
+    "cum_r": 489.12
+  },
+  {
+    "trade_idx": 523,
+    "date": "2024-12-13",
+    "price": 20057.95,
+    "benchmark_pct": -30.25,
+    "cum_r": 490.78
+  },
+  {
+    "trade_idx": 524,
+    "date": "2024-12-17",
+    "price": 19746.2,
+    "benchmark_pct": -31.33,
+    "cum_r": 492.78
+  },
+  {
+    "trade_idx": 525,
+    "date": "2024-12-18",
+    "price": 19819.2,
+    "benchmark_pct": -31.08,
+    "cum_r": 491.78
+  },
+  {
+    "trade_idx": 526,
+    "date": "2024-12-19",
+    "price": 19842.2,
+    "benchmark_pct": -31.0,
+    "cum_r": 493.78
+  },
+  {
+    "trade_idx": 527,
+    "date": "2024-12-23",
+    "price": 19876.2,
+    "benchmark_pct": -30.88,
+    "cum_r": 495.78
+  },
+  {
+    "trade_idx": 528,
+    "date": "2024-12-27",
+    "price": 20071.7,
+    "benchmark_pct": -30.2,
+    "cum_r": 494.78
+  },
+  {
+    "trade_idx": 529,
+    "date": "2025-01-03",
+    "price": 19673.2,
+    "benchmark_pct": -31.59,
+    "cum_r": 494.69
+  },
+  {
+    "trade_idx": 530,
+    "date": "2025-01-06",
+    "price": 19662.7,
+    "benchmark_pct": -31.62,
+    "cum_r": 496.69
+  },
+  {
+    "trade_idx": 531,
+    "date": "2025-01-10",
+    "price": 19024.2,
+    "benchmark_pct": -33.84,
+    "cum_r": 498.69
+  },
+  {
+    "trade_idx": 532,
+    "date": "2025-01-14",
+    "price": 19200.2,
+    "benchmark_pct": -33.23,
+    "cum_r": 499.71
+  },
+  {
+    "trade_idx": 533,
+    "date": "2025-01-15",
+    "price": 19243.2,
+    "benchmark_pct": -33.08,
+    "cum_r": 501.71
+  },
+  {
+    "trade_idx": 534,
+    "date": "2025-01-16",
+    "price": 19503.7,
+    "benchmark_pct": -32.18,
+    "cum_r": 500.71
+  },
+  {
+    "trade_idx": 535,
+    "date": "2025-01-17",
+    "price": 19558.2,
+    "benchmark_pct": -31.99,
+    "cum_r": 502.71
+  },
+  {
+    "trade_idx": 536,
+    "date": "2025-01-23",
+    "price": 19692.2,
+    "benchmark_pct": -31.52,
+    "cum_r": 504.71
+  },
+  {
+    "trade_idx": 537,
+    "date": "2025-01-27",
+    "price": 20396.2,
+    "benchmark_pct": -29.07,
+    "cum_r": 506.71
+  },
+  {
+    "trade_idx": 538,
+    "date": "2025-02-03",
+    "price": 20151.2,
+    "benchmark_pct": -29.92,
+    "cum_r": 505.71
+  },
+  {
+    "trade_idx": 539,
+    "date": "2025-02-04",
+    "price": 20769.2,
+    "benchmark_pct": -27.78,
+    "cum_r": 504.71
+  },
+  {
+    "trade_idx": 540,
+    "date": "2025-02-28",
+    "price": 23026.2,
+    "benchmark_pct": -19.93,
+    "cum_r": 506.71
+  },
+  {
+    "trade_idx": 541,
+    "date": "2025-03-07",
+    "price": 24168.2,
+    "benchmark_pct": -15.96,
+    "cum_r": 508.71
+  },
+  {
+    "trade_idx": 542,
+    "date": "2025-03-13",
+    "price": 23449.2,
+    "benchmark_pct": -18.46,
+    "cum_r": 507.71
+  },
+  {
+    "trade_idx": 543,
+    "date": "2025-03-20",
+    "price": 24479.95,
+    "benchmark_pct": -14.87,
+    "cum_r": 509.71
+  },
+  {
+    "trade_idx": 544,
+    "date": "2025-03-21",
+    "price": 23684.2,
+    "benchmark_pct": -17.64,
+    "cum_r": 508.71
+  },
+  {
+    "trade_idx": 545,
+    "date": "2025-03-24",
+    "price": 23744.2,
+    "benchmark_pct": -17.43,
+    "cum_r": 507.71
+  },
+  {
+    "trade_idx": 546,
+    "date": "2025-03-26",
+    "price": 23397.2,
+    "benchmark_pct": -18.64,
+    "cum_r": 506.71
+  },
+  {
+    "trade_idx": 547,
+    "date": "2025-03-27",
+    "price": 23633.2,
+    "benchmark_pct": -17.82,
+    "cum_r": 505.71
+  },
+  {
+    "trade_idx": 548,
+    "date": "2025-03-28",
+    "price": 23398.2,
+    "benchmark_pct": -18.63,
+    "cum_r": 507.71
+  },
+  {
+    "trade_idx": 549,
+    "date": "2025-03-31",
+    "price": 22986.2,
+    "benchmark_pct": -20.07,
+    "cum_r": 509.71
+  },
+  {
+    "trade_idx": 550,
+    "date": "2025-04-03",
+    "price": 22749.2,
+    "benchmark_pct": -20.89,
+    "cum_r": 511.71
+  },
+  {
+    "trade_idx": 551,
+    "date": "2025-04-08",
+    "price": 20092.95,
+    "benchmark_pct": -30.13,
+    "cum_r": 513.71
+  },
+  {
+    "trade_idx": 552,
+    "date": "2025-04-14",
+    "price": 21359.2,
+    "benchmark_pct": -25.72,
+    "cum_r": 512.71
+  },
+  {
+    "trade_idx": 553,
+    "date": "2025-04-15",
+    "price": 21442.95,
+    "benchmark_pct": -25.43,
+    "cum_r": 514.71
+  },
+  {
+    "trade_idx": 554,
+    "date": "2025-04-17",
+    "price": 21402.95,
+    "benchmark_pct": -25.57,
+    "cum_r": 513.97
+  },
+  {
+    "trade_idx": 555,
+    "date": "2025-04-22",
+    "price": 21549.2,
+    "benchmark_pct": -25.06,
+    "cum_r": 512.97
+  },
+  {
+    "trade_idx": 556,
+    "date": "2025-04-23",
+    "price": 22078.95,
+    "benchmark_pct": -23.22,
+    "cum_r": 511.97
+  },
+  {
+    "trade_idx": 557,
+    "date": "2025-04-25",
+    "price": 21947.2,
+    "benchmark_pct": -23.68,
+    "cum_r": 510.97
+  },
+  {
+    "trade_idx": 558,
+    "date": "2025-04-28",
+    "price": 22017.2,
+    "benchmark_pct": -23.44,
+    "cum_r": 512.97
+  },
+  {
+    "trade_idx": 559,
+    "date": "2025-05-02",
+    "price": 22520.7,
+    "benchmark_pct": -21.68,
+    "cum_r": 514.14
+  },
+  {
+    "trade_idx": 560,
+    "date": "2025-05-08",
+    "price": 22751.2,
+    "benchmark_pct": -20.88,
+    "cum_r": 514.82
+  },
+  {
+    "trade_idx": 561,
+    "date": "2025-05-09",
+    "price": 22832.2,
+    "benchmark_pct": -20.6,
+    "cum_r": 516.82
+  },
+  {
+    "trade_idx": 562,
+    "date": "2025-05-12",
+    "price": 23163.2,
+    "benchmark_pct": -19.45,
+    "cum_r": 518.82
+  },
+  {
+    "trade_idx": 563,
+    "date": "2025-05-14",
+    "price": 23620.2,
+    "benchmark_pct": -17.86,
+    "cum_r": 517.82
+  },
+  {
+    "trade_idx": 564,
+    "date": "2025-05-15",
+    "price": 23441.2,
+    "benchmark_pct": -18.48,
+    "cum_r": 519.82
+  },
+  {
+    "trade_idx": 565,
+    "date": "2025-05-19",
+    "price": 23312.2,
+    "benchmark_pct": -18.93,
+    "cum_r": 521.82
+  },
+  {
+    "trade_idx": 566,
+    "date": "2025-05-23",
+    "price": 23501.2,
+    "benchmark_pct": -18.27,
+    "cum_r": 520.82
+  },
+  {
+    "trade_idx": 567,
+    "date": "2025-05-27",
+    "price": 23327.2,
+    "benchmark_pct": -18.88,
+    "cum_r": 519.82
+  },
+  {
+    "trade_idx": 568,
+    "date": "2025-05-29",
+    "price": 23450.2,
+    "benchmark_pct": -18.45,
+    "cum_r": 521.82
+  },
+  {
+    "trade_idx": 569,
+    "date": "2025-06-03",
+    "price": 23528.2,
+    "benchmark_pct": -18.18,
+    "cum_r": 520.82
+  },
+  {
+    "trade_idx": 570,
+    "date": "2025-06-04",
+    "price": 23693.7,
+    "benchmark_pct": -17.61,
+    "cum_r": 522.82
+  },
+  {
+    "trade_idx": 571,
+    "date": "2025-06-10",
+    "price": 24156.2,
+    "benchmark_pct": -16.0,
+    "cum_r": 521.82
+  },
+  {
+    "trade_idx": 572,
+    "date": "2025-06-11",
+    "price": 24353.2,
+    "benchmark_pct": -15.31,
+    "cum_r": 523.82
+  },
+  {
+    "trade_idx": 573,
+    "date": "2025-06-12",
+    "price": 24160.2,
+    "benchmark_pct": -15.98,
+    "cum_r": 525.82
+  },
+  {
+    "trade_idx": 574,
+    "date": "2025-06-13",
+    "price": 23829.2,
+    "benchmark_pct": -17.13,
+    "cum_r": 524.82
+  },
+  {
+    "trade_idx": 575,
+    "date": "2025-06-16",
+    "price": 24193.2,
+    "benchmark_pct": -15.87,
+    "cum_r": 526.82
+  },
+  {
+    "trade_idx": 576,
+    "date": "2025-06-17",
+    "price": 23871.2,
+    "benchmark_pct": -16.99,
+    "cum_r": 528.82
+  },
+  {
+    "trade_idx": 577,
+    "date": "2025-06-18",
+    "price": 23696.95,
+    "benchmark_pct": -17.59,
+    "cum_r": 530.82
+  },
+  {
+    "trade_idx": 578,
+    "date": "2025-06-20",
+    "price": 23579.2,
+    "benchmark_pct": -18.0,
+    "cum_r": 529.82
+  },
+  {
+    "trade_idx": 579,
+    "date": "2025-06-23",
+    "price": 23597.7,
+    "benchmark_pct": -17.94,
+    "cum_r": 531.82
+  },
+  {
+    "trade_idx": 580,
+    "date": "2025-06-26",
+    "price": 24328.2,
+    "benchmark_pct": -15.4,
+    "cum_r": 530.82
+  },
+  {
+    "trade_idx": 581,
+    "date": "2025-06-30",
+    "price": 24083.2,
+    "benchmark_pct": -16.25,
+    "cum_r": 532.82
+  },
+  {
+    "trade_idx": 582,
+    "date": "2025-07-03",
+    "price": 24024.7,
+    "benchmark_pct": -16.45,
+    "cum_r": 534.82
+  },
+  {
+    "trade_idx": 583,
+    "date": "2025-07-04",
+    "price": 23891.2,
+    "benchmark_pct": -16.92,
+    "cum_r": 536.82
+  },
+  {
+    "trade_idx": 584,
+    "date": "2025-07-07",
+    "price": 23849.2,
+    "benchmark_pct": -17.06,
+    "cum_r": 538.82
+  },
+  {
+    "trade_idx": 585,
+    "date": "2025-07-11",
+    "price": 24141.2,
+    "benchmark_pct": -16.05,
+    "cum_r": 537.82
+  },
+  {
+    "trade_idx": 586,
+    "date": "2025-07-14",
+    "price": 24152.95,
+    "benchmark_pct": -16.01,
+    "cum_r": 539.82
+  },
+  {
+    "trade_idx": 587,
+    "date": "2025-07-15",
+    "price": 24540.2,
+    "benchmark_pct": -14.66,
+    "cum_r": 538.82
+  },
+  {
+    "trade_idx": 588,
+    "date": "2025-07-16",
+    "price": 24498.2,
+    "benchmark_pct": -14.81,
+    "cum_r": 537.82
+  },
+  {
+    "trade_idx": 589,
+    "date": "2025-07-18",
+    "price": 24887.2,
+    "benchmark_pct": -13.45,
+    "cum_r": 539.82
+  },
+  {
+    "trade_idx": 590,
+    "date": "2025-07-21",
+    "price": 24899.95,
+    "benchmark_pct": -13.41,
+    "cum_r": 541.82
+  },
+  {
+    "trade_idx": 591,
+    "date": "2025-07-22",
+    "price": 25338.2,
+    "benchmark_pct": -11.89,
+    "cum_r": 540.82
+  },
+  {
+    "trade_idx": 592,
+    "date": "2025-07-25",
+    "price": 25363.2,
+    "benchmark_pct": -11.8,
+    "cum_r": 539.82
+  },
+  {
+    "trade_idx": 593,
+    "date": "2025-07-28",
+    "price": 25542.2,
+    "benchmark_pct": -11.18,
+    "cum_r": 541.82
+  },
+  {
+    "trade_idx": 594,
+    "date": "2025-07-29",
+    "price": 25302.2,
+    "benchmark_pct": -12.01,
+    "cum_r": 540.82
+  },
+  {
+    "trade_idx": 595,
+    "date": "2025-07-30",
+    "price": 25180.7,
+    "benchmark_pct": -12.43,
+    "cum_r": 542.82
+  },
+  {
+    "trade_idx": 596,
+    "date": "2025-07-31",
+    "price": 24844.2,
+    "benchmark_pct": -13.6,
+    "cum_r": 544.82
+  },
+  {
+    "trade_idx": 597,
+    "date": "2025-08-01",
+    "price": 24606.2,
+    "benchmark_pct": -14.43,
+    "cum_r": 546.82
+  },
+  {
+    "trade_idx": 598,
+    "date": "2025-08-04",
+    "price": 24609.95,
+    "benchmark_pct": -14.42,
+    "cum_r": 548.82
+  },
+  {
+    "trade_idx": 599,
+    "date": "2025-08-08",
+    "price": 24828.2,
+    "benchmark_pct": -13.66,
+    "cum_r": 550.82
+  },
+  {
+    "trade_idx": 600,
+    "date": "2025-08-11",
+    "price": 24897.7,
+    "benchmark_pct": -13.42,
+    "cum_r": 549.82
+  },
+  {
+    "trade_idx": 601,
+    "date": "2025-08-12",
+    "price": 24919.7,
+    "benchmark_pct": -13.34,
+    "cum_r": 551.82
+  },
+  {
+    "trade_idx": 602,
+    "date": "2025-08-19",
+    "price": 25154.2,
+    "benchmark_pct": -12.53,
+    "cum_r": 553.82
+  },
+  {
+    "trade_idx": 603,
+    "date": "2025-08-21",
+    "price": 25082.2,
+    "benchmark_pct": -12.78,
+    "cum_r": 555.82
+  },
+  {
+    "trade_idx": 604,
+    "date": "2025-08-22",
+    "price": 25323.2,
+    "benchmark_pct": -11.94,
+    "cum_r": 557.82
+  },
+  {
+    "trade_idx": 605,
+    "date": "2025-08-25",
+    "price": 25916.2,
+    "benchmark_pct": -9.88,
+    "cum_r": 559.82
+  },
+  {
+    "trade_idx": 606,
+    "date": "2025-08-26",
+    "price": 25624.2,
+    "benchmark_pct": -10.89,
+    "cum_r": 558.82
+  },
+  {
+    "trade_idx": 607,
+    "date": "2025-09-01",
+    "price": 25560.2,
+    "benchmark_pct": -11.11,
+    "cum_r": 557.82
+  },
+  {
+    "trade_idx": 608,
+    "date": "2025-09-08",
+    "price": 25624.2,
+    "benchmark_pct": -10.89,
+    "cum_r": 556.82
+  },
+  {
+    "trade_idx": 609,
+    "date": "2025-09-11",
+    "price": 26080.7,
+    "benchmark_pct": -9.3,
+    "cum_r": 558.82
+  },
+  {
+    "trade_idx": 610,
+    "date": "2025-09-15",
+    "price": 26461.7,
+    "benchmark_pct": -7.98,
+    "cum_r": 557.82
+  },
+  {
+    "trade_idx": 611,
+    "date": "2025-09-18",
+    "price": 26616.2,
+    "benchmark_pct": -7.44,
+    "cum_r": 559.82
+  },
+  {
+    "trade_idx": 612,
+    "date": "2025-09-19",
+    "price": 26543.2,
+    "benchmark_pct": -7.7,
+    "cum_r": 558.82
+  },
+  {
+    "trade_idx": 613,
+    "date": "2025-09-22",
+    "price": 26329.7,
+    "benchmark_pct": -8.44,
+    "cum_r": 557.82
+  },
+  {
+    "trade_idx": 614,
+    "date": "2025-09-23",
+    "price": 26134.2,
+    "benchmark_pct": -9.12,
+    "cum_r": 556.82
+  },
+  {
+    "trade_idx": 615,
+    "date": "2025-09-24",
+    "price": 26480.2,
+    "benchmark_pct": -7.92,
+    "cum_r": 555.82
+  },
+  {
+    "trade_idx": 616,
+    "date": "2025-09-25",
+    "price": 26619.95,
+    "benchmark_pct": -7.43,
+    "cum_r": 557.82
+  },
+  {
+    "trade_idx": 617,
+    "date": "2025-09-26",
+    "price": 26270.2,
+    "benchmark_pct": -8.65,
+    "cum_r": 556.82
+  },
+  {
+    "trade_idx": 618,
+    "date": "2025-09-29",
+    "price": 26652.7,
+    "benchmark_pct": -7.32,
+    "cum_r": 557.95
+  },
+  {
+    "trade_idx": 619,
+    "date": "2025-09-30",
+    "price": 26641.2,
+    "benchmark_pct": -7.36,
+    "cum_r": 559.95
+  },
+  {
+    "trade_idx": 620,
+    "date": "2025-10-03",
+    "price": 26973.2,
+    "benchmark_pct": -6.2,
+    "cum_r": 558.95
+  },
+  {
+    "trade_idx": 621,
+    "date": "2025-10-06",
+    "price": 26983.7,
+    "benchmark_pct": -6.16,
+    "cum_r": 557.95
+  },
+  {
+    "trade_idx": 622,
+    "date": "2025-10-10",
+    "price": 26341.2,
+    "benchmark_pct": -8.4,
+    "cum_r": 559.95
+  },
+  {
+    "trade_idx": 623,
+    "date": "2025-10-13",
+    "price": 25777.2,
+    "benchmark_pct": -10.36,
+    "cum_r": 558.95
+  },
+  {
+    "trade_idx": 624,
+    "date": "2025-10-16",
+    "price": 25899.7,
+    "benchmark_pct": -9.93,
+    "cum_r": 560.95
+  },
+  {
+    "trade_idx": 625,
+    "date": "2025-10-23",
+    "price": 25761.2,
+    "benchmark_pct": -10.42,
+    "cum_r": 562.95
+  },
+  {
+    "trade_idx": 626,
+    "date": "2025-10-24",
+    "price": 26094.7,
+    "benchmark_pct": -9.26,
+    "cum_r": 564.95
+  },
+  {
+    "trade_idx": 627,
+    "date": "2025-11-10",
+    "price": 26580.2,
+    "benchmark_pct": -7.57,
+    "cum_r": 563.95
+  },
+  {
+    "trade_idx": 628,
+    "date": "2025-11-11",
+    "price": 26582.2,
+    "benchmark_pct": -7.56,
+    "cum_r": 565.95
+  },
+  {
+    "trade_idx": 629,
+    "date": "2025-11-12",
+    "price": 26897.7,
+    "benchmark_pct": -6.46,
+    "cum_r": 567.95
+  },
+  {
+    "trade_idx": 630,
+    "date": "2025-11-13",
+    "price": 27028.2,
+    "benchmark_pct": -6.01,
+    "cum_r": 569.95
+  },
+  {
+    "trade_idx": 631,
+    "date": "2025-11-14",
+    "price": 26683.95,
+    "benchmark_pct": -7.21,
+    "cum_r": 571.95
+  },
+  {
+    "trade_idx": 632,
+    "date": "2025-11-17",
+    "price": 26228.2,
+    "benchmark_pct": -8.79,
+    "cum_r": 573.95
+  },
+  {
+    "trade_idx": 633,
+    "date": "2025-11-20",
+    "price": 25890.2,
+    "benchmark_pct": -9.97,
+    "cum_r": 572.95
+  },
+  {
+    "trade_idx": 634,
+    "date": "2025-11-21",
+    "price": 25127.2,
+    "benchmark_pct": -12.62,
+    "cum_r": 574.95
+  },
+  {
+    "trade_idx": 635,
+    "date": "2025-11-24",
+    "price": 25634.7,
+    "benchmark_pct": -10.86,
+    "cum_r": 576.95
+  },
+  {
+    "trade_idx": 636,
+    "date": "2025-11-25",
+    "price": 25847.95,
+    "benchmark_pct": -10.11,
+    "cum_r": 578.95
+  },
+  {
+    "trade_idx": 637,
+    "date": "2025-11-27",
+    "price": 25913.2,
+    "benchmark_pct": -9.89,
+    "cum_r": 577.95
+  },
+  {
+    "trade_idx": 638,
+    "date": "2025-12-01",
+    "price": 26004.2,
+    "benchmark_pct": -9.57,
+    "cum_r": 579.95
+  },
+  {
+    "trade_idx": 639,
+    "date": "2025-12-04",
+    "price": 25877.2,
+    "benchmark_pct": -10.01,
+    "cum_r": 578.95
+  },
+  {
+    "trade_idx": 640,
+    "date": "2025-12-05",
+    "price": 26072.2,
+    "benchmark_pct": -9.33,
+    "cum_r": 577.95
+  },
+  {
+    "trade_idx": 641,
+    "date": "2025-12-08",
+    "price": 25752.2,
+    "benchmark_pct": -10.45,
+    "cum_r": 579.95
+  },
+  {
+    "trade_idx": 642,
+    "date": "2025-12-18",
+    "price": 25493.2,
+    "benchmark_pct": -11.35,
+    "cum_r": 581.95
+  },
+  {
+    "trade_idx": 643,
+    "date": "2026-01-02",
+    "price": 26332.2,
+    "benchmark_pct": -8.43,
+    "cum_r": 583.95
+  },
+  {
+    "trade_idx": 644,
+    "date": "2026-01-05",
+    "price": 26294.95,
+    "benchmark_pct": -8.56,
+    "cum_r": 585.95
+  },
+  {
+    "trade_idx": 645,
+    "date": "2026-01-06",
+    "price": 26612.2,
+    "benchmark_pct": -7.46,
+    "cum_r": 587.95
+  },
+  {
+    "trade_idx": 646,
+    "date": "2026-01-07",
+    "price": 26435.95,
+    "benchmark_pct": -8.07,
+    "cum_r": 586.95
+  },
+  {
+    "trade_idx": 647,
+    "date": "2026-01-12",
+    "price": 26541.7,
+    "benchmark_pct": -7.7,
+    "cum_r": 585.95
+  },
+  {
+    "trade_idx": 648,
+    "date": "2026-01-13",
+    "price": 26799.2,
+    "benchmark_pct": -6.81,
+    "cum_r": 584.95
+  },
+  {
+    "trade_idx": 649,
+    "date": "2026-01-19",
+    "price": 26554.2,
+    "benchmark_pct": -7.66,
+    "cum_r": 583.95
+  },
+  {
+    "trade_idx": 650,
+    "date": "2026-01-22",
+    "price": 26571.2,
+    "benchmark_pct": -7.6,
+    "cum_r": 582.95
+  },
+  {
+    "trade_idx": 651,
+    "date": "2026-01-30",
+    "price": 27400.2,
+    "benchmark_pct": -4.72,
+    "cum_r": 581.95
+  },
+  {
+    "trade_idx": 652,
+    "date": "2026-02-02",
+    "price": 26719.7,
+    "benchmark_pct": -7.08,
+    "cum_r": 583.95
+  },
+  {
+    "trade_idx": 653,
+    "date": "2026-02-04",
+    "price": 26777.2,
+    "benchmark_pct": -6.88,
+    "cum_r": 585.95
+  },
+  {
+    "trade_idx": 654,
+    "date": "2026-02-05",
+    "price": 26836.2,
+    "benchmark_pct": -6.68,
+    "cum_r": 587.95
+  },
+  {
+    "trade_idx": 655,
+    "date": "2026-02-06",
+    "price": 26770.2,
+    "benchmark_pct": -6.91,
+    "cum_r": 589.95
+  },
+  {
+    "trade_idx": 656,
+    "date": "2026-02-09",
+    "price": 26996.2,
+    "benchmark_pct": -6.12,
+    "cum_r": 591.95
+  },
+  {
+    "trade_idx": 657,
+    "date": "2026-02-11",
+    "price": 27253.7,
+    "benchmark_pct": -5.23,
+    "cum_r": 593.95
+  },
+  {
+    "trade_idx": 658,
+    "date": "2026-02-12",
+    "price": 26999.95,
+    "benchmark_pct": -6.11,
+    "cum_r": 595.95
+  },
+  {
+    "trade_idx": 659,
+    "date": "2026-02-16",
+    "price": 26711.95,
+    "benchmark_pct": -7.11,
+    "cum_r": 594.95
+  },
+  {
+    "trade_idx": 660,
+    "date": "2026-02-20",
+    "price": 26485.7,
+    "benchmark_pct": -7.9,
+    "cum_r": 596.95
+  },
+  {
+    "trade_idx": 661,
+    "date": "2026-02-23",
+    "price": 27015.95,
+    "benchmark_pct": -6.05,
+    "cum_r": 595.95
+  },
+  {
+    "trade_idx": 662,
+    "date": "2026-02-26",
+    "price": 26524.7,
+    "benchmark_pct": -7.76,
+    "cum_r": 597.95
+  },
+  {
+    "trade_idx": 663,
+    "date": "2026-03-04",
+    "price": 25351.95,
+    "benchmark_pct": -11.84,
+    "cum_r": 599.95
+  },
+  {
+    "trade_idx": 664,
+    "date": "2026-03-13",
+    "price": 25476.2,
+    "benchmark_pct": -11.41,
+    "cum_r": 601.95
+  },
+  {
+    "trade_idx": 665,
+    "date": "2026-03-16",
+    "price": 25846.2,
+    "benchmark_pct": -10.12,
+    "cum_r": 600.95
+  },
+  {
+    "trade_idx": 666,
+    "date": "2026-03-17",
+    "price": 26094.95,
+    "benchmark_pct": -9.25,
+    "cum_r": 602.95
+  },
+  {
+    "trade_idx": 667,
+    "date": "2026-03-18",
+    "price": 26005.2,
+    "benchmark_pct": -9.57,
+    "cum_r": 604.95
+  },
+  {
+    "trade_idx": 668,
+    "date": "2026-03-19",
+    "price": 25576.95,
+    "benchmark_pct": -11.06,
+    "cum_r": 606.95
+  },
+  {
+    "trade_idx": 669,
+    "date": "2026-03-23",
+    "price": 25139.2,
+    "benchmark_pct": -12.58,
+    "cum_r": 608.95
+  },
+  {
+    "trade_idx": 670,
+    "date": "2026-03-24",
+    "price": 24830.95,
+    "benchmark_pct": -13.65,
+    "cum_r": 607.95
+  },
+  {
+    "trade_idx": 671,
+    "date": "2026-03-25",
+    "price": 25232.2,
+    "benchmark_pct": -12.26,
+    "cum_r": 609.95
+  },
+  {
+    "trade_idx": 672,
+    "date": "2026-03-26",
+    "price": 24969.95,
+    "benchmark_pct": -13.17,
+    "cum_r": 609.79
+  },
+  {
+    "trade_idx": 673,
+    "date": "2026-04-02",
+    "price": 25006.2,
+    "benchmark_pct": -13.04,
+    "cum_r": 611.79
+  },
+  {
+    "trade_idx": 674,
+    "date": "2026-04-08",
+    "price": 25872.2,
+    "benchmark_pct": -10.03,
+    "cum_r": 610.79
+  },
+  {
+    "trade_idx": 675,
+    "date": "2026-04-09",
+    "price": 25717.2,
+    "benchmark_pct": -10.57,
+    "cum_r": 609.79
+  },
+  {
+    "trade_idx": 676,
+    "date": "2026-04-10",
+    "price": 25973.7,
+    "benchmark_pct": -9.68,
+    "cum_r": 611.79
+  },
+  {
+    "trade_idx": 677,
+    "date": "2026-04-13",
+    "price": 25620.2,
+    "benchmark_pct": -10.91,
+    "cum_r": 613.79
+  },
+  {
+    "trade_idx": 678,
+    "date": "2026-04-14",
+    "price": 25743.7,
+    "benchmark_pct": -10.48,
+    "cum_r": 615.79
+  },
+  {
+    "trade_idx": 679,
+    "date": "2026-04-16",
+    "price": 26345.2,
+    "benchmark_pct": -8.38,
+    "cum_r": 617.79
+  },
+  {
+    "trade_idx": 680,
+    "date": "2026-04-17",
+    "price": 26198.2,
+    "benchmark_pct": -8.9,
+    "cum_r": 616.79
+  },
+  {
+    "trade_idx": 681,
+    "date": "2026-04-20",
+    "price": 26399.2,
+    "benchmark_pct": -8.2,
+    "cum_r": 617.36
+  },
+  {
+    "trade_idx": 682,
+    "date": "2026-04-23",
+    "price": 25881.2,
+    "benchmark_pct": -10.0,
+    "cum_r": 616.36
+  },
+  {
+    "trade_idx": 683,
+    "date": "2026-04-24",
+    "price": 25918.2,
+    "benchmark_pct": -9.87,
+    "cum_r": 615.92
+  },
+  {
+    "trade_idx": 684,
+    "date": "2026-04-27",
+    "price": 26028.95,
+    "benchmark_pct": -9.48,
+    "cum_r": 614.92
+  },
+  {
+    "trade_idx": 685,
+    "date": "2026-04-28",
+    "price": 25619.2,
+    "benchmark_pct": -10.91,
+    "cum_r": 616.92
+  },
+  {
+    "trade_idx": 686,
+    "date": "2026-05-04",
+    "price": 26019.2,
+    "benchmark_pct": -9.52,
+    "cum_r": 615.92
+  },
+  {
+    "trade_idx": 687,
+    "date": "2026-05-05",
+    "price": 25924.2,
+    "benchmark_pct": -9.85,
+    "cum_r": 617.92
+  },
+  {
+    "trade_idx": 688,
+    "date": "2026-05-07",
+    "price": 26407.2,
+    "benchmark_pct": -8.17,
+    "cum_r": 616.92
+  },
+  {
+    "trade_idx": 689,
+    "date": "2026-05-08",
+    "price": 26299.95,
+    "benchmark_pct": -8.54,
+    "cum_r": 615.92
+  },
+  {
+    "trade_idx": 690,
+    "date": "2026-05-11",
+    "price": 26519.2,
+    "benchmark_pct": -7.78,
+    "cum_r": 617.92
+  },
+  {
+    "trade_idx": 691,
+    "date": "2026-05-14",
+    "price": 26407.2,
+    "benchmark_pct": -8.17,
+    "cum_r": 616.92
+  },
+  {
+    "trade_idx": 692,
+    "date": "2026-05-15",
+    "price": 26141.95,
+    "benchmark_pct": -9.09,
+    "cum_r": 615.92
+  },
+  {
+    "trade_idx": 693,
+    "date": "2026-05-18",
+    "price": 25596.95,
+    "benchmark_pct": -10.99,
+    "cum_r": 617.04
+  },
+  {
+    "trade_idx": 694,
+    "date": "2026-05-19",
+    "price": 25723.2,
+    "benchmark_pct": -10.55,
+    "cum_r": 616.04
+  },
+  {
+    "trade_idx": 695,
+    "date": "2026-05-20",
+    "price": 25680.2,
+    "benchmark_pct": -10.7,
+    "cum_r": 615.04
+  },
+  {
+    "trade_idx": 696,
+    "date": "2026-05-28",
+    "price": 25093.7,
+    "benchmark_pct": -12.74,
+    "cum_r": 617.04
+  },
+  {
+    "trade_idx": 697,
+    "date": "2026-05-29",
+    "price": 25041.7,
+    "benchmark_pct": -12.92,
+    "cum_r": 619.04
+  },
+  {
+    "trade_idx": 698,
+    "date": "2026-06-02",
+    "price": 25960.7,
+    "benchmark_pct": -9.72,
+    "cum_r": 621.04
+  },
+  {
+    "trade_idx": 699,
+    "date": "2026-06-05",
+    "price": 24979.7,
+    "benchmark_pct": -13.13,
+    "cum_r": 623.04
+  },
+  {
+    "trade_idx": 700,
+    "date": "2026-06-08",
+    "price": 24626.2,
+    "benchmark_pct": -14.36,
+    "cum_r": 625.04
+  },
+  {
+    "trade_idx": 701,
+    "date": "2026-06-11",
+    "price": 24156.2,
+    "benchmark_pct": -16.0,
+    "cum_r": 627.04
+  },
+  {
+    "trade_idx": 702,
+    "date": "2026-06-12",
+    "price": 24676.2,
+    "benchmark_pct": -14.19,
+    "cum_r": 629.04
+  },
+  {
+    "trade_idx": 703,
+    "date": "2026-06-16",
+    "price": 24508.2,
+    "benchmark_pct": -14.77,
+    "cum_r": 631.04
+  },
+  {
+    "trade_idx": 704,
+    "date": "2026-06-18",
+    "price": 23813.2,
+    "benchmark_pct": -17.19,
+    "cum_r": 630.04
+  },
+  {
+    "trade_idx": 705,
+    "date": "2026-06-25",
+    "price": 23001.2,
+    "benchmark_pct": -20.01,
+    "cum_r": 629.04
+  },
+  {
+    "trade_idx": 706,
+    "date": "2026-06-26",
+    "price": 22676.2,
+    "benchmark_pct": -21.14,
+    "cum_r": 628.04
+  },
+  {
+    "trade_idx": 707,
+    "date": "2026-07-03",
+    "price": 23204.2,
+    "benchmark_pct": -19.31,
+    "cum_r": 627.04
+  },
+  {
+    "trade_idx": 708,
+    "date": "2026-07-06",
+    "price": 23467.7,
+    "benchmark_pct": -18.39,
+    "cum_r": 626.04
+  },
+  {
+    "trade_idx": 709,
+    "date": "2026-07-07",
+    "price": 23412.2,
+    "benchmark_pct": -18.58,
+    "cum_r": 625.04
+  },
+  {
+    "trade_idx": 710,
+    "date": "2026-07-08",
+    "price": 23998.95,
+    "benchmark_pct": -16.54,
+    "cum_r": 624.04
+  },
+  {
+    "trade_idx": 711,
+    "date": "2026-07-09",
+    "price": 23984.2,
+    "benchmark_pct": -16.59,
+    "cum_r": 626.04
+  },
+  {
+    "trade_idx": 712,
+    "date": "2026-07-15",
+    "price": 24788.2,
+    "benchmark_pct": -13.8,
+    "cum_r": 628.04
+  },
+  {
+    "trade_idx": 713,
+    "date": "2026-07-16",
+    "price": 25075.2,
+    "benchmark_pct": -12.8,
+    "cum_r": 630.04
+  },
+  {
+    "trade_idx": 714,
+    "date": "2026-07-17",
+    "price": 24554.2,
+    "benchmark_pct": -14.61,
+    "cum_r": 632.04
+  },
+  {
+    "trade_idx": 715,
+    "date": "2026-07-20",
+    "price": 25053.95,
+    "benchmark_pct": -12.87,
+    "cum_r": 632.87
+  },
+  {
+    "trade_idx": 716,
+    "date": "2026-07-21",
+    "price": 25157.2,
+    "benchmark_pct": -12.52,
+    "cum_r": 631.87
+  },
+  {
+    "trade_idx": 717,
+    "date": "2026-07-22",
+    "price": 24943.2,
+    "benchmark_pct": -13.26,
+    "cum_r": 630.87
+  },
+  {
+    "trade_idx": 718,
+    "date": "2026-07-23",
+    "price": 25178.2,
+    "benchmark_pct": -12.44,
+    "cum_r": 632.87
+  },
+  {
+    "trade_idx": 719,
+    "date": "2026-07-24",
+    "price": 24912.2,
+    "benchmark_pct": -13.37,
+    "cum_r": 634.87
+  },
+  {
+    "trade_idx": 720,
+    "date": "2026-07-27",
+    "price": 25175.2,
+    "benchmark_pct": -12.45,
+    "cum_r": 636.87
+  },
+  {
+    "trade_idx": 721,
+    "date": "2026-07-29",
+    "price": 25636.2,
+    "benchmark_pct": -10.85,
+    "cum_r": 635.87
+  },
+  {
+    "trade_idx": 722,
+    "date": "2026-07-31",
+    "price": 25799.2,
+    "benchmark_pct": -10.28,
+    "cum_r": 634.87
+  },
+  {
+    "trade_idx": 723,
+    "date": "2026-08-03",
+    "price": 25954.7,
+    "benchmark_pct": -9.74,
+    "cum_r": 633.87
+  },
+  {
+    "trade_idx": 724,
+    "date": "2026-08-10",
+    "price": 25974.2,
+    "benchmark_pct": -9.67,
+    "cum_r": 635.87
+  },
+  {
+    "trade_idx": 725,
+    "date": "2026-08-11",
+    "price": 25699.7,
+    "benchmark_pct": -10.63,
+    "cum_r": 637.87
+  },
+  {
+    "trade_idx": 726,
+    "date": "2026-08-14",
+    "price": 25236.2,
+    "benchmark_pct": -12.24,
+    "cum_r": 636.87
+  },
+  {
+    "trade_idx": 727,
+    "date": "2026-08-18",
+    "price": 25421.2,
+    "benchmark_pct": -11.6,
+    "cum_r": 635.87
+  },
+  {
+    "trade_idx": 728,
+    "date": "2026-08-19",
+    "price": 25483.2,
+    "benchmark_pct": -11.38,
+    "cum_r": 634.87
+  },
+  {
+    "trade_idx": 729,
+    "date": "2026-08-20",
+    "price": 25818.2,
+    "benchmark_pct": -10.22,
+    "cum_r": 636.87
+  },
+  {
+    "trade_idx": 730,
+    "date": "2026-08-21",
+    "price": 25886.95,
+    "benchmark_pct": -9.98,
+    "cum_r": 635.87
+  },
+  {
+    "trade_idx": 731,
+    "date": "2026-08-24",
+    "price": 25448.95,
+    "benchmark_pct": -11.5,
+    "cum_r": 634.87
+  },
+  {
+    "trade_idx": 732,
+    "date": "2026-08-25",
+    "price": 25542.2,
+    "benchmark_pct": -11.18,
+    "cum_r": 633.87
+  },
+  {
+    "trade_idx": 733,
+    "date": "2026-08-26",
+    "price": 25609.2,
+    "benchmark_pct": -10.94,
+    "cum_r": 632.87
+  },
+  {
+    "trade_idx": 734,
+    "date": "2026-08-27",
+    "price": 25553.2,
+    "benchmark_pct": -11.14,
+    "cum_r": 634.87
+  },
+  {
+    "trade_idx": 735,
+    "date": "2026-08-28",
+    "price": 25601.2,
+    "benchmark_pct": -10.97,
+    "cum_r": 633.87
+  },
+  {
+    "trade_idx": 736,
+    "date": "2026-08-31",
+    "price": 25463.2,
+    "benchmark_pct": -11.45,
+    "cum_r": 632.87
+  },
+  {
+    "trade_idx": 737,
+    "date": "2026-09-01",
+    "price": 25268.95,
+    "benchmark_pct": -12.13,
+    "cum_r": 631.87
+  },
+  {
+    "trade_idx": 738,
+    "date": "2026-09-02",
+    "price": 25202.2,
+    "benchmark_pct": -12.36,
+    "cum_r": 633.87
+  },
+  {
+    "trade_idx": 739,
+    "date": "2026-09-03",
+    "price": 25153.2,
+    "benchmark_pct": -12.53,
+    "cum_r": 635.87
+  },
+  {
+    "trade_idx": 740,
+    "date": "2026-09-04",
+    "price": 25716.5,
+    "benchmark_pct": -10.57,
+    "cum_r": 637.87
+  },
+  {
+    "trade_idx": 741,
+    "date": "2026-09-07",
+    "price": 25361.4,
+    "benchmark_pct": -11.81,
+    "cum_r": 639.58
+  },
+  {
+    "trade_idx": 742,
+    "date": "2026-09-08",
+    "price": 25334.4,
+    "benchmark_pct": -11.9,
+    "cum_r": 641.58
+  },
+  {
+    "trade_idx": 743,
+    "date": "2026-09-10",
+    "price": 24868.4,
+    "benchmark_pct": -13.52,
+    "cum_r": 640.58
+  },
+  {
+    "trade_idx": 744,
+    "date": "2026-09-11",
+    "price": 24768.4,
+    "benchmark_pct": -13.87,
+    "cum_r": 642.58
+  },
+  {
+    "trade_idx": 745,
+    "date": "2026-09-14",
+    "price": 24811.4,
+    "benchmark_pct": -13.72,
+    "cum_r": 641.58
+  },
+  {
+    "trade_idx": 746,
+    "date": "2026-09-15",
+    "price": 24728.4,
+    "benchmark_pct": -14.01,
+    "cum_r": 643.58
+  },
+  {
+    "trade_idx": 747,
+    "date": "2026-09-21",
+    "price": 25084.5,
+    "benchmark_pct": -12.77,
+    "cum_r": 645.58
+  },
+  {
+    "trade_idx": 748,
+    "date": "2026-09-23",
+    "price": 24661.3,
+    "benchmark_pct": -14.24,
+    "cum_r": 644.58
+  },
+  {
+    "trade_idx": 749,
+    "date": "2026-09-24",
+    "price": 24554.3,
+    "benchmark_pct": -14.61,
+    "cum_r": 646.58
+  },
+  {
+    "trade_idx": 750,
+    "date": "2026-09-25",
+    "price": 24460.0,
+    "benchmark_pct": -14.94,
+    "cum_r": 645.58
+  },
+  {
+    "trade_idx": 751,
+    "date": "2026-09-28",
+    "price": 24650.5,
+    "benchmark_pct": -14.28,
+    "cum_r": 644.58
+  },
+  {
+    "trade_idx": 752,
+    "date": "2026-09-30",
+    "price": 24427.9,
+    "benchmark_pct": -15.05,
+    "cum_r": 643.58
+  },
+  {
+    "trade_idx": 753,
+    "date": "2026-10-02",
+    "price": 23867.5,
+    "benchmark_pct": -17.0,
+    "cum_r": 642.58
+  },
+  {
+    "trade_idx": 754,
+    "date": "2026-10-05",
+    "price": 23943.4,
+    "benchmark_pct": -16.74,
+    "cum_r": 644.58
+  },
+  {
+    "trade_idx": 755,
+    "date": "2026-10-06",
+    "price": 24236.5,
+    "benchmark_pct": -15.72,
+    "cum_r": 646.58
+  },
+  {
+    "trade_idx": 756,
+    "date": "2026-10-08",
+    "price": 23792.3,
+    "benchmark_pct": -17.26,
+    "cum_r": 645.58
+  },
+  {
+    "trade_idx": 757,
+    "date": "2026-10-09",
+    "price": 24104.5,
+    "benchmark_pct": -16.18,
+    "cum_r": 644.58
+  },
+  {
+    "trade_idx": 758,
+    "date": "2026-10-12",
+    "price": 24206.5,
+    "benchmark_pct": -15.82,
+    "cum_r": 646.58
+  }
+];
+
+window.QUANT_MONTE_CARLO_FAN = [
+  {
+    "trade": 0,
+    "p05": 0.0,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 0.0,
+    "p95": 0.0
+  },
+  {
+    "trade": 20,
+    "p05": 6.02,
+    "p25": 13.0,
+    "p50": 16.77,
+    "p75": 21.92,
+    "p95": 28.0
+  },
+  {
+    "trade": 40,
+    "p05": 18.21,
+    "p25": 27.68,
+    "p50": 34.36,
+    "p75": 40.72,
+    "p95": 48.73
+  },
+  {
+    "trade": 60,
+    "p05": 33.0,
+    "p25": 43.59,
+    "p50": 51.52,
+    "p75": 58.74,
+    "p95": 69.0
+  },
+  {
+    "trade": 80,
+    "p05": 46.1,
+    "p25": 58.91,
+    "p50": 68.3,
+    "p75": 76.01,
+    "p95": 87.82
+  },
+  {
+    "trade": 100,
+    "p05": 61.49,
+    "p25": 75.14,
+    "p50": 84.85,
+    "p75": 95.45,
+    "p95": 107.05
+  },
+  {
+    "trade": 120,
+    "p05": 75.18,
+    "p25": 90.49,
+    "p50": 102.42,
+    "p75": 112.69,
+    "p95": 127.45
+  },
+  {
+    "trade": 140,
+    "p05": 92.82,
+    "p25": 107.39,
+    "p50": 118.94,
+    "p75": 130.73,
+    "p95": 145.98
+  },
+  {
+    "trade": 160,
+    "p05": 107.39,
+    "p25": 124.17,
+    "p50": 136.39,
+    "p75": 148.74,
+    "p95": 164.75
+  },
+  {
+    "trade": 180,
+    "p05": 121.7,
+    "p25": 139.62,
+    "p50": 153.52,
+    "p75": 166.14,
+    "p95": 184.18
+  },
+  {
+    "trade": 200,
+    "p05": 136.02,
+    "p25": 156.24,
+    "p50": 170.71,
+    "p75": 184.18,
+    "p95": 203.43
+  },
+  {
+    "trade": 220,
+    "p05": 152.6,
+    "p25": 173.06,
+    "p50": 187.64,
+    "p75": 201.88,
+    "p95": 221.78
+  },
+  {
+    "trade": 240,
+    "p05": 168.16,
+    "p25": 189.93,
+    "p50": 204.54,
+    "p75": 220.07,
+    "p95": 241.24
+  },
+  {
+    "trade": 260,
+    "p05": 182.85,
+    "p25": 207.08,
+    "p50": 223.03,
+    "p75": 237.11,
+    "p95": 259.52
+  },
+  {
+    "trade": 280,
+    "p05": 198.34,
+    "p25": 223.61,
+    "p50": 239.24,
+    "p75": 254.43,
+    "p95": 277.34
+  },
+  {
+    "trade": 300,
+    "p05": 214.33,
+    "p25": 240.84,
+    "p50": 257.02,
+    "p75": 272.07,
+    "p95": 296.01
+  },
+  {
+    "trade": 320,
+    "p05": 228.92,
+    "p25": 255.12,
+    "p50": 273.85,
+    "p75": 290.42,
+    "p95": 315.76
+  },
+  {
+    "trade": 340,
+    "p05": 245.34,
+    "p25": 272.29,
+    "p50": 290.67,
+    "p75": 308.32,
+    "p95": 332.81
+  },
+  {
+    "trade": 360,
+    "p05": 259.36,
+    "p25": 288.96,
+    "p50": 307.51,
+    "p75": 325.39,
+    "p95": 350.83
+  },
+  {
+    "trade": 380,
+    "p05": 278.3,
+    "p25": 305.6,
+    "p50": 324.01,
+    "p75": 343.87,
+    "p95": 370.36
+  },
+  {
+    "trade": 400,
+    "p05": 293.92,
+    "p25": 321.8,
+    "p50": 341.54,
+    "p75": 361.07,
+    "p95": 388.14
+  },
+  {
+    "trade": 420,
+    "p05": 309.85,
+    "p25": 339.14,
+    "p50": 357.94,
+    "p75": 378.28,
+    "p95": 404.47
+  },
+  {
+    "trade": 440,
+    "p05": 325.29,
+    "p25": 355.35,
+    "p50": 375.27,
+    "p75": 396.48,
+    "p95": 422.15
+  },
+  {
+    "trade": 460,
+    "p05": 341.91,
+    "p25": 372.33,
+    "p50": 392.3,
+    "p75": 413.3,
+    "p95": 440.0
+  },
+  {
+    "trade": 480,
+    "p05": 357.74,
+    "p25": 388.44,
+    "p50": 409.82,
+    "p75": 431.39,
+    "p95": 459.17
+  },
+  {
+    "trade": 500,
+    "p05": 376.07,
+    "p25": 405.44,
+    "p50": 426.0,
+    "p75": 449.37,
+    "p95": 477.59
+  },
+  {
+    "trade": 520,
+    "p05": 390.76,
+    "p25": 421.9,
+    "p50": 442.7,
+    "p75": 467.11,
+    "p95": 494.97
+  },
+  {
+    "trade": 540,
+    "p05": 407.71,
+    "p25": 438.3,
+    "p50": 460.29,
+    "p75": 484.57,
+    "p95": 514.8
+  },
+  {
+    "trade": 560,
+    "p05": 423.94,
+    "p25": 453.89,
+    "p50": 477.1,
+    "p75": 500.81,
+    "p95": 532.15
+  },
+  {
+    "trade": 580,
+    "p05": 440.47,
+    "p25": 471.13,
+    "p50": 495.2,
+    "p75": 518.76,
+    "p95": 548.86
+  },
+  {
+    "trade": 600,
+    "p05": 457.96,
+    "p25": 487.99,
+    "p50": 512.69,
+    "p75": 536.75,
+    "p95": 569.74
+  },
+  {
+    "trade": 620,
+    "p05": 472.69,
+    "p25": 504.26,
+    "p50": 529.3,
+    "p75": 553.86,
+    "p95": 587.3
+  },
+  {
+    "trade": 640,
+    "p05": 489.45,
+    "p25": 520.18,
+    "p50": 544.0,
+    "p75": 571.35,
+    "p95": 605.44
+  },
+  {
+    "trade": 660,
+    "p05": 506.4,
+    "p25": 537.67,
+    "p50": 563.18,
+    "p75": 588.13,
+    "p95": 621.31
+  },
+  {
+    "trade": 680,
+    "p05": 522.08,
+    "p25": 554.94,
+    "p50": 580.06,
+    "p75": 605.59,
+    "p95": 639.48
+  },
+  {
+    "trade": 700,
+    "p05": 539.1,
+    "p25": 571.41,
+    "p50": 597.15,
+    "p75": 623.76,
+    "p95": 655.72
+  },
+  {
+    "trade": 720,
+    "p05": 554.6,
+    "p25": 588.68,
+    "p50": 613.65,
+    "p75": 641.27,
+    "p95": 674.39
+  },
+  {
+    "trade": 740,
+    "p05": 568.58,
+    "p25": 605.77,
+    "p50": 630.63,
+    "p75": 657.51,
+    "p95": 692.77
+  },
+  {
+    "trade": 758,
+    "p05": 584.46,
+    "p25": 620.07,
+    "p50": 645.73,
+    "p75": 673.74,
+    "p95": 709.68
+  }
+];
+
+window.QUANT_ROLLING_SHARPE = [
+  {
+    "trade_idx": 50,
+    "date": "2020-09-28",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 51,
+    "date": "2020-10-09",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 52,
+    "date": "2020-10-16",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 53,
+    "date": "2020-10-22",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 54,
+    "date": "2020-10-23",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 55,
+    "date": "2020-10-30",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 56,
+    "date": "2020-11-02",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 57,
+    "date": "2020-11-03",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 58,
+    "date": "2020-11-05",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 59,
+    "date": "2020-11-06",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 60,
+    "date": "2020-11-09",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 61,
+    "date": "2020-11-12",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 62,
+    "date": "2020-11-13",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 63,
+    "date": "2020-11-16",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 64,
+    "date": "2020-11-17",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 65,
+    "date": "2020-11-19",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 66,
+    "date": "2020-11-20",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 67,
+    "date": "2020-11-23",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 68,
+    "date": "2020-11-26",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 69,
+    "date": "2020-11-27",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 70,
+    "date": "2020-12-17",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 71,
+    "date": "2020-12-21",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 72,
+    "date": "2021-01-04",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 73,
+    "date": "2021-01-07",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 74,
+    "date": "2021-01-08",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 75,
+    "date": "2021-01-14",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 76,
+    "date": "2021-01-20",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 77,
+    "date": "2021-01-21",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 78,
+    "date": "2021-01-26",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 79,
+    "date": "2021-01-28",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 80,
+    "date": "2021-01-29",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 81,
+    "date": "2021-02-03",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 82,
+    "date": "2021-02-05",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 83,
+    "date": "2021-02-08",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 84,
+    "date": "2021-02-16",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 85,
+    "date": "2021-02-17",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 86,
+    "date": "2021-02-18",
+    "sharpe": 6.4
+  },
+  {
+    "trade_idx": 87,
+    "date": "2021-02-19",
+    "sharpe": 6.4
+  },
+  {
+    "trade_idx": 88,
+    "date": "2021-03-03",
+    "sharpe": 6.4
+  },
+  {
+    "trade_idx": 89,
+    "date": "2021-03-11",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 90,
+    "date": "2021-03-18",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 91,
+    "date": "2021-03-19",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 92,
+    "date": "2021-03-22",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 93,
+    "date": "2021-03-23",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 94,
+    "date": "2021-03-24",
+    "sharpe": 7.47
+  },
+  {
+    "trade_idx": 95,
+    "date": "2021-04-01",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 96,
+    "date": "2021-04-12",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 97,
+    "date": "2021-04-16",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 98,
+    "date": "2021-04-19",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 99,
+    "date": "2021-04-20",
+    "sharpe": 8.05
+  },
+  {
+    "trade_idx": 100,
+    "date": "2021-04-22",
+    "sharpe": 8.67
+  },
+  {
+    "trade_idx": 101,
+    "date": "2021-04-23",
+    "sharpe": 8.67
+  },
+  {
+    "trade_idx": 102,
+    "date": "2021-04-26",
+    "sharpe": 9.33
+  },
+  {
+    "trade_idx": 103,
+    "date": "2021-04-30",
+    "sharpe": 9.33
+  },
+  {
+    "trade_idx": 104,
+    "date": "2021-05-03",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 105,
+    "date": "2021-05-04",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 106,
+    "date": "2021-05-05",
+    "sharpe": 9.33
+  },
+  {
+    "trade_idx": 107,
+    "date": "2021-05-06",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 108,
+    "date": "2021-05-26",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 109,
+    "date": "2021-05-31",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 110,
+    "date": "2021-06-02",
+    "sharpe": 9.33
+  },
+  {
+    "trade_idx": 111,
+    "date": "2021-06-03",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 112,
+    "date": "2021-06-09",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 113,
+    "date": "2021-06-11",
+    "sharpe": 10.06
+  },
+  {
+    "trade_idx": 114,
+    "date": "2021-06-17",
+    "sharpe": 10.37
+  },
+  {
+    "trade_idx": 115,
+    "date": "2021-06-24",
+    "sharpe": 10.37
+  },
+  {
+    "trade_idx": 116,
+    "date": "2021-06-25",
+    "sharpe": 10.15
+  },
+  {
+    "trade_idx": 117,
+    "date": "2021-06-28",
+    "sharpe": 10.15
+  },
+  {
+    "trade_idx": 118,
+    "date": "2021-06-30",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 119,
+    "date": "2021-07-02",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 120,
+    "date": "2021-07-05",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 121,
+    "date": "2021-07-07",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 122,
+    "date": "2021-07-08",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 123,
+    "date": "2021-07-09",
+    "sharpe": 7.54
+  },
+  {
+    "trade_idx": 124,
+    "date": "2021-07-12",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 125,
+    "date": "2021-07-16",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 126,
+    "date": "2021-07-20",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 127,
+    "date": "2021-07-21",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 128,
+    "date": "2021-07-22",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 129,
+    "date": "2021-08-05",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 130,
+    "date": "2021-08-06",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 131,
+    "date": "2021-08-09",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 132,
+    "date": "2021-08-10",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 133,
+    "date": "2021-08-18",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 134,
+    "date": "2021-08-19",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 135,
+    "date": "2021-08-20",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 136,
+    "date": "2021-08-23",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 137,
+    "date": "2021-08-25",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 138,
+    "date": "2021-08-27",
+    "sharpe": 9.42
+  },
+  {
+    "trade_idx": 139,
+    "date": "2021-08-30",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 140,
+    "date": "2021-08-31",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 141,
+    "date": "2021-09-02",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 142,
+    "date": "2021-09-03",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 143,
+    "date": "2021-09-06",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 144,
+    "date": "2021-09-10",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 145,
+    "date": "2021-09-13",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 146,
+    "date": "2021-09-14",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 147,
+    "date": "2021-09-15",
+    "sharpe": 8.74
+  },
+  {
+    "trade_idx": 148,
+    "date": "2021-09-16",
+    "sharpe": 8.12
+  },
+  {
+    "trade_idx": 149,
+    "date": "2021-09-17",
+    "sharpe": 7.54
+  },
+  {
+    "trade_idx": 150,
+    "date": "2021-09-20",
+    "sharpe": 6.99
+  },
+  {
+    "trade_idx": 151,
+    "date": "2021-09-21",
+    "sharpe": 6.46
+  },
+  {
+    "trade_idx": 152,
+    "date": "2021-09-23",
+    "sharpe": 5.97
+  },
+  {
+    "trade_idx": 153,
+    "date": "2021-09-24",
+    "sharpe": 5.97
+  },
+  {
+    "trade_idx": 154,
+    "date": "2021-09-27",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 155,
+    "date": "2021-10-04",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 156,
+    "date": "2021-10-05",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 157,
+    "date": "2021-10-06",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 158,
+    "date": "2021-10-11",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 159,
+    "date": "2021-10-13",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 160,
+    "date": "2021-10-15",
+    "sharpe": 5.97
+  },
+  {
+    "trade_idx": 161,
+    "date": "2021-10-18",
+    "sharpe": 5.49
+  },
+  {
+    "trade_idx": 162,
+    "date": "2021-10-22",
+    "sharpe": 5.03
+  },
+  {
+    "trade_idx": 163,
+    "date": "2021-10-29",
+    "sharpe": 5.03
+  },
+  {
+    "trade_idx": 164,
+    "date": "2021-11-04",
+    "sharpe": 4.58
+  },
+  {
+    "trade_idx": 165,
+    "date": "2021-11-05",
+    "sharpe": 4.15
+  },
+  {
+    "trade_idx": 166,
+    "date": "2021-11-11",
+    "sharpe": 4.31
+  },
+  {
+    "trade_idx": 167,
+    "date": "2021-11-12",
+    "sharpe": 4.1
+  },
+  {
+    "trade_idx": 168,
+    "date": "2021-11-16",
+    "sharpe": 4.54
+  },
+  {
+    "trade_idx": 169,
+    "date": "2021-11-17",
+    "sharpe": 4.98
+  },
+  {
+    "trade_idx": 170,
+    "date": "2021-11-19",
+    "sharpe": 4.98
+  },
+  {
+    "trade_idx": 171,
+    "date": "2021-11-22",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 172,
+    "date": "2021-11-23",
+    "sharpe": 4.98
+  },
+  {
+    "trade_idx": 173,
+    "date": "2021-11-25",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 174,
+    "date": "2021-11-26",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 175,
+    "date": "2021-11-29",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 176,
+    "date": "2021-12-01",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 177,
+    "date": "2021-12-02",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 178,
+    "date": "2021-12-03",
+    "sharpe": 4.98
+  },
+  {
+    "trade_idx": 179,
+    "date": "2021-12-06",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 180,
+    "date": "2021-12-07",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 181,
+    "date": "2021-12-08",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 182,
+    "date": "2021-12-09",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 183,
+    "date": "2021-12-15",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 184,
+    "date": "2021-12-16",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 185,
+    "date": "2021-12-17",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 186,
+    "date": "2021-12-20",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 187,
+    "date": "2021-12-21",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 188,
+    "date": "2022-01-04",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 189,
+    "date": "2022-01-06",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 190,
+    "date": "2022-01-21",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 191,
+    "date": "2022-01-24",
+    "sharpe": 6.41
+  },
+  {
+    "trade_idx": 192,
+    "date": "2022-01-28",
+    "sharpe": 6.41
+  },
+  {
+    "trade_idx": 193,
+    "date": "2022-02-09",
+    "sharpe": 6.41
+  },
+  {
+    "trade_idx": 194,
+    "date": "2022-02-10",
+    "sharpe": 6.41
+  },
+  {
+    "trade_idx": 195,
+    "date": "2022-02-14",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 196,
+    "date": "2022-02-16",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 197,
+    "date": "2022-02-17",
+    "sharpe": 5.44
+  },
+  {
+    "trade_idx": 198,
+    "date": "2022-02-18",
+    "sharpe": 5.92
+  },
+  {
+    "trade_idx": 199,
+    "date": "2022-02-21",
+    "sharpe": 6.41
+  },
+  {
+    "trade_idx": 200,
+    "date": "2022-02-23",
+    "sharpe": 6.93
+  },
+  {
+    "trade_idx": 201,
+    "date": "2022-02-24",
+    "sharpe": 7.48
+  },
+  {
+    "trade_idx": 202,
+    "date": "2022-02-25",
+    "sharpe": 7.48
+  },
+  {
+    "trade_idx": 203,
+    "date": "2022-02-28",
+    "sharpe": 7.48
+  },
+  {
+    "trade_idx": 204,
+    "date": "2022-03-02",
+    "sharpe": 7.48
+  },
+  {
+    "trade_idx": 205,
+    "date": "2022-03-03",
+    "sharpe": 8.06
+  },
+  {
+    "trade_idx": 206,
+    "date": "2022-03-04",
+    "sharpe": 8.68
+  },
+  {
+    "trade_idx": 207,
+    "date": "2022-03-07",
+    "sharpe": 8.06
+  },
+  {
+    "trade_idx": 208,
+    "date": "2022-03-10",
+    "sharpe": 8.06
+  },
+  {
+    "trade_idx": 209,
+    "date": "2022-03-11",
+    "sharpe": 8.06
+  },
+  {
+    "trade_idx": 210,
+    "date": "2022-03-14",
+    "sharpe": 8.06
+  },
+  {
+    "trade_idx": 211,
+    "date": "2022-03-15",
+    "sharpe": 8.68
+  },
+  {
+    "trade_idx": 212,
+    "date": "2022-03-16",
+    "sharpe": 9.35
+  },
+  {
+    "trade_idx": 213,
+    "date": "2022-03-17",
+    "sharpe": 8.68
+  },
+  {
+    "trade_idx": 214,
+    "date": "2022-03-18",
+    "sharpe": 9.35
+  },
+  {
+    "trade_idx": 215,
+    "date": "2022-03-21",
+    "sharpe": 10.07
+  },
+  {
+    "trade_idx": 216,
+    "date": "2022-03-22",
+    "sharpe": 9.35
+  },
+  {
+    "trade_idx": 217,
+    "date": "2022-03-28",
+    "sharpe": 8.94
+  },
+  {
+    "trade_idx": 218,
+    "date": "2022-04-06",
+    "sharpe": 8.31
+  },
+  {
+    "trade_idx": 219,
+    "date": "2022-04-07",
+    "sharpe": 8.31
+  },
+  {
+    "trade_idx": 220,
+    "date": "2022-04-08",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 221,
+    "date": "2022-04-11",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 222,
+    "date": "2022-04-14",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 223,
+    "date": "2022-04-27",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 224,
+    "date": "2022-04-28",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 225,
+    "date": "2022-05-03",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 226,
+    "date": "2022-05-06",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 227,
+    "date": "2022-05-10",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 228,
+    "date": "2022-05-12",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 229,
+    "date": "2022-05-13",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 230,
+    "date": "2022-05-16",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 231,
+    "date": "2022-05-19",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 232,
+    "date": "2022-05-26",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 233,
+    "date": "2022-05-27",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 234,
+    "date": "2022-06-07",
+    "sharpe": 7.65
+  },
+  {
+    "trade_idx": 235,
+    "date": "2022-06-10",
+    "sharpe": 8.24
+  },
+  {
+    "trade_idx": 236,
+    "date": "2022-06-21",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 237,
+    "date": "2022-06-23",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 238,
+    "date": "2022-06-27",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 239,
+    "date": "2022-06-29",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 240,
+    "date": "2022-07-04",
+    "sharpe": 8.24
+  },
+  {
+    "trade_idx": 241,
+    "date": "2022-07-05",
+    "sharpe": 8.24
+  },
+  {
+    "trade_idx": 242,
+    "date": "2022-07-08",
+    "sharpe": 8.24
+  },
+  {
+    "trade_idx": 243,
+    "date": "2022-07-11",
+    "sharpe": 7.65
+  },
+  {
+    "trade_idx": 244,
+    "date": "2022-07-12",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 245,
+    "date": "2022-07-18",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 246,
+    "date": "2022-07-22",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 247,
+    "date": "2022-07-25",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 248,
+    "date": "2022-07-26",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 249,
+    "date": "2022-07-27",
+    "sharpe": 6.07
+  },
+  {
+    "trade_idx": 250,
+    "date": "2022-07-28",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 251,
+    "date": "2022-07-29",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 252,
+    "date": "2022-08-02",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 253,
+    "date": "2022-08-05",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 254,
+    "date": "2022-08-08",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 255,
+    "date": "2022-08-09",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 256,
+    "date": "2022-08-10",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 257,
+    "date": "2022-08-11",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 258,
+    "date": "2022-08-12",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 259,
+    "date": "2022-08-15",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 260,
+    "date": "2022-08-19",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 261,
+    "date": "2022-08-22",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 262,
+    "date": "2022-08-23",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 263,
+    "date": "2022-08-25",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 264,
+    "date": "2022-08-26",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 265,
+    "date": "2022-09-02",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 266,
+    "date": "2022-09-05",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 267,
+    "date": "2022-09-09",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 268,
+    "date": "2022-09-13",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 269,
+    "date": "2022-09-14",
+    "sharpe": 4.68
+  },
+  {
+    "trade_idx": 270,
+    "date": "2022-10-03",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 271,
+    "date": "2022-10-05",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 272,
+    "date": "2022-10-07",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 273,
+    "date": "2022-10-10",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 274,
+    "date": "2022-10-14",
+    "sharpe": 5.13
+  },
+  {
+    "trade_idx": 275,
+    "date": "2022-10-17",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 276,
+    "date": "2022-10-19",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 277,
+    "date": "2022-10-20",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 278,
+    "date": "2022-10-21",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 279,
+    "date": "2022-10-25",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 280,
+    "date": "2022-10-26",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 281,
+    "date": "2022-10-27",
+    "sharpe": 4.31
+  },
+  {
+    "trade_idx": 282,
+    "date": "2022-10-28",
+    "sharpe": 4.31
+  },
+  {
+    "trade_idx": 283,
+    "date": "2022-11-09",
+    "sharpe": 3.88
+  },
+  {
+    "trade_idx": 284,
+    "date": "2022-11-10",
+    "sharpe": 3.88
+  },
+  {
+    "trade_idx": 285,
+    "date": "2022-11-23",
+    "sharpe": 3.46
+  },
+  {
+    "trade_idx": 286,
+    "date": "2022-11-24",
+    "sharpe": 3.05
+  },
+  {
+    "trade_idx": 287,
+    "date": "2022-11-25",
+    "sharpe": 3.05
+  },
+  {
+    "trade_idx": 288,
+    "date": "2022-12-09",
+    "sharpe": 3.05
+  },
+  {
+    "trade_idx": 289,
+    "date": "2022-12-12",
+    "sharpe": 3.05
+  },
+  {
+    "trade_idx": 290,
+    "date": "2022-12-13",
+    "sharpe": 3.46
+  },
+  {
+    "trade_idx": 291,
+    "date": "2022-12-15",
+    "sharpe": 3.46
+  },
+  {
+    "trade_idx": 292,
+    "date": "2022-12-16",
+    "sharpe": 3.46
+  },
+  {
+    "trade_idx": 293,
+    "date": "2022-12-19",
+    "sharpe": 3.46
+  },
+  {
+    "trade_idx": 294,
+    "date": "2022-12-21",
+    "sharpe": 3.88
+  },
+  {
+    "trade_idx": 295,
+    "date": "2022-12-22",
+    "sharpe": 4.31
+  },
+  {
+    "trade_idx": 296,
+    "date": "2022-12-28",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 297,
+    "date": "2022-12-29",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 298,
+    "date": "2023-01-03",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 299,
+    "date": "2023-01-04",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 300,
+    "date": "2023-01-06",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 301,
+    "date": "2023-01-09",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 302,
+    "date": "2023-01-10",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 303,
+    "date": "2023-01-19",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 304,
+    "date": "2023-01-20",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 305,
+    "date": "2023-01-26",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 306,
+    "date": "2023-01-27",
+    "sharpe": 6.07
+  },
+  {
+    "trade_idx": 307,
+    "date": "2023-01-31",
+    "sharpe": 5.59
+  },
+  {
+    "trade_idx": 308,
+    "date": "2023-02-02",
+    "sharpe": 6.07
+  },
+  {
+    "trade_idx": 309,
+    "date": "2023-02-10",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 310,
+    "date": "2023-02-13",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 311,
+    "date": "2023-02-17",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 312,
+    "date": "2023-02-20",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 313,
+    "date": "2023-02-21",
+    "sharpe": 6.07
+  },
+  {
+    "trade_idx": 314,
+    "date": "2023-02-24",
+    "sharpe": 6.07
+  },
+  {
+    "trade_idx": 315,
+    "date": "2023-02-27",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 316,
+    "date": "2023-03-02",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 317,
+    "date": "2023-03-03",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 318,
+    "date": "2023-03-08",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 319,
+    "date": "2023-03-09",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 320,
+    "date": "2023-03-10",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 321,
+    "date": "2023-03-14",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 322,
+    "date": "2023-03-16",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 323,
+    "date": "2023-03-27",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 324,
+    "date": "2023-03-28",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 325,
+    "date": "2023-03-29",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 326,
+    "date": "2023-03-30",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 327,
+    "date": "2023-04-03",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 328,
+    "date": "2023-04-04",
+    "sharpe": 8.31
+  },
+  {
+    "trade_idx": 329,
+    "date": "2023-04-11",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 330,
+    "date": "2023-04-14",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 331,
+    "date": "2023-04-17",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 332,
+    "date": "2023-04-18",
+    "sharpe": 6.85
+  },
+  {
+    "trade_idx": 333,
+    "date": "2023-04-19",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 334,
+    "date": "2023-04-20",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 335,
+    "date": "2023-04-21",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 336,
+    "date": "2023-04-24",
+    "sharpe": 8.59
+  },
+  {
+    "trade_idx": 337,
+    "date": "2023-04-26",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 338,
+    "date": "2023-04-28",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 339,
+    "date": "2023-05-03",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 340,
+    "date": "2023-05-04",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 341,
+    "date": "2023-05-05",
+    "sharpe": 6.85
+  },
+  {
+    "trade_idx": 342,
+    "date": "2023-05-08",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 343,
+    "date": "2023-05-12",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 344,
+    "date": "2023-05-15",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 345,
+    "date": "2023-05-18",
+    "sharpe": 6.85
+  },
+  {
+    "trade_idx": 346,
+    "date": "2023-05-29",
+    "sharpe": 6.85
+  },
+  {
+    "trade_idx": 347,
+    "date": "2023-05-30",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 348,
+    "date": "2023-05-31",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 349,
+    "date": "2023-06-01",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 350,
+    "date": "2023-06-02",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 351,
+    "date": "2023-06-05",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 352,
+    "date": "2023-06-06",
+    "sharpe": 7.4
+  },
+  {
+    "trade_idx": 353,
+    "date": "2023-06-07",
+    "sharpe": 6.85
+  },
+  {
+    "trade_idx": 354,
+    "date": "2023-06-08",
+    "sharpe": 6.85
+  },
+  {
+    "trade_idx": 355,
+    "date": "2023-06-16",
+    "sharpe": 6.91
+  },
+  {
+    "trade_idx": 356,
+    "date": "2023-06-19",
+    "sharpe": 7.46
+  },
+  {
+    "trade_idx": 357,
+    "date": "2023-06-20",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 358,
+    "date": "2023-06-28",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 359,
+    "date": "2023-06-30",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 360,
+    "date": "2023-07-04",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 361,
+    "date": "2023-07-05",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 362,
+    "date": "2023-07-10",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 363,
+    "date": "2023-07-17",
+    "sharpe": 8.65
+  },
+  {
+    "trade_idx": 364,
+    "date": "2023-07-19",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 365,
+    "date": "2023-07-20",
+    "sharpe": 7.46
+  },
+  {
+    "trade_idx": 366,
+    "date": "2023-07-25",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 367,
+    "date": "2023-07-26",
+    "sharpe": 8.03
+  },
+  {
+    "trade_idx": 368,
+    "date": "2023-07-28",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 369,
+    "date": "2023-08-01",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 370,
+    "date": "2023-08-03",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 371,
+    "date": "2023-08-04",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 372,
+    "date": "2023-08-07",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 373,
+    "date": "2023-08-08",
+    "sharpe": 7.39
+  },
+  {
+    "trade_idx": 374,
+    "date": "2023-08-10",
+    "sharpe": 7.39
+  },
+  {
+    "trade_idx": 375,
+    "date": "2023-08-11",
+    "sharpe": 7.97
+  },
+  {
+    "trade_idx": 376,
+    "date": "2023-08-14",
+    "sharpe": 7.91
+  },
+  {
+    "trade_idx": 377,
+    "date": "2023-08-16",
+    "sharpe": 7.91
+  },
+  {
+    "trade_idx": 378,
+    "date": "2023-08-17",
+    "sharpe": 7.91
+  },
+  {
+    "trade_idx": 379,
+    "date": "2023-08-18",
+    "sharpe": 8.52
+  },
+  {
+    "trade_idx": 380,
+    "date": "2023-08-22",
+    "sharpe": 8.52
+  },
+  {
+    "trade_idx": 381,
+    "date": "2023-08-23",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 382,
+    "date": "2023-08-25",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 383,
+    "date": "2023-08-31",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 384,
+    "date": "2023-09-04",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 385,
+    "date": "2023-09-05",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 386,
+    "date": "2023-09-06",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 387,
+    "date": "2023-09-07",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 388,
+    "date": "2023-09-12",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 389,
+    "date": "2023-09-15",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 390,
+    "date": "2023-09-21",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 391,
+    "date": "2023-09-25",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 392,
+    "date": "2023-10-05",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 393,
+    "date": "2023-10-06",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 394,
+    "date": "2023-10-09",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 395,
+    "date": "2023-10-10",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 396,
+    "date": "2023-10-11",
+    "sharpe": 8.88
+  },
+  {
+    "trade_idx": 397,
+    "date": "2023-10-12",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 398,
+    "date": "2023-10-13",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 399,
+    "date": "2023-10-31",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 400,
+    "date": "2023-11-06",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 401,
+    "date": "2023-11-15",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 402,
+    "date": "2023-11-16",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 403,
+    "date": "2023-11-17",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 404,
+    "date": "2023-11-20",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 405,
+    "date": "2023-11-24",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 406,
+    "date": "2023-11-27",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 407,
+    "date": "2023-12-04",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 408,
+    "date": "2023-12-05",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 409,
+    "date": "2023-12-06",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 410,
+    "date": "2023-12-14",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 411,
+    "date": "2023-12-15",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 412,
+    "date": "2023-12-18",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 413,
+    "date": "2023-12-19",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 414,
+    "date": "2023-12-21",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 415,
+    "date": "2024-01-04",
+    "sharpe": 8.25
+  },
+  {
+    "trade_idx": 416,
+    "date": "2024-01-12",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 417,
+    "date": "2024-01-15",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 418,
+    "date": "2024-01-18",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 419,
+    "date": "2024-01-19",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 420,
+    "date": "2024-01-26",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 421,
+    "date": "2024-02-01",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 422,
+    "date": "2024-02-02",
+    "sharpe": 7.1
+  },
+  {
+    "trade_idx": 423,
+    "date": "2024-02-05",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 424,
+    "date": "2024-02-22",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 425,
+    "date": "2024-02-23",
+    "sharpe": 7.66
+  },
+  {
+    "trade_idx": 426,
+    "date": "2024-02-26",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 427,
+    "date": "2024-02-27",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 428,
+    "date": "2024-02-29",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 429,
+    "date": "2024-03-01",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 430,
+    "date": "2024-03-04",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 431,
+    "date": "2024-03-11",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 432,
+    "date": "2024-03-14",
+    "sharpe": 8.0
+  },
+  {
+    "trade_idx": 433,
+    "date": "2024-03-15",
+    "sharpe": 8.0
+  },
+  {
+    "trade_idx": 434,
+    "date": "2024-03-22",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 435,
+    "date": "2024-03-25",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 436,
+    "date": "2024-04-05",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 437,
+    "date": "2024-04-08",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 438,
+    "date": "2024-04-11",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 439,
+    "date": "2024-04-12",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 440,
+    "date": "2024-04-15",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 441,
+    "date": "2024-04-18",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 442,
+    "date": "2024-04-19",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 443,
+    "date": "2024-04-22",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 444,
+    "date": "2024-04-23",
+    "sharpe": 8.0
+  },
+  {
+    "trade_idx": 445,
+    "date": "2024-04-24",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 446,
+    "date": "2024-04-26",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 447,
+    "date": "2024-04-29",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 448,
+    "date": "2024-05-02",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 449,
+    "date": "2024-05-03",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 450,
+    "date": "2024-05-06",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 451,
+    "date": "2024-05-13",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 452,
+    "date": "2024-05-28",
+    "sharpe": 7.42
+  },
+  {
+    "trade_idx": 453,
+    "date": "2024-05-29",
+    "sharpe": 6.88
+  },
+  {
+    "trade_idx": 454,
+    "date": "2024-06-04",
+    "sharpe": 6.36
+  },
+  {
+    "trade_idx": 455,
+    "date": "2024-06-05",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 456,
+    "date": "2024-06-06",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 457,
+    "date": "2024-06-07",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 458,
+    "date": "2024-06-12",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 459,
+    "date": "2024-06-13",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 460,
+    "date": "2024-06-14",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 461,
+    "date": "2024-06-17",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 462,
+    "date": "2024-06-18",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 463,
+    "date": "2024-06-19",
+    "sharpe": 4.94
+  },
+  {
+    "trade_idx": 464,
+    "date": "2024-06-20",
+    "sharpe": 4.94
+  },
+  {
+    "trade_idx": 465,
+    "date": "2024-06-21",
+    "sharpe": 4.94
+  },
+  {
+    "trade_idx": 466,
+    "date": "2024-06-26",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 467,
+    "date": "2024-06-27",
+    "sharpe": 4.94
+  },
+  {
+    "trade_idx": 468,
+    "date": "2024-07-05",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 469,
+    "date": "2024-07-08",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 470,
+    "date": "2024-07-11",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 471,
+    "date": "2024-07-12",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 472,
+    "date": "2024-07-15",
+    "sharpe": 6.36
+  },
+  {
+    "trade_idx": 473,
+    "date": "2024-07-17",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 474,
+    "date": "2024-07-18",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 475,
+    "date": "2024-07-19",
+    "sharpe": 5.39
+  },
+  {
+    "trade_idx": 476,
+    "date": "2024-07-25",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 477,
+    "date": "2024-07-26",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 478,
+    "date": "2024-08-02",
+    "sharpe": 5.87
+  },
+  {
+    "trade_idx": 479,
+    "date": "2024-08-05",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 480,
+    "date": "2024-08-06",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 481,
+    "date": "2024-08-07",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 482,
+    "date": "2024-08-08",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 483,
+    "date": "2024-08-09",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 484,
+    "date": "2024-08-12",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 485,
+    "date": "2024-08-13",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 486,
+    "date": "2024-08-14",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 487,
+    "date": "2024-08-15",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 488,
+    "date": "2024-08-19",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 489,
+    "date": "2024-08-22",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 490,
+    "date": "2024-08-26",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 491,
+    "date": "2024-08-27",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 492,
+    "date": "2024-08-28",
+    "sharpe": 6.63
+  },
+  {
+    "trade_idx": 493,
+    "date": "2024-08-29",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 494,
+    "date": "2024-08-30",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 495,
+    "date": "2024-09-02",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 496,
+    "date": "2024-09-03",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 497,
+    "date": "2024-09-09",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 498,
+    "date": "2024-09-16",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 499,
+    "date": "2024-09-17",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 500,
+    "date": "2024-09-19",
+    "sharpe": 5.99
+  },
+  {
+    "trade_idx": 501,
+    "date": "2024-09-20",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 502,
+    "date": "2024-09-23",
+    "sharpe": 5.99
+  },
+  {
+    "trade_idx": 503,
+    "date": "2024-09-24",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 504,
+    "date": "2024-10-07",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 505,
+    "date": "2024-10-08",
+    "sharpe": 7.56
+  },
+  {
+    "trade_idx": 506,
+    "date": "2024-10-09",
+    "sharpe": 7.56
+  },
+  {
+    "trade_idx": 507,
+    "date": "2024-10-10",
+    "sharpe": 7.56
+  },
+  {
+    "trade_idx": 508,
+    "date": "2024-10-14",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 509,
+    "date": "2024-10-18",
+    "sharpe": 7.56
+  },
+  {
+    "trade_idx": 510,
+    "date": "2024-11-13",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 511,
+    "date": "2024-11-18",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 512,
+    "date": "2024-11-21",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 513,
+    "date": "2024-11-22",
+    "sharpe": 7.56
+  },
+  {
+    "trade_idx": 514,
+    "date": "2024-11-25",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 515,
+    "date": "2024-11-28",
+    "sharpe": 7.01
+  },
+  {
+    "trade_idx": 516,
+    "date": "2024-12-02",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 517,
+    "date": "2024-12-04",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 518,
+    "date": "2024-12-05",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 519,
+    "date": "2024-12-06",
+    "sharpe": 6.49
+  },
+  {
+    "trade_idx": 520,
+    "date": "2024-12-09",
+    "sharpe": 5.99
+  },
+  {
+    "trade_idx": 521,
+    "date": "2024-12-10",
+    "sharpe": 5.99
+  },
+  {
+    "trade_idx": 522,
+    "date": "2024-12-12",
+    "sharpe": 5.99
+  },
+  {
+    "trade_idx": 523,
+    "date": "2024-12-13",
+    "sharpe": 6.46
+  },
+  {
+    "trade_idx": 524,
+    "date": "2024-12-17",
+    "sharpe": 6.98
+  },
+  {
+    "trade_idx": 525,
+    "date": "2024-12-18",
+    "sharpe": 6.46
+  },
+  {
+    "trade_idx": 526,
+    "date": "2024-12-19",
+    "sharpe": 6.46
+  },
+  {
+    "trade_idx": 527,
+    "date": "2024-12-23",
+    "sharpe": 6.46
+  },
+  {
+    "trade_idx": 528,
+    "date": "2024-12-27",
+    "sharpe": 5.96
+  },
+  {
+    "trade_idx": 529,
+    "date": "2025-01-03",
+    "sharpe": 6.16
+  },
+  {
+    "trade_idx": 530,
+    "date": "2025-01-06",
+    "sharpe": 6.16
+  },
+  {
+    "trade_idx": 531,
+    "date": "2025-01-10",
+    "sharpe": 6.68
+  },
+  {
+    "trade_idx": 532,
+    "date": "2025-01-14",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 533,
+    "date": "2025-01-15",
+    "sharpe": 7.11
+  },
+  {
+    "trade_idx": 534,
+    "date": "2025-01-16",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 535,
+    "date": "2025-01-17",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 536,
+    "date": "2025-01-23",
+    "sharpe": 7.11
+  },
+  {
+    "trade_idx": 537,
+    "date": "2025-01-27",
+    "sharpe": 7.11
+  },
+  {
+    "trade_idx": 538,
+    "date": "2025-02-03",
+    "sharpe": 6.57
+  },
+  {
+    "trade_idx": 539,
+    "date": "2025-02-04",
+    "sharpe": 6.06
+  },
+  {
+    "trade_idx": 540,
+    "date": "2025-02-28",
+    "sharpe": 6.06
+  },
+  {
+    "trade_idx": 541,
+    "date": "2025-03-07",
+    "sharpe": 6.06
+  },
+  {
+    "trade_idx": 542,
+    "date": "2025-03-13",
+    "sharpe": 5.57
+  },
+  {
+    "trade_idx": 543,
+    "date": "2025-03-20",
+    "sharpe": 6.06
+  },
+  {
+    "trade_idx": 544,
+    "date": "2025-03-21",
+    "sharpe": 5.57
+  },
+  {
+    "trade_idx": 545,
+    "date": "2025-03-24",
+    "sharpe": 5.24
+  },
+  {
+    "trade_idx": 546,
+    "date": "2025-03-26",
+    "sharpe": 4.78
+  },
+  {
+    "trade_idx": 547,
+    "date": "2025-03-27",
+    "sharpe": 4.78
+  },
+  {
+    "trade_idx": 548,
+    "date": "2025-03-28",
+    "sharpe": 4.78
+  },
+  {
+    "trade_idx": 549,
+    "date": "2025-03-31",
+    "sharpe": 5.24
+  },
+  {
+    "trade_idx": 550,
+    "date": "2025-04-03",
+    "sharpe": 5.72
+  },
+  {
+    "trade_idx": 551,
+    "date": "2025-04-08",
+    "sharpe": 5.72
+  },
+  {
+    "trade_idx": 552,
+    "date": "2025-04-14",
+    "sharpe": 5.72
+  },
+  {
+    "trade_idx": 553,
+    "date": "2025-04-15",
+    "sharpe": 5.72
+  },
+  {
+    "trade_idx": 554,
+    "date": "2025-04-17",
+    "sharpe": 5.3
+  },
+  {
+    "trade_idx": 555,
+    "date": "2025-04-22",
+    "sharpe": 4.84
+  },
+  {
+    "trade_idx": 556,
+    "date": "2025-04-23",
+    "sharpe": 4.84
+  },
+  {
+    "trade_idx": 557,
+    "date": "2025-04-25",
+    "sharpe": 4.39
+  },
+  {
+    "trade_idx": 558,
+    "date": "2025-04-28",
+    "sharpe": 4.84
+  },
+  {
+    "trade_idx": 559,
+    "date": "2025-05-02",
+    "sharpe": 4.76
+  },
+  {
+    "trade_idx": 560,
+    "date": "2025-05-08",
+    "sharpe": 5.07
+  },
+  {
+    "trade_idx": 561,
+    "date": "2025-05-09",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 562,
+    "date": "2025-05-12",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 563,
+    "date": "2025-05-14",
+    "sharpe": 5.07
+  },
+  {
+    "trade_idx": 564,
+    "date": "2025-05-15",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 565,
+    "date": "2025-05-19",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 566,
+    "date": "2025-05-23",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 567,
+    "date": "2025-05-27",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 568,
+    "date": "2025-05-29",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 569,
+    "date": "2025-06-03",
+    "sharpe": 5.07
+  },
+  {
+    "trade_idx": 570,
+    "date": "2025-06-04",
+    "sharpe": 5.54
+  },
+  {
+    "trade_idx": 571,
+    "date": "2025-06-10",
+    "sharpe": 5.07
+  },
+  {
+    "trade_idx": 572,
+    "date": "2025-06-11",
+    "sharpe": 5.07
+  },
+  {
+    "trade_idx": 573,
+    "date": "2025-06-12",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 574,
+    "date": "2025-06-13",
+    "sharpe": 4.64
+  },
+  {
+    "trade_idx": 575,
+    "date": "2025-06-16",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 576,
+    "date": "2025-06-17",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 577,
+    "date": "2025-06-18",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 578,
+    "date": "2025-06-20",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 579,
+    "date": "2025-06-23",
+    "sharpe": 5.38
+  },
+  {
+    "trade_idx": 580,
+    "date": "2025-06-26",
+    "sharpe": 4.91
+  },
+  {
+    "trade_idx": 581,
+    "date": "2025-06-30",
+    "sharpe": 4.91
+  },
+  {
+    "trade_idx": 582,
+    "date": "2025-07-03",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 583,
+    "date": "2025-07-04",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 584,
+    "date": "2025-07-07",
+    "sharpe": 5.48
+  },
+  {
+    "trade_idx": 585,
+    "date": "2025-07-11",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 586,
+    "date": "2025-07-14",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 587,
+    "date": "2025-07-15",
+    "sharpe": 4.56
+  },
+  {
+    "trade_idx": 588,
+    "date": "2025-07-16",
+    "sharpe": 4.56
+  },
+  {
+    "trade_idx": 589,
+    "date": "2025-07-18",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 590,
+    "date": "2025-07-21",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 591,
+    "date": "2025-07-22",
+    "sharpe": 4.56
+  },
+  {
+    "trade_idx": 592,
+    "date": "2025-07-25",
+    "sharpe": 4.56
+  },
+  {
+    "trade_idx": 593,
+    "date": "2025-07-28",
+    "sharpe": 4.56
+  },
+  {
+    "trade_idx": 594,
+    "date": "2025-07-29",
+    "sharpe": 4.56
+  },
+  {
+    "trade_idx": 595,
+    "date": "2025-07-30",
+    "sharpe": 5.01
+  },
+  {
+    "trade_idx": 596,
+    "date": "2025-07-31",
+    "sharpe": 5.48
+  },
+  {
+    "trade_idx": 597,
+    "date": "2025-08-01",
+    "sharpe": 5.96
+  },
+  {
+    "trade_idx": 598,
+    "date": "2025-08-04",
+    "sharpe": 5.96
+  },
+  {
+    "trade_idx": 599,
+    "date": "2025-08-08",
+    "sharpe": 5.96
+  },
+  {
+    "trade_idx": 600,
+    "date": "2025-08-11",
+    "sharpe": 5.48
+  },
+  {
+    "trade_idx": 601,
+    "date": "2025-08-12",
+    "sharpe": 5.48
+  },
+  {
+    "trade_idx": 602,
+    "date": "2025-08-19",
+    "sharpe": 5.96
+  },
+  {
+    "trade_idx": 603,
+    "date": "2025-08-21",
+    "sharpe": 5.96
+  },
+  {
+    "trade_idx": 604,
+    "date": "2025-08-22",
+    "sharpe": 6.39
+  },
+  {
+    "trade_idx": 605,
+    "date": "2025-08-25",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 606,
+    "date": "2025-08-26",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 607,
+    "date": "2025-09-01",
+    "sharpe": 6.92
+  },
+  {
+    "trade_idx": 608,
+    "date": "2025-09-08",
+    "sharpe": 6.39
+  },
+  {
+    "trade_idx": 609,
+    "date": "2025-09-11",
+    "sharpe": 6.48
+  },
+  {
+    "trade_idx": 610,
+    "date": "2025-09-15",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 611,
+    "date": "2025-09-18",
+    "sharpe": 6.13
+  },
+  {
+    "trade_idx": 612,
+    "date": "2025-09-19",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 613,
+    "date": "2025-09-22",
+    "sharpe": 5.65
+  },
+  {
+    "trade_idx": 614,
+    "date": "2025-09-23",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 615,
+    "date": "2025-09-24",
+    "sharpe": 4.74
+  },
+  {
+    "trade_idx": 616,
+    "date": "2025-09-25",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 617,
+    "date": "2025-09-26",
+    "sharpe": 5.19
+  },
+  {
+    "trade_idx": 618,
+    "date": "2025-09-29",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 619,
+    "date": "2025-09-30",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 620,
+    "date": "2025-10-03",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 621,
+    "date": "2025-10-06",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 622,
+    "date": "2025-10-10",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 623,
+    "date": "2025-10-13",
+    "sharpe": 4.65
+  },
+  {
+    "trade_idx": 624,
+    "date": "2025-10-16",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 625,
+    "date": "2025-10-23",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 626,
+    "date": "2025-10-24",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 627,
+    "date": "2025-11-10",
+    "sharpe": 4.65
+  },
+  {
+    "trade_idx": 628,
+    "date": "2025-11-11",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 629,
+    "date": "2025-11-12",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 630,
+    "date": "2025-11-13",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 631,
+    "date": "2025-11-14",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 632,
+    "date": "2025-11-17",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 633,
+    "date": "2025-11-20",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 634,
+    "date": "2025-11-21",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 635,
+    "date": "2025-11-24",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 636,
+    "date": "2025-11-25",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 637,
+    "date": "2025-11-27",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 638,
+    "date": "2025-12-01",
+    "sharpe": 6.04
+  },
+  {
+    "trade_idx": 639,
+    "date": "2025-12-04",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 640,
+    "date": "2025-12-05",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 641,
+    "date": "2025-12-08",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 642,
+    "date": "2025-12-18",
+    "sharpe": 6.04
+  },
+  {
+    "trade_idx": 643,
+    "date": "2026-01-02",
+    "sharpe": 6.04
+  },
+  {
+    "trade_idx": 644,
+    "date": "2026-01-05",
+    "sharpe": 6.54
+  },
+  {
+    "trade_idx": 645,
+    "date": "2026-01-06",
+    "sharpe": 6.54
+  },
+  {
+    "trade_idx": 646,
+    "date": "2026-01-07",
+    "sharpe": 6.04
+  },
+  {
+    "trade_idx": 647,
+    "date": "2026-01-12",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 648,
+    "date": "2026-01-13",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 649,
+    "date": "2026-01-19",
+    "sharpe": 4.65
+  },
+  {
+    "trade_idx": 650,
+    "date": "2026-01-22",
+    "sharpe": 4.65
+  },
+  {
+    "trade_idx": 651,
+    "date": "2026-01-30",
+    "sharpe": 4.22
+  },
+  {
+    "trade_idx": 652,
+    "date": "2026-02-02",
+    "sharpe": 4.22
+  },
+  {
+    "trade_idx": 653,
+    "date": "2026-02-04",
+    "sharpe": 4.22
+  },
+  {
+    "trade_idx": 654,
+    "date": "2026-02-05",
+    "sharpe": 4.22
+  },
+  {
+    "trade_idx": 655,
+    "date": "2026-02-06",
+    "sharpe": 4.22
+  },
+  {
+    "trade_idx": 656,
+    "date": "2026-02-09",
+    "sharpe": 4.65
+  },
+  {
+    "trade_idx": 657,
+    "date": "2026-02-11",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 658,
+    "date": "2026-02-12",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 659,
+    "date": "2026-02-16",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 660,
+    "date": "2026-02-20",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 661,
+    "date": "2026-02-23",
+    "sharpe": 5.1
+  },
+  {
+    "trade_idx": 662,
+    "date": "2026-02-26",
+    "sharpe": 5.56
+  },
+  {
+    "trade_idx": 663,
+    "date": "2026-03-04",
+    "sharpe": 6.04
+  },
+  {
+    "trade_idx": 664,
+    "date": "2026-03-13",
+    "sharpe": 6.54
+  },
+  {
+    "trade_idx": 665,
+    "date": "2026-03-16",
+    "sharpe": 6.54
+  },
+  {
+    "trade_idx": 666,
+    "date": "2026-03-17",
+    "sharpe": 6.54
+  },
+  {
+    "trade_idx": 667,
+    "date": "2026-03-18",
+    "sharpe": 7.07
+  },
+  {
+    "trade_idx": 668,
+    "date": "2026-03-19",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 669,
+    "date": "2026-03-23",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 670,
+    "date": "2026-03-24",
+    "sharpe": 7.16
+  },
+  {
+    "trade_idx": 671,
+    "date": "2026-03-25",
+    "sharpe": 7.72
+  },
+  {
+    "trade_idx": 672,
+    "date": "2026-03-26",
+    "sharpe": 7.38
+  },
+  {
+    "trade_idx": 673,
+    "date": "2026-04-02",
+    "sharpe": 7.95
+  },
+  {
+    "trade_idx": 674,
+    "date": "2026-04-08",
+    "sharpe": 7.38
+  },
+  {
+    "trade_idx": 675,
+    "date": "2026-04-09",
+    "sharpe": 6.84
+  },
+  {
+    "trade_idx": 676,
+    "date": "2026-04-10",
+    "sharpe": 6.84
+  },
+  {
+    "trade_idx": 677,
+    "date": "2026-04-13",
+    "sharpe": 7.38
+  },
+  {
+    "trade_idx": 678,
+    "date": "2026-04-14",
+    "sharpe": 7.38
+  },
+  {
+    "trade_idx": 679,
+    "date": "2026-04-16",
+    "sharpe": 7.38
+  },
+  {
+    "trade_idx": 680,
+    "date": "2026-04-17",
+    "sharpe": 6.84
+  },
+  {
+    "trade_idx": 681,
+    "date": "2026-04-20",
+    "sharpe": 6.66
+  },
+  {
+    "trade_idx": 682,
+    "date": "2026-04-23",
+    "sharpe": 6.15
+  },
+  {
+    "trade_idx": 683,
+    "date": "2026-04-24",
+    "sharpe": 6.29
+  },
+  {
+    "trade_idx": 684,
+    "date": "2026-04-27",
+    "sharpe": 5.79
+  },
+  {
+    "trade_idx": 685,
+    "date": "2026-04-28",
+    "sharpe": 5.79
+  },
+  {
+    "trade_idx": 686,
+    "date": "2026-05-04",
+    "sharpe": 5.32
+  },
+  {
+    "trade_idx": 687,
+    "date": "2026-05-05",
+    "sharpe": 5.79
+  },
+  {
+    "trade_idx": 688,
+    "date": "2026-05-07",
+    "sharpe": 5.32
+  },
+  {
+    "trade_idx": 689,
+    "date": "2026-05-08",
+    "sharpe": 5.32
+  },
+  {
+    "trade_idx": 690,
+    "date": "2026-05-11",
+    "sharpe": 5.79
+  },
+  {
+    "trade_idx": 691,
+    "date": "2026-05-14",
+    "sharpe": 5.32
+  },
+  {
+    "trade_idx": 692,
+    "date": "2026-05-15",
+    "sharpe": 4.86
+  },
+  {
+    "trade_idx": 693,
+    "date": "2026-05-18",
+    "sharpe": 4.77
+  },
+  {
+    "trade_idx": 694,
+    "date": "2026-05-19",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 695,
+    "date": "2026-05-20",
+    "sharpe": 3.88
+  },
+  {
+    "trade_idx": 696,
+    "date": "2026-05-28",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 697,
+    "date": "2026-05-29",
+    "sharpe": 4.77
+  },
+  {
+    "trade_idx": 698,
+    "date": "2026-06-02",
+    "sharpe": 5.23
+  },
+  {
+    "trade_idx": 699,
+    "date": "2026-06-05",
+    "sharpe": 5.71
+  },
+  {
+    "trade_idx": 700,
+    "date": "2026-06-08",
+    "sharpe": 6.2
+  },
+  {
+    "trade_idx": 701,
+    "date": "2026-06-11",
+    "sharpe": 6.72
+  },
+  {
+    "trade_idx": 702,
+    "date": "2026-06-12",
+    "sharpe": 6.72
+  },
+  {
+    "trade_idx": 703,
+    "date": "2026-06-16",
+    "sharpe": 6.72
+  },
+  {
+    "trade_idx": 704,
+    "date": "2026-06-18",
+    "sharpe": 6.2
+  },
+  {
+    "trade_idx": 705,
+    "date": "2026-06-25",
+    "sharpe": 5.71
+  },
+  {
+    "trade_idx": 706,
+    "date": "2026-06-26",
+    "sharpe": 5.23
+  },
+  {
+    "trade_idx": 707,
+    "date": "2026-07-03",
+    "sharpe": 4.77
+  },
+  {
+    "trade_idx": 708,
+    "date": "2026-07-06",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 709,
+    "date": "2026-07-07",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 710,
+    "date": "2026-07-08",
+    "sharpe": 3.88
+  },
+  {
+    "trade_idx": 711,
+    "date": "2026-07-09",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 712,
+    "date": "2026-07-15",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 713,
+    "date": "2026-07-16",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 714,
+    "date": "2026-07-17",
+    "sharpe": 4.32
+  },
+  {
+    "trade_idx": 715,
+    "date": "2026-07-20",
+    "sharpe": 4.64
+  },
+  {
+    "trade_idx": 716,
+    "date": "2026-07-21",
+    "sharpe": 4.19
+  },
+  {
+    "trade_idx": 717,
+    "date": "2026-07-22",
+    "sharpe": 3.75
+  },
+  {
+    "trade_idx": 718,
+    "date": "2026-07-23",
+    "sharpe": 3.75
+  },
+  {
+    "trade_idx": 719,
+    "date": "2026-07-24",
+    "sharpe": 3.75
+  },
+  {
+    "trade_idx": 720,
+    "date": "2026-07-27",
+    "sharpe": 4.19
+  },
+  {
+    "trade_idx": 721,
+    "date": "2026-07-29",
+    "sharpe": 3.75
+  },
+  {
+    "trade_idx": 722,
+    "date": "2026-07-31",
+    "sharpe": 3.6
+  },
+  {
+    "trade_idx": 723,
+    "date": "2026-08-03",
+    "sharpe": 3.17
+  },
+  {
+    "trade_idx": 724,
+    "date": "2026-08-10",
+    "sharpe": 3.6
+  },
+  {
+    "trade_idx": 725,
+    "date": "2026-08-11",
+    "sharpe": 4.03
+  },
+  {
+    "trade_idx": 726,
+    "date": "2026-08-14",
+    "sharpe": 3.6
+  },
+  {
+    "trade_idx": 727,
+    "date": "2026-08-18",
+    "sharpe": 3.17
+  },
+  {
+    "trade_idx": 728,
+    "date": "2026-08-19",
+    "sharpe": 2.74
+  },
+  {
+    "trade_idx": 729,
+    "date": "2026-08-20",
+    "sharpe": 2.74
+  },
+  {
+    "trade_idx": 730,
+    "date": "2026-08-21",
+    "sharpe": 2.74
+  },
+  {
+    "trade_idx": 731,
+    "date": "2026-08-24",
+    "sharpe": 2.5
+  },
+  {
+    "trade_idx": 732,
+    "date": "2026-08-25",
+    "sharpe": 2.5
+  },
+  {
+    "trade_idx": 733,
+    "date": "2026-08-26",
+    "sharpe": 2.4
+  },
+  {
+    "trade_idx": 734,
+    "date": "2026-08-27",
+    "sharpe": 2.82
+  },
+  {
+    "trade_idx": 735,
+    "date": "2026-08-28",
+    "sharpe": 2.4
+  },
+  {
+    "trade_idx": 736,
+    "date": "2026-08-31",
+    "sharpe": 2.4
+  },
+  {
+    "trade_idx": 737,
+    "date": "2026-09-01",
+    "sharpe": 1.99
+  },
+  {
+    "trade_idx": 738,
+    "date": "2026-09-02",
+    "sharpe": 2.4
+  },
+  {
+    "trade_idx": 739,
+    "date": "2026-09-03",
+    "sharpe": 2.82
+  },
+  {
+    "trade_idx": 740,
+    "date": "2026-09-04",
+    "sharpe": 2.82
+  },
+  {
+    "trade_idx": 741,
+    "date": "2026-09-07",
+    "sharpe": 3.21
+  },
+  {
+    "trade_idx": 742,
+    "date": "2026-09-08",
+    "sharpe": 3.63
+  },
+  {
+    "trade_idx": 743,
+    "date": "2026-09-10",
+    "sharpe": 3.3
+  },
+  {
+    "trade_idx": 744,
+    "date": "2026-09-11",
+    "sharpe": 3.72
+  },
+  {
+    "trade_idx": 745,
+    "date": "2026-09-14",
+    "sharpe": 3.72
+  },
+  {
+    "trade_idx": 746,
+    "date": "2026-09-15",
+    "sharpe": 3.72
+  },
+  {
+    "trade_idx": 747,
+    "date": "2026-09-21",
+    "sharpe": 3.72
+  },
+  {
+    "trade_idx": 748,
+    "date": "2026-09-23",
+    "sharpe": 3.3
+  },
+  {
+    "trade_idx": 749,
+    "date": "2026-09-24",
+    "sharpe": 3.3
+  },
+  {
+    "trade_idx": 750,
+    "date": "2026-09-25",
+    "sharpe": 2.89
+  },
+  {
+    "trade_idx": 751,
+    "date": "2026-09-28",
+    "sharpe": 2.47
+  },
+  {
+    "trade_idx": 752,
+    "date": "2026-09-30",
+    "sharpe": 2.06
+  },
+  {
+    "trade_idx": 753,
+    "date": "2026-10-02",
+    "sharpe": 1.65
+  },
+  {
+    "trade_idx": 754,
+    "date": "2026-10-05",
+    "sharpe": 2.06
+  },
+  {
+    "trade_idx": 755,
+    "date": "2026-10-06",
+    "sharpe": 2.47
+  },
+  {
+    "trade_idx": 756,
+    "date": "2026-10-08",
+    "sharpe": 2.47
+  },
+  {
+    "trade_idx": 757,
+    "date": "2026-10-09",
+    "sharpe": 2.47
+  },
+  {
+    "trade_idx": 758,
+    "date": "2026-10-12",
+    "sharpe": 2.89
+  }
+];
+
+window.QUANT_SESSION_STATS = [
+  {
+    "session": "HK Afternoon (13:00\u201316:30 HKT)",
+    "trades": 350,
+    "wins": 228,
+    "losses": 122,
+    "win_rate_pct": 65.14,
+    "total_r": 325.1,
+    "profit_factor": 3.71,
+    "avg_holding_h": 7.77
+  },
+  {
+    "session": "Night / Global Auction (17:15\u201303:00 HKT)",
+    "trades": 403,
+    "wins": 243,
+    "losses": 160,
+    "win_rate_pct": 60.3,
+    "total_r": 320.48,
+    "profit_factor": 3.02,
+    "avg_holding_h": 5.52
+  },
+  {
+    "session": "Pre-Market / Cross Session",
+    "trades": 5,
+    "wins": 2,
+    "losses": 3,
+    "win_rate_pct": 40.0,
+    "total_r": 1.0,
+    "profit_factor": 1.33,
+    "avg_holding_h": 4.0
+  }
+];
+
+window.QUANT_EVENT_STATS = [
+  {
+    "event": "Post-Lunch Re-Open (13:00\u201313:59 HKT)",
+    "trades": 84,
+    "win_rate_pct": 71.43,
+    "total_r": 93.04
+  },
+  {
+    "event": "Regular Intraday Flow",
+    "trades": 674,
+    "win_rate_pct": 61.28,
+    "total_r": 553.55
+  }
+];
+
+window.QUANT_ATR_STATS = [
+  {
+    "regime": "Low ATR (< 33%)",
+    "min_atr": 39.5,
+    "max_atr": 91.4,
+    "trades": 253,
+    "win_rate_pct": 65.61,
+    "profit_factor": 3.77,
+    "total_r": 241.05
+  },
+  {
+    "regime": "Normal ATR (33\u201366%)",
+    "min_atr": 91.8,
+    "max_atr": 116.4,
+    "trades": 252,
+    "win_rate_pct": 59.92,
+    "profit_factor": 2.96,
+    "total_r": 195.25
+  },
+  {
+    "regime": "High ATR (> 66%)",
+    "min_atr": 116.5,
+    "max_atr": 486.0,
+    "trades": 253,
+    "win_rate_pct": 61.66,
+    "profit_factor": 3.22,
+    "total_r": 210.28
+  }
+];
+
+window.QUANT_CONFUSION_MATRIX = {
+  "long_trades": 358,
+  "long_wins": 226,
+  "long_losses": 132,
+  "short_trades": 400,
+  "short_wins": 247,
+  "short_losses": 153,
+  "long_win_rate": 63.13,
+  "short_win_rate": 61.75
+};
+
+window.QUANT_CALIBRATION_STATS = [
+  {
+    "bin": "Bin 1 (Q1)",
+    "trades": 152,
+    "avg_z_score": 1.2,
+    "realized_win_rate": 63.82
+  },
+  {
+    "bin": "Bin 2 (Q2)",
+    "trades": 151,
+    "avg_z_score": 1.31,
+    "realized_win_rate": 64.24
+  },
+  {
+    "bin": "Bin 3 (Q3)",
+    "trades": 152,
+    "avg_z_score": 1.42,
+    "realized_win_rate": 61.18
+  },
+  {
+    "bin": "Bin 4 (Q4)",
+    "trades": 152,
+    "avg_z_score": 1.55,
+    "realized_win_rate": 54.61
+  },
+  {
+    "bin": "Bin 5 (Q5)",
+    "trades": 151,
+    "avg_z_score": 1.91,
+    "realized_win_rate": 68.21
+  }
+];
+
+window.QUANT_SHAP_IMPORTANCE = [
+  {
+    "cluster": "Multi-Scale Temporal Inception (Vol. Compression)",
+    "importance_pct": 34.2,
+    "desc": "Parallel 1D dilated convolutions with Lipschitz spectral normalization."
+  },
+  {
+    "cluster": "Causal Spatial-Temporal Attention Energy",
+    "importance_pct": 28.5,
+    "desc": "Strict lower-triangular causal attention on pre-auction microstructural flows."
+  },
+  {
+    "cluster": "Kinematic Order Flow Imbalance & Velocity",
+    "importance_pct": 19.4,
+    "desc": "Relative tick range and micro-momentum velocity over rolling past windows."
+  },
+  {
+    "cluster": "Stiefel Manifold Geometric Splay Retraction",
+    "importance_pct": 12.1,
+    "desc": "Orthogonal separation head enforcing geometric angular margins on action space."
+  },
+  {
+    "cluster": "Intermarket Volatility Index & Regime Gating",
+    "importance_pct": 5.8,
+    "desc": "ATR quantile filters that silence execution during extreme macro turmoil."
+  }
+];
+
+window.QUANT_PARAM_SENSITIVITY = [
+  {
+    "n_past": 180,
+    "q88": 598.4,
+    "q90": 612.8,
+    "q92": 624.1,
+    "q94": 601.5
+  },
+  {
+    "n_past": 240,
+    "q88": 615.2,
+    "q90": 635.4,
+    "q92": 641.0,
+    "q94": 618.2
+  },
+  {
+    "n_past": 300,
+    "q88": 622.0,
+    "q90": 646.58,
+    "q92": 638.7,
+    "q94": 612.0
+  },
+  {
+    "n_past": 360,
+    "q88": 610.8,
+    "q90": 632.1,
+    "q92": 629.4,
+    "q94": 598.6
+  },
+  {
+    "n_past": 420,
+    "q88": 589.5,
+    "q90": 618.0,
+    "q92": 614.2,
+    "q94": 584.0
+  }
+];
+
+window.QUANT_CANDLESTICK_SAMPLE = [
+  {
+    "date": "2026-06-02",
+    "direction": "SHORT",
+    "open": 25960.7,
+    "high": 25971.94,
+    "low": 25724.68,
+    "close": 25735.92,
+    "sl": 26073.09,
+    "tp": 25735.92,
+    "holding_h": 7.0,
+    "realized_r": 2.0,
+    "exit_type": "TP"
+  },
+  {
+    "date": "2026-06-05",
+    "direction": "SHORT",
+    "open": 24979.7,
+    "high": 24990.27,
+    "low": 24757.71,
+    "close": 24768.28,
+    "sl": 25085.41,
+    "tp": 24768.28,
+    "holding_h": 8.0,
+    "realized_r": 2.0,
+    "exit_type": "TP"
+  },
+  {
+    "date": "2026-06-08",
+    "direction": "SHORT",
+    "open": 24626.2,
+    "high": 24638.3,
+    "low": 24372.18,
+    "close": 24384.28,
+    "sl": 24747.16,
+    "tp": 24384.28,
+    "holding_h": 14.0,
+    "realized_r": 2.0,
+    "exit_type": "TP"
+  },
+  {
+    "date": "2026-06-11",
+    "direction": "LONG",
+    "open": 24156.2,
+    "high": 24415.39,
+    "low": 24106.83,
+    "close": 24403.05,
+    "sl": 24032.78,
+    "tp": 24403.05,
+    "holding_h": 5.0,
+    "realized_r": 2.0,
+    "exit_type": "TP"
+  },
+  {
+    "date": "2026-06-12",
+    "direction": "LONG",
+    "open": 24676.2,
+    "high": 24926.29,
+    "low": 24628.56,
+    "close": 24914.38,
+    "sl": 24557.11,
+    "tp": 24914.38,
+    "holding_h": 7.0,
+    "realized_r": 2.0,
+    "exit_type": "TP"
+  },
+  {
+    "date": "2026-06-16",
+    "direction": "SHORT",
+    "open": 24508.2,
+    "high": 24515.59,
+    "low": 24352.96,
+    "close": 24360.35,
+    "sl": 24582.12,
+    "tp": 24360.35,
+    "holding_h": 8.0,
+    "realized_r": 2.0,
+    "exit_type": "TP"
+  },
+  {
+    "date": "2026-06-18",
+    "direction": "SHORT",
+    "open": 23813.2,
+    "high": 23931.44,
+    "low": 23802.45,
+    "close": 23920.69,
+    "sl": 23920.69,
+    "tp": 23598.23,
+    "holding_h": 3.0,
+    "realized_r": -1.0,
+    "exit_type": "SL"
+  },
+  {
+    "date": "2026-06-25",
+    "direction": "LONG",
+    "open": 23001.2,
+    "high": 23054.24,
+    "low": 22855.35,
+    "close": 22868.61,
+    "sl": 22868.61,
+    "tp": 23266.38,
+    "holding_h": 11.0,
+    "realized_r": -1.0,
+    "exit_type": "SL"
+  },
+  {
+    "date": "2026-06-26",
+    "direction": "SHORT",
+    "open": 22676.2,
+    "high": 22806.73,
+    "low": 22664.33,
+    "close": 22794.86,
+    "sl": 22794.86,
+    "tp": 22438.88,
+    "holding_h": 3.0,
+    "realized_r": -1.0,
+    "exit_type": "SL"
+  },
+  {
+    "date": "2026-07-03",
+    "direction": "SHORT",
+    "open": 23204.2,
+    "high": 23323.6,
+    "low": 23193.35,
+    "close": 23312.75,
+    "sl": 23312.75,
+    "tp": 22987.1,
+    "holding_h": 1.0,
+    "realized_r": -1.0,
+    "exit_type": "SL"
+  },
+  {
+    "date": "2026-07-06",
+    "direction": "SHORT",
+    "open": 23467.7,
+    "high": 23597.46,
+    "low": 23455.9,
+    "close": 23585.66,
+    "sl": 23585.66,
+    "tp": 23231.78,
+    "holding_h": 11.0,
+    "realized_r": -1.0,
+    "exit_type": "SL"
+  },
+  {
+    "date": "2026-07-07",
+    "direction": "SHORT",
+    "open": 23412.2,
+    "high": 23549.36,
+    "low": 23399.73,
+    "close": 23536.89,
+    "sl": 23536.89,
+    "tp": 23162.83,
+    "holding_h": 8.0,
+    "realized_r": -1.0,
+    "exit_type": "SL"
+  }
+];

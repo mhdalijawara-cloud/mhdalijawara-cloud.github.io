@@ -26,6 +26,10 @@
       *, *::before, *::after {
         box-sizing: border-box;
       }
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
 
       /* Edward Tufte Layout Harmonization & Dynamic Color Variables */
       :root {
@@ -93,8 +97,10 @@
       .table-wrapper {
         width: 100%;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         margin: 1.5rem 0;
         clear: both;
+        position: relative;
       }
 
       /* Sortable Table Header */
@@ -152,8 +158,12 @@
         }
       }
 
+      .figure-grid-2 > * {
+        min-width: 0;
+      }
       .tufte-figure-box {
         width: 100%;
+        min-width: 0;
         margin: 0;
         padding: 0;
         clear: both;

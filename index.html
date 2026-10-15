@@ -16,8 +16,11 @@
     <!-- Lightweight Charts (Clean Financial Rendering) -->
     <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
 
-    <!-- Embedded Audited Showcase Datasets -->
-    <script src="data/data.js"></script>
+    <!-- Inline SVG Favicon to eliminate 404s -->
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📈&lt;/text&gt;&lt;/svg&gt;"/>
+
+    <!-- Embedded Audited Showcase Datasets with CDN Cache-Buster -->
+    <script src="data/data.js?v=20261015_v3"></script>
 
     <style>
       *, *::before, *::after {

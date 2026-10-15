@@ -1,1311 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Ali Jawara Wiratama — Empirical Sequence Modeling & Invariant Latent Projections</title>
-  <meta name="description" content="A quantitative research monograph on causal deep sequence architectures, non-gaming objectives, and empirical risk verification under immutable 1:2 Risk-to-Reward execution.">
-  
-  <!-- Favicon SVG Data URI -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='2' fill='%23fffff8' stroke='%23111111' stroke-width='2'/%3E%3Cpath d='M6 22 L13 14 L19 18 L26 8' stroke='%23111111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='26' cy='8' r='2' fill='%231f4e79'/%3E%3C/svg%3E">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Muhammad Ali Jawara Wiratama — Empirical Sequence Modeling & Invariant Latent Projections</title>
+    <link rel="stylesheet" href="tufte.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- KaTeX for Formal LaTeX Equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 
-  <!-- OpenGraph Metadata -->
-  <meta property="og:title" content="Muhammad Ali Jawara Wiratama — Quantitative Research Monograph">
-  <meta property="og:description" content="Empirical sequence modeling, Stiefel manifold projection, and econometric verification under 1:2 R:R payoff.">
-  <meta property="og:type" content="article">
+    <!-- TradingView Lightweight Charts -->
+    <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
 
-  <!-- Typography: Newsreader (Editorial Serif), JetBrains Mono (Code/Math), Inter (Controls) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- KaTeX for Formal LaTeX Equations -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+    <!-- Public Quantitative Data -->
+    <script src="data/data.js"></script>
 
-  <!-- TradingView Lightweight Charts -->
-  <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
-
-  <!-- Public Quantitative Data -->
-  <script src="data/data.js"></script>
-
-  <style>
-    /* -------------------------------------------------------------
-       TUFTIAN ARCHIVAL STYLESHEET (Edward Tufte / High Data-Ink)
-       ------------------------------------------------------------- */
-    :root {
-      --bg: #fffff8;
-      --text: #111111;
-      --text-muted: #555555;
-      --text-light: #777777;
-      --link: #004578;
-      --border-dark: #111111;
-      --border-light: #dcdcd3;
-      --contrast-blue: #1f4e79;
-      --contrast-red: #8b0000;
-      --contrast-green: #2e7d32;
-      --code-bg: #f4f4ea;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      font-size: 15px;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Newsreader', Garamond, 'Georgia', serif;
-      font-weight: 400;
-      line-height: 1.6;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      padding: 2.5rem 1.5rem 6rem 1.5rem;
-    }
-
-    /* Selection */
-    ::selection {
-      background: #e2e8d8;
-      color: #111;
-    }
-
-    /* Container Architecture */
-    .article-container {
-      max-width: 1240px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    /* Main Reading Column */
-    .content-column {
-      width: 55%;
-      min-width: 320px;
-      max-width: 680px;
-    }
-
-    /* Full Width Elements (Figures, Tables) */
-    .fullwidth {
-      width: 100%;
-      max-width: 1200px;
-      margin: 2.5rem 0;
-      clear: both;
-    }
-
-    /* Headings */
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 600;
-      line-height: 1.2;
-      margin-top: 1rem;
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.015em;
-    }
-
-    h2 {
-      font-size: 1.55rem;
-      font-weight: 600;
-      font-style: italic;
-      line-height: 1.3;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border-light);
-      padding-bottom: 0.35rem;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-    }
-
-    p {
-      margin-bottom: 1.25rem;
-      text-align: justify;
-      hyphens: auto;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2.5px;
-    }
-    a:hover {
-      color: var(--contrast-blue);
-      text-decoration-thickness: 2px;
-    }
-
-    /* Tufte Epigraph */
-    .epigraph {
-      margin: 2rem 0 2.5rem 0;
-      padding-left: 1.25rem;
-      border-left: 2px solid var(--border-dark);
-      font-style: italic;
-      color: var(--text-muted);
-    }
-    .epigraph .attribution {
-      display: block;
-      margin-top: 0.4rem;
-      font-style: normal;
-      font-size: 0.85rem;
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-light);
-    }
-
-    /* Sidenotes & Marginnotes (Authentic Tufte Floats) */
-    .sidenote, .marginnote {
-      float: right;
-      clear: right;
-      margin-right: -45%;
-      width: 36%;
-      margin-top: 0.3rem;
-      margin-bottom: 1.2rem;
-      font-size: 0.85rem;
-      line-height: 1.45;
-      color: var(--text-muted);
-      position: relative;
-      font-family: 'Newsreader', serif;
-      text-align: left;
-    }
-
-    .sidenote-number {
-      counter-increment: sidenote-counter;
-    }
-    .sidenote-number:after, .sidenote:before {
-      font-family: 'JetBrains Mono', monospace;
-      position: relative;
-      vertical-align: baseline;
-    }
-    .sidenote-number:after {
-      content: counter(sidenote-counter);
-      font-size: 0.75rem;
-      top: -0.5rem;
-      left: 0.1rem;
-      color: var(--contrast-blue);
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .sidenote:before {
-      content: counter(sidenote-counter) ".\00a0";
-      font-size: 0.78rem;
-      top: -0.2rem;
-      font-weight: 600;
-      color: var(--contrast-blue);
-    }
-
-    input.margin-toggle {
-      display: none;
-    }
-    label.sidenote-number {
-      display: inline;
-    }
-    label.margin-toggle:not(.sidenote-number) {
-      display: none;
-    }
-
-    /* Mathematical Equations Box */
-    .equation-block {
-      margin: 1.5rem 0;
-      padding: 0.8rem 1rem;
-      background: var(--code-bg);
-      border-left: 2px solid var(--border-dark);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.9rem;
-      overflow-x: auto;
-    }
-
-    /* Formal Booktabs Table Style */
-    table.booktabs {
-      width: 100%;
-      border-top: 2px solid var(--border-dark);
-      border-bottom: 2px solid var(--border-dark);
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 0.88rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    table.booktabs thead th {
-      border-bottom: 1px solid var(--border-dark);
-      padding: 0.6rem 0.75rem;
-      font-weight: 600;
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      color: var(--text);
-    }
-    table.booktabs tbody td {
-      padding: 0.55rem 0.75rem;
-      border-bottom: 1px solid #ebebe0;
-      vertical-align: middle;
-    }
-    table.booktabs tbody tr:last-child td {
-      border-bottom: none;
-    }
-    table.booktabs tbody tr:hover {
-      background-color: #f7f7ee;
-    }
-
-    /* Figure Captions */
-    figcaption {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-      margin-top: 0.6rem;
-      margin-bottom: 1.5rem;
-    }
-    figcaption strong {
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    /* UI Controls & Navigation Header */
-    .masthead-nav {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-bottom: 1rem;
-      margin-bottom: 2.5rem;
-      border-bottom: 1px solid var(--border-light);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-    }
-    .masthead-nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-    .masthead-nav a:hover {
-      color: var(--text);
-      text-decoration: underline;
-    }
-    .status-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.5rem;
-      background: var(--code-bg);
-      border: 1px solid var(--border-light);
-      color: var(--text);
-    }
-
-    /* Button Controls (Clean, Paper-Style) */
-    .tufte-btn {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 0.35rem 0.7rem;
-      border: 1px solid var(--border-dark);
-      background: var(--bg);
-      color: var(--text);
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-    }
-    .tufte-btn:hover {
-      background: var(--border-dark);
-      color: var(--bg);
-    }
-    .tufte-btn.active {
-      background: var(--contrast-blue);
-      border-color: var(--contrast-blue);
-      color: #ffffff;
-    }
-
-    /* Form Inputs */
-    .tufte-input, .tufte-select {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      padding: 0.3rem 0.5rem;
-      border: 1px solid var(--border-dark);
-      background: var(--bg);
-      color: var(--text);
-    }
-    .tufte-input:focus, .tufte-select:focus {
-      outline: 2px solid var(--contrast-blue);
-    }
-
-    /* Responsive Adaptation for Sidenotes */
-    @media (max-width: 1080px) {
-      .content-column {
-        width: 100%;
-        max-width: 100%;
+    <style>
+      /* Booktabs and Table Extensions for Tufte CSS */
+      table.booktabs {
+        border-top: 2px solid #111;
+        border-bottom: 2px solid #111;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
       }
-      .sidenote, .marginnote {
-        display: none;
-        float: none;
+      table.booktabs thead th {
+        border-bottom: 1px solid #111;
+        padding: 0.5rem 0.75rem;
+        font-weight: normal;
+        font-style: italic;
+        text-align: left;
+      }
+      table.booktabs tbody td {
+        padding: 0.45rem 0.75rem;
+        border-bottom: 1px solid #e8e8e0;
+      }
+      table.booktabs tbody tr:last-child td {
+        border-bottom: none;
+      }
+      table.fullwidth {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      /* KaTeX Math Blocks inside Tufte layout */
+      .katex-display {
+        width: 55%;
+        margin-left: 0;
         margin-right: 0;
-        width: 100%;
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
-        padding: 0.5rem 0.8rem;
-        background: var(--code-bg);
-        border-left: 2px solid var(--contrast-blue);
+        text-align: left !important;
+        overflow-x: auto;
+        overflow-y: hidden;
       }
-      label.margin-toggle:not(.sidenote-number) {
-        display: inline;
-        color: var(--contrast-blue);
+      @media (max-width: 760px) {
+        .katex-display {
+          width: 100%;
+        }
+      }
+
+      /* Minimal Controls conforming to Tufte Typographic Simplicity */
+      .tufte-control {
+        font-family: inherit;
+        font-size: 0.9rem;
+        background-color: #fffff8;
+        color: #111;
+        border: 1px solid #111;
+        padding: 3px 8px;
+        margin-right: 4px;
         cursor: pointer;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.8rem;
       }
-      .margin-toggle:checked + .sidenote,
-      .margin-toggle:checked + .marginnote {
-        display: block;
+      .tufte-control:hover {
+        background-color: #111;
+        color: #fffff8;
       }
-    }
-  </style>
-</head>
-<body>
+      .tufte-control.active {
+        background-color: #111;
+        color: #fffff8;
+        font-weight: bold;
+      }
+      .tufte-input {
+        font-family: inherit;
+        font-size: 0.9rem;
+        background-color: #fffff8;
+        color: #111;
+        border: 1px solid #111;
+        padding: 3px 8px;
+      }
+    </style>
+  </head>
 
-  <div class="article-container">
-
-    <!-- Masthead Navigation -->
-    <header class="masthead-nav">
-      <div>
-        <span style="font-weight: 600; letter-spacing: -0.01em;">RESEARCH MONOGRAPH • CAUSAL DEEP LEARNING</span>
-      </div>
-      <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="#abstract">Abstract</a>
-        <a href="#parameters">System Parameters</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#econometrics">Econometric Proof</a>
-        <a href="#matrix">Temporal Matrix</a>
-        <a href="#replication">Replication Ledger</a>
-        <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
-    </header>
-
+  <body>
     <article>
+      <h1 id="title">Muhammad Ali Jawara Wiratama</h1>
+      <p class="subtitle">Quantitative Machine Learning Researcher & Algorithmic Systems Engineer</p>
 
-      <!-- Main Title Block -->
-      <section class="content-column">
-        <h1 style="font-size: 2.4rem; font-weight: 700; color: #111;">Muhammad Ali Jawara Wiratama</h1>
-        <p style="font-size: 1.15rem; font-style: italic; color: var(--text-muted); margin-bottom: 0.8rem;">
-          Quantitative Machine Learning Researcher & Algorithmic Systems Engineer
-        </p>
-        
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted);">
-          Institutional Focus: Causal Deep Sequence Modeling, Invariant Feature Manifolds, and Non-Gaming Objective Functions in Financial Microstructure.
-        </p>
+      <!-- Epigraph -->
+      <div class="epigraph">
+        <blockquote>
+          <p>Clutter and confusion are failures of design, not attributes of information. Above all else show the data.</p>
+          <footer>Edward R. Tufte, <cite>The Visual Display of Quantitative Information</cite> (1983)</footer>
+        </blockquote>
+        <blockquote>
+          <p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p>
+          <footer>Richard P. Feynman, <cite>What Do You Care What Other People Think?</cite> (1988)</footer>
+        </blockquote>
+      </div>
 
-        <!-- Epigraph (Edward Tufte Principle) -->
-        <div class="epigraph">
-          “Clutter and confusion are failures of design, not attributes of information. Above all else show the data.”
-          <span class="attribution">Edward R. Tufte — The Visual Display of Quantitative Information</span>
-        </div>
+      <!-- Section: Abstract & Introduction -->
+      <section>
+        <p><span class="newthought">Standard deep sequence architectures</span> applied naively to financial time-series suffer from catastrophic variance decay, ex-post parameter gaming, and regime overfitting. In this monograph, we document the theoretical formulation and continuous 6.8-year empirical evaluation (January 2020 through September 2026) of an autonomous execution engine on the Hong Kong Hang Seng Index (HK50).<label for="sn-daemon-state" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-daemon-state" class="margin-toggle"/><span class="sidenote"><strong>Production Daemon State:</strong> Continuously deployed on AWS EC2 Singapore under Linux <code>systemd</code> (<code>hk50-trader.service</code>). Currently operating at Cycle #971+ with zero manual intervention.</span></p>
+
+        <p>The system combines multi-scale temporal convolutions with causal self-attention, conditioned via Feature-wise Linear Modulation (FiLM) and constrained by a Stiefel manifold projection head. Directional execution strictly adheres to an immutable 1:2 Risk-to-Reward ratio ($1.0\times\text{ATR}$ Stop Loss vs $2.0\times\text{ATR}$ Take Profit) with a mandatory 16-hour Velocity Guard termination.<label for="sn-breakeven-math" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-breakeven-math" class="margin-toggle"/><span class="sidenote">Under a 1:2 payoff ratio, mathematical breakeven win rate is precisely $\frac{1}{1 + 2} = 33.33\%$. Any empirical win rate sustained above $50.0\%$ provides a wide margin of safety against execution friction.</span></p>
+
+        <p>Across 758 consecutive daily executions, the system generates $+646.58\text{ R}$ net cumulative return, an empirical win rate of $59.37\%$ (Wilson 95% Confidence Interval: $[55.80\%, 62.84\%]$), a profit factor of $3.22$, and positive realized alpha in seven out of seven consecutive calendar years.</p>
       </section>
 
-      <!-- Section: Abstract -->
-      <section id="abstract" class="content-column" style="margin-top: 2rem;">
-        <h2>Abstract</h2>
-        
-        <p>
-          Standard deep sequence architectures applied naively to financial time-series suffer from catastrophic variance decay, ex-post parameter gaming, and regime overfitting. In this monograph, we document the theoretical formulation and continuous 6.8-year empirical evaluation (2020.01–2026.09) of an autonomous execution engine on the Hong Kong Hang Seng Index (HK50).
-        </p>
+      <!-- Section: System Specifications Table -->
+      <section>
+        <h2 id="parameters">System Specifications & Empirical Parameters</h2>
+        <p>All performance metrics in this monograph are reported strictly in invariant R-Multiples (risk units), completely eliminating distortions from arbitrary compounding, lot sizing, or currency conversion.</p>
 
-        <label for="sn-daemon" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="sn-daemon" class="margin-toggle"/>
-        <span class="sidenote">
-          <strong>Production Daemon State:</strong> Continuously deployed on AWS EC2 Singapore under Linux <code>systemd</code> (<code>hk50-trader.service</code>). Currently operating at Cycle #971+ with zero manual intervention.
-        </span>
-
-        <p>
-          The architecture combines multi-scale temporal convolutions with causal self-attention, conditioned via Feature-wise Linear Modulation (FiLM) and constrained by a Stiefel manifold projection head. Directional execution strictly adheres to an immutable <span style="font-weight: 600; color: var(--contrast-blue);">1:2 Risk-to-Reward ratio</span> ($1.0\times\text{ATR}$ Stop Loss vs $2.0\times\text{ATR}$ Take Profit) with a mandatory 16-hour Velocity Guard termination. 
-        </p>
-
-        <p>
-          Across 758 consecutive daily executions, the system generates $+646.58\text{ R}$ net cumulative return, an empirical win rate of $59.37\%$ (Wilson 95% CI: $[55.80\%, 62.84\%]$), a profit factor of $3.22$, and positive realized alpha in seven out of seven consecutive calendar years.
-        </p>
-      </section>
-
-      <!-- Section: System Parameters Table (Booktabs Style) -->
-      <section id="parameters" class="fullwidth" style="margin-top: 3.5rem;">
-        <h3 style="font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem;">
-          Table 1: Formal System Specifications and Empirical Econometric Statistics
-        </h3>
-        <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.8rem;">
-          Sample period: January 2, 2020 through September 30, 2026. All trade outcomes are evaluated strictly in R-Multiples without compounding or arbitrary leverage scaling.
-        </p>
-
-        <table class="booktabs">
+        <table class="booktabs fullwidth">
           <thead>
             <tr>
-              <th style="text-align: left;">System Parameter / Metric</th>
-              <th style="text-align: center;">Operational Value</th>
-              <th style="text-align: center;">Statistical Confidence / Range</th>
-              <th style="text-align: left;">Mathematical & Theoretical Governance</th>
+              <th style="width: 28%;">Parameter / Metric</th>
+              <th style="width: 22%; text-align: center;">Operational Value</th>
+              <th style="width: 24%; text-align: center;">Statistical Range</th>
+              <th style="width: 26%;">Theoretical Governance</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Target Asset & Time Horizon</strong></td>
-              <td style="text-align: center; color: var(--contrast-blue); font-weight: 600;">HK50 (Hang Seng Index)</td>
-              <td style="text-align: center;">1-Hour Microstructure Bars</td>
-              <td>Pre-market auction liquidity & opening volatility expansion.</td>
+              <td>Target Asset & Horizon</td>
+              <td style="text-align: center;"><strong>HK50 (Hang Seng)</strong></td>
+              <td style="text-align: center;">1-Hour Bars</td>
+              <td>Auction liquidity & morning volatility expansion.</td>
             </tr>
             <tr>
-              <td><strong>Execution Protocol</strong></td>
+              <td>Execution Protocol</td>
               <td style="text-align: center;">Daily Top-1 Causal Lock</td>
               <td style="text-align: center;">$N_{\text{past}} \in [120, 330]$ Bars</td>
-              <td>Dynamic rolling quantile gating. First qualifying signal locks the trading day.</td>
+              <td>Dynamic rolling quantile gating. Day locks upon first trigger.</td>
             </tr>
             <tr>
-              <td><strong>Immutable Payoff Structure</strong></td>
-              <td style="text-align: center; font-weight: 600;">1:2 R:R Asymmetric</td>
+              <td>Payoff Structure</td>
+              <td style="text-align: center;"><strong>Immutable 1:2 R:R</strong></td>
               <td style="text-align: center;">$1.0\times\text{ATR}$ SL / $2.0\times\text{ATR}$ TP</td>
-              <td>Theoretical breakeven win rate: $33.33\%$. Absolute ban on discretionary trailing.</td>
+              <td>Theoretical breakeven: $33.33\%$. Absolute ban on trailing.</td>
             </tr>
             <tr>
-              <td><strong>Holding Velocity Guard</strong></td>
-              <td style="text-align: center; font-weight: 600;">$\Delta t \le 16\text{ Hours}$</td>
-              <td style="text-align: center;">$100.0\%$ Terminated $\le 16\text{h}$</td>
-              <td>Mark-to-market forced liquidation at hour 16; eliminates multi-day jump risk.</td>
+              <td>Velocity Guard</td>
+              <td style="text-align: center;">$\Delta t \le 16\text{ Hours}$</td>
+              <td style="text-align: center;">100.0% Resolved $\le 16\text{h}$</td>
+              <td>Mark-to-market termination at hour 16; eliminates multi-day jump risk.</td>
             </tr>
             <tr>
-              <td><strong>Sample Trade Count</strong></td>
-              <td style="text-align: center; font-weight: 600;">758 Closed Trades</td>
+              <td>Sample Executions</td>
+              <td style="text-align: center;"><strong>758 Closed Trades</strong></td>
               <td style="text-align: center;">6.8 Calendar Years</td>
               <td>Full chronological audit trail; zero look-ahead data leakage.</td>
             </tr>
             <tr>
-              <td><strong>Cumulative Realized Return</strong></td>
-              <td style="text-align: center; color: var(--contrast-green); font-weight: 700;">+646.58 R</td>
-              <td style="text-align: center;">+95.08 R / Year Average</td>
-              <td>Gross Profit: $+898.0\text{ R}$ | Gross Loss: $-278.4\text{ R}$ | Timeouts: $+27.0\text{ R}$.</td>
+              <td>Cumulative Realized Return</td>
+              <td style="text-align: center;"><strong>+646.58 R</strong></td>
+              <td style="text-align: center;">+95.08 R / Year Avg</td>
+              <td>Gross Profit: $+898.0\text{ R}$ | Gross Loss: $-278.4\text{ R}$ | MtM: $+27.0\text{ R}$.</td>
             </tr>
             <tr>
-              <td><strong>Empirical Win Rate ($W$)</strong></td>
-              <td style="text-align: center; font-weight: 700;">59.37%</td>
-              <td style="text-align: center;">Wilson 95% CI: [55.80%, 62.84%]</td>
-              <td>Statistically significant surplus of $+26.04\%$ above the $33.33\%$ breakeven threshold.</td>
+              <td>Empirical Win Rate ($W$)</td>
+              <td style="text-align: center;"><strong>59.37%</strong></td>
+              <td style="text-align: center;">Wilson CI: [55.80%, 62.84%]</td>
+              <td>$+26.04\%$ surplus above $33.33\%$ breakeven threshold.</td>
             </tr>
             <tr>
-              <td><strong>Profit Factor (PF)</strong></td>
-              <td style="text-align: center; font-weight: 700;">3.22</td>
-              <td style="text-align: center;">Theoretical Edge: $\frac{W \times 2.0}{(1-W) \times 1.0}$</td>
-              <td>Substantial resilience against execution friction and structural slippage.</td>
+              <td>Profit Factor (PF)</td>
+              <td style="text-align: center;"><strong>3.22</strong></td>
+              <td style="text-align: center;">Theoretical: $\frac{W \times 2.0}{(1-W) \times 1.0}$</td>
+              <td>High resilience against structural market friction and slippage.</td>
             </tr>
             <tr>
-              <td><strong>Annualized Sharpe Ratio</strong></td>
-              <td style="text-align: center;">2.87</td>
+              <td>Annualized Sharpe Ratio</td>
+              <td style="text-align: center;"><strong>2.87</strong></td>
               <td style="text-align: center;">Weekly Returns Basis</td>
-              <td>Risk-free rate assumed $r_f = 0.0\%$. Sortino ratio: $4.12$.</td>
+              <td>Risk-free rate assumed $r_f = 0.0\%$. Realized Sortino ratio: $4.12$.</td>
             </tr>
             <tr>
-              <td><strong>Maximum Cumulative Drawdown</strong></td>
-              <td style="text-align: center; color: var(--contrast-red); font-weight: 600;">-13.88 R</td>
+              <td>Maximum Peak-to-Trough Drawdown</td>
+              <td style="text-align: center;"><strong>-13.88 R</strong></td>
               <td style="text-align: center;">Recovery Factor: 46.58×</td>
-              <td>Maximum recovery period: 14 calendar weeks; peak consecutive losses: 5 trades.</td>
+              <td>Maximum recovery period: 14 calendar weeks; peak losing streak: 5 trades.</td>
             </tr>
           </tbody>
         </table>
       </section>
 
-      <!-- Section: Deep Learning Sequence Architecture -->
-      <section id="architecture" class="content-column" style="margin-top: 3.5rem;">
-        <h2>The Sequence Architecture & Formal Formulations</h2>
+      <!-- Section: Sequence Architecture -->
+      <section>
+        <h2 id="architecture">The Sequence Architecture & Formal Formulations</h2>
+        <p>The sequence modeling pipeline transforms raw limit order flow features $X \in \mathbb{R}^{B \times 60 \times 24}$ into discrete directional decisions through four regularized stages.<label for="sn-ip-boundary" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ip-boundary" class="margin-toggle"/><span class="sidenote"><strong>IP Boundary Note:</strong> Network topologies, mathematical loss bounds, and empirical ledger entries are disclosed for scientific replication. Trained weight tensors (<code>i11.pth</code>) and private optimization seeds remain proprietary.</span></p>
 
-        <p>
-          The neural sequence architecture is engineered to enforce Lipschitz regularity, manifold orthogonality, and causal gating over non-stationary market states.
-        </p>
+        <h3 id="architecture--inception">1. Multi-Scale Temporal Inception</h3>
+        <p>Microstructural volatility compression manifests across disparate frequency bands. To extract invariant representations without manual timeframe selection, parallel 1D dilated convolutions process the input simultaneously:</p>
 
-        <label for="sn-ip" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="sn-ip" class="margin-toggle"/>
-        <span class="sidenote">
-          <strong>Reproducibility & IP Boundary:</strong> Full operator semantics, dimension transformations, and regularization constraints are disclosed for scientific review. Exact trained weights (<code>i11.pth</code>) and private optimization seeds remain proprietary.
-        </span>
+        <p>$$Z_{\text{inc}} = \text{Concat}\Big(\text{Conv}_{1}(X), \text{Conv}_{3}(X), \text{Conv}_{5}(X), \text{MaxPool}_{3}(X)\Big)$$</p>
 
-        <h3>1. Multi-Scale Temporal Inception</h3>
-        <p>
-          Microstructural liquidity compression manifests heterogeneously across multiple temporal frequencies. Rather than imposing a fixed lookback filter, the initial input tensor $X \in \mathbb{R}^{B \times 60 \times 24}$ is projected through parallel dilated convolutions:
-        </p>
+        <p>Spectral normalization is applied to all convolutional kernel matrices, constraining the operator Lipschitz constant to $\|W\|_{\text{spec}} \le 1.0$.</p>
 
-        <div class="equation-block">
-          $$Z_{\text{inc}} = \text{Concat}\Big(\text{Conv}_{1}(X), \text{Conv}_{3}(X), \text{Conv}_{5}(X), \text{MaxPool}_{3}(X)\Big)$$
-        </div>
+        <h3 id="architecture--attention">2. Causal Spatial-Temporal Attention</h3>
+        <p>Feature relevance is non-stationary. To identify leading indicators during pre-market auction transitions without look-ahead bias, causal lower-triangular masking is strictly enforced:</p>
 
-        <p>
-          Spectral normalization is applied to all convolutional kernel matrices, constraining the operator Lipschitz constant to $\|W\|_{\text{spec}} \le 1.0$.
-        </p>
+        <p>$$A = \text{Softmax}\left(\frac{Q K^T}{\sqrt{d_k}} + M_{\text{causal}}\right) V$$</p>
 
-        <h3>2. Causal Spatial-Temporal Attention</h3>
-        <p>
-          To capture dynamic inter-feature relevance without ex-post leakage, attention weights are derived through a masked lower-triangular kernel $M_{\text{causal}}$:
-        </p>
+        <p>where $M_{i,j} = -\infty$ for all $j > i$. Attention weights at step $t$ depend solely on past observations $t' \le t$.</p>
 
-        <div class="equation-block">
-          $$A = \text{Softmax}\left(\frac{Q K^T}{\sqrt{d_k}} + M_{\text{causal}}\right) V$$
-        </div>
+        <h3 id="architecture--stiefel">3. Stiefel Manifold Splay Projection Head</h3>
+        <p>Unconstrained linear projection heads suffer from directional logit collapse during sustained macro trends. To enforce geometric angular separation between Long, Short, and Flat signal spaces, projection matrix $W \in \mathbb{R}^{d \times k}$ is constrained to the Stiefel manifold:<label for="mn-stiefel-geometry" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-stiefel-geometry" class="margin-toggle"/><span class="marginnote">Orthogonal retraction on $\mathcal{V}_k(\mathbb{R}^d)$ prevents directional collapse and maintains maximal angular distance $\theta_{ij} \approx \frac{2\pi}{3}$ between competing action classes.</span></p>
 
-        <p>
-          where $M_{i,j} = -\infty$ for all $j > i$. This guarantees that feature weights at time step $t$ depend solely on historical bars $t' \le t$.
-        </p>
+        <p>$$\min_{W \in \mathcal{V}_k(\mathbb{R}^d)} \mathcal{L}_{\text{task}}(W) \quad \text{subject to } W^T W = I_k$$</p>
 
-        <h3>3. Stiefel Manifold Splay Projection Head</h3>
-        <p>
-          Unconstrained classification heads suffer from directional logit collapse during prolonged macro trends. To maintain angular class separability between Long, Short, and Flat representations, the output projection matrix $W \in \mathbb{R}^{d \times k}$ is constrained to the Stiefel manifold:
-        </p>
+        <h3 id="architecture--gating">4. Causal Rolling Quantile Gating</h3>
+        <p>Execution triggers are derived by comparing instantaneous logits $z_t$ against a causal historical rolling quantile window ($N_{\text{past}} \in [120, 330]$ bars):</p>
 
-        <div class="equation-block">
-          $$\min_{W \in \mathcal{V}_k(\mathbb{R}^d)} \mathcal{L}_{\text{task}}(W) \quad \text{subject to } W^T W = I_k$$
-        </div>
+        <p>$$\text{Signal}_t = \mathbb{I}\Big(z_t \ge \text{Quantile}_p\big(z_{t-N_{\text{past}}:t}\big)\Big)$$</p>
 
-        <p>
-          Updates are executed via Riemannian gradient retraction onto the orthogonal Grassmannian manifold at the completion of each ASAM optimizer step.
-        </p>
-
-        <h3>4. Dynamic Causal Rolling Quantile Gating</h3>
-        <p>
-          Signals are filtered ex-ante by comparing instantaneous logits $z_t$ against a causal historical rolling quantile window ($N_{\text{past}} \in [120, 330]$ bars):
-        </p>
-
-        <div class="equation-block">
-          $$\text{Signal}_t = \mathbb{I}\Big(z_t \ge \text{Quantile}_p\big(z_{t-N_{\text{past}}:t}\big)\Big)$$
-        </div>
-
-        <p>
-          This eliminates static threshold degradation across high- and low-volatility regimes.
-        </p>
+        <p>This guarantees zero look-ahead bias while dynamically adjusting selectivity to prevailing volatility regimes.</p>
       </section>
 
-      <!-- Section: Econometric Validation Figures -->
-      <section id="econometrics" class="fullwidth" style="margin-top: 4rem;">
-        <h2>Econometric Edge & Statistical Verification</h2>
-        
-        <p class="content-column" style="margin-bottom: 1.5rem;">
-          Visualizations below are presented in accordance with Edward Tufte's graphical integrity standards: high data density, clear baseline references, and absence of non-informative decoration.
-        </p>
+      <!-- Section: Econometric Validation -->
+      <section>
+        <h2 id="econometrics">Econometric Edge & Statistical Verification</h2>
+        <p>Following Edward Tufte's principles of graphical excellence, the charts below emphasize high data-ink density, clear baseline references, and absence of non-informative decoration.</p>
 
-        <!-- Figure 1: Full-Width Lightweight Chart -->
+        <!-- Figure 1: Full-width Equity & Drawdown Chart -->
         <figure class="fullwidth">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <span class="sans" style="font-size: 0.95rem; font-weight: bold;">Figure 1: Cumulative Realized R-Multiple Trajectory and Peak-to-Trough Drawdown (2020–2026)</span>
             <div>
-              <span style="font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">
-                Figure 1: Cumulative Realized R-Multiple Trajectory and Underwater Drawdown (2020–2026)
-              </span>
-            </div>
-            <div style="display: flex; gap: 0.4rem;">
-              <button id="btn-tufte-equity" class="tufte-btn active">Cumulative R</button>
-              <button id="btn-tufte-drawdown" class="tufte-btn">Underwater Drawdown</button>
+              <button id="btn-tufte-equity" class="tufte-control active">Cumulative R</button>
+              <button id="btn-tufte-drawdown" class="tufte-control">Underwater Drawdown</button>
             </div>
           </div>
 
-          <!-- Chart Canvas Container -->
-          <div id="tufte-chart-container" style="width: 100%; height: 380px; border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); background: #fffff8;"></div>
+          <div id="tufte-chart-container" style="width: 100%; height: 380px; border-top: 1px solid #111; border-bottom: 1px solid #111; background-color: #fffff8;"></div>
 
           <figcaption>
-            <strong>Figure 1 Description:</strong> Sequence of 758 realized trades. The blue curve tracks cumulative R growth from $0.0\text{ R}$ to $+646.58\text{ R}$. In-sample phase (2020–2024: $+562.1\text{ R}$) transitions seamlessly into out-of-sample forward evaluation (2025–2026: $+84.5\text{ R}$) without structural inflection or alpha decay. The red series displays peak-to-trough drawdown in R units, bounded strictly at $-13.88\text{ R}$.
+            Sequence of 758 realized trades. The primary series tracks cumulative R growth from $0.0\text{ R}$ to $+646.58\text{ R}$. In-sample training (2020–2024: $+562.1\text{ R}$) transitions smoothly into out-of-sample forward evaluation (2025–2026: $+84.5\text{ R}$) with zero alpha decay. Maximum drawdown is bounded strictly at $-13.88\text{ R}$.
           </figcaption>
         </figure>
 
-        <!-- Figures 2 & 3: Side-by-Side High Density Plots -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 3rem; margin-top: 2rem;">
-          
-          <!-- Figure 2: Bimodal Return Distribution -->
-          <figure>
-            <span style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.4rem;">
-              Figure 2: Empirical Return Distribution under Immutable 1:2 Payoff
-            </span>
-            <div style="width: 100%; height: 230px; border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); background: #fffff8; padding: 0.5rem 0;">
-              <canvas id="tufte-canvas-bimodal" style="width: 100%; height: 100%;"></canvas>
-            </div>
-            <figcaption>
-              <strong>Figure 2 Description:</strong> Realized payoff frequency across 758 trades. Downside loss is hard-truncated at $-1.00\text{ R}$ ($36.94\%$), Take Profit clusters at $+2.00\text{ R}$ ($59.37\%$), and 16h mark-to-market liquidations account for $3.69\%$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
-            </figcaption>
-          </figure>
-
-          <!-- Figure 3: Rolling Win Rate vs Breakeven -->
-          <figure>
-            <span style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.4rem;">
-              Figure 3: 50-Trade Rolling Win Rate vs Breakeven Barrier (33.33%)
-            </span>
-            <div style="width: 100%; height: 230px; border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); background: #fffff8; padding: 0.5rem 0;">
-              <canvas id="tufte-canvas-rolling" style="width: 100%; height: 100%;"></canvas>
-            </div>
-            <figcaption>
-              <strong>Figure 3 Description:</strong> 50-trade rolling window empirical win rate (blue curve) plotted against the theoretical breakeven line ($33.33\%$, dashed crimson). Over 708 rolling windows, the minimum empirical trough was $50.00\%$, establishing an unbroken safety margin of $\ge +16.67\%$ above mathematical ruin throughout 6.8 years of market regimes. Peak rolling win rate: $78.00\%$.
-            </figcaption>
-          </figure>
-
-        </div>
-
-        <!-- Table 2 & Figure 4: Markov Independence & Velocity -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 3rem; margin-top: 2rem;">
-          
-          <!-- Table 2: Markov Transition Matrix -->
-          <div>
-            <span style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.4rem;">
-              Table 2: 2×2 Markovian Transition Probability Matrix & Sequential Independence Test
-            </span>
-            <table class="booktabs" style="margin-top: 0.2rem;">
-              <thead>
-                <tr>
-                  <th style="text-align: left;">Preceding State ($S_{t-1}$)</th>
-                  <th style="text-align: center;">$P(\text{Win}_t \mid S_{t-1})$</th>
-                  <th style="text-align: center;">$P(\text{Loss}_t \mid S_{t-1})$</th>
-                  <th style="text-align: center;">Observations</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>After Winning Trade ($\text{Win}_{t-1}$)</td>
-                  <td style="text-align: center; font-weight: 600; color: var(--contrast-green);">61.95%</td>
-                  <td style="text-align: center; color: var(--contrast-red);">38.05%</td>
-                  <td style="text-align: center;">452 Trades</td>
-                </tr>
-                <tr>
-                  <td>After Losing Trade ($\text{Loss}_{t-1}$)</td>
-                  <td style="text-align: center; font-weight: 600; color: var(--contrast-green);">63.16%</td>
-                  <td style="text-align: center; color: var(--contrast-red);">36.84%</td>
-                  <td style="text-align: center;">277 Trades</td>
-                </tr>
-              </tbody>
-            </table>
-            <figcaption>
-              <strong>Statistical Independence:</strong> Pearson's Chi-Square Test yields $\chi^2 = 0.0881$ ($p = 0.7666 > 0.05$). The null hypothesis of sequential independence cannot be rejected. There is zero evidence of loss clustering, martingale fragility, or negative emotional momentum.
-            </figcaption>
+        <!-- Figure 2: Return Density Histogram -->
+        <figure>
+          <figcaption>
+            <strong>Figure 2: Empirical Return Distribution under Immutable 1:2 Payoff.</strong> Realized payoff frequency across 758 trades. Downside loss is hard-truncated at $-1.00\text{ R}$ ($36.94\%$), Take Profit clusters at $+2.00\text{ R}$ ($59.37\%$), and 16h mark-to-market liquidations account for $3.69\%$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
+          </figcaption>
+          <div style="width: 100%; height: 230px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
+            <canvas id="tufte-canvas-bimodal" style="width: 100%; height: 100%;"></canvas>
           </div>
+        </figure>
 
-          <!-- Figure 4: Velocity Attribution -->
-          <figure>
-            <span style="font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.4rem;">
-              Figure 4: Holding Duration Velocity Attribution (1h to 16h Distribution)
-            </span>
-            <div style="width: 100%; height: 165px; border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); background: #fffff8; padding: 0.5rem 0;">
-              <canvas id="tufte-canvas-velocity" style="width: 100%; height: 100%;"></canvas>
-            </div>
-            <figcaption>
-              <strong>Velocity Governance:</strong> Median trade duration is $6.00\text{ hours}$ (Mean win: $5.92\text{h}$; Mean loss: $6.67\text{h}$). $100.0\%$ of positions terminate $\le 16\text{ hours}$, strictly eliminating exposure to overnight weekend holding gaps.
-            </figcaption>
-          </figure>
+        <!-- Figure 3: Rolling Win Rate vs Breakeven -->
+        <figure>
+          <figcaption>
+            <strong>Figure 3: 50-Trade Rolling Win Rate vs Breakeven Barrier (33.33%).</strong> 50-trade moving average win rate (solid curve) plotted against theoretical breakeven ($33.33\%$, dashed crimson). Over 708 rolling windows, the minimum empirical trough was $50.00\%$, establishing an unbroken safety margin of $\ge +16.67\%$ above mathematical ruin throughout 6.8 years of market regimes. Peak rolling win rate: $78.00\%$.
+          </figcaption>
+          <div style="width: 100%; height: 230px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
+            <canvas id="tufte-canvas-rolling" style="width: 100%; height: 100%;"></canvas>
+          </div>
+        </figure>
 
-        </div>
+        <!-- Table 2: Markov Transition Matrix -->
+        <p><label for="mn-markov-test" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-markov-test" class="margin-toggle"/><span class="marginnote"><strong>Markovian Independence:</strong> Pearson's Chi-Square Test yields $\chi^2 = 0.0881$ ($p = 0.7666 > 0.05$). The null hypothesis of sequential independence cannot be rejected. There is zero evidence of loss clustering or martingale fragility.</span><strong>Table 2: 2×2 Markovian Transition Probability Matrix.</strong> Demonstrating that consecutive trade outcomes behave as independent Markovian trials:</p>
 
+        <table class="booktabs" style="width: 55%;">
+          <thead>
+            <tr>
+              <th>Preceding Outcome ($S_{t-1}$)</th>
+              <th style="text-align: center;">$P(\text{Win}_t \mid S_{t-1})$</th>
+              <th style="text-align: center;">$P(\text{Loss}_t \mid S_{t-1})$</th>
+              <th style="text-align: center;">Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>After Winning Trade ($\text{Win}_{t-1}$)</td>
+              <td style="text-align: center; font-weight: bold;">61.95%</td>
+              <td style="text-align: center;">38.05%</td>
+              <td style="text-align: center;">452</td>
+            </tr>
+            <tr>
+              <td>After Losing Trade ($\text{Loss}_{t-1}$)</td>
+              <td style="text-align: center; font-weight: bold;">63.16%</td>
+              <td style="text-align: center;">36.84%</td>
+              <td style="text-align: center;">277</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Figure 4: Velocity Attribution -->
+        <figure>
+          <figcaption>
+            <strong>Figure 4: Holding Duration Velocity Attribution.</strong> Median trade duration is $6.00\text{ hours}$ (Mean win: $5.92\text{h}$; Mean loss: $6.67\text{h}$). $100.0\%$ of positions terminate $\le 16\text{ hours}$, strictly eliminating exposure to overnight weekend holding gaps.
+          </figcaption>
+          <div style="width: 100%; height: 165px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
+            <canvas id="tufte-canvas-velocity" style="width: 100%; height: 100%;"></canvas>
+          </div>
+        </figure>
       </section>
 
-      <!-- Section: Multi-Year Monthly Matrix (7/7 Years Positive) -->
-      <section id="matrix" class="fullwidth" style="margin-top: 4rem;">
-        <h3 style="font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem;">
-          Table 3: 82-Month Comprehensive Performance Matrix (2020 – 2026)
-        </h3>
-        <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.8rem;">
-          Realized net return partitioned by calendar month in R units. 7 out of 7 calendar years delivered net positive expected payoff.
-        </p>
+      <!-- Section: Multi-Year Monthly Performance Matrix -->
+      <section>
+        <h2 id="matrix">Multi-Year Temporal Stability (82 Months)</h2>
+        <p>A resilient quantitative strategy must deliver positive annual alpha across diverse macroeconomic regimes. Table 3 records monthly realized returns across all 82 months of evaluation.</p>
 
-        <div style="overflow-x: auto;">
-          <table class="booktabs" style="text-align: center;">
+        <div class="table-wrapper">
+          <table class="booktabs fullwidth" style="text-align: center;">
             <thead>
               <tr>
-                <th style="text-align: left;">Calendar Year</th>
+                <th style="text-align: left;">Year</th>
                 <th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th>
                 <th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
-                <th style="text-align: right; color: var(--contrast-green);">Annual Net R</th>
+                <th style="text-align: right; font-weight: bold;">Annual Net R</th>
               </tr>
             </thead>
             <tbody id="tufte-matrix-body">
-              <!-- Rendered via JS from MONTHLY_RETURNS -->
+              <!-- Rendered dynamically from MONTHLY_RETURNS in data/data.js -->
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- Section: Master Replication Trade Ledger -->
-      <section id="replication" class="fullwidth" style="margin-top: 4.5rem;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 1px solid var(--border-dark); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-          <div>
-            <h3 style="font-family: 'Inter', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">
-              Section 4: Open Replication Ledger (758 Trade Execution Records)
-            </h3>
-            <p style="font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin: 0.2rem 0 0 0;">
-              Granular tick-verified fill prices, exit timestamps, and realized payoff outcomes for independent econometric replication.
-            </p>
-          </div>
+      <!-- Section: Open Replication Ledger -->
+      <section>
+        <h2 id="replication">Open Replication Ledger (758 Trade Audit Trail)</h2>
+        <p>Scientific integrity requires full auditability. Below is the complete record of all 758 executed trades, including timestamp, fill prices, duration, exit reason, and realized net R.</p>
 
-          <!-- Controls -->
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
-            <input type="text" id="tufte-ledger-search" placeholder="Search date / regime..." class="tufte-input" style="width: 170px;">
-            <select id="tufte-ledger-year" class="tufte-select">
-              <option value="ALL">All Years (2020–2026)</option>
-              <option value="2026">2026 (OOS Live)</option>
-              <option value="2025">2025 (OOS Forward)</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2021">2021</option>
-              <option value="2020">2020</option>
-            </select>
-            <select id="tufte-ledger-outcome" class="tufte-select">
-              <option value="ALL">All Outcomes</option>
-              <option value="WIN">Wins (+2.0R)</option>
-              <option value="LOSS">Losses (-1.0R)</option>
-            </select>
-          </div>
+        <div style="margin: 1.5rem 0 0.5rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+          <input type="text" id="tufte-ledger-search" placeholder="Search date / regime..." class="tufte-input" style="width: 180px;">
+          <select id="tufte-ledger-year" class="tufte-control">
+            <option value="ALL">All Years (2020–2026)</option>
+            <option value="2026">2026 (OOS Live)</option>
+            <option value="2025">2025 (OOS Forward)</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+          </select>
+          <select id="tufte-ledger-outcome" class="tufte-control">
+            <option value="ALL">All Outcomes</option>
+            <option value="WIN">Wins (+2.0R)</option>
+            <option value="LOSS">Losses (-1.0R)</option>
+          </select>
         </div>
 
-        <table class="booktabs">
-          <thead>
-            <tr>
-              <th style="text-align: left; width: 60px;">#</th>
-              <th style="text-align: left;">Execution Timestamp (UTC)</th>
-              <th style="text-align: center;">Asset</th>
-              <th style="text-align: center;">Direction</th>
-              <th style="text-align: right;">Entry Price</th>
-              <th style="text-align: right;">Exit Price</th>
-              <th style="text-align: center;">Holding</th>
-              <th style="text-align: center;">Exit Mechanism</th>
-              <th style="text-align: right;">Realized R</th>
-            </tr>
-          </thead>
-          <tbody id="tufte-ledger-tbody">
-            <!-- Dynamically populated via JS -->
-          </tbody>
-        </table>
+        <div class="table-wrapper">
+          <table class="booktabs fullwidth">
+            <thead>
+              <tr>
+                <th style="width: 50px;">#</th>
+                <th>Timestamp (UTC)</th>
+                <th style="text-align: center;">Asset</th>
+                <th style="text-align: center;">Type</th>
+                <th style="text-align: right;">Entry Price</th>
+                <th style="text-align: right;">Exit Price</th>
+                <th style="text-align: center;">Holding</th>
+                <th style="text-align: center;">Exit Reason</th>
+                <th style="text-align: right;">Realized R</th>
+              </tr>
+            </thead>
+            <tbody id="tufte-ledger-tbody">
+              <!-- Dynamically populated via JS -->
+            </tbody>
+          </table>
+        </div>
 
-        <!-- Pagination Controls -->
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
-          <span id="tufte-ledger-pagination-info" style="color: var(--text-muted);">Showing 1–15 of 758 trades</span>
-          <div style="display: flex; gap: 0.4rem; align-items: center;">
-            <button id="btn-tufte-prev" class="tufte-btn">Previous</button>
-            <span id="tufte-page-num" style="padding: 0 0.5rem; font-weight: 600;">1 / 51</span>
-            <button id="btn-tufte-next" class="tufte-btn">Next</button>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 1rem; width: 90%;">
+          <span id="tufte-ledger-pagination-info" style="font-size: 0.9rem; font-style: italic;">Showing 1–15 of 758 records</span>
+          <div>
+            <button id="btn-tufte-prev" class="tufte-control">Previous</button>
+            <span id="tufte-page-num" style="padding: 0 0.5rem; font-family: monospace;">1 / 51</span>
+            <button id="btn-tufte-next" class="tufte-control">Next</button>
           </div>
         </div>
       </section>
 
-      <!-- Section: Research Methodology & Selected References -->
-      <section class="content-column" style="margin-top: 4.5rem; border-top: 1px solid var(--border-light); padding-top: 2rem;">
-        <h2>Computational Environment & Selected References</h2>
+      <!-- Section: Computational Environment & References -->
+      <section>
+        <h2 id="references">Computational Environment & References</h2>
+        <p>Execution is hosted on a dedicated AWS EC2 compute instance in Singapore (ap-southeast-1) running Ubuntu Server 24.04 LTS. Inferences execute via PyTorch 2.5 with CUDA acceleration, orchestrated by a native Linux <code>systemd</code> daemon executing bar-by-bar causal quantile calibrations at market tick arrivals.</p>
 
-        <p>
-          Execution is hosted on a dedicated AWS EC2 compute instance in Singapore (ap-southeast-1) running Ubuntu Server 24.04 LTS. Inferences execute via PyTorch 2.5 with CUDA acceleration, orchestrated by a native Linux <code>systemd</code> daemon executing bar-by-bar causal quantile calibrations at market tick arrivals.
-        </p>
-
-        <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2rem;">References</h3>
-        
-        <ol style="padding-left: 1.2rem; font-size: 0.88rem; line-height: 1.6; color: var(--text-muted);">
-          <li style="margin-bottom: 0.6rem;">
-            Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2nd ed.). Graphics Press.
-          </li>
-          <li style="margin-bottom: 0.6rem;">
-            López de Prado, M. (2018). <em>Advances in Financial Machine Learning</em>. John Wiley & Sons.
-          </li>
-          <li style="margin-bottom: 0.6rem;">
-            Foret, P., Kleiner, A., Mobahi, H., & Neyshabur, B. (2021). Sharpness-aware minimization for efficiently improving generalization. <em>International Conference on Learning Representations (ICLR)</em>.
-          </li>
-          <li style="margin-bottom: 0.6rem;">
-            Absil, P.-A., Mahony, R., & Sepulchre, R. (2008). <em>Optimization Algorithms on Matrix Manifolds</em>. Princeton University Press.
-          </li>
-          <li style="margin-bottom: 0.6rem;">
-            Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. <em>Journal of the American Statistical Association</em>, 22(158), 209–212.
-          </li>
+        <ol>
+          <li>Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2nd ed.). Graphics Press.</li>
+          <li>López de Prado, M. (2018). <em>Advances in Financial Machine Learning</em>. John Wiley & Sons.</li>
+          <li>Foret, P., Kleiner, A., Mobahi, H., & Neyshabur, B. (2021). Sharpness-aware minimization for efficiently improving generalization. <em>International Conference on Learning Representations (ICLR)</em>.</li>
+          <li>Absil, P.-A., Mahony, R., & Sepulchre, R. (2008). <em>Optimization Algorithms on Matrix Manifolds</em>. Princeton University Press.</li>
+          <li>Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. <em>Journal of the American Statistical Association</em>, 22(158), 209–212.</li>
         </ol>
 
-        <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: var(--text-light);">
-          <p>
-            Correspondence: <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener">github.com/mhdalijawara-cloud</a> • Version: i11-Production • Monograph Compiled: October 2026.
-          </p>
-        </div>
+        <hr>
+        <p class="sans" style="font-size: 0.85rem; color: #666;">
+          Muhammad Ali Jawara Wiratama • Correspondence: <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener">github.com/mhdalijawara-cloud</a> • Production Checkpoint: i11 • Ledger Verification: 758-AUDITED • October 2026.
+        </p>
       </section>
-
     </article>
 
-  </div>
+    <!-- Interactive Execution Logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        initTufteLightweightChart();
+        initTufteCanvases();
+        initTufteMonthlyMatrix();
+        initTufteReplicationLedger();
 
-  <!-- Interactive Scripts (Lightweight Charts, Canvases, Ledger) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Initialize Tufte-styled Lightweight Charts
-      initTufteLightweightChart();
-
-      // 2. Initialize Tufte Canvases (Bimodal, Rolling Win Rate, Velocity)
-      initTufteCanvases();
-
-      // 3. Initialize Monthly Return Matrix (82 Months)
-      initTufteMonthlyMatrix();
-
-      // 4. Initialize Replication Trade Ledger (758 Trades)
-      initTufteReplicationLedger();
-
-      // 5. Render KaTeX Equations
-      if (window.renderMathInElement) {
-        window.renderMathInElement(document.body, {
-          delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false}
-          ],
-          throwOnError: false
-        });
-      }
-    });
-
-    // -------------------------------------------------------------
-    // MODULE 1: TUFTE LIGHTWEIGHT EQUITY & UNDERWATER CHART
-    // -------------------------------------------------------------
-    let tufteChart = null;
-    let tufteEquitySeries = null;
-    let tufteDrawdownSeries = null;
-
-    function initTufteLightweightChart() {
-      const container = document.getElementById('tufte-chart-container');
-      if (!container || !window.LightweightCharts || !window.HK50_TRADES) return;
-
-      tufteChart = window.LightweightCharts.createChart(container, {
-        width: container.clientWidth,
-        height: 380,
-        layout: {
-          background: { color: '#fffff8' },
-          textColor: '#222222',
-          fontSize: 11,
-          fontFamily: 'JetBrains Mono, monospace',
-        },
-        grid: {
-          vertLines: { color: 'rgba(0, 0, 0, 0.05)' },
-          horzLines: { color: 'rgba(0, 0, 0, 0.05)' },
-        },
-        timeScale: {
-          borderColor: '#111111',
-          timeVisible: true,
-          secondsVisible: false,
-        },
-        rightPriceScale: {
-          borderColor: '#111111',
-        },
-        crosshair: {
-          vertLine: { color: '#1f4e79', width: 1, style: 2 },
-          horzLine: { color: '#1f4e79', width: 1, style: 2 },
+        if (window.renderMathInElement) {
+          window.renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false}
+            ],
+            throwOnError: false
+          });
         }
       });
 
-      // Prepare cumulative data
-      let cumR = 0;
-      let peakR = 0;
-      const equityData = [];
-      const drawdownData = [];
+      // -------------------------------------------------------------
+      // 1. LIGHTWEIGHT CHART (TUFTE THEME)
+      // -------------------------------------------------------------
+      let tufteChart = null;
+      let tufteEquitySeries = null;
+      let tufteDrawdownSeries = null;
 
-      window.HK50_TRADES.forEach((tr) => {
-        cumR += tr.net_r;
-        if (cumR > peakR) peakR = cumR;
-        const dd = cumR - peakR;
+      function initTufteLightweightChart() {
+        const container = document.getElementById('tufte-chart-container');
+        if (!container || !window.LightweightCharts || !window.HK50_TRADES) return;
 
-        const dStr = tr.date;
-        equityData.push({ time: dStr, value: parseFloat(cumR.toFixed(2)) });
-        drawdownData.push({ time: dStr, value: parseFloat(dd.toFixed(2)) });
-      });
-
-      // Prussian Blue Area for Equity
-      tufteEquitySeries = tufteChart.addAreaSeries({
-        lineColor: '#1f4e79',
-        topColor: 'rgba(31, 78, 121, 0.22)',
-        bottomColor: 'rgba(31, 78, 121, 0.02)',
-        lineWidth: 2,
-        priceFormat: { type: 'custom', formatter: (val) => val.toFixed(1) + ' R' },
-      });
-      tufteEquitySeries.setData(equityData);
-
-      // Crimson Area for Drawdown
-      tufteDrawdownSeries = tufteChart.addAreaSeries({
-        lineColor: '#8b0000',
-        topColor: 'rgba(139, 0, 0, 0.02)',
-        bottomColor: 'rgba(139, 0, 0, 0.25)',
-        lineWidth: 2,
-        priceFormat: { type: 'custom', formatter: (val) => val.toFixed(1) + ' R' },
-        visible: false,
-      });
-      tufteDrawdownSeries.setData(drawdownData);
-
-      tufteChart.timeScale().fitContent();
-
-      window.addEventListener('resize', () => {
-        tufteChart.resize(container.clientWidth, 380);
-      });
-
-      // Button Toggles
-      const btnEq = document.getElementById('btn-tufte-equity');
-      const btnDD = document.getElementById('btn-tufte-drawdown');
-
-      if (btnEq && btnDD) {
-        btnEq.addEventListener('click', () => {
-          btnEq.className = 'tufte-btn active';
-          btnDD.className = 'tufte-btn';
-          tufteEquitySeries.applyOptions({ visible: true });
-          tufteDrawdownSeries.applyOptions({ visible: false });
-          tufteChart.timeScale().fitContent();
+        tufteChart = window.LightweightCharts.createChart(container, {
+          width: container.clientWidth,
+          height: 380,
+          layout: {
+            background: { color: '#fffff8' },
+            textColor: '#111111',
+            fontSize: 11,
+            fontFamily: 'Consolas, monospace',
+          },
+          grid: {
+            vertLines: { color: 'rgba(0, 0, 0, 0.06)' },
+            horzLines: { color: 'rgba(0, 0, 0, 0.06)' },
+          },
+          timeScale: {
+            borderColor: '#111111',
+            timeVisible: true,
+            secondsVisible: false,
+          },
+          rightPriceScale: {
+            borderColor: '#111111',
+          },
+          crosshair: {
+            vertLine: { color: '#111111', width: 1, style: 2 },
+            horzLine: { color: '#111111', width: 1, style: 2 },
+          }
         });
 
-        btnDD.addEventListener('click', () => {
-          btnDD.className = 'tufte-btn active';
-          btnEq.className = 'tufte-btn';
-          tufteEquitySeries.applyOptions({ visible: false });
-          tufteDrawdownSeries.applyOptions({ visible: true });
-          tufteChart.timeScale().fitContent();
+        let cumR = 0;
+        let peakR = 0;
+        const equityData = [];
+        const drawdownData = [];
+
+        window.HK50_TRADES.forEach((tr) => {
+          cumR += tr.net_r;
+          if (cumR > peakR) peakR = cumR;
+          const dd = cumR - peakR;
+
+          equityData.push({ time: tr.date, value: parseFloat(cumR.toFixed(2)) });
+          drawdownData.push({ time: tr.date, value: parseFloat(dd.toFixed(2)) });
         });
-      }
-    }
 
+        tufteEquitySeries = tufteChart.addAreaSeries({
+          lineColor: '#111111',
+          topColor: 'rgba(17, 17, 17, 0.15)',
+          bottomColor: 'rgba(17, 17, 17, 0.01)',
+          lineWidth: 2,
+          priceFormat: { type: 'custom', formatter: (val) => val.toFixed(1) + ' R' },
+        });
+        tufteEquitySeries.setData(equityData);
 
-    // -------------------------------------------------------------
-    // MODULE 2: TUFTE CANVASES (Bimodal, Rolling, Velocity)
-    // -------------------------------------------------------------
-    function initTufteCanvases() {
-      renderTufteBimodal();
-      renderTufteRollingWinRate();
-      renderTufteVelocity();
-    }
+        tufteDrawdownSeries = tufteChart.addAreaSeries({
+          lineColor: '#8b0000',
+          topColor: 'rgba(139, 0, 0, 0.01)',
+          bottomColor: 'rgba(139, 0, 0, 0.20)',
+          lineWidth: 2,
+          priceFormat: { type: 'custom', formatter: (val) => val.toFixed(1) + ' R' },
+          visible: false,
+        });
+        tufteDrawdownSeries.setData(drawdownData);
 
-    function renderTufteBimodal() {
-      const canvas = document.getElementById('tufte-canvas-bimodal');
-      if (!canvas || !window.QUANT_RETURN_DISTRIBUTION) return;
-      const ctx = canvas.getContext('2d');
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = canvas.clientWidth * dpr;
-      canvas.height = canvas.clientHeight * dpr;
-      ctx.scale(dpr, dpr);
+        tufteChart.timeScale().fitContent();
 
-      const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
-      const bins = window.QUANT_RETURN_DISTRIBUTION.bins || [];
-      if (!bins.length) return;
+        window.addEventListener('resize', () => {
+          tufteChart.resize(container.clientWidth, 380);
+        });
 
-      const maxCount = Math.max(...bins.map(b => b.count));
-      const padBottom = 26;
-      const padTop = 18;
-      const padLeft = 15;
-      const padRight = 15;
-      const chartH = h - padBottom - padTop;
-      const barWidth = (w - padLeft - padRight) / bins.length;
+        const btnEq = document.getElementById('btn-tufte-equity');
+        const btnDD = document.getElementById('btn-tufte-drawdown');
 
-      ctx.clearRect(0, 0, w, h);
+        if (btnEq && btnDD) {
+          btnEq.addEventListener('click', () => {
+            btnEq.className = 'tufte-control active';
+            btnDD.className = 'tufte-control';
+            tufteEquitySeries.applyOptions({ visible: true });
+            tufteDrawdownSeries.applyOptions({ visible: false });
+            tufteChart.timeScale().fitContent();
+          });
 
-      bins.forEach((b, i) => {
-        const x = padLeft + i * barWidth;
-        const barH = (b.count / maxCount) * chartH;
-        const y = h - padBottom - barH;
-
-        if (b.bin_center < -0.2) {
-          ctx.fillStyle = '#8b0000'; // Loss Crimson
-        } else if (b.bin_center > 0.8) {
-          ctx.fillStyle = '#1f4e79'; // Win Prussian Blue
-        } else {
-          ctx.fillStyle = '#777777'; // Timeouts
+          btnDD.addEventListener('click', () => {
+            btnDD.className = 'tufte-control active';
+            btnEq.className = 'tufte-control';
+            tufteEquitySeries.applyOptions({ visible: false });
+            tufteDrawdownSeries.applyOptions({ visible: true });
+            tufteChart.timeScale().fitContent();
+          });
         }
-
-        ctx.fillRect(x + 1.5, y, barWidth - 3, barH);
-
-        // Peak count numbers
-        if (b.count > 100) {
-          ctx.fillStyle = '#111111';
-          ctx.font = '10px JetBrains Mono';
-          ctx.textAlign = 'center';
-          ctx.fillText(b.count + ' trades', x + barWidth / 2, y - 5);
-        }
-      });
-
-      // Baseline
-      ctx.strokeStyle = '#111111';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(padLeft, h - padBottom);
-      ctx.lineTo(w - padRight, h - padBottom);
-      ctx.stroke();
-
-      // Axis text
-      ctx.fillStyle = '#333333';
-      ctx.font = '10px JetBrains Mono';
-      ctx.textAlign = 'center';
-      ctx.fillText('-1.0R (SL)', padLeft + 20, h - 8);
-      ctx.fillText('0.0R (MtM)', w / 2, h - 8);
-      ctx.fillText('+2.0R (TP)', w - padRight - 20, h - 8);
-    }
-
-    function renderTufteRollingWinRate() {
-      const canvas = document.getElementById('tufte-canvas-rolling');
-      if (!canvas || !window.QUANT_ROLLING_WIN_RATE) return;
-      const ctx = canvas.getContext('2d');
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = canvas.clientWidth * dpr;
-      canvas.height = canvas.clientHeight * dpr;
-      ctx.scale(dpr, dpr);
-
-      const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
-      const data = window.QUANT_ROLLING_WIN_RATE;
-      if (!data.length) return;
-
-      const padTop = 15;
-      const padBottom = 24;
-      const padLeft = 40;
-      const padRight = 15;
-      const chartW = w - padLeft - padRight;
-      const chartH = h - padTop - padBottom;
-
-      ctx.clearRect(0, 0, w, h);
-
-      const yMin = 20;
-      const yMax = 90;
-      const getY = (val) => padTop + chartH - ((val - yMin) / (yMax - yMin)) * chartH;
-      const getX = (idx) => padLeft + (idx / (data.length - 1)) * chartW;
-
-      // Breakeven reference line (33.33%)
-      const yBE = getY(33.33);
-      ctx.strokeStyle = '#8b0000';
-      ctx.lineWidth = 1.5;
-      ctx.setLineDash([4, 4]);
-      ctx.beginPath();
-      ctx.moveTo(padLeft, yBE);
-      ctx.lineTo(w - padRight, yBE);
-      ctx.stroke();
-      ctx.setLineDash([]);
-
-      ctx.fillStyle = '#8b0000';
-      ctx.font = '10px JetBrains Mono';
-      ctx.textAlign = 'right';
-      ctx.fillText('BE 33.3%', padLeft - 5, yBE + 3);
-
-      // Rolling win rate line
-      ctx.strokeStyle = '#1f4e79';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      data.forEach((pt, i) => {
-        const x = getX(i);
-        const y = getY(pt.rolling_wr);
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      });
-      ctx.stroke();
-
-      // Axis labels
-      ctx.fillStyle = '#555555';
-      ctx.font = '10px JetBrains Mono';
-      ctx.textAlign = 'right';
-      ctx.fillText('80%', padLeft - 5, getY(80) + 3);
-      ctx.fillText('50%', padLeft - 5, getY(50) + 3);
-
-      ctx.textAlign = 'center';
-      ctx.fillText('Trade #50', padLeft + 25, h - 8);
-      ctx.fillText('Trade #758', w - padRight - 25, h - 8);
-    }
-
-    function renderTufteVelocity() {
-      const canvas = document.getElementById('tufte-canvas-velocity');
-      if (!canvas || !window.QUANT_VELOCITY_ATTRIBUTION) return;
-      const ctx = canvas.getContext('2d');
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = canvas.clientWidth * dpr;
-      canvas.height = canvas.clientHeight * dpr;
-      ctx.scale(dpr, dpr);
-
-      const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
-      const dist = window.QUANT_VELOCITY_ATTRIBUTION.hourly_distribution || [];
-      if (!dist.length) return;
-
-      const maxCnt = Math.max(...dist.map(d => d.count));
-      const padBottom = 22;
-      const padTop = 10;
-      const padLeft = 10;
-      const padRight = 10;
-      const chartH = h - padBottom - padTop;
-      const barW = (w - padLeft - padRight) / dist.length;
-
-      ctx.clearRect(0, 0, w, h);
-
-      dist.forEach((d, i) => {
-        const x = padLeft + i * barW;
-        const bH = (d.count / maxCnt) * chartH;
-        const y = h - padBottom - bH;
-
-        ctx.fillStyle = d.hour === 16 ? '#8b0000' : '#1f4e79';
-        ctx.fillRect(x + 1, y, barW - 2, bH);
-      });
-
-      // Axis baseline
-      ctx.strokeStyle = '#111111';
-      ctx.beginPath();
-      ctx.moveTo(padLeft, h - padBottom);
-      ctx.lineTo(w - padRight, h - padBottom);
-      ctx.stroke();
-
-      ctx.fillStyle = '#333333';
-      ctx.font = '9px JetBrains Mono';
-      ctx.textAlign = 'center';
-      ctx.fillText('1h', padLeft + barW / 2, h - 7);
-      ctx.fillText('8h', padLeft + 7.5 * barW, h - 7);
-      ctx.fillText('16h Limit', w - padRight - barW / 2, h - 7);
-    }
-
-
-    // -------------------------------------------------------------
-    // MODULE 3: TUFTE 82-MONTH CONSISTENCY MATRIX
-    // -------------------------------------------------------------
-    function initTufteMonthlyMatrix() {
-      const tbody = document.getElementById('tufte-matrix-body');
-      if (!tbody || !window.MONTHLY_RETURNS) return;
-
-      const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
-      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-      let html = '';
-      years.forEach(yr => {
-        let annualR = 0;
-        let monthCells = '';
-
-        months.forEach((m, mIdx) => {
-          const key = `${yr}-${String(mIdx + 1).padStart(2, '0')}`;
-          const val = window.MONTHLY_RETURNS[key];
-
-          if (val === undefined || val === null) {
-            monthCells += `<td style="color: #bbb;">–</td>`;
-          } else {
-            annualR += val;
-            let colorStyle = 'color: #333;';
-            if (val > 0) colorStyle = 'color: #2e7d32; font-weight: 500;';
-            else if (val < 0) colorStyle = 'color: #8b0000; font-weight: 500;';
-
-            const sign = val > 0 ? '+' : '';
-            monthCells += `<td style="${colorStyle}">${sign}${val.toFixed(1)}</td>`;
-          }
-        });
-
-        const annSign = annualR > 0 ? '+' : '';
-        html += `
-          <tr>
-            <td style="text-align: left; font-weight: 600; color: #111;">${yr}</td>
-            ${monthCells}
-            <td style="text-align: right; font-weight: 700; color: #2e7d32;">${annSign}${annualR.toFixed(1)} R</td>
-          </tr>
-        `;
-      });
-
-      tbody.innerHTML = html;
-    }
-
-
-    // -------------------------------------------------------------
-    // MODULE 4: REPLICATION MASTER TRADE LEDGER
-    // -------------------------------------------------------------
-    let tufteCurrentPage = 1;
-    const tuftePageSize = 15;
-    let tufteFilteredTrades = [];
-
-    function initTufteReplicationLedger() {
-      if (!window.HK50_TRADES) return;
-      tufteFilteredTrades = [...window.HK50_TRADES];
-
-      const searchInput = document.getElementById('tufte-ledger-search');
-      const yearFilter = document.getElementById('tufte-ledger-year');
-      const outcomeFilter = document.getElementById('tufte-ledger-outcome');
-      const btnPrev = document.getElementById('btn-tufte-prev');
-      const btnNext = document.getElementById('btn-tufte-next');
-
-      const applyFilters = () => {
-        const query = (searchInput?.value || '').toLowerCase().trim();
-        const year = yearFilter?.value || 'ALL';
-        const outcome = outcomeFilter?.value || 'ALL';
-
-        tufteFilteredTrades = window.HK50_TRADES.filter(tr => {
-          if (year !== 'ALL' && !tr.date.startsWith(year)) return false;
-          if (outcome === 'WIN' && !tr.is_win) return false;
-          if (outcome === 'LOSS' && tr.is_win) return false;
-          if (query) {
-            const matchDate = tr.date.toLowerCase().includes(query);
-            const matchRegime = (tr.regime || '').toLowerCase().includes(query);
-            const matchExit = (tr.exit_reason || '').toLowerCase().includes(query);
-            if (!matchDate && !matchRegime && !matchExit) return false;
-          }
-          return true;
-        });
-
-        tufteCurrentPage = 1;
-        renderTufteLedgerTable();
-      };
-
-      if (searchInput) searchInput.addEventListener('input', applyFilters);
-      if (yearFilter) yearFilter.addEventListener('change', applyFilters);
-      if (outcomeFilter) outcomeFilter.addEventListener('change', applyFilters);
-
-      if (btnPrev) {
-        btnPrev.addEventListener('click', () => {
-          if (tufteCurrentPage > 1) {
-            tufteCurrentPage--;
-            renderTufteLedgerTable();
-          }
-        });
       }
 
-      if (btnNext) {
-        btnNext.addEventListener('click', () => {
-          const maxP = Math.ceil(tufteFilteredTrades.length / tuftePageSize);
-          if (tufteCurrentPage < maxP) {
-            tufteCurrentPage++;
-            renderTufteLedgerTable();
-          }
-        });
+      // -------------------------------------------------------------
+      // 2. TUFTE CANVASES (BIMODAL, ROLLING, VELOCITY)
+      // -------------------------------------------------------------
+      function initTufteCanvases() {
+        renderTufteBimodal();
+        renderTufteRollingWinRate();
+        renderTufteVelocity();
       }
 
-      renderTufteLedgerTable();
-    }
+      function renderTufteBimodal() {
+        const canvas = document.getElementById('tufte-canvas-bimodal');
+        if (!canvas || !window.QUANT_RETURN_DISTRIBUTION) return;
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = canvas.clientWidth * dpr;
+        canvas.height = canvas.clientHeight * dpr;
+        ctx.scale(dpr, dpr);
 
-    function renderTufteLedgerTable() {
-      const tbody = document.getElementById('tufte-ledger-tbody');
-      const info = document.getElementById('tufte-ledger-pagination-info');
-      const pageSpan = document.getElementById('tufte-page-num');
-      const btnPrev = document.getElementById('btn-tufte-prev');
-      const btnNext = document.getElementById('btn-tufte-next');
-      if (!tbody) return;
+        const w = canvas.clientWidth;
+        const h = canvas.clientHeight;
+        const bins = window.QUANT_RETURN_DISTRIBUTION.bins || [];
+        if (!bins.length) return;
 
-      const total = tufteFilteredTrades.length;
-      const maxPage = Math.max(1, Math.ceil(total / tuftePageSize));
-      if (tufteCurrentPage > maxPage) tufteCurrentPage = maxPage;
+        const maxCount = Math.max(...bins.map(b => b.count));
+        const padBottom = 26;
+        const padTop = 18;
+        const padLeft = 15;
+        const padRight = 15;
+        const chartH = h - padBottom - padTop;
+        const barWidth = (w - padLeft - padRight) / bins.length;
 
-      const startIdx = (tufteCurrentPage - 1) * tuftePageSize;
-      const endIdx = Math.min(startIdx + tuftePageSize, total);
-      const pageData = tufteFilteredTrades.slice(startIdx, endIdx);
+        ctx.clearRect(0, 0, w, h);
 
-      if (pageData.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 2rem; color: #888;">No execution records matching query.</td></tr>`;
-      } else {
-        tbody.innerHTML = pageData.map((tr, idx) => {
-          const globalIdx = startIdx + idx + 1;
-          const isWin = tr.is_win;
-          const rColor = isWin ? 'color: #2e7d32; font-weight: 700;' : 'color: #8b0000; font-weight: 700;';
-          const rText = (tr.net_r > 0 ? '+' : '') + tr.net_r.toFixed(2) + ' R';
+        bins.forEach((b, i) => {
+          const x = padLeft + i * barWidth;
+          const barH = (b.count / maxCount) * chartH;
+          const y = h - padBottom - barH;
 
-          return `
+          ctx.fillStyle = b.bin_center < -0.2 ? '#8b0000' : (b.bin_center > 0.8 ? '#111111' : '#666666');
+          ctx.fillRect(x + 1.5, y, barWidth - 3, barH);
+
+          if (b.count > 100) {
+            ctx.fillStyle = '#111111';
+            ctx.font = '10px Consolas, monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText(b.count, x + barWidth / 2, y - 5);
+          }
+        });
+
+        ctx.strokeStyle = '#111111';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padLeft, h - padBottom);
+        ctx.lineTo(w - padRight, h - padBottom);
+        ctx.stroke();
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '10px Consolas, monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText('-1.0R (SL)', padLeft + 20, h - 8);
+        ctx.fillText('0.0R (MtM)', w / 2, h - 8);
+        ctx.fillText('+2.0R (TP)', w - padRight - 20, h - 8);
+      }
+
+      function renderTufteRollingWinRate() {
+        const canvas = document.getElementById('tufte-canvas-rolling');
+        if (!canvas || !window.QUANT_ROLLING_WIN_RATE) return;
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = canvas.clientWidth * dpr;
+        canvas.height = canvas.clientHeight * dpr;
+        ctx.scale(dpr, dpr);
+
+        const w = canvas.clientWidth;
+        const h = canvas.clientHeight;
+        const data = window.QUANT_ROLLING_WIN_RATE;
+        if (!data.length) return;
+
+        const padTop = 15;
+        const padBottom = 24;
+        const padLeft = 40;
+        const padRight = 15;
+        const chartW = w - padLeft - padRight;
+        const chartH = h - padTop - padBottom;
+
+        ctx.clearRect(0, 0, w, h);
+
+        const yMin = 20;
+        const yMax = 90;
+        const getY = (val) => padTop + chartH - ((val - yMin) / (yMax - yMin)) * chartH;
+        const getX = (idx) => padLeft + (idx / (data.length - 1)) * chartW;
+
+        const yBE = getY(33.33);
+        ctx.strokeStyle = '#8b0000';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(padLeft, yBE);
+        ctx.lineTo(w - padRight, yBE);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = '#8b0000';
+        ctx.font = '10px Consolas, monospace';
+        ctx.textAlign = 'right';
+        ctx.fillText('BE 33.3%', padLeft - 5, yBE + 3);
+
+        ctx.strokeStyle = '#111111';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        data.forEach((pt, i) => {
+          const x = getX(i);
+          const y = getY(pt.rolling_wr);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+
+        ctx.fillStyle = '#555555';
+        ctx.font = '10px Consolas, monospace';
+        ctx.textAlign = 'right';
+        ctx.fillText('80%', padLeft - 5, getY(80) + 3);
+        ctx.fillText('50%', padLeft - 5, getY(50) + 3);
+
+        ctx.textAlign = 'center';
+        ctx.fillText('Trade #50', padLeft + 25, h - 8);
+        ctx.fillText('Trade #758', w - padRight - 25, h - 8);
+      }
+
+      function renderTufteVelocity() {
+        const canvas = document.getElementById('tufte-canvas-velocity');
+        if (!canvas || !window.QUANT_VELOCITY_ATTRIBUTION) return;
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = canvas.clientWidth * dpr;
+        canvas.height = canvas.clientHeight * dpr;
+        ctx.scale(dpr, dpr);
+
+        const w = canvas.clientWidth;
+        const h = canvas.clientHeight;
+        const dist = window.QUANT_VELOCITY_ATTRIBUTION.hourly_distribution || [];
+        if (!dist.length) return;
+
+        const maxCnt = Math.max(...dist.map(d => d.count));
+        const padBottom = 22;
+        const padTop = 10;
+        const padLeft = 10;
+        const padRight = 10;
+        const chartH = h - padBottom - padTop;
+        const barW = (w - padLeft - padRight) / dist.length;
+
+        ctx.clearRect(0, 0, w, h);
+
+        dist.forEach((d, i) => {
+          const x = padLeft + i * barW;
+          const bH = (d.count / maxCnt) * chartH;
+          const y = h - padBottom - bH;
+
+          ctx.fillStyle = d.hour === 16 ? '#8b0000' : '#111111';
+          ctx.fillRect(x + 1, y, barW - 2, bH);
+        });
+
+        ctx.strokeStyle = '#111111';
+        ctx.beginPath();
+        ctx.moveTo(padLeft, h - padBottom);
+        ctx.lineTo(w - padRight, h - padBottom);
+        ctx.stroke();
+
+        ctx.fillStyle = '#111111';
+        ctx.font = '9px Consolas, monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText('1h', padLeft + barW / 2, h - 7);
+        ctx.fillText('8h', padLeft + 7.5 * barW, h - 7);
+        ctx.fillText('16h Limit', w - padRight - barW / 2, h - 7);
+      }
+
+      // -------------------------------------------------------------
+      // 3. MONTHLY RETURN MATRIX
+      // -------------------------------------------------------------
+      function initTufteMonthlyMatrix() {
+        const tbody = document.getElementById('tufte-matrix-body');
+        if (!tbody || !window.MONTHLY_RETURNS) return;
+
+        const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        let html = '';
+        years.forEach(yr => {
+          let annualR = 0;
+          let monthCells = '';
+
+          months.forEach((m, mIdx) => {
+            const key = `${yr}-${String(mIdx + 1).padStart(2, '0')}`;
+            const val = window.MONTHLY_RETURNS[key];
+
+            if (val === undefined || val === null) {
+              monthCells += `<td style="color: #bbb;">–</td>`;
+            } else {
+              annualR += val;
+              const sign = val > 0 ? '+' : '';
+              const color = val > 0 ? 'font-weight: 500;' : (val < 0 ? 'color: #8b0000;' : '');
+              monthCells += `<td style="${color}">${sign}${val.toFixed(1)}</td>`;
+            }
+          });
+
+          const annSign = annualR > 0 ? '+' : '';
+          html += `
             <tr>
-              <td style="color: #777;">${globalIdx}</td>
-              <td style="font-weight: 500;">${tr.date} ${tr.entry_time || '00:00'}</td>
-              <td style="text-align: center; color: var(--contrast-blue);">HK50</td>
-              <td style="text-align: center; font-weight: 600;">${tr.direction || 'BUY'}</td>
-              <td style="text-align: right;">${(tr.entry_price || 0).toLocaleString()}</td>
-              <td style="text-align: right;">${(tr.exit_price || 0).toLocaleString()}</td>
-              <td style="text-align: center; color: #555;">${tr.duration_hours || 6}h</td>
-              <td style="text-align: center; font-size: 0.75rem; text-transform: uppercase;">${tr.exit_reason || (isWin ? 'TAKE_PROFIT' : 'STOP_LOSS')}</td>
-              <td style="text-align: right; ${rColor}">${rText}</td>
+              <td style="text-align: left; font-weight: bold;">${yr}</td>
+              ${monthCells}
+              <td style="text-align: right; font-weight: bold;">${annSign}${annualR.toFixed(1)} R</td>
             </tr>
           `;
-        }).join('');
+        });
+
+        tbody.innerHTML = html;
       }
 
-      if (info) info.innerText = `Showing ${total ? startIdx + 1 : 0}–${endIdx} of ${total} records`;
-      if (pageSpan) pageSpan.innerText = `${tufteCurrentPage} / ${maxPage}`;
-      if (btnPrev) btnPrev.disabled = tufteCurrentPage <= 1;
-      if (btnNext) btnNext.disabled = tufteCurrentPage >= maxPage;
-    }
-  </script>
-</body>
+      // -------------------------------------------------------------
+      // 4. REPLICATION TRADE LEDGER
+      // -------------------------------------------------------------
+      let tufteCurrentPage = 1;
+      const tuftePageSize = 15;
+      let tufteFilteredTrades = [];
+
+      function initTufteReplicationLedger() {
+        if (!window.HK50_TRADES) return;
+        tufteFilteredTrades = [...window.HK50_TRADES];
+
+        const searchInput = document.getElementById('tufte-ledger-search');
+        const yearFilter = document.getElementById('tufte-ledger-year');
+        const outcomeFilter = document.getElementById('tufte-ledger-outcome');
+        const btnPrev = document.getElementById('btn-tufte-prev');
+        const btnNext = document.getElementById('btn-tufte-next');
+
+        const applyFilters = () => {
+          const query = (searchInput?.value || '').toLowerCase().trim();
+          const year = yearFilter?.value || 'ALL';
+          const outcome = outcomeFilter?.value || 'ALL';
+
+          tufteFilteredTrades = window.HK50_TRADES.filter(tr => {
+            if (year !== 'ALL' && !tr.date.startsWith(year)) return false;
+            if (outcome === 'WIN' && !tr.is_win) return false;
+            if (outcome === 'LOSS' && tr.is_win) return false;
+            if (query) {
+              const matchDate = tr.date.toLowerCase().includes(query);
+              const matchRegime = (tr.regime || '').toLowerCase().includes(query);
+              const matchExit = (tr.exit_reason || '').toLowerCase().includes(query);
+              if (!matchDate && !matchRegime && !matchExit) return false;
+            }
+            return true;
+          });
+
+          tufteCurrentPage = 1;
+          renderTufteLedgerTable();
+        };
+
+        if (searchInput) searchInput.addEventListener('input', applyFilters);
+        if (yearFilter) yearFilter.addEventListener('change', applyFilters);
+        if (outcomeFilter) outcomeFilter.addEventListener('change', applyFilters);
+
+        if (btnPrev) {
+          btnPrev.addEventListener('click', () => {
+            if (tufteCurrentPage > 1) {
+              tufteCurrentPage--;
+              renderTufteLedgerTable();
+            }
+          });
+        }
+
+        if (btnNext) {
+          btnNext.addEventListener('click', () => {
+            const maxP = Math.ceil(tufteFilteredTrades.length / tuftePageSize);
+            if (tufteCurrentPage < maxP) {
+              tufteCurrentPage++;
+              renderTufteLedgerTable();
+            }
+          });
+        }
+
+        renderTufteLedgerTable();
+      }
+
+      function renderTufteLedgerTable() {
+        const tbody = document.getElementById('tufte-ledger-tbody');
+        const info = document.getElementById('tufte-ledger-pagination-info');
+        const pageSpan = document.getElementById('tufte-page-num');
+        const btnPrev = document.getElementById('btn-tufte-prev');
+        const btnNext = document.getElementById('btn-tufte-next');
+        if (!tbody) return;
+
+        const total = tufteFilteredTrades.length;
+        const maxPage = Math.max(1, Math.ceil(total / tuftePageSize));
+        if (tufteCurrentPage > maxPage) tufteCurrentPage = maxPage;
+
+        const startIdx = (tufteCurrentPage - 1) * tuftePageSize;
+        const endIdx = Math.min(startIdx + tuftePageSize, total);
+        const pageData = tufteFilteredTrades.slice(startIdx, endIdx);
+
+        if (pageData.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 2rem; color: #888;">No execution records matching query.</td></tr>`;
+        } else {
+          tbody.innerHTML = pageData.map((tr, idx) => {
+            const globalIdx = startIdx + idx + 1;
+            const isWin = tr.is_win;
+            const rColor = isWin ? 'font-weight: bold;' : 'color: #8b0000; font-weight: bold;';
+            const rText = (tr.net_r > 0 ? '+' : '') + tr.net_r.toFixed(2) + ' R';
+
+            return `
+              <tr>
+                <td style="color: #777;">${globalIdx}</td>
+                <td>${tr.date} ${tr.entry_time || '00:00'}</td>
+                <td style="text-align: center;">HK50</td>
+                <td style="text-align: center;">${tr.direction || 'BUY'}</td>
+                <td style="text-align: right;">${(tr.entry_price || 0).toLocaleString()}</td>
+                <td style="text-align: right;">${(tr.exit_price || 0).toLocaleString()}</td>
+                <td style="text-align: center;">${tr.duration_hours || 6}h</td>
+                <td style="text-align: center; font-size: 0.85rem;">${tr.exit_reason || (isWin ? 'TAKE_PROFIT' : 'STOP_LOSS')}</td>
+                <td style="text-align: right; ${rColor}">${rText}</td>
+              </tr>
+            `;
+          }).join('');
+        }
+
+        if (info) info.innerText = `Showing ${total ? startIdx + 1 : 0}–${endIdx} of ${total} records`;
+        if (pageSpan) pageSpan.innerText = `${tufteCurrentPage} / ${maxPage}`;
+        if (btnPrev) btnPrev.disabled = tufteCurrentPage <= 1;
+        if (btnNext) btnNext.disabled = tufteCurrentPage >= maxPage;
+      }
+    </script>
+  </body>
 </html>

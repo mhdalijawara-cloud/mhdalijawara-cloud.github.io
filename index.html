@@ -19,26 +19,58 @@
     <script src="data/data.js"></script>
 
     <style>
+      /* Dynamic Theme Variables for Flawless Light & Dark Support */
+      :root {
+        --bg: #fffff8;
+        --text: #111111;
+        --text-muted: #555555;
+        --border: #111111;
+        --border-light: #e5e5dc;
+        --chart-bg: #fffff8;
+        --grid-color: rgba(0, 0, 0, 0.06);
+        --control-bg: #fffff8;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #151515;
+          --text: #dddddd;
+          --text-muted: #999999;
+          --border: #444444;
+          --border-light: #2a2a2a;
+          --chart-bg: #151515;
+          --grid-color: rgba(255, 255, 255, 0.08);
+          --control-bg: #222222;
+        }
+        body {
+          background-color: var(--bg) !important;
+          color: var(--text) !important;
+        }
+      }
+
       /* Booktabs and Table Extensions for Tufte CSS */
       table.booktabs {
-        border-top: 2px solid #111;
-        border-bottom: 2px solid #111;
+        border-top: 2px solid var(--border);
+        border-bottom: 2px solid var(--border);
         border-collapse: collapse;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
         font-size: 0.95rem;
         line-height: 1.4;
+        background-color: var(--bg);
       }
       table.booktabs thead th {
-        border-bottom: 1px solid #111;
+        border-bottom: 1px solid var(--border);
         padding: 0.5rem 0.75rem;
         font-weight: normal;
         font-style: italic;
         text-align: left;
+        color: var(--text);
       }
       table.booktabs tbody td {
         padding: 0.45rem 0.75rem;
-        border-bottom: 1px solid #e8e8e0;
+        border-bottom: 1px solid var(--border-light);
+        color: var(--text);
       }
       table.booktabs tbody tr:last-child td {
         border-bottom: none;
@@ -46,6 +78,41 @@
       table.fullwidth {
         width: 100%;
         max-width: 90%;
+      }
+
+      /* Two-column Structured Grid for Figures (Guaranteed Zero Collision) */
+      .figure-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        width: 100%;
+        max-width: 90%;
+        margin: 2.5rem 0;
+        clear: both;
+      }
+      @media (max-width: 860px) {
+        .figure-grid-2 {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
+      .tufte-figure-box {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        clear: both;
+      }
+      .tufte-figure-box figcaption {
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 0.8rem !important;
+        margin-right: 0 !important;
+        font-size: 0.9rem;
+        line-height: 1.45;
+        color: var(--text-muted);
+        clear: both;
       }
 
       /* KaTeX Math Blocks inside Tufte layout */
@@ -56,6 +123,7 @@
         text-align: left !important;
         overflow-x: auto;
         overflow-y: hidden;
+        color: var(--text);
       }
       @media (max-width: 760px) {
         .katex-display {
@@ -67,28 +135,24 @@
       .tufte-control {
         font-family: inherit;
         font-size: 0.9rem;
-        background-color: #fffff8;
-        color: #111;
-        border: 1px solid #111;
+        background-color: var(--control-bg);
+        color: var(--text);
+        border: 1px solid var(--border);
         padding: 3px 8px;
         margin-right: 4px;
         cursor: pointer;
       }
-      .tufte-control:hover {
-        background-color: #111;
-        color: #fffff8;
-      }
-      .tufte-control.active {
-        background-color: #111;
-        color: #fffff8;
+      .tufte-control:hover, .tufte-control.active {
+        background-color: var(--border);
+        color: var(--bg);
         font-weight: bold;
       }
       .tufte-input {
         font-family: inherit;
         font-size: 0.9rem;
-        background-color: #fffff8;
-        color: #111;
-        border: 1px solid #111;
+        background-color: var(--control-bg);
+        color: var(--text);
+        border: 1px solid var(--border);
         padding: 3px 8px;
       }
     </style>
@@ -232,12 +296,12 @@
       </section>
 
       <!-- Section: Econometric Validation -->
-      <section>
-        <h2 id="econometrics">Econometric Edge & Statistical Verification</h2>
+      <section id="econometrics">
+        <h2>Econometric Edge & Statistical Verification</h2>
         <p>Following Edward Tufte's principles of graphical excellence, the charts below emphasize high data-ink density, clear baseline references, and absence of non-informative decoration.</p>
 
         <!-- Figure 1: Full-width Equity & Drawdown Chart -->
-        <figure class="fullwidth">
+        <figure class="fullwidth tufte-figure-box" style="margin: 3rem 0;">
           <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
             <span class="sans" style="font-size: 0.95rem; font-weight: bold;">Figure 1: Cumulative Realized R-Multiple Trajectory and Peak-to-Trough Drawdown (2020–2026)</span>
             <div>
@@ -246,70 +310,95 @@
             </div>
           </div>
 
-          <div id="tufte-chart-container" style="width: 100%; height: 380px; border-top: 1px solid #111; border-bottom: 1px solid #111; background-color: #fffff8;"></div>
+          <div id="tufte-chart-container" style="width: 100%; height: 380px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--chart-bg);"></div>
 
           <figcaption>
             Sequence of 758 realized trades. The primary series tracks cumulative R growth from $0.0\text{ R}$ to $+646.58\text{ R}$. In-sample phase (2020–2024: $+562.1\text{ R}$) transitions smoothly into out-of-sample forward evaluation (2025–2026: $+84.5\text{ R}$) with zero alpha decay. Maximum drawdown is bounded strictly at $-13.88\text{ R}$.
           </figcaption>
         </figure>
 
-        <!-- Figure 2: Return Density Histogram -->
-        <figure>
-          <figcaption>
-            <strong>Figure 2: Empirical Return Distribution under Immutable 1:2 Payoff.</strong> Realized payoff frequency across 758 trades. Downside loss is hard-truncated at $-1.00\text{ R}$ ($36.81\%$), Take Profit clusters at $+2.00\text{ R}$ ($60.16\%$), and time-exit mark-to-market liquidations account for $3.03\%$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
-          </figcaption>
-          <div style="width: 100%; height: 230px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
-            <canvas id="tufte-canvas-bimodal" style="width: 100%; height: 100%;"></canvas>
+        <!-- Figure 2 & Figure 3: Clean Two-Column Structured Grid -->
+        <div class="figure-grid-2">
+          
+          <!-- Column 1: Figure 2 (Bimodal Return Distribution) -->
+          <div class="tufte-figure-box">
+            <span class="sans" style="font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 0.4rem;">
+              Figure 2: Empirical Return Distribution under Immutable 1:2 Payoff
+            </span>
+            <div style="width: 100%; height: 230px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--chart-bg); padding: 0.5rem 0;">
+              <canvas id="tufte-canvas-bimodal" style="width: 100%; height: 100%; display: block;"></canvas>
+            </div>
+            <figcaption>
+              Realized payoff frequency across 758 trades. Downside loss is hard-truncated at $-1.00\text{ R}$ ($36.81\%$), Take Profit clusters at $+2.00\text{ R}$ ($60.16\%$), and time-exit mark-to-market liquidations account for $3.03\%$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
+            </figcaption>
           </div>
-        </figure>
 
-        <!-- Figure 3: Rolling Win Rate vs Breakeven -->
-        <figure>
-          <figcaption>
-            <strong>Figure 3: 50-Trade Rolling Win Rate vs Breakeven Barrier (33.33%).</strong> 50-trade moving average win rate (solid curve) plotted against theoretical breakeven ($33.33\%$, dashed crimson). Over 709 rolling windows, the minimum empirical trough was $42.00\%$, establishing an unbroken safety margin of $\ge +8.67\%$ above mathematical ruin throughout 6.8 years of market regimes. Peak rolling win rate: $76.00\%$.
-          </figcaption>
-          <div style="width: 100%; height: 230px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
-            <canvas id="tufte-canvas-rolling" style="width: 100%; height: 100%;"></canvas>
+          <!-- Column 2: Figure 3 (Rolling Win Rate vs Breakeven) -->
+          <div class="tufte-figure-box">
+            <span class="sans" style="font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 0.4rem;">
+              Figure 3: 50-Trade Rolling Win Rate vs Breakeven Barrier (33.33%)
+            </span>
+            <div style="width: 100%; height: 230px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--chart-bg); padding: 0.5rem 0;">
+              <canvas id="tufte-canvas-rolling" style="width: 100%; height: 100%; display: block;"></canvas>
+            </div>
+            <figcaption>
+              50-trade moving average win rate (solid curve) plotted against theoretical breakeven ($33.33\%$, dashed crimson). Over 709 rolling windows, the minimum empirical trough was $42.00\%$, establishing an unbroken safety margin of $\ge +8.67\%$ above mathematical ruin throughout 6.8 years of market regimes. Peak rolling win rate: $76.00\%$.
+            </figcaption>
           </div>
-        </figure>
 
-        <!-- Table 2: Markov Transition Matrix -->
-        <p><label for="mn-markov-test" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-markov-test" class="margin-toggle"/><span class="marginnote"><strong>Markovian Independence:</strong> Pearson's Chi-Square Test yields $\chi^2 = 0.6486$ ($p = 0.4206 > 0.05$). The null hypothesis of sequential independence cannot be rejected. Consecutive trades behave as memoryless Bernoulli trials with zero clustering bias.</span><strong>Table 2: 2×2 Markovian Transition Probability Matrix.</strong> Demonstrating that consecutive trade outcomes behave as independent Markovian trials:</p>
+        </div>
 
-        <table class="booktabs" style="width: 55%;">
-          <thead>
-            <tr>
-              <th>Preceding Outcome ($S_{t-1}$)</th>
-              <th style="text-align: center;">$P(\text{Win}_t \mid S_{t-1})$</th>
-              <th style="text-align: center;">$P(\text{Loss}_t \mid S_{t-1})$</th>
-              <th style="text-align: center;">Count</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>After Winning Trade ($\text{Win}_{t-1}$)</td>
-              <td style="text-align: center; font-weight: bold;">63.56%</td>
-              <td style="text-align: center;">36.44%</td>
-              <td style="text-align: center;">472</td>
-            </tr>
-            <tr>
-              <td>After Losing Trade ($\text{Loss}_{t-1}$)</td>
-              <td style="text-align: center; font-weight: bold;">60.35%</td>
-              <td style="text-align: center;">39.65%</td>
-              <td style="text-align: center;">285</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Figure 4: Velocity Attribution -->
-        <figure>
-          <figcaption>
-            <strong>Figure 4: Holding Duration Velocity Attribution.</strong> Median trade duration is $6.00\text{ hours}$ (Mean win: $7.39\text{h}$; Mean loss: $5.16\text{h}$). $100.0\%$ of positions terminate $\le 16\text{ hours}$, strictly eliminating exposure to overnight weekend holding gaps.
-          </figcaption>
-          <div style="width: 100%; height: 165px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
-            <canvas id="tufte-canvas-velocity" style="width: 100%; height: 100%;"></canvas>
+        <!-- Table 2 & Figure 4: Clean Two-Column Structured Grid -->
+        <div class="figure-grid-2" style="margin-top: 3.5rem;">
+          
+          <!-- Column 1: Table 2 (Markov Transition Matrix) -->
+          <div class="tufte-figure-box">
+            <span class="sans" style="font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 0.4rem;">
+              Table 2: 2×2 Markovian Transition Probability Matrix
+            </span>
+            <table class="booktabs" style="width: 100%; margin: 0;">
+              <thead>
+                <tr>
+                  <th>Preceding Outcome ($S_{t-1}$)</th>
+                  <th style="text-align: center;">$P(\text{Win}_t \mid S_{t-1})$</th>
+                  <th style="text-align: center;">$P(\text{Loss}_t \mid S_{t-1})$</th>
+                  <th style="text-align: center;">Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>After Winning Trade ($\text{Win}_{t-1}$)</td>
+                  <td style="text-align: center; font-weight: bold;">63.56%</td>
+                  <td style="text-align: center;">36.44%</td>
+                  <td style="text-align: center;">472</td>
+                </tr>
+                <tr>
+                  <td>After Losing Trade ($\text{Loss}_{t-1}$)</td>
+                  <td style="text-align: center; font-weight: bold;">60.35%</td>
+                  <td style="text-align: center;">39.65%</td>
+                  <td style="text-align: center;">285</td>
+                </tr>
+              </tbody>
+            </table>
+            <figcaption>
+              <strong>Markovian Independence:</strong> Pearson's Chi-Square Test yields $\chi^2 = 0.6486$ ($p = 0.4206 > 0.05$). The null hypothesis of sequential independence cannot be rejected. Consecutive trades behave as memoryless Bernoulli trials with zero clustering bias.
+            </figcaption>
           </div>
-        </figure>
+
+          <!-- Column 2: Figure 4 (Velocity Attribution) -->
+          <div class="tufte-figure-box">
+            <span class="sans" style="font-size: 0.9rem; font-weight: bold; display: block; margin-bottom: 0.4rem;">
+              Figure 4: Holding Duration Velocity Attribution
+            </span>
+            <div style="width: 100%; height: 165px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--chart-bg); padding: 0.5rem 0;">
+              <canvas id="tufte-canvas-velocity" style="width: 100%; height: 100%; display: block;"></canvas>
+            </div>
+            <figcaption>
+              Median trade duration is $6.00\text{ hours}$ (Mean win: $7.39\text{h}$; Mean loss: $5.16\text{h}$). $100.0\%$ of positions terminate $\le 16\text{ hours}$, strictly eliminating exposure to overnight weekend holding gaps.
+            </figcaption>
+          </div>
+
+        </div>
       </section>
 
       <!-- Section: Multi-Year Monthly Performance Matrix -->
@@ -369,7 +458,7 @@
                 <th style="text-align: right;">Entry Price</th>
                 <th style="text-align: right;">Exit Price</th>
                 <th style="text-align: center;">Holding</th>
-                <th style="text-align: center;">Exit Mechanism</th>
+                <th style="text-align: center;">Exit Reason</th>
                 <th style="text-align: right;">Realized R</th>
               </tr>
             </thead>
@@ -426,10 +515,43 @@
             throwOnError: false
           });
         }
+
+        if (window.matchMedia) {
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (tufteChart) {
+              const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              tufteChart.applyOptions({
+                layout: {
+                  background: { type: 'solid', color: isDark ? '#151515' : '#fffff8' },
+                  textColor: isDark ? '#dddddd' : '#111111'
+                },
+                grid: {
+                  vertLines: { color: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)' },
+                  horzLines: { color: isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)' }
+                }
+              });
+              if (tufteEquitySeries) {
+                tufteEquitySeries.applyOptions({
+                  lineColor: isDark ? '#e0e0e0' : '#111111',
+                  topColor: isDark ? 'rgba(224, 224, 224, 0.12)' : 'rgba(17, 17, 17, 0.08)',
+                  bottomColor: isDark ? 'rgba(224, 224, 224, 0.0)' : 'rgba(17, 17, 17, 0.0)'
+                });
+              }
+              if (tufteDrawdownSeries) {
+                tufteDrawdownSeries.applyOptions({
+                  lineColor: isDark ? '#f43f5e' : '#8b0000',
+                  topColor: isDark ? 'rgba(244, 63, 94, 0.15)' : 'rgba(139, 0, 0, 0.12)',
+                  bottomColor: isDark ? 'rgba(244, 63, 94, 0.0)' : 'rgba(139, 0, 0, 0.0)'
+                });
+              }
+            }
+            initTufteCanvases();
+          });
+        }
       });
 
       // -------------------------------------------------------------
-      // 1. LIGHTWEIGHT CHART (TUFTE THEME) - BOUND TO SHOWCASE_CURVE
+      // 1. LIGHTWEIGHT CHART (TUFTE THEME) - DYNAMIC LIGHT/DARK
       // -------------------------------------------------------------
       let tufteChart = null;
       let tufteEquitySeries = null;
@@ -439,30 +561,37 @@
         const container = document.getElementById('tufte-chart-container');
         if (!container || !window.LightweightCharts || !window.SHOWCASE_CURVE) return;
 
+        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const chartBgColor = isDark ? '#151515' : '#fffff8';
+        const chartTextColor = isDark ? '#dddddd' : '#111111';
+        const chartGridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)';
+        const equityLineColor = isDark ? '#e0e0e0' : '#111111';
+        const drawdownLineColor = isDark ? '#f43f5e' : '#8b0000';
+
         tufteChart = window.LightweightCharts.createChart(container, {
           width: container.clientWidth,
           height: 380,
           layout: {
-            background: { color: '#fffff8' },
-            textColor: '#111111',
+            background: { color: chartBgColor },
+            textColor: chartTextColor,
             fontSize: 11,
             fontFamily: 'Consolas, monospace',
           },
           grid: {
-            vertLines: { color: 'rgba(0, 0, 0, 0.06)' },
-            horzLines: { color: 'rgba(0, 0, 0, 0.06)' },
+            vertLines: { color: chartGridColor },
+            horzLines: { color: chartGridColor },
           },
           timeScale: {
-            borderColor: '#111111',
+            borderColor: isDark ? '#444444' : '#111111',
             timeVisible: true,
             secondsVisible: false,
           },
           rightPriceScale: {
-            borderColor: '#111111',
+            borderColor: isDark ? '#444444' : '#111111',
           },
           crosshair: {
-            vertLine: { color: '#111111', width: 1, style: 2 },
-            horzLine: { color: '#111111', width: 1, style: 2 },
+            vertLine: { color: isDark ? '#aaaaaa' : '#111111', width: 1, style: 2 },
+            horzLine: { color: isDark ? '#aaaaaa' : '#111111', width: 1, style: 2 },
           }
         });
 
@@ -477,18 +606,18 @@
         }));
 
         tufteEquitySeries = tufteChart.addAreaSeries({
-          lineColor: '#111111',
-          topColor: 'rgba(17, 17, 17, 0.15)',
-          bottomColor: 'rgba(17, 17, 17, 0.01)',
+          lineColor: equityLineColor,
+          topColor: isDark ? 'rgba(224, 224, 224, 0.20)' : 'rgba(17, 17, 17, 0.15)',
+          bottomColor: isDark ? 'rgba(224, 224, 224, 0.01)' : 'rgba(17, 17, 17, 0.01)',
           lineWidth: 2,
           priceFormat: { type: 'custom', formatter: (val) => val.toFixed(1) + ' R' },
         });
         tufteEquitySeries.setData(equityData);
 
         tufteDrawdownSeries = tufteChart.addAreaSeries({
-          lineColor: '#8b0000',
-          topColor: 'rgba(139, 0, 0, 0.01)',
-          bottomColor: 'rgba(139, 0, 0, 0.20)',
+          lineColor: drawdownLineColor,
+          topColor: isDark ? 'rgba(244, 63, 94, 0.01)' : 'rgba(139, 0, 0, 0.01)',
+          bottomColor: isDark ? 'rgba(244, 63, 94, 0.25)' : 'rgba(139, 0, 0, 0.20)',
           lineWidth: 2,
           priceFormat: { type: 'custom', formatter: (val) => val.toFixed(1) + ' R' },
           visible: false,
@@ -524,7 +653,7 @@
       }
 
       // -------------------------------------------------------------
-      // 2. TUFTE CANVASES (BIMODAL, ROLLING, VELOCITY)
+      // 2. TUFTE CANVASES (BIMODAL, ROLLING, VELOCITY) - DYNAMIC THEME
       // -------------------------------------------------------------
       function initTufteCanvases() {
         renderTufteBimodal();
@@ -541,6 +670,7 @@
         canvas.height = canvas.clientHeight * dpr;
         ctx.scale(dpr, dpr);
 
+        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         const w = canvas.clientWidth;
         const h = canvas.clientHeight;
         const breakdown = window.QUANT_RETURN_DISTRIBUTION.breakdown || [];
@@ -561,33 +691,32 @@
           const barH = (b.count / maxCount) * chartH;
           const y = h - padBottom - barH;
 
-          // Muted Tufte ink palette
           if (b.r_range.includes('-1.0')) {
-            ctx.fillStyle = '#8b0000'; // Loss
+            ctx.fillStyle = isDark ? '#f43f5e' : '#8b0000'; // Loss
           } else if (b.r_range.includes('+2.0')) {
-            ctx.fillStyle = '#111111'; // Win
+            ctx.fillStyle = isDark ? '#e0e0e0' : '#111111'; // Win
           } else {
-            ctx.fillStyle = '#777777'; // Timeouts/Scratch
+            ctx.fillStyle = isDark ? '#777777' : '#666666'; // Timeouts/Scratch
           }
 
           ctx.fillRect(x + 4, y, barWidth - 8, barH);
 
           if (b.count > 0) {
-            ctx.fillStyle = '#111111';
+            ctx.fillStyle = isDark ? '#e0e0e0' : '#111111';
             ctx.font = '10px Consolas, monospace';
             ctx.textAlign = 'center';
             ctx.fillText(b.count, x + barWidth / 2, y - 5);
           }
         });
 
-        ctx.strokeStyle = '#111111';
+        ctx.strokeStyle = isDark ? '#444444' : '#111111';
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(padLeft, h - padBottom);
         ctx.lineTo(w - padRight, h - padBottom);
         ctx.stroke();
 
-        ctx.fillStyle = '#111111';
+        ctx.fillStyle = isDark ? '#aaaaaa' : '#111111';
         ctx.font = '10px Consolas, monospace';
         ctx.textAlign = 'center';
         ctx.fillText('-1.0R (SL)', padLeft + barWidth / 2, h - 8);
@@ -606,6 +735,7 @@
         canvas.height = canvas.clientHeight * dpr;
         ctx.scale(dpr, dpr);
 
+        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         const w = canvas.clientWidth;
         const h = canvas.clientHeight;
         const series = window.QUANT_ROLLING_WIN_RATE.series;
@@ -626,7 +756,7 @@
         const getX = (idx) => padLeft + (idx / (series.length - 1)) * chartW;
 
         const yBE = getY(33.33);
-        ctx.strokeStyle = '#8b0000';
+        ctx.strokeStyle = isDark ? '#f43f5e' : '#8b0000';
         ctx.lineWidth = 1.5;
         ctx.setLineDash([4, 4]);
         ctx.beginPath();
@@ -635,12 +765,12 @@
         ctx.stroke();
         ctx.setLineDash([]);
 
-        ctx.fillStyle = '#8b0000';
+        ctx.fillStyle = isDark ? '#f43f5e' : '#8b0000';
         ctx.font = '10px Consolas, monospace';
         ctx.textAlign = 'right';
         ctx.fillText('BE 33.3%', padLeft - 5, yBE + 3);
 
-        ctx.strokeStyle = '#111111';
+        ctx.strokeStyle = isDark ? '#e0e0e0' : '#111111';
         ctx.lineWidth = 2;
         ctx.beginPath();
         series.forEach((pt, i) => {
@@ -651,7 +781,7 @@
         });
         ctx.stroke();
 
-        ctx.fillStyle = '#555555';
+        ctx.fillStyle = isDark ? '#888888' : '#555555';
         ctx.font = '10px Consolas, monospace';
         ctx.textAlign = 'right';
         ctx.fillText('80%', padLeft - 5, getY(80) + 3);
@@ -671,6 +801,7 @@
         canvas.height = canvas.clientHeight * dpr;
         ctx.scale(dpr, dpr);
 
+        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         const w = canvas.clientWidth;
         const h = canvas.clientHeight;
         const dist = window.QUANT_VELOCITY_ATTRIBUTION.hourly_distribution;
@@ -691,17 +822,17 @@
           const bH = (d.trades / maxCnt) * chartH;
           const y = h - padBottom - bH;
 
-          ctx.fillStyle = d.hour === 16 ? '#8b0000' : '#111111';
+          ctx.fillStyle = d.hour === 16 ? (isDark ? '#f43f5e' : '#8b0000') : (isDark ? '#e0e0e0' : '#111111');
           ctx.fillRect(x + 1, y, barW - 2, bH);
         });
 
-        ctx.strokeStyle = '#111111';
+        ctx.strokeStyle = isDark ? '#444444' : '#111111';
         ctx.beginPath();
         ctx.moveTo(padLeft, h - padBottom);
         ctx.lineTo(w - padRight, h - padBottom);
         ctx.stroke();
 
-        ctx.fillStyle = '#111111';
+        ctx.fillStyle = isDark ? '#aaaaaa' : '#111111';
         ctx.font = '9px Consolas, monospace';
         ctx.textAlign = 'center';
         ctx.fillText('1h', padLeft + barW / 2, h - 7);
@@ -720,10 +851,10 @@
         window.SHOWCASE_MONTHLY.forEach(yrObj => {
           let monthCells = yrObj.months.map(m => {
             if (m.r === null || m.r === undefined || (m.trades === 0 && m.r === 0)) {
-              return `<td style="color: #bbb;">–</td>`;
+              return `<td style="color: #666;">–</td>`;
             }
             const sign = m.r > 0 ? '+' : '';
-            const color = m.r > 0 ? 'font-weight: 500;' : (m.r < 0 ? 'color: #8b0000;' : '');
+            const color = m.r > 0 ? 'font-weight: 500;' : 'color: #f43f5e;';
             return `<td style="${color}">${sign}${m.r.toFixed(1)}</td>`;
           }).join('');
 
@@ -825,7 +956,7 @@
         } else {
           tbody.innerHTML = pageData.map((tr) => {
             const isWin = tr.r > 0;
-            const rColor = isWin ? 'font-weight: bold;' : 'color: #8b0000; font-weight: bold;';
+            const rColor = isWin ? 'font-weight: bold;' : 'color: #f43f5e; font-weight: bold;';
             const rText = (tr.r > 0 ? '+' : '') + tr.r.toFixed(2) + ' R';
 
             return `

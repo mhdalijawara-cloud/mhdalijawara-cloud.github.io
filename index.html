@@ -20,7 +20,7 @@
     <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📈&lt;/text&gt;&lt;/svg&gt;"/>
 
     <!-- Embedded Audited Showcase Datasets with CDN Cache-Buster -->
-    <script src="data/data.js?v=20261015_v4"></script>
+    <script src="data/data.js?v=20261015_v5"></script>
 
     <style>
       *, *::before, *::after {
@@ -764,29 +764,26 @@
         <h2 id="replication">Open Replication Ledger (758 Trade Audit Trail)</h2>
         <p>Scientific integrity requires full auditability. Below is the complete record of all 758 executed trades, including timestamp, fill prices, duration, exit reason, and realized net R.</p>
 
-        <div style="margin: 1.5rem 0 0.5rem 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: space-between;">
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
-            <input type="text" id="tufte-ledger-search" placeholder="Search date / price..." class="tufte-input" style="width: 160px;">
-            <select id="tufte-ledger-year" class="tufte-control">
-              <option value="ALL">All Years (2020–2026)</option>
-              <option value="2026">2026 (OOS Live)</option>
-              <option value="2025">2025 (OOS Forward)</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2021">2021</option>
-              <option value="2020">2020</option>
-            </select>
-            <select id="tufte-ledger-outcome" class="tufte-control">
-              <option value="ALL">All Outcomes</option>
-              <option value="WIN">Wins (+2.0R)</option>
-              <option value="LOSS">Losses (-1.0R)</option>
-            </select>
-          </div>
-          <div>
-            <button id="btn-export-csv" class="tufte-control" style="border-color: var(--win-color); color: var(--win-color);">Download CSV</button>
-            <button id="btn-export-json" class="tufte-control">Download JSON</button>
-          </div>
+        <div style="margin: 1.5rem 0 0.75rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: flex-start;">
+          <input type="text" id="tufte-ledger-search" placeholder="Search date / price..." class="tufte-input" style="width: 170px;">
+          <select id="tufte-ledger-year" class="tufte-control">
+            <option value="ALL">All Years (2020–2026)</option>
+            <option value="2026">2026 (OOS Live)</option>
+            <option value="2025">2025 (OOS Forward)</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+          </select>
+          <select id="tufte-ledger-outcome" class="tufte-control">
+            <option value="ALL">All Outcomes</option>
+            <option value="WIN">Wins (+2.0R)</option>
+            <option value="LOSS">Losses (-1.0R)</option>
+          </select>
+          <span style="display: inline-block; width: 1px; height: 18px; background: var(--border-light); margin: 0 0.25rem;"></span>
+          <button id="btn-export-csv" class="tufte-control">Download CSV</button>
+          <button id="btn-export-json" class="tufte-control">Download JSON</button>
         </div>
 
         <div class="table-wrapper">

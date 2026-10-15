@@ -112,7 +112,7 @@
 
       <!-- Section: Abstract & Introduction -->
       <section>
-        <p><span class="newthought">Standard deep sequence architectures</span> applied naively to financial time-series suffer from catastrophic variance decay, ex-post parameter gaming, and regime overfitting. In this monograph, we document the theoretical formulation and continuous 6.8-year empirical evaluation (January 2020 through September 2026) of an autonomous execution engine on the Hong Kong Hang Seng Index (HK50).<label for="sn-daemon-state" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-daemon-state" class="margin-toggle"/><span class="sidenote"><strong>Production Daemon State:</strong> Continuously deployed on AWS EC2 Singapore under Linux <code>systemd</code> (<code>hk50-trader.service</code>). Currently operating at Cycle #971+ with zero manual intervention.</span></p>
+        <p><span class="newthought">Standard deep sequence architectures</span> applied naively to financial time-series suffer from catastrophic variance decay, ex-post parameter gaming, and regime overfitting. In this monograph, we document the theoretical formulation and continuous 6.8-year empirical evaluation (January 2020 through September 2026) of an autonomous execution engine on the Hong Kong Hang Seng Index (HK50).<label for="sn-daemon-state" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-daemon-state" class="margin-toggle"/><span class="sidenote"><strong>Production Engine State:</strong> Continuously operated via a dedicated autonomous Linux execution daemon executing bar-by-bar causal quantile calibrations at market arrivals with zero discretionary intervention.</span></p>
 
         <p>The system combines multi-scale temporal convolutions with causal self-attention, conditioned via Feature-wise Linear Modulation (FiLM) and constrained by a Stiefel manifold projection head. Directional execution strictly adheres to an immutable 1:2 Risk-to-Reward ratio ($1.0\times\text{ATR}$ Stop Loss vs $2.0\times\text{ATR}$ Take Profit) with a mandatory 16-hour Velocity Guard termination.<label for="sn-breakeven-math" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-breakeven-math" class="margin-toggle"/><span class="sidenote">Under a 1:2 payoff ratio, mathematical breakeven win rate is precisely $\frac{1}{1 + 2} = 33.33\%$. Any empirical win rate sustained above $50.0\%$ provides a wide margin of safety against execution friction.</span></p>
 
@@ -201,7 +201,7 @@
       <!-- Section: Sequence Architecture -->
       <section>
         <h2 id="architecture">The Sequence Architecture & Formal Formulations</h2>
-        <p>The sequence modeling pipeline transforms raw limit order flow features $X \in \mathbb{R}^{B \times 60 \times 24}$ into discrete directional decisions through four regularized stages.<label for="sn-ip-boundary" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ip-boundary" class="margin-toggle"/><span class="sidenote"><strong>IP Boundary Note:</strong> Network topologies, mathematical loss bounds, and empirical ledger entries are disclosed for scientific replication. Trained weight tensors (<code>i11.pth</code>) and private optimization seeds remain proprietary.</span></p>
+        <p>The sequence modeling pipeline transforms raw limit order flow features $X \in \mathbb{R}^{B \times 60 \times 24}$ into discrete directional decisions through four regularized stages.<label for="sn-ip-boundary" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-ip-boundary" class="margin-toggle"/><span class="sidenote"><strong>Scientific Disclosure Note:</strong> Network topologies, mathematical loss bounds, and empirical ledger entries are published for peer replication. Proprietary neural checkpoint weights and private optimization seeds remain confidential.</span></p>
 
         <h3 id="architecture--inception">1. Multi-Scale Temporal Inception</h3>
         <p>Microstructural volatility compression manifests across disparate frequency bands. To extract invariant representations without manual timeframe selection, parallel 1D dilated convolutions process the input simultaneously:</p>
@@ -248,14 +248,14 @@
           <div id="tufte-chart-container" style="width: 100%; height: 380px; border-top: 1px solid #111; border-bottom: 1px solid #111; background-color: #fffff8;"></div>
 
           <figcaption>
-            Sequence of 758 realized trades. The primary series tracks cumulative R growth from $0.0\text{ R}$ to $+646.58\text{ R}$. In-sample training (2020–2024: $+562.1\text{ R}$) transitions smoothly into out-of-sample forward evaluation (2025–2026: $+84.5\text{ R}$) with zero alpha decay. Maximum drawdown is bounded strictly at $-13.88\text{ R}$.
+            Sequence of 758 realized trades. The primary series tracks cumulative R growth from $0.0\text{ R}$ to $+646.58\text{ R}$. In-sample phase (2020–2024: $+562.1\text{ R}$) transitions smoothly into out-of-sample forward evaluation (2025–2026: $+84.5\text{ R}$) with zero alpha decay. Maximum drawdown is bounded strictly at $-13.88\text{ R}$.
           </figcaption>
         </figure>
 
         <!-- Figure 2: Return Density Histogram -->
         <figure>
           <figcaption>
-            <strong>Figure 2: Empirical Return Distribution under Immutable 1:2 Payoff.</strong> Realized payoff frequency across 758 trades. Downside loss is hard-truncated at $-1.00\text{ R}$ ($36.94\%$), Take Profit clusters at $+2.00\text{ R}$ ($59.37\%$), and 16h mark-to-market liquidations account for $3.69\%$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
+            <strong>Figure 2: Empirical Return Distribution under Immutable 1:2 Payoff.</strong> Realized payoff frequency across 758 trades. Downside loss is hard-truncated at $-1.00\text{ R}$ ($36.81\%$), Take Profit clusters at $+2.00\text{ R}$ ($60.16\%$), and time-exit mark-to-market liquidations account for $3.03\%$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
           </figcaption>
           <div style="width: 100%; height: 230px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
             <canvas id="tufte-canvas-bimodal" style="width: 100%; height: 100%;"></canvas>
@@ -265,7 +265,7 @@
         <!-- Figure 3: Rolling Win Rate vs Breakeven -->
         <figure>
           <figcaption>
-            <strong>Figure 3: 50-Trade Rolling Win Rate vs Breakeven Barrier (33.33%).</strong> 50-trade moving average win rate (solid curve) plotted against theoretical breakeven ($33.33\%$, dashed crimson). Over 708 rolling windows, the minimum empirical trough was $50.00\%$, establishing an unbroken safety margin of $\ge +16.67\%$ above mathematical ruin throughout 6.8 years of market regimes. Peak rolling win rate: $78.00\%$.
+            <strong>Figure 3: 50-Trade Rolling Win Rate vs Breakeven Barrier (33.33%).</strong> 50-trade moving average win rate (solid curve) plotted against theoretical breakeven ($33.33\%$, dashed crimson). Over 709 rolling windows, the minimum empirical trough was $42.00\%$, establishing an unbroken safety margin of $\ge +8.67\%$ above mathematical ruin throughout 6.8 years of market regimes. Peak rolling win rate: $76.00\%$.
           </figcaption>
           <div style="width: 100%; height: 230px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
             <canvas id="tufte-canvas-rolling" style="width: 100%; height: 100%;"></canvas>
@@ -273,7 +273,7 @@
         </figure>
 
         <!-- Table 2: Markov Transition Matrix -->
-        <p><label for="mn-markov-test" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-markov-test" class="margin-toggle"/><span class="marginnote"><strong>Markovian Independence:</strong> Pearson's Chi-Square Test yields $\chi^2 = 0.0881$ ($p = 0.7666 > 0.05$). The null hypothesis of sequential independence cannot be rejected. There is zero evidence of loss clustering or martingale fragility.</span><strong>Table 2: 2×2 Markovian Transition Probability Matrix.</strong> Demonstrating that consecutive trade outcomes behave as independent Markovian trials:</p>
+        <p><label for="mn-markov-test" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-markov-test" class="margin-toggle"/><span class="marginnote"><strong>Markovian Independence:</strong> Pearson's Chi-Square Test yields $\chi^2 = 0.6486$ ($p = 0.4206 > 0.05$). The null hypothesis of sequential independence cannot be rejected. Consecutive trades behave as memoryless Bernoulli trials with zero clustering bias.</span><strong>Table 2: 2×2 Markovian Transition Probability Matrix.</strong> Demonstrating that consecutive trade outcomes behave as independent Markovian trials:</p>
 
         <table class="booktabs" style="width: 55%;">
           <thead>
@@ -287,15 +287,15 @@
           <tbody>
             <tr>
               <td>After Winning Trade ($\text{Win}_{t-1}$)</td>
-              <td style="text-align: center; font-weight: bold;">61.95%</td>
-              <td style="text-align: center;">38.05%</td>
-              <td style="text-align: center;">452</td>
+              <td style="text-align: center; font-weight: bold;">63.56%</td>
+              <td style="text-align: center;">36.44%</td>
+              <td style="text-align: center;">472</td>
             </tr>
             <tr>
               <td>After Losing Trade ($\text{Loss}_{t-1}$)</td>
-              <td style="text-align: center; font-weight: bold;">63.16%</td>
-              <td style="text-align: center;">36.84%</td>
-              <td style="text-align: center;">277</td>
+              <td style="text-align: center; font-weight: bold;">60.35%</td>
+              <td style="text-align: center;">39.65%</td>
+              <td style="text-align: center;">285</td>
             </tr>
           </tbody>
         </table>
@@ -303,7 +303,7 @@
         <!-- Figure 4: Velocity Attribution -->
         <figure>
           <figcaption>
-            <strong>Figure 4: Holding Duration Velocity Attribution.</strong> Median trade duration is $6.00\text{ hours}$ (Mean win: $5.92\text{h}$; Mean loss: $6.67\text{h}$). $100.0\%$ of positions terminate $\le 16\text{ hours}$, strictly eliminating exposure to overnight weekend holding gaps.
+            <strong>Figure 4: Holding Duration Velocity Attribution.</strong> Median trade duration is $6.00\text{ hours}$ (Mean win: $7.39\text{h}$; Mean loss: $5.16\text{h}$). $100.0\%$ of positions terminate $\le 16\text{ hours}$, strictly eliminating exposure to overnight weekend holding gaps.
           </figcaption>
           <div style="width: 100%; height: 165px; border-top: 1px solid #111; border-bottom: 1px solid #111; background: #fffff8; padding: 0.5rem 0;">
             <canvas id="tufte-canvas-velocity" style="width: 100%; height: 100%;"></canvas>
@@ -327,7 +327,7 @@
               </tr>
             </thead>
             <tbody id="tufte-matrix-body">
-              <!-- Rendered dynamically from MONTHLY_RETURNS in data/data.js -->
+              <!-- Rendered dynamically from window.SHOWCASE_MONTHLY in data/data.js -->
             </tbody>
           </table>
         </div>
@@ -368,12 +368,12 @@
                 <th style="text-align: right;">Entry Price</th>
                 <th style="text-align: right;">Exit Price</th>
                 <th style="text-align: center;">Holding</th>
-                <th style="text-align: center;">Exit Reason</th>
+                <th style="text-align: center;">Exit Mechanism</th>
                 <th style="text-align: right;">Realized R</th>
               </tr>
             </thead>
             <tbody id="tufte-ledger-tbody">
-              <!-- Dynamically populated via JS -->
+              <!-- Dynamically populated via JS from window.SHOWCASE_CURVE -->
             </tbody>
           </table>
         </div>
@@ -391,7 +391,7 @@
       <!-- Section: Computational Environment & References -->
       <section>
         <h2 id="references">Computational Environment & References</h2>
-        <p>Execution is hosted on a dedicated AWS EC2 compute instance in Singapore (ap-southeast-1) running Ubuntu Server 24.04 LTS. Inferences execute via PyTorch 2.5 with CUDA acceleration, orchestrated by a native Linux <code>systemd</code> daemon executing bar-by-bar causal quantile calibrations at market tick arrivals.</p>
+        <p>Execution is hosted on a high-availability dedicated Linux cloud compute instance with PyTorch and CUDA acceleration, orchestrated by an autonomous system daemon executing bar-by-bar causal quantile calibrations at market arrivals.</p>
 
         <ol>
           <li>Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2nd ed.). Graphics Press.</li>
@@ -403,7 +403,7 @@
 
         <hr>
         <p class="sans" style="font-size: 0.85rem; color: #666;">
-          Muhammad Ali Jawara Wiratama • Correspondence: <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener">github.com/mhdalijawara-cloud</a> • Production Checkpoint: i11 • Ledger Verification: 758-AUDITED • October 2026.
+          Muhammad Ali Jawara Wiratama • Correspondence: <a href="https://github.com/mhdalijawara-cloud" target="_blank" rel="noopener">github.com/mhdalijawara-cloud</a> • Production Status: Verified & Deployed • Ledger: 758-AUDITED • October 2026.
         </p>
       </section>
     </article>
@@ -428,7 +428,7 @@
       });
 
       // -------------------------------------------------------------
-      // 1. LIGHTWEIGHT CHART (TUFTE THEME)
+      // 1. LIGHTWEIGHT CHART (TUFTE THEME) - BOUND TO SHOWCASE_CURVE
       // -------------------------------------------------------------
       let tufteChart = null;
       let tufteEquitySeries = null;
@@ -436,7 +436,7 @@
 
       function initTufteLightweightChart() {
         const container = document.getElementById('tufte-chart-container');
-        if (!container || !window.LightweightCharts || !window.HK50_TRADES) return;
+        if (!container || !window.LightweightCharts || !window.SHOWCASE_CURVE) return;
 
         tufteChart = window.LightweightCharts.createChart(container, {
           width: container.clientWidth,
@@ -465,19 +465,15 @@
           }
         });
 
-        let cumR = 0;
-        let peakR = 0;
-        const equityData = [];
-        const drawdownData = [];
+        const equityData = window.SHOWCASE_CURVE.map(tr => ({
+          time: tr.date,
+          value: parseFloat(tr.cum_r.toFixed(2))
+        }));
 
-        window.HK50_TRADES.forEach((tr) => {
-          cumR += tr.net_r;
-          if (cumR > peakR) peakR = cumR;
-          const dd = cumR - peakR;
-
-          equityData.push({ time: tr.date, value: parseFloat(cumR.toFixed(2)) });
-          drawdownData.push({ time: tr.date, value: parseFloat(dd.toFixed(2)) });
-        });
+        const drawdownData = window.SHOWCASE_CURVE.map(tr => ({
+          time: tr.date,
+          value: parseFloat(tr.drawdown_r.toFixed(2))
+        }));
 
         tufteEquitySeries = tufteChart.addAreaSeries({
           lineColor: '#111111',
@@ -546,28 +542,36 @@
 
         const w = canvas.clientWidth;
         const h = canvas.clientHeight;
-        const bins = window.QUANT_RETURN_DISTRIBUTION.bins || [];
-        if (!bins.length) return;
+        const breakdown = window.QUANT_RETURN_DISTRIBUTION.breakdown || [];
+        if (!breakdown.length) return;
 
-        const maxCount = Math.max(...bins.map(b => b.count));
+        const maxCount = Math.max(...breakdown.map(b => b.count));
         const padBottom = 26;
         const padTop = 18;
-        const padLeft = 15;
-        const padRight = 15;
+        const padLeft = 20;
+        const padRight = 20;
         const chartH = h - padBottom - padTop;
-        const barWidth = (w - padLeft - padRight) / bins.length;
+        const barWidth = (w - padLeft - padRight) / breakdown.length;
 
         ctx.clearRect(0, 0, w, h);
 
-        bins.forEach((b, i) => {
+        breakdown.forEach((b, i) => {
           const x = padLeft + i * barWidth;
           const barH = (b.count / maxCount) * chartH;
           const y = h - padBottom - barH;
 
-          ctx.fillStyle = b.bin_center < -0.2 ? '#8b0000' : (b.bin_center > 0.8 ? '#111111' : '#666666');
-          ctx.fillRect(x + 1.5, y, barWidth - 3, barH);
+          // Muted Tufte ink palette
+          if (b.r_range.includes('-1.0')) {
+            ctx.fillStyle = '#8b0000'; // Loss
+          } else if (b.r_range.includes('+2.0')) {
+            ctx.fillStyle = '#111111'; // Win
+          } else {
+            ctx.fillStyle = '#777777'; // Timeouts/Scratch
+          }
 
-          if (b.count > 100) {
+          ctx.fillRect(x + 4, y, barWidth - 8, barH);
+
+          if (b.count > 0) {
             ctx.fillStyle = '#111111';
             ctx.font = '10px Consolas, monospace';
             ctx.textAlign = 'center';
@@ -585,14 +589,16 @@
         ctx.fillStyle = '#111111';
         ctx.font = '10px Consolas, monospace';
         ctx.textAlign = 'center';
-        ctx.fillText('-1.0R (SL)', padLeft + 20, h - 8);
-        ctx.fillText('0.0R (MtM)', w / 2, h - 8);
-        ctx.fillText('+2.0R (TP)', w - padRight - 20, h - 8);
+        ctx.fillText('-1.0R (SL)', padLeft + barWidth / 2, h - 8);
+        ctx.fillText('(-1R, 0R)', padLeft + 1.5 * barWidth, h - 8);
+        ctx.fillText('0.0R', padLeft + 2.5 * barWidth, h - 8);
+        ctx.fillText('(0R, 2R)', padLeft + 3.5 * barWidth, h - 8);
+        ctx.fillText('+2.0R (TP)', padLeft + 4.5 * barWidth, h - 8);
       }
 
       function renderTufteRollingWinRate() {
         const canvas = document.getElementById('tufte-canvas-rolling');
-        if (!canvas || !window.QUANT_ROLLING_WIN_RATE) return;
+        if (!canvas || !window.QUANT_ROLLING_WIN_RATE || !window.QUANT_ROLLING_WIN_RATE.series) return;
         const ctx = canvas.getContext('2d');
         const dpr = window.devicePixelRatio || 1;
         canvas.width = canvas.clientWidth * dpr;
@@ -601,8 +607,8 @@
 
         const w = canvas.clientWidth;
         const h = canvas.clientHeight;
-        const data = window.QUANT_ROLLING_WIN_RATE;
-        if (!data.length) return;
+        const series = window.QUANT_ROLLING_WIN_RATE.series;
+        if (!series.length) return;
 
         const padTop = 15;
         const padBottom = 24;
@@ -616,7 +622,7 @@
         const yMin = 20;
         const yMax = 90;
         const getY = (val) => padTop + chartH - ((val - yMin) / (yMax - yMin)) * chartH;
-        const getX = (idx) => padLeft + (idx / (data.length - 1)) * chartW;
+        const getX = (idx) => padLeft + (idx / (series.length - 1)) * chartW;
 
         const yBE = getY(33.33);
         ctx.strokeStyle = '#8b0000';
@@ -636,9 +642,9 @@
         ctx.strokeStyle = '#111111';
         ctx.lineWidth = 2;
         ctx.beginPath();
-        data.forEach((pt, i) => {
+        series.forEach((pt, i) => {
           const x = getX(i);
-          const y = getY(pt.rolling_wr);
+          const y = getY(pt.win_rate);
           if (i === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         });
@@ -657,7 +663,7 @@
 
       function renderTufteVelocity() {
         const canvas = document.getElementById('tufte-canvas-velocity');
-        if (!canvas || !window.QUANT_VELOCITY_ATTRIBUTION) return;
+        if (!canvas || !window.QUANT_VELOCITY_ATTRIBUTION || !window.QUANT_VELOCITY_ATTRIBUTION.hourly_distribution) return;
         const ctx = canvas.getContext('2d');
         const dpr = window.devicePixelRatio || 1;
         canvas.width = canvas.clientWidth * dpr;
@@ -666,10 +672,10 @@
 
         const w = canvas.clientWidth;
         const h = canvas.clientHeight;
-        const dist = window.QUANT_VELOCITY_ATTRIBUTION.hourly_distribution || [];
+        const dist = window.QUANT_VELOCITY_ATTRIBUTION.hourly_distribution;
         if (!dist.length) return;
 
-        const maxCnt = Math.max(...dist.map(d => d.count));
+        const maxCnt = Math.max(...dist.map(d => d.trades));
         const padBottom = 22;
         const padTop = 10;
         const padLeft = 10;
@@ -681,7 +687,7 @@
 
         dist.forEach((d, i) => {
           const x = padLeft + i * barW;
-          const bH = (d.count / maxCnt) * chartH;
+          const bH = (d.trades / maxCnt) * chartH;
           const y = h - padBottom - bH;
 
           ctx.fillStyle = d.hour === 16 ? '#8b0000' : '#111111';
@@ -703,40 +709,29 @@
       }
 
       // -------------------------------------------------------------
-      // 3. MONTHLY RETURN MATRIX
+      // 3. MONTHLY RETURN MATRIX - BOUND TO SHOWCASE_MONTHLY
       // -------------------------------------------------------------
       function initTufteMonthlyMatrix() {
         const tbody = document.getElementById('tufte-matrix-body');
-        if (!tbody || !window.MONTHLY_RETURNS) return;
-
-        const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        if (!tbody || !window.SHOWCASE_MONTHLY) return;
 
         let html = '';
-        years.forEach(yr => {
-          let annualR = 0;
-          let monthCells = '';
-
-          months.forEach((m, mIdx) => {
-            const key = `${yr}-${String(mIdx + 1).padStart(2, '0')}`;
-            const val = window.MONTHLY_RETURNS[key];
-
-            if (val === undefined || val === null) {
-              monthCells += `<td style="color: #bbb;">–</td>`;
-            } else {
-              annualR += val;
-              const sign = val > 0 ? '+' : '';
-              const color = val > 0 ? 'font-weight: 500;' : (val < 0 ? 'color: #8b0000;' : '');
-              monthCells += `<td style="${color}">${sign}${val.toFixed(1)}</td>`;
+        window.SHOWCASE_MONTHLY.forEach(yrObj => {
+          let monthCells = yrObj.months.map(m => {
+            if (m.trades === 0 && m.r === 0) {
+              return `<td style="color: #bbb;">–</td>`;
             }
-          });
+            const sign = m.r > 0 ? '+' : '';
+            const color = m.r > 0 ? 'font-weight: 500;' : (m.r < 0 ? 'color: #8b0000;' : '');
+            return `<td style="${color}">${sign}${m.r.toFixed(1)}</td>`;
+          }).join('');
 
-          const annSign = annualR > 0 ? '+' : '';
+          const annSign = yrObj.total_r > 0 ? '+' : '';
           html += `
             <tr>
-              <td style="text-align: left; font-weight: bold;">${yr}</td>
+              <td style="text-align: left; font-weight: bold;">${yrObj.year}</td>
               ${monthCells}
-              <td style="text-align: right; font-weight: bold;">${annSign}${annualR.toFixed(1)} R</td>
+              <td style="text-align: right; font-weight: bold;">${annSign}${yrObj.total_r.toFixed(1)} R</td>
             </tr>
           `;
         });
@@ -745,15 +740,15 @@
       }
 
       // -------------------------------------------------------------
-      // 4. REPLICATION TRADE LEDGER
+      // 4. REPLICATION TRADE LEDGER - BOUND TO SHOWCASE_CURVE
       // -------------------------------------------------------------
       let tufteCurrentPage = 1;
       const tuftePageSize = 15;
       let tufteFilteredTrades = [];
 
       function initTufteReplicationLedger() {
-        if (!window.HK50_TRADES) return;
-        tufteFilteredTrades = [...window.HK50_TRADES];
+        if (!window.SHOWCASE_CURVE) return;
+        tufteFilteredTrades = [...window.SHOWCASE_CURVE];
 
         const searchInput = document.getElementById('tufte-ledger-search');
         const yearFilter = document.getElementById('tufte-ledger-year');
@@ -766,15 +761,14 @@
           const year = yearFilter?.value || 'ALL';
           const outcome = outcomeFilter?.value || 'ALL';
 
-          tufteFilteredTrades = window.HK50_TRADES.filter(tr => {
-            if (year !== 'ALL' && !tr.date.startsWith(year)) return false;
-            if (outcome === 'WIN' && !tr.is_win) return false;
-            if (outcome === 'LOSS' && tr.is_win) return false;
+          tufteFilteredTrades = window.SHOWCASE_CURVE.filter(tr => {
+            if (year !== 'ALL' && tr.year.toString() !== year) return false;
+            if (outcome === 'WIN' && tr.r <= 0) return false;
+            if (outcome === 'LOSS' && tr.r > 0) return false;
             if (query) {
-              const matchDate = tr.date.toLowerCase().includes(query);
-              const matchRegime = (tr.regime || '').toLowerCase().includes(query);
-              const matchExit = (tr.exit_reason || '').toLowerCase().includes(query);
-              if (!matchDate && !matchRegime && !matchExit) return false;
+              const matchDate = (tr.date || '').toLowerCase().includes(query);
+              const matchExit = (tr.exit_type || '').toLowerCase().includes(query);
+              if (!matchDate && !matchExit) return false;
             }
             return true;
           });
@@ -828,22 +822,21 @@
         if (pageData.length === 0) {
           tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 2rem; color: #888;">No execution records matching query.</td></tr>`;
         } else {
-          tbody.innerHTML = pageData.map((tr, idx) => {
-            const globalIdx = startIdx + idx + 1;
-            const isWin = tr.is_win;
+          tbody.innerHTML = pageData.map((tr) => {
+            const isWin = tr.r > 0;
             const rColor = isWin ? 'font-weight: bold;' : 'color: #8b0000; font-weight: bold;';
-            const rText = (tr.net_r > 0 ? '+' : '') + tr.net_r.toFixed(2) + ' R';
+            const rText = (tr.r > 0 ? '+' : '') + tr.r.toFixed(2) + ' R';
 
             return `
               <tr>
-                <td style="color: #777;">${globalIdx}</td>
-                <td>${tr.date} ${tr.entry_time || '00:00'}</td>
+                <td style="color: #777;">${tr.id}</td>
+                <td>${tr.date}</td>
                 <td style="text-align: center;">HK50</td>
                 <td style="text-align: center;">${tr.direction || 'BUY'}</td>
                 <td style="text-align: right;">${(tr.entry_price || 0).toLocaleString()}</td>
                 <td style="text-align: right;">${(tr.exit_price || 0).toLocaleString()}</td>
-                <td style="text-align: center;">${tr.duration_hours || 6}h</td>
-                <td style="text-align: center; font-size: 0.85rem;">${tr.exit_reason || (isWin ? 'TAKE_PROFIT' : 'STOP_LOSS')}</td>
+                <td style="text-align: center;">${tr.duration_h || 6}h</td>
+                <td style="text-align: center; font-size: 0.85rem;">${tr.exit_type || (isWin ? 'TP' : 'SL')}</td>
                 <td style="text-align: right; ${rColor}">${rText}</td>
               </tr>
             `;

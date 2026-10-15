@@ -1275,12 +1275,13 @@
           ctx.fillText('50%', padLeft - 4, midY + 3);
 
           // Win Rate curve
-          ctx.strokeStyle = isDark ? '#e0e0e0' : '#111111';
-          ctx.lineWidth = 1.5;
+          ctx.strokeStyle = isDark ? '#4ade80' : '#16a34a';
+          ctx.lineWidth = 1.8;
           ctx.beginPath();
           series.forEach((pt, idx) => {
             const x = padLeft + (idx / (series.length - 1)) * plotW;
-            const y = padTop + (1.0 - (pt.win_rate - minY) / (maxY - minY)) * plotH;
+            const wr = pt.win_rate > 1.0 ? pt.win_rate / 100.0 : pt.win_rate;
+            const y = padTop + (1.0 - (wr - minY) / (maxY - minY)) * plotH;
             if (idx === 0) ctx.moveTo(x, y);
             else ctx.lineTo(x, y);
           });

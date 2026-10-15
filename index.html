@@ -297,6 +297,137 @@
       .references-list {
         padding-left: 1.5rem !important;
       }
+
+      /* ==========================================================================
+         Mobile Ergonomics & Responsive Tufte Harmonization (<= 768px)
+         ========================================================================== */
+      @media (max-width: 768px) {
+        body {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+        }
+
+        article {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding-top: 2rem !important;
+        }
+
+        section, section > p, section > table {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        /* 1. Full-width utilization without 15% gutter squashing */
+        div.table-wrapper,
+        table.booktabs.fullwidth,
+        figure,
+        figure.fullwidth,
+        .tufte-figure-box,
+        .figure-grid-2 {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        /* 2. Touch targets >= 44px */
+        button.tufte-control,
+        .tufte-control,
+        .tufte-input {
+          min-height: 44px !important;
+          padding: 8px 14px !important;
+          font-size: 0.8rem !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          box-sizing: border-box !important;
+        }
+
+        /* Figure 1 chart controls touch layout */
+        .tufte-chart-controls {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0.5rem !important;
+          width: 100% !important;
+          margin-top: 0.5rem !important;
+        }
+        .tufte-chart-controls button {
+          width: 100% !important;
+          margin-right: 0 !important;
+        }
+
+        /* Rolling metrics buttons in Fig 3 */
+        .rolling-metric-controls {
+          display: flex !important;
+          gap: 0.4rem !important;
+        }
+        .rolling-metric-controls button {
+          min-height: 44px !important;
+          padding: 8px 12px !important;
+          font-size: 0.75rem !important;
+        }
+
+        /* Filter bar touch spacing */
+        .tufte-filter-toolbar {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0.6rem !important;
+          width: 100% !important;
+        }
+        .tufte-filter-toolbar input,
+        .tufte-filter-toolbar select,
+        .tufte-filter-toolbar button {
+          width: 100% !important;
+          min-height: 44px !important;
+          box-sizing: border-box !important;
+          margin: 0 !important;
+        }
+        .tufte-filter-toolbar .toolbar-divider {
+          display: none !important;
+        }
+        .tufte-filter-actions {
+          display: flex !important;
+          gap: 0.5rem !important;
+          width: 100% !important;
+        }
+        .tufte-filter-actions button {
+          flex: 1 !important;
+        }
+
+        /* 3. Pagination flex layout fix - prevent broken wrapping */
+        .tufte-pagination-bar {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: stretch !important;
+          gap: 0.75rem !important;
+          width: 100% !important;
+          margin-top: 1rem !important;
+        }
+        .tufte-pagination-controls {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          gap: 0.5rem !important;
+          width: 100% !important;
+        }
+        .tufte-pagination-controls button {
+          flex: 1 !important;
+          min-height: 44px !important;
+          margin: 0 !important;
+        }
+        .tufte-pagination-controls span {
+          padding: 0 0.5rem !important;
+          white-space: nowrap !important;
+        }
+
+        /* 4. Tufte sidenote mobile toggle touch targets */
+        label.margin-toggle {
+          display: inline-block !important;
+          padding: 4px 8px !important;
+          min-width: 28px !important;
+          min-height: 28px !important;
+          line-height: 1.2 !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -320,21 +451,15 @@
       <!-- Section: Abstract & Monograph Overview -->
       <section>
         <p>
-          <span class="marginnote">
-            <sup>1</sup> <strong>Production Engine State:</strong> Continuously operated via an autonomous Linux execution daemon executing bar-by-bar causal quantile calibrations at market arrivals with zero discretionary intervention.
-          </span>
-          <span class="newthought">Standard deep sequence architectures</span> applied naively to financial time-series suffer from catastrophic variance decay, ex-post parameter gaming, and regime overfitting. In this monograph, we document the theoretical formulation and continuous 6.8-year empirical evaluation (January 2020 through September 2026) of an autonomous execution engine on the Hong Kong Hang Seng Index (HK50).<sup>1</sup>
+          <span class="newthought">Standard deep sequence architectures</span> applied naively to financial time-series suffer from catastrophic variance decay, ex-post parameter gaming, and regime overfitting. In this monograph, we document the theoretical formulation and continuous 6.8-year empirical evaluation (January 2020 through September 2026) of an autonomous execution engine on the Hong Kong Hang Seng Index (HK50).<label for="sn-production-state" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-production-state" class="margin-toggle"/><span class="sidenote"><strong>Production Engine State:</strong> Continuously operated via an autonomous Linux execution daemon executing bar-by-bar causal quantile calibrations at market arrivals with zero discretionary intervention.</span>
         </p>
 
         <p>
           The system combines multi-scale temporal convolutions with causal self-attention, conditioned via Feature-wise Linear Modulation (FiLM) and constrained by a Stiefel manifold projection head. Directional execution strictly adheres to an immutable 1:2 Risk-to-Reward ratio ($1.0 \times \text{ATR}$ Stop Loss vs $2.0 \times \text{ATR}$ Take Profit) with a mandatory 16-hour Velocity Guard termination.
-          <span class="marginnote">
-            <sup>2</sup> Under a 1:2 payoff ratio, mathematical breakeven win rate is precisely $\frac{1}{1+2} = \mathbf{33.33\%}$. Any empirical win rate sustained above $50.0\%$ provides a wide margin of safety against execution friction.
-          </span>
         </p>
 
         <p>
-          Across 758 consecutive daily executions, the system generates $\mathbf{+646.58\text{ R}}$ net cumulative return with an empirical win rate of $\mathbf{62.40\%}$ (Wilson 95% Confidence Interval: $[58.90\%, 65.78\%]$, $+29.07\%$ above mathematical breakeven).<sup>2</sup> Out-of-sample forward verification (January through September 2026) produces $+64.64\text{ R}$ across 116 trades with 0 negative quarters, empirically refuting the hypothesis of regime decay.
+          Across 758 consecutive daily executions, the system generates $\mathbf{+646.58\text{ R}}$ net cumulative return with an empirical win rate of $\mathbf{62.40\%}$ (Wilson 95% Confidence Interval: $[58.90\%, 65.78\%]$, $+29.07\%$ above mathematical breakeven).<label for="sn-breakeven-calc" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-breakeven-calc" class="margin-toggle"/><span class="sidenote">Under a 1:2 payoff ratio, mathematical breakeven win rate is precisely $\frac{1}{1+2} = \mathbf{33.33\%}$. Any empirical win rate sustained above $50.0\%$ provides a wide margin of safety against execution friction.</span> Out-of-sample forward verification (January through September 2026) produces $+64.64\text{ R}$ across 116 trades with 0 negative quarters, empirically refuting the hypothesis of regime decay.
         </p>
       </section>
 
@@ -443,7 +568,7 @@
             <span class="sans" style="font-size: 0.95rem; font-weight: bold;">
               Figure 1: Cumulative Realized Alpha vs Hang Seng Index (HK50) Buy & Hold (2020–2026)
             </span>
-            <div>
+            <div id="tufte-chart-controls" class="tufte-chart-controls">
               <button id="btn-tufte-equity" class="tufte-control active">Cumulative R (Model)</button>
               <button id="btn-tufte-benchmark" class="tufte-control">HK50 Buy & Hold</button>
               <button id="btn-tufte-drawdown" class="tufte-control">Underwater Drawdown</button>
@@ -479,9 +604,9 @@
               <span id="title-rolling-metric" class="sans" style="font-size: 0.9rem; font-weight: bold;">
                 Figure 3: 50-Trade Rolling Win Rate vs Breakeven (33.33%)
               </span>
-              <div>
-                <button id="btn-roll-wr" class="tufte-control active" style="font-size: 0.68rem; padding: 2px 6px;">Win Rate</button>
-                <button id="btn-roll-sharpe" class="tufte-control" style="font-size: 0.68rem; padding: 2px 6px;">Rolling Sharpe</button>
+              <div class="rolling-metric-controls">
+                <button id="btn-roll-wr" class="tufte-control active">Win Rate</button>
+                <button id="btn-roll-sharpe" class="tufte-control">Rolling Sharpe</button>
               </div>
             </div>
             <div style="width: 100%; height: 230px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--chart-bg); padding: 0.5rem 0;">
@@ -805,7 +930,7 @@
         <h2 id="replication">Open Replication Ledger (758 Trade Audit Trail)</h2>
         <p>Scientific integrity requires full auditability. Below is the complete record of all 758 executed trades, including timestamp, fill prices, duration, exit reason, and realized net R.</p>
 
-        <div style="margin: 1.5rem 0 0.75rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: flex-start;">
+        <div class="tufte-filter-toolbar" style="margin: 1.5rem 0 0.75rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: flex-start;">
           <input type="text" id="tufte-ledger-search" placeholder="Search date / price..." class="tufte-input" style="width: 170px;">
           <select id="tufte-ledger-year" class="tufte-control">
             <option value="ALL">All Years (2020–2026)</option>
@@ -822,9 +947,11 @@
             <option value="WIN">Wins (+2.0R)</option>
             <option value="LOSS">Losses (-1.0R)</option>
           </select>
-          <span style="display: inline-block; width: 1px; height: 18px; background: var(--border-light); margin: 0 0.25rem;"></span>
-          <button id="btn-export-csv" class="tufte-control">Download CSV</button>
-          <button id="btn-export-json" class="tufte-control">Download JSON</button>
+          <span class="toolbar-divider" style="display: inline-block; width: 1px; height: 18px; background: var(--border-light); margin: 0 0.25rem;"></span>
+          <div class="tufte-filter-actions" style="display: inline-flex; gap: 0.4rem;">
+            <button id="btn-export-csv" class="tufte-control">Download CSV</button>
+            <button id="btn-export-json" class="tufte-control">Download JSON</button>
+          </div>
         </div>
 
         <div class="table-wrapper">
@@ -848,9 +975,9 @@
           </table>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 1rem; width: 90%;">
+        <div class="tufte-pagination-bar">
           <span id="tufte-ledger-pagination-info" style="font-size: 0.9rem; font-style: italic;">Showing 1–15 of 758 records</span>
-          <div>
+          <div class="tufte-pagination-controls">
             <button id="btn-tufte-prev" class="tufte-control">Previous</button>
             <span id="tufte-page-num" style="padding: 0 0.5rem; font-family: monospace;">1 / 51</span>
             <button id="btn-tufte-next" class="tufte-control">Next</button>

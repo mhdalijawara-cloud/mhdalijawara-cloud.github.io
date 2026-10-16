@@ -36,7 +36,7 @@
     <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📈&lt;/text&gt;&lt;/svg&gt;"/>
 
     <!-- Embedded Audited Showcase Datasets with CDN Cache-Buster -->
-    <script src="data/data.js?v=20261016_v1"></script>
+    <script src="data/data.js?v=20261016_v2"></script>
 
     <style>
       *, *::before, *::after {
@@ -2077,10 +2077,11 @@
             if (out === 'WIN' && trR <= 0) return false;
             if (out === 'LOSS' && trR >= 0) return false;
             if (q) {
+              const matchId = String(tr.id || tr.trade_id || '').toLowerCase().includes(q);
               const matchDate = trDate.toLowerCase().includes(q);
               const matchPrice = String(tr.entry_price || '').includes(q) || String(tr.exit_price || '').includes(q);
               const matchReason = (tr.exit_type || tr.exit_reason || '').toLowerCase().includes(q);
-              if (!matchDate && !matchPrice && !matchReason) return false;
+              if (!matchId && !matchDate && !matchPrice && !matchReason) return false;
             }
             return true;
           });

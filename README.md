@@ -45,13 +45,13 @@ Empirical return breakdown across all 82 continuous months of production evaluat
 
 | Calendar Year | Regime Context | Realized Trades | Win Rate | Annual Alpha | Cumulative Alpha | Max Annual DD |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **2020** | COVID-19 Liquidity Shock & Volatility Spike | 71 | $60.56\%$ | **$+74.24\text{ R}$** | $+74.24\text{ R}$ | $-4.00\text{ R}$ |
-| **2021** | China Tech Regulatory Crackdown & Bear Flow | 109 | $61.47\%$ | **$+108.90\text{ R}$** | $+183.14\text{ R}$ | $-6.00\text{ R}$ |
-| **2022** | Global Rate Hikes & Property Market Contagion | 112 | $62.50\%$ | **$+90.40\text{ R}$** | $+273.54\text{ R}$ | $-7.00\text{ R}$ |
-| **2023** | Post-Reopening Disinflation & Rangebound Drift | 124 | $62.10\%$ | **$+125.90\text{ R}$** | $+399.44\text{ R}$ | $-5.00\text{ R}$ |
-| **2024** | Hang Seng Value Rebound & Low-Vol Accumulation | 112 | $62.50\%$ | **$+95.40\text{ R}$** | $+494.84\text{ R}$ | $-4.00\text{ R}$ |
-| **2025** | Systematic Volatility Expansion & Trend Swings | 114 | $64.04\%$ | **$+87.20\text{ R}$** | $+582.04\text{ R}$ | $-4.00\text{ R}$ |
-| **2026 (YTD)** | Live Out-of-Sample Forward Execution | 117 | $62.39\%$ | **$+63.63\text{ R}$** | **$+645.58\text{ R}$** | $-6.00\text{ R}$ |
+| **2020** | COVID-19 Liquidity Shock & Volatility Spike | 71 | $69.01\%$ | **$+74.24\text{ R}$** | $+74.24\text{ R}$ | $-3.00\text{ R}$ |
+| **2021** | China Tech Regulatory Crackdown & Bear Flow | 116 | $65.52\%$ | **$+108.89\text{ R}$** | $+183.13\text{ R}$ | $-6.00\text{ R}$ |
+| **2022** | Global Rate Hikes & Property Market Contagion | 110 | $60.91\%$ | **$+90.36\text{ R}$** | $+273.49\text{ R}$ | $-7.00\text{ R}$ |
+| **2023** | Post-Reopening Disinflation & Rangebound Drift | 117 | $69.23\%$ | **$+125.89\text{ R}$** | $+399.38\text{ R}$ | $-3.10\text{ R}$ |
+| **2024** | Hang Seng Value Rebound & Low-Vol Accumulation | 114 | $62.28\%$ | **$+95.40\text{ R}$** | $+494.78\text{ R}$ | $-4.00\text{ R}$ |
+| **2025** | Systematic Volatility Expansion & Trend Swings | 114 | $59.65\%$ | **$+87.17\text{ R}$** | $+581.95\text{ R}$ | $-4.00\text{ R}$ |
+| **2026 (YTD)** | Live Out-of-Sample Forward Execution | 117 | $52.14\%$ | **$+63.63\text{ R}$** | **$+645.58\text{ R}$** | $-7.00\text{ R}$ |
 | **Total / Summary** | **Continuous Systematic Evaluation** | **759** | **$62.32\%$** | **$+645.58\text{ R}$** | &mdash; | **$-7.00\text{ R}$** |
 
 ---
@@ -60,11 +60,11 @@ Empirical return breakdown across all 82 continuous months of production evaluat
 
 ```mermaid
 flowchart LR
-    A["Raw Order Flow Features<br/>X in R^(B x 60 x 24)"] --> B["Multi-Scale 1D Inception<br/>Lipschitz ||W||_spec <= 1.0"]
+    A["Raw Order Flow Features<br/>X ∈ ℝ^(B × 60 × 24)"] --> B["Multi-Scale 1D Inception<br/>Lipschitz ‖W‖_spec ≤ 1.0"]
     B --> C["Causal Spatial-Temporal Attention<br/>Masked Lower-Triangular M_ij"]
     C --> D["Stiefel Manifold Splay Head<br/>W^T W = I_k"]
-    D --> E["Causal Quantile Gate<br/>tau = 0.90 (N_past = 300)"]
-    E --> F{"p_t >= q_t ?"}
+    D --> E["Causal Quantile Gate<br/>τ = 0.90 (N_past = 300)"]
+    E --> F{"p_t ≥ q_t ?"}
     F -- "Yes" --> G["Execute Daily Top-1<br/>Fixed 1:2 R:R Payoff"]
     F -- "No" --> H["Filter / Stay Flat<br/>Preserve Capital"]
 ```
@@ -73,16 +73,27 @@ flowchart LR
 
 1. **Multi-Scale Temporal Inception:**
    Processes microstructural volatility compression across parallel kernel dimensions with spectral normalization:
-   $$Z_{\text{inc}} = \text{Concat}\Big(\text{Conv}_{1}(X), \text{Conv}_{3}(X), \text{Conv}_{5}(X), \text{MaxPool}_{3}(X)\Big), \quad \|W\|_{\text{spec}} \le 1.0$$
+   $$
+   Z_{\text{inc}} = \text{Concat}\Big(\text{Conv}_{1}(X), \text{Conv}_{3}(X), \text{Conv}_{5}(X), \text{MaxPool}_{3}(X)\Big), \quad \|W\|_{\text{spec}} \le 1.0
+   $$
+
 2. **Strict Causal Lower-Triangular Masking:**
    Eliminates look-ahead bias across sequence history:
-   $$A = \text{Softmax}\left(\frac{Q K^T}{\sqrt{d_k}} + M_{\text{causal}}\right) V, \quad M_{i,j} = \begin{cases} 0 & j \le i \\ -\infty & j > i \end{cases}$$
+   $$
+   A = \text{Softmax}\left(\frac{Q K^T}{\sqrt{d_k}} + M_{\text{causal}}\right) V, \quad M_{i,j} = \begin{cases} 0 & j \le i \\ -\infty & j > i \end{cases}
+   $$
+
 3. **Stiefel Manifold Projection Head:**
    Constrains projection weights to the compact Stiefel manifold $\mathcal{V}_k(\mathbb{R}^d)$ to guarantee angular separation between action classes and prevent directional collapse:
-   $$\min_{W \in \mathcal{V}_k(\mathbb{R}^d)} \mathcal{L}_{\text{task}}(W) \quad \text{subject to } W^T W = I_k$$
+   $$
+   \min_{W \in \mathcal{V}_k(\mathbb{R}^d)} \mathcal{L}_{\text{task}}(W) \quad \text{subject to } W^T W = I_k
+   $$
+
 4. **Causal Rolling Quantile Thresholding:**
    Evaluated strictly over historical backward windows of $N_{\text{past}} = 300$ trading bars to eliminate ex-post selection bias:
-   $$q_t = \text{Quantile}\Big(\big\{p_{t-k}\big\}_{k=1}^{N_{\text{past}}}, \tau = 0.90\Big)$$
+   $$
+   q_t = \text{Quantile}\Big(\big\{p_{t-k}\big\}_{k=1}^{N_{\text{past}}}, \tau = 0.90\Big)
+   $$
 
 ### 2. Intrinsic Execution Protocol
 

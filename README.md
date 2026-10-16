@@ -1,10 +1,10 @@
 # Empirical Sequence Modeling & Invariant Latent Projections
-### Autonomous Quantitative Alpha on Hang Seng Index (HK50) &bull; Continuous 6.8-Year Production Audit (2020&ndash;2026)
+### Autonomous Quantitative Alpha on Hang Seng Index (HK50) • Continuous 6.8-Year Production Audit (2020–2026)
 
 [![Production Audit Status](https://img.shields.io/badge/Production%20Status-Verified%20Live-10b981.svg?style=flat-square)](https://mhdalijawara-cloud.github.io/)
 [![Audit Trail](https://img.shields.io/badge/Audited%20Executions-759%20Trades-0ea5e9.svg?style=flat-square)](https://mhdalijawara-cloud.github.io/)
 [![Realized Alpha](https://img.shields.io/badge/Cumulative%20Return-%2B645.58%20R-8b5cf6.svg?style=flat-square)](https://mhdalijawara-cloud.github.io/)
-[![Win Rate](https://img.shields.io/badge/Win%20Rate-62.32%25%20(vs%2033.3%25%20BE)-f59e0b.svg?style=flat-square)](https://mhdalijawara-cloud.github.io/)
+[![Win Rate](https://img.shields.io/badge/Win%20Rate-62.32%25%20--%2033.3%25%20BE-f59e0b.svg?style=flat-square)](https://mhdalijawara-cloud.github.io/)
 [![License](https://img.shields.io/badge/Architecture-Proprietary%20%2F%20Closed--Source-e11d48.svg?style=flat-square)](#intellectual-property--security-disclosure)
 
 **Author & Quantitative Systems Engineer:** Muhammad Ali Jawara Wiratama  
@@ -16,43 +16,43 @@
 
 Standard deep learning architectures applied naively to financial time-series suffer from severe regime overfitting, directional logit collapse, and look-ahead bias. This repository documents the empirical validation and continuous 6.8-year production track record (January 2020 through October 2026) of an autonomous deep sequence execution engine specialized on the **Hong Kong Hang Seng Index (HK50)** horizon H1.
 
-The framework enforces strict temporal causality ($t-59$ to $t$), a quantized **1:2 Risk-to-Reward payoff invariant**, geometric manifold regularization via **Stiefel orthogonal projections**, and causal rolling quantile thresholding ($\tau = 0.90$). Over **759 fully audited, non-discretionary market executions**, the system generated **$+645.58\text{ R}$** of cumulative alpha with an all-time win rate of **$62.32\%$** (Profit Factor **$3.287$**), outperforming the underlying HK50 benchmark ($-18.23\%$ buy-and-hold with $-52.6\%$ drawdown) across every economic regime.
+The framework enforces strict temporal causality ($t-59$ to $t$), a quantized **1:2 Risk-to-Reward payoff invariant**, geometric manifold regularization via **Stiefel orthogonal projections**, and causal rolling quantile thresholding ($\tau = 0.90$). Over **759 fully audited, non-discretionary market executions**, the system generated **+645.58 R** of cumulative alpha with an all-time win rate of **62.32%** (Profit Factor **3.287**), outperforming the underlying HK50 benchmark (-18.23% buy-and-hold with -52.6% drawdown) across every economic regime.
 
 ---
 
 ## Verified Production Metrics (Single Source of Truth)
 
-All metrics are recorded in pure **Risk-to-Reward multiples ($R$)**, strictly invariant to arbitrary account leverage or equity denomination ($1.0\text{R} = 1.0 \times \text{ATR}$).
+All metrics are recorded in pure **Risk-to-Reward multiples (R)**, strictly invariant to arbitrary account leverage or equity denomination ($1.0\text{R} = 1.0 \times \text{ATR}$).
 
 | Econometric Dimension | Verified Value | Benchmark / Theoretical Reference | Statistical Interpretation |
 | :--- | :---: | :---: | :--- |
-| **Cumulative Realized Alpha** | **$+645.58\text{ R}$** | $0.00\text{ R}$ Baseline | $+94.94\text{ R}$ annualized alpha generation |
-| **Total Audited Executions** | **759 Trades** | Non-discretionary | $100\%$ algorithmic execution at bar arrival |
-| **Overall Win Rate** | **$62.32\%$** | $33.33\%$ (1:2 Breakeven) | **$+28.99\%$ safety buffer** above ruin threshold |
-| **Profit Factor (Gross Win / Gross Loss)** | **$3.287$** | $> 1.50$ (Institutional Grade) | $+927.90\text{ R}$ Wins / $-282.31\text{ R}$ Losses |
-| **Wilson 95% Confidence Interval** | **$[58.82\%,\; 65.70\%]$** | Lower bound $> 33.33\%$ | Statistical significance $p < 10^{-12}$ |
-| **Annualized Sharpe Ratio** | **$\sim 3.29$** | $> 2.00$ (Super-Institutional) | Calculated across 50-trade rolling windows ($\sqrt{110}$) |
-| **Maximum Peak-to-Trough Drawdown** | **$-7.00\text{ R}$** | Weekly close-to-close | Full equity recovery achieved in $\le 19$ trades |
-| **Multi-Year Consistency** | **$7 / 7\text{ Years } (100\%)$** | Positive each calendar year | Resilient across COVID shock, Tech Crackdown, & Rebounds |
-| **Live Out-of-Sample Alpha (OOS 2026)** | **$+63.63\text{ R}$** | $52.14\%$ WR (117 Trades) | **Profit Factor $2.166$** under frozen production weights |
-| **Median Execution Duration** | **$6.0\text{ Hours}$** | $\le 16\text{h}$ Hard Boundary | Zero overnight weekend gap risk ($100\%$ closed $\le 16\text{h}$) |
+| **Cumulative Realized Alpha** | **+645.58 R** | 0.00 R Baseline | +94.94 R annualized alpha generation |
+| **Total Audited Executions** | **759 Trades** | Non-discretionary | 100% algorithmic execution at bar arrival |
+| **Overall Win Rate** | **62.32%** | 33.33% (1:2 Breakeven) | **+28.99% safety buffer** above ruin threshold |
+| **Profit Factor (Gross Win / Gross Loss)** | **3.287** | > 1.50 (Institutional Grade) | +927.90 R Wins / -282.31 R Losses |
+| **Wilson 95% Confidence Interval** | **[58.82%, 65.70%]** | Lower bound > 33.33% | Statistical significance $p < 10^{-12}$ |
+| **Annualized Sharpe Ratio** | **~3.29** | > 2.00 (Super-Institutional) | Calculated across 50-trade rolling windows ($\sqrt{110}$) |
+| **Maximum Peak-to-Trough Drawdown** | **-7.00 R** | Weekly close-to-close | Full equity recovery achieved in ≤ 19 trades |
+| **Multi-Year Consistency** | **7 / 7 Years (100%)** | Positive each calendar year | Resilient across COVID shock, Tech Crackdown, & Rebounds |
+| **Live Out-of-Sample Alpha (OOS 2026)** | **+63.63 R** | 52.14% WR (117 Trades) | **Profit Factor 2.166** under frozen production weights |
+| **Median Execution Duration** | **6.0 Hours** | ≤ 16h Hard Boundary | Zero overnight weekend gap risk (100% closed ≤ 16h) |
 
 ---
 
-## Multi-Year Annual Performance Matrix (2020&ndash;2026)
+## Multi-Year Annual Performance Matrix (2020–2026)
 
 Empirical return breakdown across all 82 continuous months of production evaluation:
 
 | Calendar Year | Regime Context | Realized Trades | Win Rate | Annual Alpha | Cumulative Alpha | Max Annual DD |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **2020** | COVID-19 Liquidity Shock & Volatility Spike | 71 | $69.01\%$ | **$+74.24\text{ R}$** | $+74.24\text{ R}$ | $-3.00\text{ R}$ |
-| **2021** | China Tech Regulatory Crackdown & Bear Flow | 116 | $65.52\%$ | **$+108.89\text{ R}$** | $+183.13\text{ R}$ | $-6.00\text{ R}$ |
-| **2022** | Global Rate Hikes & Property Market Contagion | 110 | $60.91\%$ | **$+90.36\text{ R}$** | $+273.49\text{ R}$ | $-7.00\text{ R}$ |
-| **2023** | Post-Reopening Disinflation & Rangebound Drift | 117 | $69.23\%$ | **$+125.89\text{ R}$** | $+399.38\text{ R}$ | $-3.10\text{ R}$ |
-| **2024** | Hang Seng Value Rebound & Low-Vol Accumulation | 114 | $62.28\%$ | **$+95.40\text{ R}$** | $+494.78\text{ R}$ | $-4.00\text{ R}$ |
-| **2025** | Systematic Volatility Expansion & Trend Swings | 114 | $59.65\%$ | **$+87.17\text{ R}$** | $+581.95\text{ R}$ | $-4.00\text{ R}$ |
-| **2026 (YTD)** | Live Out-of-Sample Forward Execution | 117 | $52.14\%$ | **$+63.63\text{ R}$** | **$+645.58\text{ R}$** | $-7.00\text{ R}$ |
-| **Total / Summary** | **Continuous Systematic Evaluation** | **759** | **$62.32\%$** | **$+645.58\text{ R}$** | &mdash; | **$-7.00\text{ R}$** |
+| **2020** | COVID-19 Liquidity Shock & Volatility Spike | 71 | 69.01% | **+74.24 R** | +74.24 R | -3.00 R |
+| **2021** | China Tech Regulatory Crackdown & Bear Flow | 116 | 65.52% | **+108.89 R** | +183.13 R | -6.00 R |
+| **2022** | Global Rate Hikes & Property Market Contagion | 110 | 60.91% | **+90.36 R** | +273.49 R | -7.00 R |
+| **2023** | Post-Reopening Disinflation & Rangebound Drift | 117 | 69.23% | **+125.89 R** | +399.38 R | -3.10 R |
+| **2024** | Hang Seng Value Rebound & Low-Vol Accumulation | 114 | 62.28% | **+95.40 R** | +494.78 R | -4.00 R |
+| **2025** | Systematic Volatility Expansion & Trend Swings | 114 | 59.65% | **+87.17 R** | +581.95 R | -4.00 R |
+| **2026 (YTD)** | Live Out-of-Sample Forward Execution | 117 | 52.14% | **+63.63 R** | **+645.58 R** | -7.00 R |
+| **Total / Summary** | **Continuous Systematic Evaluation** | **759** | **62.32%** | **+645.58 R** | — | **-7.00 R** |
 
 ---
 
@@ -65,41 +65,47 @@ flowchart LR
     C --> D["Stiefel Manifold Splay Head<br/>W^T W = I_k"]
     D --> E["Causal Quantile Gate<br/>τ = 0.90 (N_past = 300)"]
     E --> F{"p_t ≥ q_t ?"}
-    F -- "Yes" --> G["Execute Daily Top-1<br/>Fixed 1:2 R:R Payoff"]
-    F -- "No" --> H["Filter / Stay Flat<br/>Preserve Capital"]
+    F -->|Yes| G["Execute Daily Top-1<br/>Fixed 1:2 R:R Payoff"]
+    F -->|No| H["Filter / Stay Flat<br/>Preserve Capital"]
 ```
 
-### 1. Mathematical Formulations Disclosed
+### Mathematical Formulations Disclosed
 
-1. **Multi-Scale Temporal Inception:**
-   Processes microstructural volatility compression across parallel kernel dimensions with spectral normalization:
-   $$
-   Z_{\text{inc}} = \text{Concat}\Big(\text{Conv}_{1}(X), \text{Conv}_{3}(X), \text{Conv}_{5}(X), \text{MaxPool}_{3}(X)\Big), \quad \|W\|_{\text{spec}} \le 1.0
-   $$
+#### 1. Multi-Scale Temporal Inception
+Processes microstructural volatility compression across parallel kernel dimensions with spectral normalization:
 
-2. **Strict Causal Lower-Triangular Masking:**
-   Eliminates look-ahead bias across sequence history:
-   $$
-   A = \text{Softmax}\left(\frac{Q K^T}{\sqrt{d_k}} + M_{\text{causal}}\right) V, \quad M_{i,j} = \begin{cases} 0 & j \le i \\ -\infty & j > i \end{cases}
-   $$
+$$
+Z_{\text{inc}} = \text{Concat}\Big(\text{Conv}_{1}(X), \text{Conv}_{3}(X), \text{Conv}_{5}(X), \text{MaxPool}_{3}(X)\Big), \quad \|W\|_{\text{spec}} \le 1.0
+$$
 
-3. **Stiefel Manifold Projection Head:**
-   Constrains projection weights to the compact Stiefel manifold $\mathcal{V}_k(\mathbb{R}^d)$ to guarantee angular separation between action classes and prevent directional collapse:
-   $$
-   \min_{W \in \mathcal{V}_k(\mathbb{R}^d)} \mathcal{L}_{\text{task}}(W) \quad \text{subject to } W^T W = I_k
-   $$
+#### 2. Strict Causal Lower-Triangular Masking
+Eliminates look-ahead bias across sequence history:
 
-4. **Causal Rolling Quantile Thresholding:**
-   Evaluated strictly over historical backward windows of $N_{\text{past}} = 300$ trading bars to eliminate ex-post selection bias:
-   $$
-   q_t = \text{Quantile}\Big(\big\{p_{t-k}\big\}_{k=1}^{N_{\text{past}}}, \tau = 0.90\Big)
-   $$
+$$
+A = \text{Softmax}\left(\frac{QK^T}{\sqrt{d_k}} + M_{\text{causal}}\right) V, \quad M_{i,j} = \begin{cases} 0 & j \le i \\ -\infty & j > i \end{cases}
+$$
 
-### 2. Intrinsic Execution Protocol
+#### 3. Stiefel Manifold Projection Head
+Constrains projection weights to the compact Stiefel manifold $\mathcal{V}_k(\mathbb{R}^d)$ to guarantee angular separation between action classes and prevent directional collapse:
+
+$$
+\min_{W \in \mathcal{V}_k(\mathbb{R}^d)} \mathcal{L}_{\text{task}}(W) \quad \text{subject to } W^T W = I_k
+$$
+
+#### 4. Causal Rolling Quantile Thresholding
+Evaluated strictly over historical backward windows of $N_{\text{past}} = 300$ trading bars to eliminate ex-post selection bias:
+
+$$
+q_t = \text{Quantile}\Big(\{p_{t-k}\}_{k=1}^{N_{\text{past}}}, \tau = 0.90\Big)
+$$
+
+---
+
+## Intrinsic Execution Protocol
 
 - **Fixed 1:2 Payoff Invariant:** Stop Loss locked at $-1.00\text{ R}$ ($-1.0 \times \text{ATR}$), Take Profit locked at $+2.00\text{ R}$ ($+2.0 \times \text{ATR}$). Dynamic target scaling, asymmetric trailing stops, and arbitrary curve-fitting are strictly forbidden.
 - **Daily Top-1 Scanning:** Bar evaluation runs sequentially from 00:00 UTC. The first valid setup clears execution and immediately locks out subsequent signals for that calendar session.
-- **Velocity Guard ($\le 16\text{h}$):** Position lifespan is constrained to a maximum holding window of 16 hours. Positions unresolved by bar 16 undergo mark-to-market liquidation.
+- **Velocity Guard (≤ 16h):** Position lifespan is constrained to a maximum holding window of 16 hours. Positions unresolved by bar 16 undergo mark-to-market liquidation.
 
 ---
 
@@ -107,10 +113,10 @@ flowchart LR
 
 The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-cloud.github.io/) renders 9 interactive econometric visualizations typeset according to Edward Tufte's principles of high data-ink density:
 
-- **Figure 1 (TradingView LightweightCharts):** Interactive pan-and-zoom cumulative equity curve ($+645.58\text{ R}$), HK50 benchmark comparison ($-18.23\%$), and continuous drawdown profile.
-- **Figure 2 (Return Distribution Canvas):** Bimodal histogram verifying downside tail truncation at $\text{VaR}_{95\%} = -1.00\text{ R}$, $\text{CVaR}_{95\%} = -1.00\text{ R}$, with empirical skewness $+0.5847$.
-- **Figure 3 (Rolling Alpha & Risk):** 50-trade rolling annualized Sharpe ratio (peaking at $8.00$, median $2.84$) and rolling win rate versus the $33.33\%$ breakeven threshold.
-- **Figure 4 (Velocity Attribution):** Bar-by-bar holding duration distribution ($100\%$ terminated within $\le 16$ hours).
+- **Figure 1 (TradingView LightweightCharts):** Interactive pan-and-zoom cumulative equity curve (+645.58 R), HK50 benchmark comparison (-18.23%), and continuous drawdown profile.
+- **Figure 2 (Return Distribution Canvas):** Bimodal histogram verifying downside tail truncation at $\text{VaR}_{95\%} = -1.00\text{ R}$, $\text{CVaR}_{95\%} = -1.00\text{ R}$, with empirical skewness +0.5847.
+- **Figure 3 (Rolling Alpha & Risk):** 50-trade rolling annualized Sharpe ratio (peaking at 8.00, median 2.84) and rolling win rate versus the 33.33% breakeven threshold.
+- **Figure 4 (Velocity Attribution):** Bar-by-bar holding duration distribution (100% terminated within ≤ 16 hours).
 - **Figure 5 (Temporal Alpha Heatmap):** Microstructural alpha density mapped across 24 hours of the day and 5 trading days.
 - **Figure 6 (Monte Carlo Fan):** 1,000-path bootstrap simulation evaluating maximum potential drawdown paths under randomized sequence resampling.
 - **Figure 7 (Calibration Curve):** Reliability diagram comparing forecasted quantile probabilities against realized empirical win rates.
@@ -134,7 +140,7 @@ The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-
 
 ## Web Technology Stack
 
-- **Design System & Typography:** Edward Tufte CSS Framework, ET Book Local Webfonts, KaTeX Mathematical Typesetting ($\KaTeX$)
+- **Design System & Typography:** Edward Tufte CSS Framework, ET Book Local Webfonts, KaTeX Mathematical Typesetting
 - **Chart Infrastructure:** TradingView Lightweight Charts v4.1.1
 - **Custom Visualizations:** Native HTML5 2D Canvas with HiDPI ($2\times$) pixel scaling
 - **Client-Side Audit Engine:** Zero third-party analytics, pure deterministic client-side JavaScript, zero external server tracking
@@ -148,8 +154,8 @@ The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-
 2. **López de Prado, M.** (2018). *Advances in Financial Machine Learning*. John Wiley & Sons.
 3. **Foret, P., Kleiner, A., Mobahi, H., & Neyshabur, B.** (2021). Sharpness-Aware Minimization for Efficiently Improving Generalization. *International Conference on Learning Representations (ICLR)*.
 4. **Absil, P.-A., Mahony, R., & Sepulchre, R.** (2008). *Optimization Algorithms on Matrix Manifolds*. Princeton University Press.
-5. **Wilson, E. B.** (1927). Probable inference, the law of succession, and statistical inference. *Journal of the American Statistical Association*, 22(158), 209&ndash;212.
+5. **Wilson, E. B.** (1927). Probable inference, the law of succession, and statistical inference. *Journal of the American Statistical Association*, 22(158), 209–212.
 
 ---
 
-&copy; 2020&ndash;2026 Muhammad Ali Jawara Wiratama. All rights reserved. Trade ledger and verification portal published for quantitative research demonstration and academic auditability.
+© 2020–2026 Muhammad Ali Jawara Wiratama. All rights reserved. Trade ledger and verification portal published for quantitative research demonstration and academic auditability.

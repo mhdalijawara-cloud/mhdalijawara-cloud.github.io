@@ -16,7 +16,7 @@
 
 Standard deep learning architectures applied naively to financial time-series suffer from severe regime overfitting, directional logit collapse, and look-ahead bias. This repository documents the empirical validation and continuous 6.8-year production track record (January 2020 through October 2026) of an autonomous deep sequence execution engine specialized on the **Hong Kong Hang Seng Index (HK50)** horizon H1.
 
-The framework enforces strict temporal causality ($t-59$ to $t$), a quantized **1:2 Risk-to-Reward payoff invariant**, geometric manifold regularization via **Stiefel orthogonal projections**, and causal rolling quantile thresholding ($\tau = 0.90$). Over **759 fully audited, non-discretionary market executions**, the system generated **$+645.58\text{ R}$** of cumulative alpha with an all-time win rate of **$62.32\%$** (Profit Factor **$3.290$**), outperforming the underlying HK50 benchmark ($-18.23\%$ buy-and-hold with $-52.6\%$ drawdown) across every economic regime.
+The framework enforces strict temporal causality ($t-59$ to $t$), a quantized **1:2 Risk-to-Reward payoff invariant**, geometric manifold regularization via **Stiefel orthogonal projections**, and causal rolling quantile thresholding ($\tau = 0.90$). Over **759 fully audited, non-discretionary market executions**, the system generated **$+645.58\text{ R}$** of cumulative alpha with an all-time win rate of **$62.32\%$** (Profit Factor **$3.287$**), outperforming the underlying HK50 benchmark ($-18.23\%$ buy-and-hold with $-52.6\%$ drawdown) across every economic regime.
 
 ---
 
@@ -29,12 +29,12 @@ All metrics are recorded in pure **Risk-to-Reward multiples ($R$)**, strictly in
 | **Cumulative Realized Alpha** | **$+645.58\text{ R}$** | $0.00\text{ R}$ Baseline | $+94.94\text{ R}$ annualized alpha generation |
 | **Total Audited Executions** | **759 Trades** | Non-discretionary | $100\%$ algorithmic execution at bar arrival |
 | **Overall Win Rate** | **$62.32\%$** | $33.33\%$ (1:2 Breakeven) | **$+28.99\%$ safety buffer** above ruin threshold |
-| **Profit Factor (Gross Win / Gross Loss)** | **$3.290$** | $> 1.50$ (Institutional Grade) | $+927.58\text{ R}$ Wins / $-282.00\text{ R}$ Losses |
+| **Profit Factor (Gross Win / Gross Loss)** | **$3.287$** | $> 1.50$ (Institutional Grade) | $+927.90\text{ R}$ Wins / $-282.31\text{ R}$ Losses |
 | **Wilson 95% Confidence Interval** | **$[58.82\%,\; 65.70\%]$** | Lower bound $> 33.33\%$ | Statistical significance $p < 10^{-12}$ |
 | **Annualized Sharpe Ratio** | **$\sim 3.29$** | $> 2.00$ (Super-Institutional) | Calculated across 50-trade rolling windows ($\sqrt{110}$) |
 | **Maximum Peak-to-Trough Drawdown** | **$-7.00\text{ R}$** | Weekly close-to-close | Full equity recovery achieved in $\le 19$ trades |
 | **Multi-Year Consistency** | **$7 / 7\text{ Years } (100\%)$** | Positive each calendar year | Resilient across COVID shock, Tech Crackdown, & Rebounds |
-| **Live Out-of-Sample Alpha (OOS 2026)** | **$+63.63\text{ R}$** | $62.39\%$ WR (117 Trades) | **Profit Factor $3.885$** under frozen production weights |
+| **Live Out-of-Sample Alpha (OOS 2026)** | **$+63.63\text{ R}$** | $52.14\%$ WR (117 Trades) | **Profit Factor $2.166$** under frozen production weights |
 | **Median Execution Duration** | **$6.0\text{ Hours}$** | $\le 16\text{h}$ Hard Boundary | Zero overnight weekend gap risk ($100\%$ closed $\le 16\text{h}$) |
 
 ---

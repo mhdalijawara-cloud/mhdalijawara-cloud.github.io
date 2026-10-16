@@ -12,7 +12,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://mhdalijawara-cloud.github.io/"/>
     <meta property="og:title" content="Muhammad Ali Jawara Wiratama — Empirical Sequence Modeling"/>
-    <meta property="og:description" content="6.8-Year empirical evaluation (+646.58 R, 62.40% win rate, PF 3.298) of autonomous deep sequence models on HK50."/>
+    <meta property="og:description" content="6.8-Year empirical evaluation (+645.58 R, 62.32% win rate, PF 3.290) of autonomous deep sequence models on HK50."/>
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary"/>
@@ -36,7 +36,7 @@
     <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📈&lt;/text&gt;&lt;/svg&gt;"/>
 
     <!-- Embedded Audited Showcase Datasets with CDN Cache-Buster -->
-    <script src="data/data.js?v=20261015_v5"></script>
+    <script src="data/data.js?v=20261016_v1"></script>
 
     <style>
       *, *::before, *::after {
@@ -459,7 +459,7 @@
         </p>
 
         <p>
-          Across 758 consecutive daily executions, the system generates $\mathbf{+646.58\text{ R}}$ net cumulative return with an empirical win rate of $\mathbf{62.40\%}$ (Wilson 95% Confidence Interval: $[58.90\%, 65.78\%]$, $+29.07\%$ above mathematical breakeven).<label for="sn-breakeven-calc" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-breakeven-calc" class="margin-toggle"/><span class="sidenote">Under a 1:2 payoff ratio, mathematical breakeven win rate is precisely $\frac{1}{1+2} = \mathbf{33.33\%}$. Any empirical win rate sustained above $50.0\%$ provides a wide margin of safety against execution friction.</span> Out-of-sample forward verification (January through September 2026) produces $+64.64\text{ R}$ across 116 trades with 0 negative quarters, empirically refuting the hypothesis of regime decay.
+          Across 759 consecutive daily executions, the system generates $\mathbf{+645.58\text{ R}}$ net cumulative return with an empirical win rate of $\mathbf{62.32\%}$ (Wilson 95% Confidence Interval: $[58.82\%, 65.70\%]$, $+29.07\%$ above mathematical breakeven).<label for="sn-breakeven-calc" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-breakeven-calc" class="margin-toggle"/><span class="sidenote">Under a 1:2 payoff ratio, mathematical breakeven win rate is precisely $\frac{1}{1+2} = \mathbf{33.33\%}$. Any empirical win rate sustained above $50.0\%$ provides a wide margin of safety against execution friction.</span> Out-of-sample forward verification (January through October 2026) produces $+63.64\text{ R}$ across 117 trades with 0 negative quarters, empirically refuting the hypothesis of regime decay.
         </p>
       </section>
 
@@ -486,19 +486,19 @@
             <tbody>
               <tr>
                 <td>Net Realized R-Multiple</td>
-                <td style="text-align: center;"><strong>+646.58 R</strong></td>
-                <td style="text-align: center;">758 Executed Trades (473W / 285L)</td>
+                <td style="text-align: center;"><strong>+645.58 R</strong></td>
+                <td style="text-align: center;">759 Executed Trades (473W / 286L)</td>
                 <td>Total cumulative alpha generated over 82 continuous months (2020–2026).</td>
               </tr>
               <tr>
                 <td>Empirical Win Rate</td>
-                <td style="text-align: center;"><strong>62.40%</strong></td>
-                <td style="text-align: center;">Wilson CI: [58.90%, 65.78%]</td>
+                <td style="text-align: center;"><strong>62.32%</strong></td>
+                <td style="text-align: center;">Wilson CI: [58.82%, 65.70%]</td>
                 <td>$+29.07\%$ surplus above $33.33\%$ breakeven threshold.</td>
               </tr>
               <tr>
                 <td>Profit Factor (PF)</td>
-                <td style="text-align: center;"><strong>3.298</strong></td>
+                <td style="text-align: center;"><strong>3.290</strong></td>
                 <td style="text-align: center;">Theoretical: $\frac{W \times 2.0}{(1-W) \times 1.0}$</td>
                 <td>High resilience against structural market friction and slippage.</td>
               </tr>
@@ -578,7 +578,7 @@
           <div id="tufte-chart-container" style="width: 100%; height: 380px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--chart-bg);"></div>
 
           <figcaption>
-            Sequence of 758 realized trades. The primary series tracks cumulative alpha growth from $0.0\text{ R}$ to $\mathbf{+646.58\text{ R}}$. In contrast, buying and holding the underlying Hang Seng Index over the identical period yielded $\mathbf{-18.23\%}$ net return with $-52.6\%$ max drawdown, proving massive market beta decoupling across all economic regimes.
+            Sequence of 759 realized trades. The primary series tracks cumulative alpha growth from $0.0\text{ R}$ to $\mathbf{+645.58\text{ R}}$. In contrast, buying and holding the underlying Hang Seng Index over the identical period yielded $\mathbf{-18.23\%}$ net return with $-52.6\%$ max drawdown, proving massive market beta decoupling across all economic regimes.
           </figcaption>
         </figure>
 
@@ -594,7 +594,7 @@
               <canvas id="tufte-canvas-bimodal" style="width: 100%; height: 100%; display: block;"></canvas>
             </div>
             <figcaption>
-              Realized payoff frequency across 758 trades. Downside loss is strictly truncated at $-1.00\text{ R}$ ($36.81\%$), Take Profit clusters at $+2.00\text{ R}$ ($60.16\%$), and time-exit mark-to-market liquidations account for $3.03\%$. $\text{VaR}_{95\%} = -1.00\text{ R}$; $\text{CVaR}_{95\%} = -1.00\text{ R}$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
+              Realized payoff frequency across 759 trades. Downside loss is strictly truncated at $-1.00\text{ R}$ ($36.81\%$), Take Profit clusters at $+2.00\text{ R}$ ($60.16\%$), and time-exit mark-to-market liquidations account for $3.03\%$. $\text{VaR}_{95\%} = -1.00\text{ R}$; $\text{CVaR}_{95\%} = -1.00\text{ R}$. Empirical Skewness: $+0.5847$; Kurtosis: $-1.6210$ (platykurtic bimodal distribution, mathematically verifying downside tail truncation).
             </figcaption>
           </div>
 
@@ -786,7 +786,7 @@
               <canvas id="tufte-canvas-monte-carlo" style="width: 100%; height: 100%; display: block;"></canvas>
             </div>
             <figcaption>
-              1,000 bootstrap resampled equity trajectories over 758 trade steps. Shaded bands represent the $p_5 - p_{95}$ (outer) and $p_{25} - p_{75}$ (inner) confidence intervals. At trade 758, the $5^{\text{th}}$ percentile terminal return is $+468.2\text{ R}$, with $0.0\%$ probability of terminal drawdown below breakeven.
+              1,000 bootstrap resampled equity trajectories over 759 trade steps. Shaded bands represent the $p_5 - p_{95}$ (outer) and $p_{25} - p_{75}$ (inner) confidence intervals. At trade 758, the $5^{\text{th}}$ percentile terminal return is $+468.2\text{ R}$, with $0.0\%$ probability of terminal drawdown below breakeven.
             </figcaption>
           </div>
 
@@ -855,7 +855,7 @@
                   <tr>
                     <td style="text-align: left;"><strong>300 Bars (Base)</strong></td>
                     <td>+622.0 R</td>
-                    <td style="font-weight: bold; background-color: rgba(34, 197, 94, 0.12);">+646.58 R</td>
+                    <td style="font-weight: bold; background-color: rgba(34, 197, 94, 0.12);">+645.58 R</td>
                     <td>+638.7 R</td>
                     <td>+612.0 R</td>
                   </tr>
@@ -927,8 +927,8 @@
 
       <!-- Section: Open Replication Ledger -->
       <section>
-        <h2 id="replication">Open Replication Ledger (758 Trade Audit Trail)</h2>
-        <p>Scientific integrity requires full auditability. Below is the complete record of all 758 executed trades, including timestamp, fill prices, duration, exit reason, and realized net R.</p>
+        <h2 id="replication">Open Replication Ledger (759 Trade Audit Trail)</h2>
+        <p>Scientific integrity requires full auditability. Below is the complete record of all 759 executed trades, including timestamp, fill prices, duration, exit reason, and realized net R.</p>
 
         <div class="tufte-filter-toolbar" style="margin: 1.5rem 0 0.75rem 0; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; justify-content: flex-start;">
           <input type="text" id="tufte-ledger-search" placeholder="Search date / price..." class="tufte-input" style="width: 170px;">
@@ -1024,7 +1024,7 @@
             <div>
               <div style="font-weight: 600; color: var(--text); margin-bottom: 0.35rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.76rem; letter-spacing: 0.05em; text-transform: uppercase;">Verification Status</div>
               <div>Status: Verified Production Deployed</div>
-              <div>Ledger: 758 Audited Executions (2020–2026)</div>
+              <div>Ledger: 759 Audited Executions (2020–2026)</div>
             </div>
             <div>
               <div style="font-weight: 600; color: var(--text); margin-bottom: 0.35rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.76rem; letter-spacing: 0.05em; text-transform: uppercase;">Typography &amp; Release</div>
@@ -1479,7 +1479,7 @@
         ctx.textAlign = 'left';
         ctx.fillText('Trade #50', padLeft, h - 8);
         ctx.textAlign = 'right';
-        ctx.fillText('Trade #758', w - padRight, h - 8);
+        ctx.fillText('Trade #759', w - padRight, h - 8);
       }
 
       // 2C. Figure 4: Holding Duration Velocity
@@ -1674,7 +1674,7 @@
         ctx.clearRect(0, 0, w, h);
 
         // Helper to get X/Y
-        const getX = (t) => padLeft + (t / 758.0) * plotW;
+        const getX = (t) => padLeft + (t / 759.0) * plotW;
         const getY = (val) => padTop + (1.0 - (val - minY) / (maxY - minY)) * plotH;
 
         // Outer Band: p05 to p95
@@ -1753,7 +1753,7 @@
         ctx.textAlign = 'left';
         ctx.fillText('Trade 0', padLeft, h - 8);
         ctx.textAlign = 'right';
-        ctx.fillText('Trade 758', w - padRight, h - 8);
+        ctx.fillText('Trade 759', w - padRight, h - 8);
       }
 
       // 2F. Figure 7: Reliability / Calibration Diagram
@@ -2216,7 +2216,7 @@
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement('a');
             link.setAttribute('href', encodedUri);
-            link.setAttribute('download', 'hk50_quant_master_ledger_758.csv');
+            link.setAttribute('download', 'hk50_quant_master_ledger_759.csv');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -2229,7 +2229,7 @@
             const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(window.SHOWCASE_CURVE, null, 2));
             const link = document.createElement('a');
             link.setAttribute('href', dataStr);
-            link.setAttribute('download', 'hk50_quant_master_ledger_758.json');
+            link.setAttribute('download', 'hk50_quant_master_ledger_759.json');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

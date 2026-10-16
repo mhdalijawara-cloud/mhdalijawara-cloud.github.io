@@ -547,8 +547,8 @@
   },
   {
     "year": 2026,
-    "total_r": 64.63,
-    "total_trades": 116,
+    "total_r": 63.63,
+    "total_trades": 117,
     "months": [
       {
         "month_num": 1,
@@ -617,8 +617,8 @@
         "month_num": 10,
         "month_name": "Oct",
         "status": "active",
-        "r": 3.0,
-        "trades": 6
+        "r": 2.0,
+        "trades": 7
       },
       {
         "month_num": 11,

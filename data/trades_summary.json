@@ -10610,5 +10610,19 @@
     "cum_r": 646.58,
     "drawdown_r": 0.0,
     "year": 2026
+  },
+  {
+    "id": 759,
+    "date": "2026-10-15",
+    "time": "19:00",
+    "direction": "SHORT",
+    "entry_price": 24268.3,
+    "exit_price": 24341.25,
+    "exit_type": "SL",
+    "duration_h": 5,
+    "r": -1.0,
+    "cum_r": 645.58,
+    "drawdown_r": -1.0,
+    "year": 2026
   }
 ]

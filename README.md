@@ -22,7 +22,7 @@ The framework enforces strict temporal causality ($t-59$ to $t$), a quantized **
 
 ## Verified Production Metrics (Single Source of Truth)
 
-All metrics are recorded in pure **Risk-to-Reward multiples (R)**, strictly invariant to arbitrary account leverage or equity denomination ($1.0\text{R} = 1.0 \times \text{ATR}$).
+All metrics are recorded in pure **Risk-to-Reward multiples (R)**, strictly invariant to arbitrary account leverage or equity denomination (1.0R = 1.0 × ATR).
 
 | Econometric Dimension | Verified Value | Benchmark / Theoretical Reference | Statistical Interpretation |
 | :--- | :---: | :---: | :--- |
@@ -103,7 +103,7 @@ $$
 
 ## Intrinsic Execution Protocol
 
-- **Fixed 1:2 Payoff Invariant:** Stop Loss locked at $-1.00\text{ R}$ ($-1.0 \times \text{ATR}$), Take Profit locked at $+2.00\text{ R}$ ($+2.0 \times \text{ATR}$). Dynamic target scaling, asymmetric trailing stops, and arbitrary curve-fitting are strictly forbidden.
+- **Fixed 1:2 Payoff Invariant:** Stop Loss locked at -1.00 R (-1.0 × ATR), Take Profit locked at +2.00 R (+2.0 × ATR). Dynamic target scaling, asymmetric trailing stops, and arbitrary curve-fitting are strictly forbidden.
 - **Daily Top-1 Scanning:** Bar evaluation runs sequentially from 00:00 UTC. The first valid setup clears execution and immediately locks out subsequent signals for that calendar session.
 - **Velocity Guard (≤ 16h):** Position lifespan is constrained to a maximum holding window of 16 hours. Positions unresolved by bar 16 undergo mark-to-market liquidation.
 
@@ -111,10 +111,10 @@ $$
 
 ## Interactive Visualizations Suite (Portal Features)
 
-The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-cloud.github.io/) renders 9 interactive econometric visualizations typeset according to Edward Tufte's principles of high data-ink density:
+The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-cloud.github.io/) renders 9 interactive econometric visualizations and a comprehensive replication ledger, typeset according to Edward Tufte's principles of high data-ink density:
 
 - **Figure 1 (TradingView LightweightCharts):** Interactive pan-and-zoom cumulative equity curve (+645.58 R), HK50 benchmark comparison (-18.23%), and continuous drawdown profile.
-- **Figure 2 (Return Distribution Canvas):** Bimodal histogram verifying downside tail truncation at $\text{VaR}_{95\%} = -1.00\text{ R}$, $\text{CVaR}_{95\%} = -1.00\text{ R}$, with empirical skewness +0.5847.
+- **Figure 2 (Return Distribution Canvas):** Bimodal histogram verifying downside tail truncation at VaR 95% = -1.00 R, CVaR 95% = -1.00 R, with empirical skewness +0.5847.
 - **Figure 3 (Rolling Alpha & Risk):** 50-trade rolling annualized Sharpe ratio (peaking at 8.00, median 2.84) and rolling win rate versus the 33.33% breakeven threshold.
 - **Figure 4 (Velocity Attribution):** Bar-by-bar holding duration distribution (100% terminated within ≤ 16 hours).
 - **Figure 5 (Temporal Alpha Heatmap):** Microstructural alpha density mapped across 24 hours of the day and 5 trading days.
@@ -122,7 +122,7 @@ The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-
 - **Figure 7 (Calibration Curve):** Reliability diagram comparing forecasted quantile probabilities against realized empirical win rates.
 - **Figure 8 (SHAP Attribution):** Feature importance cluster breakdown across multi-scale convolutions, volatility compression, and manifold projections.
 - **Figure 9 (OOS Candlestick Showcase):** Interactive bar-by-bar showcase of 12 consecutive live trades with entry arrows, stop loss boundaries, and take profit resolution.
-- **Table 6 (Open Replication Ledger):** Full 759-trade audit trail with instantaneous Trade ID search, date/price filtering, and one-click JSON/CSV dataset export.
+- **Open Replication Ledger:** Full 759-trade audit trail with instantaneous Trade ID search, date/price filtering, and one-click JSON/CSV dataset export.
 
 ---
 
@@ -142,7 +142,7 @@ The live portal at [https://mhdalijawara-cloud.github.io/](https://mhdalijawara-
 
 - **Design System & Typography:** Edward Tufte CSS Framework, ET Book Local Webfonts, KaTeX Mathematical Typesetting
 - **Chart Infrastructure:** TradingView Lightweight Charts v4.1.1
-- **Custom Visualizations:** Native HTML5 2D Canvas with HiDPI ($2\times$) pixel scaling
+- **Custom Visualizations:** Native HTML5 2D Canvas with HiDPI (2×) pixel scaling
 - **Client-Side Audit Engine:** Zero third-party analytics, pure deterministic client-side JavaScript, zero external server tracking
 - **Deployment:** GitHub Pages Static CDN
 
